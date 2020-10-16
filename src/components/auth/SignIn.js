@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React  from "react";
 import { useHistory } from "react-router-dom";
-import { Button, Form, Divider, Grid, Header, Icon, Segment, Image, Input, Modal } from 'semantic-ui-react'
+import { Button, Form, Divider, Grid, Header, Icon, Segment, Image, Modal } from 'semantic-ui-react'
 import horizLogo from "../../images/LLogoHoriz.png";
 import 'semantic-ui-css/semantic.css'
 
@@ -63,7 +63,7 @@ export const SignIn = () => {
                         <div>
                             <form onSubmit={handleLogin} >
                                 
-                                    <Form.Input email={""} placeholder='Email' name="email" icon='envelope outline' iconPosition='left' required /><br></br>
+                                    <Form.Input email={email} placeholder='Email' name="email" icon='envelope outline' iconPosition='left' required /><br></br>
                                     
                                 <Form.Button animated type="submit">
                                     <Button.Content visible>Sign In</Button.Content>

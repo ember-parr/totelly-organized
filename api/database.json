@@ -1,0 +1,83 @@
+{ 
+    "users": [
+        {
+            "firstName": "Ember",
+            "lastName": "Parr",
+            "phoneNumber": 6158150173,
+            "email": "ember@emberparr.com",
+            "lastFmUsername": "emberparr",
+            "darkMode": false,
+            "id": 1
+        }
+    ],
+    "items": [
+        {
+            "itemName": "iron",
+            "userId": 1,
+            "category": 1,
+            "location": 2,
+            "description": "steam iron",
+            "seasonal": "n/a",
+            "bin": "Laundry room, 3rd shelf",
+            "dateLastSearched": 1601409045668,
+            "id": 1
+        }
+    ],
+    "locations": [
+        {
+            "name": "Adams House",
+            "id": 1
+        }
+    ],
+    "categories": [
+        {
+            "name": "Small Applances",
+            "id": 1
+        }
+    ],
+    "sharedLocations": [
+        {
+            "locationId": 1,
+            "owner": 1,
+            "sharedUser": 2,
+            "id": 1
+        }
+    ],
+    "connectedUsers": [
+        {
+            "userOne": 1,
+            "userTwo": 2,
+            "status": "pending",
+            "id": 1
+        }
+    ],
+    "quickLinks": [
+        {
+            "userId": 1,
+            "name": "Pinterest Board",
+            "link": "www.pinterest.com/emberparr",
+            "id": 1
+        }
+    ],
+    "tasks": [
+        {
+            "userId": 1,
+            "assingedTo": 2,
+            "name": "Power wash driveway",
+            "details": "power wash driveway, porch & walkway",
+            "dueDate": 1601409045668,
+            "recurring": "Every 6 months",
+            "id": 1
+        }
+    ],
+    "notes": [
+        {
+            "userId": 1,
+            "name": "A/C filter",
+            "details": "the most recent order of air filters was awful quality. do not order again.",
+            "date": 1601409045668,
+            "editedDate": 0,
+            "id": 1
+        }
+    ]
+}

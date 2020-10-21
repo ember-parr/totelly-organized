@@ -74,7 +74,7 @@ export const SignIn = () => {
                         <div>
                             <form onSubmit={handleLogin} >
                                 
-                                    <Form.Input  onChange={handleInputChange} placeholder='Email' name="email" icon='envelope outline' iconPosition='left' value={values.email}required /><br></br>
+                                    <Form.Input  onChange={handleInputChange} placeholder='Email' name="email" icon='envelope outline' iconPosition='left' value={values.email} required /><br></br>
                                     
                                 <Form.Button animated type="submit">
                                     <Button.Content visible>Sign In</Button.Content>

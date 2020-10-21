@@ -24,6 +24,12 @@ export const ApplicationViews = (props) => {
             <ItemForm/>
           </Route>
         </ItemProvider>
+
+        <ItemProvider>
+          <Route exact path="/items/edit/:itemId(\d+)">
+            <ItemForm/>
+          </Route>
+        </ItemProvider>
   
       </>
     );

@@ -6,7 +6,7 @@ export const ItemTableRow = ({item}) => {
     const history = useHistory()
     return (
         <>
-       <Table.Row onClick ={()=> history.push(`/items/${item.id}/edit`)}>
+       <Table.Row onClick ={()=> history.push(`/items/edit/${item.id}`)}>
         <Table.Cell>{ item.itemName }</Table.Cell>
         <Table.Cell>{ item.location?.name }</Table.Cell>
         <Table.Cell>{ item?.room }</Table.Cell>

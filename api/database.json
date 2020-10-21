@@ -21,67 +21,28 @@
   ],
   "items": [
     {
-      "itemName": "iron",
-      "userId": 1,
-      "categoryId": 1,
-      "locationId": 1,
-      "description": "steam iron",
-      "room": "Laundry room",
-      "placement": "3rd shelf",
-      "dateLastSearched": 1601409045668,
-      "notes": "the one we got for christmas",
-      "lists": [],
-      "id": 1
-    },
-    {
-      "itemName": "ironing board",
-      "userId": 1,
-      "categoryId": 1,
-      "locationId": 2,
-      "description": "",
-      "room": "Laundry room",
-      "placement": "3rd shelf",
-      "dateLastSearched": 1601409045668,
-      "notes": "the one we got for christmas",
-      "lists": [],
-      "id": 2
-    },
-    {
-      "itemName": "Curtain Rod",
-      "description": "extra white rod 48\"",
-      "room": "",
-      "categoryId": 1,
-      "dateLastSearched": 1601409045668,
-      "lists": [],
-      "locationId": 2,
-      "placement": "",
-      "notes": "",
-      "userId": 1,
-      "id": 3
-    },
-    {
-      "itemName": "Command Hooks",
-      "description": "the little bitty ones",
-      "room": "closet",
-      "placement": "bottom shelf in a tonte",
-      "notes": "idk where the sticky part is",
+      "id": 1,
+      "itemName": "Iron",
+      "description": "Steamy One",
+      "room": "Laundry Room ",
+      "placement": "On shelf, with dust",
+      "notes": "Don't burn yourself again though...",
       "categoryId": 2,
       "locationId": 1,
       "dateLastSearched": 1601409045668,
-      "userId": 1,
-      "id": 4
+      "userId": 1
     },
     {
-      "itemName": "Bike Helmet",
-      "description": "aiden's helmet with mohawk hair",
-      "room": "outdoor closet",
-      "placement": "hook on the wall",
-      "notes": "might be too small now",
+      "id": 2,
+      "itemName": "Ironing Board",
+      "description": "the mini table top one",
+      "room": "Laundry Room",
+      "placement": "Hanging beside dryer",
+      "notes": "it wiggles. pretend it doesn't though. ",
       "categoryId": 2,
       "locationId": 1,
       "dateLastSearched": 1601409045668,
-      "userId": 1,
-      "id": 5
+      "userId": 1
     }
   ],
   "locations": [

@@ -14,9 +14,11 @@ export const ItemForm = () => {
 
     const handleControlledInputChange = (event) => {
         const newItem = { ...item }
+        
         newItem[event.target.name] = event.target.value
         setItem(newItem)
     }
+    
     const handleInputChange = e => {
         const {name, value} = e.target
         setValues({...values, [name]: value})
@@ -47,18 +49,21 @@ export const ItemForm = () => {
                     room: item.room,
                     placement: item.placement,
                     notes: item.notes,
-                    userId: parseInt(item.userId)
+                    categoryId: item.categoryId,
+                    locationId: item.locationId,
+                    dateLastSearched: 1601409045668,
+                    userId: parseInt(user)
                 })
-                .then(() => history.push(`/items/detail/${item.id}`))
+                .then(() => history.push(`/items`))
             }else {
                 addItem({
-                    itemName: values.itemName,
-                    description: values.description,
-                    room: values.room,
-                    placement: values.placement,
-                    notes: values.notes,
-                    categoryId: values.categoryId,
-                    locationId: values.locationId,
+                    itemName: item.itemName,
+                    description: item.description,
+                    room: item.room,
+                    placement: item.placement,
+                    notes: item.notes,
+                    categoryId: item.categoryId,
+                    locationId: item.locationId,
                     dateLastSearched: 1601409045668,
                     userId: parseInt(user)
                 })
@@ -72,17 +77,20 @@ export const ItemForm = () => {
         <div>
           <Grid.Column>
                         <Header>
-                            <h2>Add New Item</h2>
+                            <h2>{itemId ? `Update ${item.itemName}` : "Add New Item"}</h2>
                         </Header>
                         <div>
                         <form >
-                          <Grid.Row><Form.Input onChange={handleInputChange} name="itemName" icon='hand point up outline' iconPosition='left' placeholder='Name of Item' size='large' value={values.itemName}/> </Grid.Row> <br/>
-                          <Grid.Row><Form.Input onChange={handleInputChange} name="description" icon='hand peace outline' iconPosition='left' placeholder='Description' size='large' value={values.description}/> </Grid.Row><br/>
-                          <Grid.Row><Form.Input onChange={handleInputChange} name="room" icon='envelope outline' iconPosition='left' placeholder='Room' size='large' value={values.room}/> </Grid.Row><br/>
-                          <Grid.Row><Form.Input onChange={handleInputChange} name="placement" icon='mobile alternate' iconPosition='left' placeholder='Placement' size='large' value={values.placement}/> </Grid.Row> <br/>
-                          <Grid.Row><Form.Input onChange={handleInputChange} name="notes" icon='mobile alternate' iconPosition='left' placeholder='Notes' size='large' value={values.notes}/> </Grid.Row> <br/>
-                          <Grid.Row><Form.Button animated onClick={constructItemObject}>
-                              <Button.Content visible>Register</Button.Content>
+                          <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="itemName" icon='hand point up outline' iconPosition='left' placeholder='Name of Item' size='large' defaultValue={item.itemName} /> </Grid.Row> <br/>
+                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="description" icon='hand peace outline' iconPosition='left' placeholder='Description' size='large' value={item.description}/> </Grid.Row><br/>
+                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="room" icon='envelope outline' iconPosition='left' placeholder='Room' size='large' value={item.room}/> </Grid.Row><br/>
+                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="placement" icon='mobile alternate' iconPosition='left' placeholder='Placement' size='large' value={item.placement}/> </Grid.Row> <br/>
+                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="notes" icon='mobile alternate' iconPosition='left' placeholder='Notes' size='large' value={item.notes}/> </Grid.Row> <br/>
+                          <Grid.Row><Form.Button animated disabled={isLoading} onClick={event=> {
+                              event.preventDefault() 
+                              constructItemObject()
+                              }}>
+                              <Button.Content visible>{itemId ? "Save Changes" : "Add Item"}</Button.Content>
                               <Button.Content hidden>
                                   <Icon name='arrow right' />
                               </Button.Content>

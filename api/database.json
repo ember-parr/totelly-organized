@@ -14,12 +14,14 @@
         {
             "itemName": "iron",
             "userId": 1,
-            "category": 1,
-            "location": 2,
+            "categoryId": 1,
+            "locationId": 2,
             "description": "steam iron",
-            "seasonal": "n/a",
             "bin": "Laundry room, 3rd shelf",
             "dateLastSearched": 1601409045668,
+            "sharedItemId": [2, 13],
+            "notes": "the one we got for christmas",
+            "lists": [],
             "id": 1
         }
     ],
@@ -38,45 +40,25 @@
     "sharedLocations": [
         {
             "locationId": 1,
-            "owner": 1,
-            "sharedUser": 2,
+            "connectedUsersId": 2,
             "id": 1
         }
     ],
     "connectedUsers": [
         {
-            "userOne": 1,
-            "userTwo": 2,
-            "status": "pending",
+            "userId": 1,
+            "connectedUserId": 2,
+            "status": false,
             "id": 1
         }
     ],
-    "quickLinks": [
+    "lists": [
         {
             "userId": 1,
-            "name": "Pinterest Board",
-            "link": "www.pinterest.com/emberparr",
-            "id": 1
-        }
-    ],
-    "tasks": [
-        {
-            "userId": 1,
-            "assingedTo": 2,
-            "name": "Power wash driveway",
-            "details": "power wash driveway, porch & walkway",
-            "dueDate": 1601409045668,
-            "recurring": "Every 6 months",
-            "id": 1
-        }
-    ],
-    "notes": [
-        {
-            "userId": 1,
-            "name": "A/C filter",
+            "name": "Take To Goodwill",
             "details": "the most recent order of air filters was awful quality. do not order again.",
             "date": 1601409045668,
-            "editedDate": 0,
+            "items": [4, 21, 16],
             "id": 1
         }
     ]

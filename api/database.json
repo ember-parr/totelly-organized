@@ -26,12 +26,9 @@
         "categoryId": 1,
         "locationId": 1,
         "description": "steam iron",
-        "bin": "Laundry room, 3rd shelf",
+        "room": "Laundry room",
+        "placement": "3rd shelf",
         "dateLastSearched": 1601409045668,
-        "sharedItemId": [
-          2,
-          13
-        ],
         "notes": "the one we got for christmas",
         "lists": [],
         "id": 1
@@ -42,12 +39,9 @@
           "categoryId": 1,
           "locationId": 2,
           "description": "",
-          "bin": "Laundry room, 3rd shelf",
+          "room": "Laundry room",
+          "placement": "3rd shelf",
           "dateLastSearched": 1601409045668,
-          "sharedItemId": [
-            2,
-            13
-          ],
           "notes": "the one we got for christmas",
           "lists": [],
           "id": 2

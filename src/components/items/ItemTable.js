@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react"
 import {ItemContext} from './ItemProvider'
 import { ItemTableRow } from './ItemTableRow'
 import { useHistory } from 'react-router-dom'
+import { Table } from "semantic-ui-react"
 
 
 export const ItemTable = () => {
@@ -26,11 +27,32 @@ export const ItemTable = () => {
     return (
         <>
         <button onClick={() => domHistory.push("/items/add")}>New Item</button>
-        <div className="items">
-            {filteredItems.map(item => {
+        
+        <Table celled selectable collapsing>
+            <Table.Header>
+                <Table.Row>
+                    <Table.HeaderCell>Item Name</Table.HeaderCell>
+                    <Table.HeaderCell>Location</Table.HeaderCell>
+                    <Table.HeaderCell>Room</Table.HeaderCell>
+                    <Table.HeaderCell>Placement</Table.HeaderCell>
+                    <Table.HeaderCell>Category</Table.HeaderCell>
+                    <Table.HeaderCell>Details</Table.HeaderCell>
+                </Table.Row>
+                </Table.Header>
+
+        
+        <Table.Body>
+        {filteredItems.map(item => {
                 return <ItemTableRow key={item.id} item={item} />
             })}
-        </div>
+
+        </Table.Body>
+        </Table>
+        
+        
+        
+        
+        
 
         </>
     )

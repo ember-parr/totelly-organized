@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from "react"
 import {ItemContext} from './ItemProvider'
 import { ItemTableRow } from './ItemTableRow'

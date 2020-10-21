@@ -8,11 +8,11 @@ export const ItemTableRow = ({item}) => {
         <>
        <Table.Row onClick ={()=> history.push(`/items/${item.id}/edit`)}>
         <Table.Cell>{ item.itemName }</Table.Cell>
-        <Table.Cell>{ item.location.name }</Table.Cell>
-        <Table.Cell>{ item.room }</Table.Cell>
-        <Table.Cell>{ item.placement }</Table.Cell>
-        <Table.Cell>{ item.category.name }</Table.Cell>
-        <Table.Cell>{ item.description }</Table.Cell>
+        <Table.Cell>{ item.location?.name }</Table.Cell>
+        <Table.Cell>{ item?.room }</Table.Cell>
+        <Table.Cell>{ item?.placement }</Table.Cell>
+        <Table.Cell>{ item.category?.name }</Table.Cell>
+        <Table.Cell>{ item?.description }</Table.Cell>
      </Table.Row>
      </>
 

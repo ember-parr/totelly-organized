@@ -3,10 +3,10 @@ import { useHistory } from 'react-router-dom'
 import { Table } from 'semantic-ui-react'
 
 export const ItemTableRow = ({item}) => {
-    const domHistory = useHistory()
+    const history = useHistory()
     return (
         <>
-       <Table.Row>
+       <Table.Row onClick ={()=> history.push(`/items/${item.id}/edit`)}>
         <Table.Cell>{ item.itemName }</Table.Cell>
         <Table.Cell>{ item.location.name }</Table.Cell>
         <Table.Cell>{ item.room }</Table.Cell>

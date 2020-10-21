@@ -1,81 +1,101 @@
 {
-  "users": [
-    {
-      "firstName": "Ember",
-      "lastName": "Parr",
-      "phoneNumber": 6158150173,
-      "email": "ember@emberparr.com",
-      "lastFmUsername": "emberparr",
-      "darkMode": false,
-      "id": 1
-    },
-    {
-      "email": "justin@home.com",
-      "firstName": "Justin",
-      "lastName": "Adams",
-      "phoneNumber": "6148745147",
-      "darkMode": false,
-      "lastFmUsername": "",
-      "id": 2
-    }
-  ],
-  "items": [
-    {
-      "itemName": "iron",
-      "userId": 1,
-      "categoryId": 1,
-      "locationId": 2,
-      "description": "steam iron",
-      "bin": "Laundry room, 3rd shelf",
-      "dateLastSearched": 1601409045668,
-      "sharedItemId": [
-        2,
-        13
-      ],
-      "notes": "the one we got for christmas",
-      "lists": [],
-      "id": 1
-    }
-  ],
-  "locations": [
-    {
-      "name": "Adams House",
-      "id": 1
-    }
-  ],
-  "categories": [
-    {
-      "name": "Small Applances",
-      "id": 1
-    }
-  ],
-  "sharedLocations": [
-    {
-      "locationId": 1,
-      "connectedUsersId": 2,
-      "id": 1
-    }
-  ],
-  "connectedUsers": [
-    {
-      "userId": 1,
-      "connectedUserId": 2,
-      "status": false,
-      "id": 1
-    }
-  ],
-  "lists": [
-    {
-      "userId": 1,
-      "name": "Take To Goodwill",
-      "details": "the most recent order of air filters was awful quality. do not order again.",
-      "date": 1601409045668,
-      "items": [
-        4,
-        21,
-        16
-      ],
-      "id": 1
-    }
-  ]
-}
+    "users": [
+      {
+        "firstName": "Ember",
+        "lastName": "Parr",
+        "phoneNumber": 6158150173,
+        "email": "ember@emberparr.com",
+        "lastFmUsername": "emberparr",
+        "darkMode": false,
+        "id": 1
+      },
+      {
+        "email": "justin@home.com",
+        "firstName": "Justin",
+        "lastName": "Adams",
+        "phoneNumber": "6148745147",
+        "darkMode": false,
+        "lastFmUsername": "",
+        "id": 2
+      }
+    ],
+    "items": [
+      {
+        "itemName": "iron",
+        "userId": 1,
+        "categoryId": 1,
+        "locationId": 1,
+        "description": "steam iron",
+        "bin": "Laundry room, 3rd shelf",
+        "dateLastSearched": 1601409045668,
+        "sharedItemId": [
+          2,
+          13
+        ],
+        "notes": "the one we got for christmas",
+        "lists": [],
+        "id": 1
+      },
+      {
+          "itemName": "ironing board",
+          "userId": 1,
+          "categoryId": 1,
+          "locationId": 2,
+          "description": "",
+          "bin": "Laundry room, 3rd shelf",
+          "dateLastSearched": 1601409045668,
+          "sharedItemId": [
+            2,
+            13
+          ],
+          "notes": "the one we got for christmas",
+          "lists": [],
+          "id": 2
+        }
+    ],
+    "locations": [
+      {
+        "name": "Adams House",
+        "id": 1
+      },
+      {
+          "name": "Storage Unit",
+          "id": 2
+        }
+    ],
+    "categories": [
+      {
+        "name": "Small Applances",
+        "id": 1
+      }
+    ],
+    "sharedLocations": [
+      {
+        "locationId": 1,
+        "connectedUsersId": 2,
+        "id": 1
+      }
+    ],
+    "connectedUsers": [
+      {
+        "userId": 1,
+        "connectedUserId": 2,
+        "status": false,
+        "id": 1
+      }
+    ],
+    "lists": [
+      {
+        "userId": 1,
+        "name": "Take To Goodwill",
+        "details": "the most recent order of air filters was awful quality. do not order again.",
+        "date": 1601409045668,
+        "items": [
+          4,
+          21,
+          16
+        ],
+        "id": 1
+      }
+    ]
+  }

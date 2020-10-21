@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Button, Grid, Header, Icon, Segment, Image, Input, Modal, Form } from 'semantic-ui-react'
+import { Button, Grid, Header, Icon, Segment, Image, Modal, Form } from 'semantic-ui-react'
 import horizLogo from "../../images/LLogoHoriz.png";
 //import "./Login.css";
 

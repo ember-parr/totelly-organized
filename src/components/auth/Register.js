@@ -1,36 +1,45 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Button, Grid, Header, Icon, Segment, Image, Input, Modal } from 'semantic-ui-react'
+import { Button, Grid, Header, Icon, Segment, Image, Modal, Form } from 'semantic-ui-react'
 import horizLogo from "../../images/LLogoHoriz.png";
 //import "./Login.css";
 
-export const Register = (props) => {
-  const firstName = useRef();
-  const lastName = useRef();
-  const email = useRef();
-  const history = useHistory();
-  const [open, setOpen] = React.useState(false)
+export const Register = () => {
+  const history = useHistory()
 
-  const existingUserCheck = () => {
-    return fetch(`http://localhost:8088/users?email=${email.current?.value}`)
-      .then((res) => res.json())
-      .then((user) => !!user.length);
-  };
+    //sets state for 'email is already used' modal 
+    const [open, setOpen] = React.useState(false)
+    
+    //deals with input change of email field
+    const handleInputChange = e => {
+        const {name, value} = e.target
+        setValues({...values, [name]: value})
+    }
+
+    //checks that user exists in the database
+    const existingUserCheck = (email) => {
+        return fetch(`http://localhost:8088/users?email=${email}`)
+            .then(res => res.json())
+            .then(user => user.length ? user[0] : false)
+    }
 
   const handleRegister = (e) => {
     e.preventDefault();
 
-    existingUserCheck().then((userExists) => {
-      if (!userExists) {
+    existingUserCheck(values.email).then((userExists) => {
+      if (!userExists && values.email !== '') {
         fetch("http://localhost:8088/users", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            email: email.current.value,
-            firstName: firstName.current.value,
-            lastName: lastName.current.value,
+            email: values.email,
+            firstName: values.firstName,
+            lastName: values.lastName,
+            phoneNumber: values.phoneNumber,
+            darkMode: false,
+            lastFmUsername: ""
           }),
         })
           .then((_) => _.json())
@@ -46,14 +55,17 @@ export const Register = (props) => {
     });
   };
 
+  const [values, setValues] = useState({email: '', firstName: '', lastName: '', phoneNumber: 0})
+
   return (
+    <>
     
     <main style={{ textAlign: "center" }}>
     <Modal centered={false} open={open} onClose={() => setOpen(false)} onOpen={() => setOpen(true)} >
             <Modal.Header>Whoops!</Modal.Header>
             <Modal.Content>
                 <Modal.Description>
-                    This email does not exist. Please try again or register a new account. 
+                    This email is already used for a Totelly Organized Account. Please try again or login to your account. 
                 </Modal.Description>
             </Modal.Content>
             <Modal.Actions>
@@ -73,19 +85,22 @@ export const Register = (props) => {
                             <h2>Register</h2>
                         </Header>
                         <div>
-                        <Grid.Row><Input icon='hand point up outline' iconPosition='left' placeholder='First Name' size='large' /> </Grid.Row> <br/>
-                        <Grid.Row><Input icon='hand peace outline' iconPosition='left' placeholder='Last Name' size='large' /> </Grid.Row><br/>
-                        <Grid.Row><Input icon='envelope outline' iconPosition='left' placeholder='Email (used to login)' size='large' /> </Grid.Row><br/>
-                        <Grid.Row><Input icon='mobile alternate' iconPosition='left' placeholder='Phone Number' size='large' /> </Grid.Row> <br/>
-                        <Grid.Row><Button animated onClick={handleRegister}>
-                            <Button.Content visible>Register</Button.Content>
-                            <Button.Content hidden>
-                                <Icon name='arrow right' />
-                            </Button.Content>
-                        </Button></Grid.Row>
+                        <form onSubmit={handleRegister} >
+                          <Grid.Row><Form.Input onChange={handleInputChange} name="firstName" icon='hand point up outline' iconPosition='left' placeholder='First Name' size='large' value={values.firstName}/> </Grid.Row> <br/>
+                          <Grid.Row><Form.Input onChange={handleInputChange} name="lastName" icon='hand peace outline' iconPosition='left' placeholder='Last Name' size='large' value={values.lastName}/> </Grid.Row><br/>
+                          <Grid.Row><Form.Input onChange={handleInputChange} name="email" icon='envelope outline' iconPosition='left' placeholder='Email (used to login)' size='large' value={values.email}/> </Grid.Row><br/>
+                          <Grid.Row><Form.Input onChange={handleInputChange} name="phoneNumber" icon='mobile alternate' iconPosition='left' placeholder='Phone Number' size='large' value={values.phoneNumber}/> </Grid.Row> <br/>
+                          <Grid.Row><Form.Button animated onClick={handleRegister}>
+                              <Button.Content visible>Register</Button.Content>
+                              <Button.Content hidden>
+                                  <Icon name='arrow right' />
+                              </Button.Content>
+                          </Form.Button></Grid.Row>
+                          </form>
                         </div>
                     </Grid.Column>
     </main>
+    </>
   );
 };
 

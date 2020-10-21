@@ -43,6 +43,66 @@
       "locationId": 1,
       "dateLastSearched": 1601409045668,
       "userId": 1
+    },
+    {
+      "id": 3,
+      "itemName": "Glasses Wipes",
+      "description": "Individually Wrapped",
+      "room": "Home Office",
+      "placement": "2nd Drawer",
+      "notes": "They say anti-smudge... they lied. ",
+      "categoryId": 2,
+      "locationId": 1,
+      "dateLastSearched": 1601409045668,
+      "userId": 1
+    },
+    {
+      "itemName": "Macbook Pro Charger",
+      "description": "MagSafe",
+      "room": "Kids Room",
+      "placement": "Closet, Tech Bin",
+      "notes": "old school charger",
+      "categoryId": 2,
+      "locationId": 1,
+      "dateLastSearched": 1601409045668,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "itemName": "Index Cards",
+      "description": "blank on both sides",
+      "room": "Home Office",
+      "placement": "School Supply Bin",
+      "notes": "roughly fifty million packs",
+      "categoryId": 2,
+      "locationId": 1,
+      "dateLastSearched": 1601409045668,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "itemName": "Brown Bags",
+      "description": "Lunch Sacks",
+      "room": "Kitchen",
+      "placement": "consumables bin",
+      "notes": "not for drugs",
+      "categoryId": 2,
+      "locationId": 1,
+      "dateLastSearched": 1601409045668,
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "itemName": "GoSund smart plugs",
+      "description": "the ones that hate IFTTT",
+      "room": "living room",
+      "placement": "Smart Home Gadget Bin",
+      "notes": "these kinda suck",
+      "categoryId": 2,
+      "locationId": 1,
+      "dateLastSearched": 1601409045668,
+      "userId": 1,
+      "id": 7
     }
   ],
   "locations": [

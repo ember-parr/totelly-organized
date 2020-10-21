@@ -62,8 +62,8 @@ export const ItemForm = () => {
                     room: item.room,
                     placement: item.placement,
                     notes: item.notes,
-                    categoryId: item.categoryId,
-                    locationId: item.locationId,
+                    categoryId: 2,
+                    locationId: 1,
                     dateLastSearched: 1601409045668,
                     userId: parseInt(user)
                 })
@@ -82,10 +82,10 @@ export const ItemForm = () => {
                         <div>
                         <form >
                           <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="itemName" icon='hand point up outline' iconPosition='left' placeholder='Name of Item' size='large' defaultValue={item.itemName} /> </Grid.Row> <br/>
-                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="description" icon='hand peace outline' iconPosition='left' placeholder='Description' size='large' value={item.description}/> </Grid.Row><br/>
-                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="room" icon='envelope outline' iconPosition='left' placeholder='Room' size='large' value={item.room}/> </Grid.Row><br/>
-                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="placement" icon='mobile alternate' iconPosition='left' placeholder='Placement' size='large' value={item.placement}/> </Grid.Row> <br/>
-                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="notes" icon='mobile alternate' iconPosition='left' placeholder='Notes' size='large' value={item.notes}/> </Grid.Row> <br/>
+                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="description" icon='hand peace outline' iconPosition='left' placeholder='Description' size='large' defaultValue={item.description}/> </Grid.Row><br/>
+                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="room" icon='envelope outline' iconPosition='left' placeholder='Room' size='large' defaultValue={item.room}/> </Grid.Row><br/>
+                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="placement" icon='mobile alternate' iconPosition='left' placeholder='Placement' size='large' defaultValue={item.placement}/> </Grid.Row> <br/>
+                          <Grid.Row><Form.Input onChange={handleControlledInputChange} name="notes" icon='mobile alternate' iconPosition='left' placeholder='Notes' size='large' defaultValue={item.notes}/> </Grid.Row> <br/>
                           <Grid.Row><Form.Button animated disabled={isLoading} onClick={event=> {
                               event.preventDefault() 
                               constructItemObject()

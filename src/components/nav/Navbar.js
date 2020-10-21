@@ -1,60 +1,76 @@
-import React, { Component } from 'react'
-import { Icon, Menu } from 'semantic-ui-react'
+import React from 'react'
+import { Header, Icon, Image, Menu, Segment, Sidebar, Grid, Button, Rail} from 'semantic-ui-react'
 
 
-export default class SidebarNavigation extends Component {
-    state = { activeItem: 'home' }
-  
-    handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-  
-    render() {
-      const { activeItem } = this.state
-  
+
+function exampleReducer(state, action) {
+  switch (action.type) {
+    case 'CHANGE_ANIMATION':
+      return { ...state, animation: action.animation, visible: !state.visible }
+    case 'CHANGE_DIMMED':
+      return { ...state, dimmed: action.dimmed }
+    case 'CHANGE_DIRECTION':
+      return { ...state, direction: action.direction, visible: false }
+    default:
+      throw new Error()
+  }
+}
+export const SidebarNavigation = () => {
+  const [state, dispatch] = React.useReducer(exampleReducer, {
+    animation: 'overlay',
+    direction: 'left',
+    dimmed: false,
+    visible: false,
+  })
+
+  const { animation, dimmed, direction, visible } = state
+  const vertical = direction === 'bottom' || direction === 'top'
+
       return (
-        <Menu icon vertical>
-          <Menu.Item
-            name='home'
-            active={activeItem === 'home'}
-            onClick={this.handleItemClick}
-          >
-            <Icon name='home' />
-          </Menu.Item>
+        <>
+        <Button
+        onClick={() =>
+          dispatch({ type: 'CHANGE_ANIMATION', animation: 'push' })
+        }
+      >
+        Menu
+      </Button>
+
+
+
+     
+      <Sidebar
+    as={Menu}
+    animation={animation}
+    direction={direction}
+    icon='labeled'
+    inverted
+    vertical
+    visible={visible}
+    width='thin'
+  >
+      <Menu.Item as='a'>
+        <Icon name='home' />
+        Home
+      </Menu.Item>
+      <Menu.Item as='a'>
+        <Icon name='gamepad' />
+        Games
+      </Menu.Item>
+      <Menu.Item as='a'>
+        <Icon name='camera' />
+        Channels
+      </Menu.Item>
+    </Sidebar>
+
+    
   
-          <Menu.Item
-            name='unordered list'
-            active={activeItem === 'unordered list'}
-            onClick={this.handleItemClick}
-          >
-            <Icon name='unordered list' />
-          </Menu.Item>
-  
-          <Menu.Item
-            name='pencil alternate'
-            active={activeItem === 'pencil alternate'}
-            onClick={this.handleItemClick}
-          >
-            <Icon name='pencil alternate' />
-          </Menu.Item>
-
-          <Menu.Item
-            name='users'
-            active={activeItem === 'users'}
-            onClick={this.handleItemClick}
-          >
-            <Icon name='users' />
-          </Menu.Item>
-
-          <Menu.Item
-            name='checked calendar'
-            active={activeItem === 'checked calendar'}
-            onClick={this.handleItemClick}
-          >
-            <Icon name='checked calendar' />
-          </Menu.Item>
 
 
-        </Menu>
+
+
+    </>
+      
       )
-    }
   }
   

@@ -6,25 +6,27 @@ import 'semantic-ui-css/semantic.css'
 
 
 export const SignIn = () => {
-    // const [email, setEmail] = React.useState("")
     const history = useHistory()
 
+    //sets state for 'invalid email' modal 
     const [open, setOpen] = React.useState(false)
+    
+    //deals with input change of email field
+    const handleInputChange = e => {
+        const {name, value} = e.target
+        setValues({...values, [name]: value})
+    }
 
+    //checks that user exists in the database
     const existingUserCheck = (email) => {
         return fetch(`http://localhost:8088/users?email=${email}`)
             .then(res => res.json())
             .then(user => user.length ? user[0] : false)
     }
 
-    const handleInputChange = e => {
-        const {name, value} = e.target
-        setValues({...values, [name]: value})
-    }
-
+    //logs the user into the application
     const handleLogin = (e) => {
         e.preventDefault()
-
         existingUserCheck(values.email)
             .then(exists => {
                 if (exists) {
@@ -36,7 +38,11 @@ export const SignIn = () => {
                 }
             })
     }
+
+    //sets initial state for values
     const [values, setValues] = useState({email: ''})
+
+    //returns a login form on the dom with header image & register for new acct button
     return (
         <>
         <Modal centered={false} open={open} onClose={() => setOpen(false)} onOpen={() => setOpen(true)} >

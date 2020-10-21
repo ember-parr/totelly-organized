@@ -1,12 +1,15 @@
 import React from 'react'
-import { Header, Icon, Image, Menu, Segment, Sidebar, Grid, Button, Rail} from 'semantic-ui-react'
-
-
+import { Icon, Menu } from 'semantic-ui-react'
+import { useHistory } from "react-router-dom";
 
 function exampleReducer(state, action) {
   switch (action.type) {
-    case 'CHANGE_ANIMATION':
-      return { ...state, animation: action.animation, visible: !state.visible }
+    case 'SHOW_ANIMATION':
+      return { ...state, animation: action.animation, visible: true}
+    case 'HIDE_ANIMATION':
+        return { ...state, animation: action.animation, visible: false }  
+    case 'ICON_CLICKED':
+        return { ...state, color: "teal", active: true}
     case 'CHANGE_DIMMED':
       return { ...state, dimmed: action.dimmed }
     case 'CHANGE_DIRECTION':
@@ -15,62 +18,47 @@ function exampleReducer(state, action) {
       throw new Error()
   }
 }
-export const SidebarNavigation = () => {
-  const [state, dispatch] = React.useReducer(exampleReducer, {
-    animation: 'overlay',
-    direction: 'left',
-    dimmed: false,
-    visible: false,
-  })
-
-  const { animation, dimmed, direction, visible } = state
-  const vertical = direction === 'bottom' || direction === 'top'
-
-      return (
-        <>
-        <Button
-        onClick={() =>
-          dispatch({ type: 'CHANGE_ANIMATION', animation: 'push' })
-        }
-      >
-        Menu
-      </Button>
 
 
+  export const SidebarNavitation = () => {
 
-     
-      <Sidebar
-    as={Menu}
-    animation={animation}
-    direction={direction}
-    icon='labeled'
-    inverted
-    vertical
-    visible={visible}
-    width='thin'
-  >
-      <Menu.Item as='a'>
-        <Icon name='home' />
-        Home
-      </Menu.Item>
-      <Menu.Item as='a'>
-        <Icon name='gamepad' />
-        Games
-      </Menu.Item>
-      <Menu.Item as='a'>
-        <Icon name='camera' />
-        Channels
-      </Menu.Item>
-    </Sidebar>
-
+    const [state ] = React.useReducer(exampleReducer, {
+      animation: 'show',
+      direction: "left",
+      dimmed: false,
+      visible: false,
+      color: 'grey'
+    })
+    const { color } = state
     
-  
+    const history=useHistory()
 
-
-
-
-    </>
-      
-      )
+    return (
+      <>
+  <Menu.Item as='a' onClick={() => history.push("/")} >
+            <Icon name='home' />
+            Home
+          </Menu.Item>
+          <Menu.Item as='a' onClick={() => history.push("/items")}>
+            <Icon name='list alternate outline' color={color} />
+            Items
+          </Menu.Item>
+          <Menu.Item as='a' onClick={() => history.push("/locations")}>
+            <Icon name='map outline' color={color} />
+            Locations
+          </Menu.Item>
+          <Menu.Item as='a' onClick={() => history.push("/lists")}>
+            <Icon name='tags' color={color} />
+            My Lists
+          </Menu.Item>
+          <Menu.Item as='a' onClick={() => history.push("/users")}>
+            <Icon name='users' color={color} />
+            Connected Users
+          </Menu.Item>
+          <Menu.Item as='a' onClick={() => history.push("/settings")}>
+            <Icon name='setting' color={color} />
+            Settings
+          </Menu.Item>
+      </>
+    )
   }
-  

@@ -3,7 +3,7 @@ import logo from "../../images/Logo.png";
 
 export const Home = () => (
   <div className="text-center mt-5">
-    <img src={logo} />
+    <img src={logo} alt="totelly organized logo"/>
     <h1 className="display-3" style={{ color: "#def2f1" }}>
       Welcome
     </h1>

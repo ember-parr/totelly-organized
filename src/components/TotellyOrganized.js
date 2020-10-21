@@ -4,16 +4,19 @@ import { SignIn } from "./auth/SignIn";
 import { Register } from "./auth/Register";
 import { Route, Redirect } from "react-router-dom";
 import { Footer } from "./nav/Footer";
-import {  Icon, Menu, Segment, Sidebar, Button, Grid, Image, Header } from 'semantic-ui-react'
+import {  Menu, Segment, Sidebar } from 'semantic-ui-react'
+import { SidebarNavitation } from "./nav/Navbar";
 
 
 //function to enable sliding content 
 function exampleReducer(state, action) {
   switch (action.type) {
     case 'SHOW_ANIMATION':
-      return { ...state, animation: action.animation, visible: true }
+      return { ...state, animation: action.animation, visible: true}
     case 'HIDE_ANIMATION':
         return { ...state, animation: action.animation, visible: false }  
+    case 'ICON_CLICKED':
+        return { ...state, color: "teal", active: true}
     case 'CHANGE_DIMMED':
       return { ...state, dimmed: action.dimmed }
     case 'CHANGE_DIRECTION':
@@ -25,15 +28,15 @@ function exampleReducer(state, action) {
 
 //whole page render
 export const TotellyOrganized = () => {
-  const [state, dispatch] = React.useReducer(exampleReducer, {
-    animation: 'overlay',
-    direction: 'left',
+  const [state ] = React.useReducer(exampleReducer, {
+    animation: 'show',
+    direction: "left",
     dimmed: false,
     visible: false,
+    color: 'grey'
   })
-  const { animation, dimmed, direction, visible } = state
-  
-  
+  const { dimmed, visible, } = state
+   
   return (
   <>
     <Route
@@ -41,25 +44,11 @@ export const TotellyOrganized = () => {
         if (localStorage.getItem("user")) {
           return (
             <>
-              <Button onMouseOver={() => dispatch({ type: 'SHOW_ANIMATION', animation: 'push' })} onMouseOut={() => dispatch({ type: 'HIDE_ANIMATION', animation: 'push' })}> Menu </Button>
-
-
+ 
       <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }}>
-        <Sidebar as={Menu} animation={animation} direction={direction} icon='labeled' vertical visible={visible} width='thin' >
-          <Menu.Item as='a'>
-            <Icon name='home' />
-            Home
-          </Menu.Item>
-          <Menu.Item as='a'>
-            <Icon name='gamepad' />
-            Games
-          </Menu.Item>
-          <Menu.Item as='a'>
-            <Icon name='camera' />
-            Channels
-          </Menu.Item>
-        </Sidebar>
-
+      <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible  >
+            <SidebarNavitation />
+      </Sidebar>
       <Sidebar.Pusher dimmed={dimmed && visible}>
         <Segment basic>
           

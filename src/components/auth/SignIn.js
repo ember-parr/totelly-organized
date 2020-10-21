@@ -1,4 +1,4 @@
-import React  from "react";
+import React, {useState}  from "react";
 import { useHistory } from "react-router-dom";
 import { Button, Form, Divider, Grid, Header, Icon, Segment, Image, Modal } from 'semantic-ui-react'
 import horizLogo from "../../images/LLogoHoriz.png";
@@ -6,32 +6,43 @@ import 'semantic-ui-css/semantic.css'
 
 
 export const SignIn = () => {
-    const email = React.useState()
     const history = useHistory()
 
+    //sets state for 'invalid email' modal 
     const [open, setOpen] = React.useState(false)
+    
+    //deals with input change of email field
+    const handleInputChange = e => {
+        const {name, value} = e.target
+        setValues({...values, [name]: value})
+    }
 
-    const existingUserCheck = () => {
-        return fetch(`http://localhost:8088/users?email=${email.current?.value}`)
+    //checks that user exists in the database
+    const existingUserCheck = (email) => {
+        return fetch(`http://localhost:8088/users?email=${email}`)
             .then(res => res.json())
             .then(user => user.length ? user[0] : false)
     }
 
+    //logs the user into the application
     const handleLogin = (e) => {
         e.preventDefault()
-
-        existingUserCheck()
+        existingUserCheck(values.email)
             .then(exists => {
                 if (exists) {
                     localStorage.setItem("user", exists.id)
                     history.push("/")
                 } else {
                     setOpen(true)
-                    console.log(email)
+                    console.log("email: ", values.email)
                 }
             })
     }
 
+    //sets initial state for values
+    const [values, setValues] = useState({email: ''})
+
+    //returns a login form on the dom with header image & register for new acct button
     return (
         <>
         <Modal centered={false} open={open} onClose={() => setOpen(false)} onOpen={() => setOpen(true)} >
@@ -63,7 +74,7 @@ export const SignIn = () => {
                         <div>
                             <form onSubmit={handleLogin} >
                                 
-                                    <Form.Input email={email} placeholder='Email' name="email" icon='envelope outline' iconPosition='left' required /><br></br>
+                                    <Form.Input  onChange={handleInputChange} placeholder='Email' name="email" icon='envelope outline' iconPosition='left' value={values.email}required /><br></br>
                                     
                                 <Form.Button animated type="submit">
                                     <Button.Content visible>Sign In</Button.Content>

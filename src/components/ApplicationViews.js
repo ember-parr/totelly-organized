@@ -4,6 +4,7 @@ import { Home } from "./home/Home";
 import {ItemProvider} from "./items/ItemProvider";
 import {ItemTable} from "./items/ItemTable"
 import {ItemForm} from "./items/ItemForm"
+import { CategoryProvider } from "./categories/CategoryProvider";
 
 export const ApplicationViews = (props) => {
     return (
@@ -20,15 +21,19 @@ export const ApplicationViews = (props) => {
         </ItemProvider>
 
         <ItemProvider>
-          <Route exact path="/items/add">
-            <ItemForm/>
-          </Route>
+          <CategoryProvider>
+            <Route exact path="/items/add">
+              <ItemForm/>
+            </Route>
+          </CategoryProvider>
         </ItemProvider>
 
         <ItemProvider>
+          <CategoryProvider>
           <Route exact path="/items/edit/:itemId(\d+)">
             <ItemForm/>
           </Route>
+          </CategoryProvider>
         </ItemProvider>
   
       </>

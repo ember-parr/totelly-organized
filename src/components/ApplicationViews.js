@@ -9,6 +9,7 @@ import { CategoryProvider } from "./categories/CategoryProvider";
 export const ApplicationViews = (props) => {
     return (
       <>
+      <section class="pageContent">
         {/* Render the location list when http://localhost:3000/ */}
         <Route exact path="/">
           <Home />
@@ -35,7 +36,7 @@ export const ApplicationViews = (props) => {
           </Route>
           </CategoryProvider>
         </ItemProvider>
-  
+        </section>
       </>
     );
   };

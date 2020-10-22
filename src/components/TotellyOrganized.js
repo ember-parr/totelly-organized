@@ -40,18 +40,19 @@ export const TotellyOrganized = () => {
    
   return (
   <>
-  <main class="content">
+  <main >
+    <section class="pageContent">
     <Route
       render={() => {
         if (localStorage.getItem("user")) {
           return (
             <>
-              <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }} class="content">
+              <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }} >
               <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible  >
                 <SidebarNavitation />
               </Sidebar>
               <Sidebar.Pusher dimmed={dimmed && visible}>
-                <Segment basic>
+                <Segment basic >
                   <ApplicationViews />
                   <Footer/>
                 </Segment>
@@ -59,11 +60,11 @@ export const TotellyOrganized = () => {
               </Sidebar.Pushable>
             </>
 );
-      } else {
-        return <Redirect to="/login" />;
-      }
-    }}
-    />  
+} else {
+  return <Redirect to="/login" />;
+}
+}}
+/>  
     <Route path="/login">
       <SignIn />
     </Route>
@@ -71,6 +72,7 @@ export const TotellyOrganized = () => {
     <Route path="/register">
       <Register />
     </Route>
+</section>
     </main>
   </>
   )

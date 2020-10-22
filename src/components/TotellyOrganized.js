@@ -47,8 +47,8 @@ export const TotellyOrganized = () => {
         if (localStorage.getItem("user")) {
           return (
             <>
-              <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }} >
-              <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible  >
+              <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }} class="customSidebar" >
+              <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible class="customSidebar" >
                 <SidebarNavitation />
               </Sidebar>
               <Sidebar.Pusher dimmed={dimmed && visible}>

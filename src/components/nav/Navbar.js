@@ -1,6 +1,7 @@
 import React from 'react'
 import { Icon, Menu } from 'semantic-ui-react'
 import { useHistory } from "react-router-dom";
+import "./footer.css"
 
 function exampleReducer(state, action) {
   switch (action.type) {
@@ -35,7 +36,7 @@ function exampleReducer(state, action) {
 
     return (
       <>
-  <Menu.Item as='a' onClick={() => history.push("/")} >
+          <Menu.Item as='a' onClick={() => history.push("/")} class="sidebarBox">
             <Icon name='home' />
             Home
           </Menu.Item>

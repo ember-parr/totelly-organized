@@ -27,7 +27,7 @@
       "room": "Laundry Room ",
       "placement": "On shelf, with dust",
       "notes": "Don't burn yourself again though...",
-      "categoryId": 2,
+      "categoryId": 1,
       "locationId": 1,
       "dateLastSearched": 1601409045668,
       "userId": 1
@@ -39,8 +39,8 @@
       "room": "Laundry Room",
       "placement": "Hanging beside dryer",
       "notes": "it wiggles. pretend it doesn't though. ",
-      "categoryId": 2,
-      "locationId": 1,
+      "categoryId": 1,
+      "locationId": 4,
       "dateLastSearched": 1601409045668,
       "userId": 1
     },
@@ -51,8 +51,8 @@
       "room": "Home Office",
       "placement": "2nd Drawer",
       "notes": "They say anti-smudge... they lied. ",
-      "categoryId": 2,
-      "locationId": 1,
+      "categoryId": 6,
+      "locationId": 5,
       "dateLastSearched": 1601409045668,
       "userId": 1
     },
@@ -63,7 +63,7 @@
       "placement": "Closet, Tech Bin",
       "notes": "old school charger",
       "categoryId": 2,
-      "locationId": 1,
+      "locationId": 3,
       "dateLastSearched": 1601409045668,
       "userId": 1,
       "id": 4
@@ -74,8 +74,8 @@
       "room": "Home Office",
       "placement": "School Supply Bin",
       "notes": "roughly fifty million packs",
-      "categoryId": 2,
-      "locationId": 1,
+      "categoryId": 6,
+      "locationId": 4,
       "dateLastSearched": 1601409045668,
       "userId": 1,
       "id": 5
@@ -86,8 +86,8 @@
       "room": "Kitchen",
       "placement": "consumables bin",
       "notes": "not for drugs",
-      "categoryId": 2,
-      "locationId": 1,
+      "categoryId": 8,
+      "locationId": 6,
       "dateLastSearched": 1601409045668,
       "userId": 1,
       "id": 6
@@ -99,26 +99,100 @@
       "placement": "Smart Home Gadget Bin",
       "notes": "these kinda suck",
       "categoryId": 2,
-      "locationId": 1,
+      "locationId": 3,
       "dateLastSearched": 1601409045668,
       "userId": 1,
       "id": 7
+    },
+    {
+      "itemName": "Charging Block",
+      "description": "To plug USB cord into wall",
+      "room": "Home Office",
+      "placement": "Cables Bin",
+      "notes": "3 three foot cords and 1 six food cord",
+      "locationId": 1,
+      "categoryId": 2,
+      "dateLastSearched": 1601409045668,
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "itemName": "3\" Curling Iron",
+      "description": "Hot Tools Brand",
+      "room": "Bathroom",
+      "placement": "Under sink, hot tool bin",
+      "notes": "holds a good curl! ",
+      "categoryId": 4,
+      "locationId": 1,
+      "dateLastSearched": 1601409045668,
+      "userId": 1,
+      "id": 9
     }
   ],
   "locations": [
     {
       "name": "Adams House",
+      "userId": 2,
       "id": 1
     },
     {
       "name": "Storage Unit",
+      "userId": 1,
       "id": 2
+    },
+    {
+      "name": "Office",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "Backyard Shed",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "Office Basement",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "name": "Home",
+      "userId": 1,
+      "id": 6
     }
   ],
   "categories": [
     {
       "name": "Small Applances",
       "id": 1
+    },
+    {
+      "name": "Electronics",
+      "id": 2
+    },
+    {
+      "name": "Cleaning",
+      "id": 3
+    },
+    {
+      "name": "Self Care",
+      "id": 4
+    },
+    {
+      "name": "Pet",
+      "id": 5
+    },
+    {
+      "name": "Office Supply",
+      "id": 6
+    },
+    {
+      "name": "Clothing",
+      "id": 7
+    },
+    {
+      "name": "Kitchen Consumables",
+      "id": 8
     }
   ],
   "sharedLocations": [

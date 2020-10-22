@@ -6,6 +6,7 @@ import { Route, Redirect } from "react-router-dom";
 import { Footer } from "./nav/Footer";
 import {  Menu, Segment, Sidebar } from 'semantic-ui-react'
 import { SidebarNavitation } from "./nav/Navbar";
+import "./TotellyOrganized.css"
 
 
 //function to enable sliding content 
@@ -39,33 +40,31 @@ export const TotellyOrganized = () => {
    
   return (
   <>
+  <main >
+    <section class="pageContent">
     <Route
       render={() => {
         if (localStorage.getItem("user")) {
           return (
             <>
- 
-      <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }}>
-      <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible  >
-            <SidebarNavitation />
-      </Sidebar>
-      <Sidebar.Pusher dimmed={dimmed && visible}>
-        <Segment basic>
-          
-              <ApplicationViews />
-              <Footer/>
-        </Segment>
-
-
-      </Sidebar.Pusher>
-      </Sidebar.Pushable>
-</>
+              <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }} >
+              <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible  >
+                <SidebarNavitation />
+              </Sidebar>
+              <Sidebar.Pusher dimmed={dimmed && visible}>
+                <Segment basic >
+                  <ApplicationViews />
+                  <Footer/>
+                </Segment>
+              </Sidebar.Pusher>
+              </Sidebar.Pushable>
+            </>
 );
-      } else {
-        return <Redirect to="/login" />;
-      }
-    }}
-    />
+} else {
+  return <Redirect to="/login" />;
+}
+}}
+/>  
     <Route path="/login">
       <SignIn />
     </Route>
@@ -73,7 +72,8 @@ export const TotellyOrganized = () => {
     <Route path="/register">
       <Register />
     </Route>
-    
+</section>
+    </main>
   </>
   )
 };

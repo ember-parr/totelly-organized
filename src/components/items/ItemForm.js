@@ -11,7 +11,6 @@ export const ItemForm = () => {
     const { Categories, getCategories } = useContext(CategoryContext)
     const { Locations, getLocations, addLocation } = useContext(LocationContext)
     const [item, setItem] = useState({})
-    const [dropdownLoc, setLocation] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {itemId} = useParams();
     const history = useHistory();
@@ -41,7 +40,6 @@ export const ItemForm = () => {
             userId: parseInt(user)
         })
         newLocation[e.target.name] = e.target.value
-        // setLocation(newLocation)
         currentLocation = newLocation
         getLocations()
     }
@@ -130,7 +128,6 @@ export const ItemForm = () => {
                                     <Dropdown 
                                         value={currentLocation}
                                         placeholder='Select a Location' 
-                                       
                                         options={usersLocations.map(loc => (
                                             {
                                                 key: loc.id,
@@ -189,13 +186,25 @@ export const ItemForm = () => {
     
                                 </Grid.Row><br />
                                 <Grid.Row>
-                                    <Dropdown placeholder='Select a Location' options={usersLocations.map(loc => (
-                                        {
-                                            key: loc.id,
-                                            text: loc.name,
-                                            value: loc.id
-                                        }
-                                    ))} selection onChange={handleDropdown} name="locationId" defaultValue={item.locationId} label="locations" search />
+                                <Dropdown 
+                                        value={currentLocation}
+                                        placeholder='Select a Location' 
+                                        defaultValue={item.locationId}
+                                        options={usersLocations.map(loc => (
+                                            {
+                                                key: loc.id,
+                                                text: loc.name,
+                                                value: loc.id
+                                            }
+                                        ))} 
+                                        onChange={handleDropdown} 
+                                        onAddItem={handleLocationAddition}
+                                        name="locationId" 
+                                        label="locations" 
+                                        allowAdditions
+                                        selection 
+                                        search 
+                                        />
 
                             </Grid.Row><br />
                                 <Grid.Row>

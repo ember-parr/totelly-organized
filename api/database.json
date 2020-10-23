@@ -64,7 +64,7 @@
       "placement": "Closet, Tech Bin",
       "notes": "Throwback Charger Type",
       "categoryId": 2,
-      "locationId": 3,
+      "locationId": 21,
       "dateLastSearched": 1601409045668,
       "userId": 1
     },
@@ -203,10 +203,10 @@
       "id": 12
     },
     {
+      "id": 13,
       "name": "soccer",
-      "description": "",
-      "userId": 1,
-      "id": 13
+      "description": "tester location",
+      "userId": 1
     },
     {
       "name": "Tennis",
@@ -249,6 +249,12 @@
       "description": "",
       "userId": 1,
       "id": 20
+    },
+    {
+      "name": "Other Office",
+      "description": "",
+      "userId": 1,
+      "id": 21
     }
   ],
   "categories": [

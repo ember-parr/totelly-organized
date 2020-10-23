@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { CategoryContext } from "../categories/CategoryProvider"
 import { ItemContext } from "./ItemProvider"
 import { useHistory, useParams } from 'react-router-dom';
-import { Button, Grid, Header, Icon, Form, Dropdown, Confirm, Item, Modal } from 'semantic-ui-react'
+import { Button, Grid, Header, Icon, Form, Dropdown, Item, Modal } from 'semantic-ui-react'
 
 export const ItemForm = () => {
     const { addItem, getItemById, updateItem, deleteItem } = useContext(ItemContext)
@@ -14,7 +14,6 @@ export const ItemForm = () => {
     const history = useHistory();
     const user = localStorage.getItem("user")
     const [open, setOpen] = React.useState(false)
-    const [todel, setTodel] = useState()
 
 
     const handleControlledInputChange = (event) => {
@@ -48,8 +47,8 @@ export const ItemForm = () => {
 
 
     const constructItemObject = () => {
-        if (parseInt(item.locationId) === 0) {
-            window.alert("Please select a location")
+        if (!item.itemName) {
+            window.alert("Please enter a name for the item")
         } else {
             setIsLoading(true);
             if (itemId){

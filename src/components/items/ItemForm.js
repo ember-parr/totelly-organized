@@ -17,6 +17,7 @@ export const ItemForm = () => {
     const user = localStorage.getItem("user")
     const [open, setOpen] = React.useState(false)
 
+    const usersLocations = Locations.filter(loc => loc.userId === parseInt(user))
 
     const handleControlledInputChange = (event) => {
         const newItem = { ...item }
@@ -113,7 +114,7 @@ export const ItemForm = () => {
 
                             </Grid.Row><br />
                             <Grid.Row>
-                                    <Dropdown placeholder='Select a Location' options={Locations.map(loc => (
+                                    <Dropdown placeholder='Select a Location' options={usersLocations.map(loc => (
                                         {
                                             key: loc.id,
                                             text: loc.name,
@@ -163,7 +164,7 @@ export const ItemForm = () => {
     
                                 </Grid.Row><br />
                                 <Grid.Row>
-                                    <Dropdown placeholder='Select a Location' options={Locations.map(loc => (
+                                    <Dropdown placeholder='Select a Location' options={usersLocations.map(loc => (
                                         {
                                             key: loc.id,
                                             text: loc.name,

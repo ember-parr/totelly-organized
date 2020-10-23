@@ -132,31 +132,37 @@
   "locations": [
     {
       "name": "Adams House",
+      "description": "Mama Adam's House",
       "userId": 2,
       "id": 1
     },
     {
+      "id": 2,
       "name": "Storage Unit",
-      "userId": 1,
-      "id": 2
+      "description": "RedDot unit 54",
+      "userId": 1
     },
     {
       "name": "Office",
+      "description": "physical office, not home office",
       "userId": 1,
       "id": 3
     },
     {
       "name": "Backyard Shed",
+      "description": "",
       "userId": 1,
       "id": 4
     },
     {
       "name": "Office Basement",
+      "description": "from parking garage, go through door 5a",
       "userId": 1,
       "id": 5
     },
     {
       "name": "Home",
+      "description": "",
       "userId": 1,
       "id": 6
     }

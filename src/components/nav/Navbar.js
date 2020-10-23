@@ -36,7 +36,7 @@ function exampleReducer(state, action) {
 
     return (
       <>
-          <Menu.Item as='a' onClick={() => history.push("/")} class="sidebarBox">
+          <Menu.Item as='a' onClick={() => history.push("/")}>
             <Icon name='home' />
             Home
           </Menu.Item>

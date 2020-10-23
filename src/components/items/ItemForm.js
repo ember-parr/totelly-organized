@@ -9,15 +9,16 @@ import { Button, Grid, Header, Icon, Form, Dropdown, Item, Modal } from 'semanti
 export const ItemForm = () => {
     const { addItem, getItemById, updateItem, deleteItem } = useContext(ItemContext)
     const { Categories, getCategories } = useContext(CategoryContext)
-    const { Locations, getLocations } = useContext(LocationContext)
+    const { Locations, getLocations, addLocation } = useContext(LocationContext)
     const [item, setItem] = useState({})
+    const [dropdownLoc, setLocation] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {itemId} = useParams();
     const history = useHistory();
     const user = localStorage.getItem("user")
     const [open, setOpen] = React.useState(false)
-
     const usersLocations = Locations.filter(loc => loc.userId === parseInt(user))
+    let currentLocation = item.locationId
 
     const handleControlledInputChange = (event) => {
         const newItem = { ...item }
@@ -31,6 +32,18 @@ export const ItemForm = () => {
         console.log("category: ", item.categoryId)
         newItem[data.name] = data.value
         setItem(newItem)
+    }
+
+    const handleLocationAddition = (e, {value}) => {
+        let newLocation = addLocation({
+            name: value,
+            description: "",
+            userId: parseInt(user)
+        })
+        newLocation[e.target.name] = e.target.value
+        // setLocation(newLocation)
+        currentLocation = newLocation
+        getLocations()
     }
 
 
@@ -85,7 +98,7 @@ export const ItemForm = () => {
         }
     }
 
-
+    
 
 
     // const [values, setValues] = useState({itemName: '', description: '', room: '', categoryId: 2, locationId: 1, placement: '', notes: '', lists: []})
@@ -94,7 +107,7 @@ export const ItemForm = () => {
         <div>
             <Grid.Column>
                         <Header>
-                            <h2>{itemId ? `Update ${item.itemName}` : "Add New Item"}</h2>
+                            <h2>{"Add New Item"}</h2>
                         </Header>
                         <div>
                         <form >
@@ -114,13 +127,25 @@ export const ItemForm = () => {
 
                             </Grid.Row><br />
                             <Grid.Row>
-                                    <Dropdown placeholder='Select a Location' options={usersLocations.map(loc => (
-                                        {
-                                            key: loc.id,
-                                            text: loc.name,
-                                            value: loc.id
-                                        }
-                                    ))} selection onChange={handleDropdown} name="locationId" defaultValue={item.locationId} label="locations" search />
+                                    <Dropdown 
+                                        value={currentLocation}
+                                        placeholder='Select a Location' 
+                                       
+                                        options={usersLocations.map(loc => (
+                                            {
+                                                key: loc.id,
+                                                text: loc.name,
+                                                value: loc.id
+                                            }
+                                        ))} 
+                                        onChange={handleDropdown} 
+                                        onAddItem={handleLocationAddition}
+                                        name="locationId" 
+                                        label="locations" 
+                                        allowAdditions
+                                        selection 
+                                        search 
+                                        />
 
                             </Grid.Row><br />
                             <Grid.Row>                                

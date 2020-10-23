@@ -165,6 +165,90 @@
       "description": "",
       "userId": 1,
       "id": 6
+    },
+    {
+      "name": "Mom's Garage",
+      "description": "",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "name": "Mom's Shed",
+      "description": "",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "name": "Mom's Attic",
+      "description": "",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "name": "Dad's Garage",
+      "description": "",
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "name": "Basketball ",
+      "description": "",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "name": "Football",
+      "description": "",
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "name": "soccer",
+      "description": "",
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "name": "Tennis",
+      "description": "",
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "name": "Shoes",
+      "description": "",
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "name": "Socks",
+      "description": "",
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "name": "Pants",
+      "description": "",
+      "userId": 1,
+      "id": 17
+    },
+    {
+      "name": "Undies",
+      "description": "",
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "name": "Leggings",
+      "description": "",
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "name": "Shirt",
+      "description": "",
+      "userId": 1,
+      "id": 20
     }
   ],
   "categories": [

@@ -51,7 +51,7 @@ export const TotellyOrganized = () => {
               <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible style={{backgroundColor: '#def2f1'}}>
                 <SidebarNavitation />
               </Sidebar>
-              <Sidebar.Pusher dimmed={dimmed && visible}>
+              <Sidebar.Pusher dimmed={dimmed} style={{margin: '0 -100px'}}>
                 <Segment basic >
                   <ApplicationViews />
                   <Footer/>

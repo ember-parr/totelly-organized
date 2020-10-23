@@ -1,6 +1,7 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import { Home } from "./home/Home";
+import { DashboardView } from "./home/Dashboard"
 import {ItemProvider} from "./items/ItemProvider";
 import { LocationProvider } from "./locations/LocationProvider";
 import {LocationTable} from "./locations/LocationTable";
@@ -15,7 +16,7 @@ export const ApplicationViews = (props) => {
       <section className="pageContent">
         {/* Render the location list when http://localhost:3000/ */}
           <Route exact path="/">
-            <Home />
+            <DashboardView />
           </Route>
 
           <ItemProvider>

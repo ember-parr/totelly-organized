@@ -25,7 +25,7 @@ function exampleReducer(state, action) {
 
     const [state ] = React.useReducer(exampleReducer, {
       animation: 'show',
-      direction: "left",
+      direction: "right",
       dimmed: false,
       visible: false,
       color: 'grey'

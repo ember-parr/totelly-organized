@@ -41,14 +41,14 @@ export const TotellyOrganized = () => {
   return (
   <>
   <main >
-    <section class="pageContent">
+    <section className="pageContent">
     <Route
       render={() => {
         if (localStorage.getItem("user")) {
           return (
             <>
-              <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }} class="customSidebar" >
-              <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible class="customSidebar" >
+              <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }}  >
+              <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible style={{backgroundColor: '#def2f1'}}>
                 <SidebarNavitation />
               </Sidebar>
               <Sidebar.Pusher dimmed={dimmed && visible}>

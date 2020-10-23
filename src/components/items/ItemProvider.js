@@ -7,7 +7,7 @@ export const ItemProvider = (props) => {
     const [searchTerms, setSearchTerms] = useState("")
 
     const getItems = () => {
-        return fetch(`http://localhost:8088/items?_expand=location&_expand=category`)
+        return fetch(`http://localhost:8088/items?_expand=location&_expand=category&_expand=user`)
         .then(result => result.json())
         .then(setItems)
     }

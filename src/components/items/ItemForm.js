@@ -3,16 +3,18 @@ import React, { useContext, useEffect, useState } from "react"
 import { CategoryContext } from "../categories/CategoryProvider"
 import { ItemContext } from "./ItemProvider"
 import { useHistory, useParams } from 'react-router-dom';
-import { Button, Grid, Header, Icon, Form, Dropdown } from 'semantic-ui-react'
+import { Button, Grid, Header, Icon, Form, Dropdown, Item, Modal } from 'semantic-ui-react'
 
 export const ItemForm = () => {
-    const { addItem, getItemById, updateItem } = useContext(ItemContext)
+    const { addItem, getItemById, updateItem, deleteItem } = useContext(ItemContext)
     const { Categories, getCategories } = useContext(CategoryContext)
     const [item, setItem] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {itemId} = useParams();
     const history = useHistory();
     const user = localStorage.getItem("user")
+    const [open, setOpen] = React.useState(false)
+
 
     const handleControlledInputChange = (event) => {
         const newItem = { ...item }
@@ -28,6 +30,7 @@ export const ItemForm = () => {
         setItem(newItem)
     }
 
+
     useEffect(() => {
         getCategories().then().then(() => {
             if (itemId){
@@ -42,9 +45,10 @@ export const ItemForm = () => {
         })
     }, [])
 
+
     const constructItemObject = () => {
-        if (parseInt(item.locationId) === 0) {
-            window.alert("Please select a location")
+        if (!item.itemName) {
+            window.alert("Please enter a name for the item")
         } else {
             setIsLoading(true);
             if (itemId){
@@ -82,7 +86,7 @@ export const ItemForm = () => {
 
 
     // const [values, setValues] = useState({itemName: '', description: '', room: '', categoryId: 2, locationId: 1, placement: '', notes: '', lists: []})
-
+    if (!itemId) {
     return (
         <div>
             <Grid.Column>
@@ -106,7 +110,8 @@ export const ItemForm = () => {
                                     ))} selection onChange={handleDropdown} name="categoryId" defaultValue={item.categoryId} label="categories" search />
 
                             </Grid.Row><br />
-                            <Grid.Row><Form.Button animated disabled={isLoading} onClick={event=> {
+                            <Grid.Row>                                
+                                <Form.Button animated disabled={isLoading} onClick={event=> {
                                 event.preventDefault() 
                                 constructItemObject()
                                 }}>
@@ -118,8 +123,121 @@ export const ItemForm = () => {
                             </form>
                         </div>
                     </Grid.Column>
+                    
         </div>
-    );
+    )} else if (itemId && item.userId===parseInt(user)) {
+        return (
+            <div>
+                <Grid.Column>
+                            <Header>
+                                <h2>{itemId ? `Update ${item.itemName}` : "Add New Item"}</h2>
+                                                            <h3>This is your item</h3>
+                            </Header>
+                            <div>
+                            <form >
+                                <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="itemName" icon='hand point up outline' iconPosition='left' placeholder='Name of Item' size='large' defaultValue={item.itemName} /> </Grid.Row> <br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="description" icon='hand peace outline' iconPosition='left' placeholder='Description' size='large' defaultValue={item.description}/> </Grid.Row><br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="room" icon='envelope outline' iconPosition='left' placeholder='Room' size='large' defaultValue={item.room}/> </Grid.Row><br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="placement" icon='mobile alternate' iconPosition='left' placeholder='Placement' size='large' defaultValue={item.placement}/> </Grid.Row> <br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="notes" icon='mobile alternate' iconPosition='left' placeholder='Notes' size='large' defaultValue={item.notes}/> </Grid.Row> <br/>
+                                <Grid.Row>
+                                        <Dropdown placeholder='Select a Category' options={Categories.map(cat => (
+                                            {
+                                                key: cat.id,
+                                                text: cat.name,
+                                                value: cat.id
+                                            }
+                                        ))} selection onChange={handleDropdown} name="categoryId" defaultValue={item.categoryId} label="categories" search />
+    
+                                </Grid.Row><br />
+                                <Grid.Row>
+                                    
+                                    
+                                    <Form.Button 
+                                        animated 
+                                        disabled={isLoading} 
+                                        onClick={event=> {
+                                            event.preventDefault() 
+                                            constructItemObject()
+                                            }}>
+                                    <Button.Content visible>{itemId ? "Save Changes" : "Add Item"}</Button.Content>
+                                    <Button.Content hidden>
+                                        <Icon name='arrow right' />
+                                    </Button.Content>
+                                </Form.Button>
+    
+    
+                        <Modal 
+                            closeIcon 
+                            value={itemId}
+                            open={open} 
+                            trigger={<Button style={{backgroundColor: 'grey', width: '130px'}}> <Icon name='trash alternate outline' /> </Button>} 
+                            onClose={() => setOpen(false)} 
+                            onOpen={(event) => {
+                                event.preventDefault()
+                                setOpen(true)} }
+                        >
+                            <Header icon='trash alternate outline' content={`Delete ${item.itemName}?`} />
+                            <Modal.Content>
+                                <p>
+                                This action cannot be reversed.<br />
+                                Are you sure you want to permanently delete this item?  
+                                </p>
+                            </Modal.Content>
+                            <Modal.Actions>
+                                <Button color='red' onClick={() => setOpen(false)}>
+                                <Icon name='remove' /> No
+                                </Button>
+                                <Button 
+                                    color='green' 
+                                    onClick={() => { 
+                                        setOpen(false)
+                                        deleteItem(itemId)
+                                        history.push('/items')
+                                    }}>
+                                <Icon name='checkmark' /> Yes
+                                </Button>
+                            </Modal.Actions>
+                        </Modal>
+                        </Grid.Row>
+                                </form>
+                            </div>
+                        </Grid.Column>
+    
+    
+                        
+            </div>
+        )} else if (itemId && item.userId !== parseInt(user)) {
+                                    return (
+                                        <div>
+                                            <Header>
+                                                <h2>{`${item.itemName}`}</h2>
+                                                <h3>{`${item.user?.firstName} ${item.user?.lastName} entered this item`}</h3>
+                                            </Header>
+
+                                            <Item>
+                                                <Item.Content>
+                                                    <h5>Location:   {item.location?.name}</h5>
+                                                    <h5>Room:   {item.room}</h5>
+                                                    <h5>Placement:   {item.placement}</h5>
+                                                    <h5>Category:   {item.category?.name}</h5>
+                                                    <h5>Description:   {item.description}</h5>
+                                                    <h5>Notes:   {item.notes}</h5>
+                                                </Item.Content>
+                                            </Item>
+                                        </div>
+                                    )
+
+
+                                
+
+    } else {
+        return(
+            <div>
+                <h2>something broke</h2>
+            </div>
+        )
+    }
     
     
 }

@@ -64,7 +64,7 @@
       "placement": "Closet, Tech Bin",
       "notes": "Throwback Charger Type",
       "categoryId": 2,
-      "locationId": 3,
+      "locationId": 21,
       "dateLastSearched": 1601409045668,
       "userId": 1
     },
@@ -103,30 +103,6 @@
       "dateLastSearched": 1601409045668,
       "userId": 1,
       "id": 9
-    },
-    {
-      "itemName": "testing function",
-      "description": "of name check",
-      "room": "one",
-      "placement": "two",
-      "notes": "three",
-      "categoryId": 4,
-      "locationId": 1,
-      "dateLastSearched": 1601409045668,
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "id": 11,
-      "itemName": "asdve",
-      "description": "left the name blank",
-      "room": "sdfa",
-      "placement": "sdovia",
-      "notes": "oivjasd",
-      "categoryId": 3,
-      "locationId": 1,
-      "dateLastSearched": 1601409045668,
-      "userId": 1
     }
   ],
   "locations": [
@@ -165,6 +141,102 @@
       "description": "",
       "userId": 1,
       "id": 6
+    },
+    {
+      "name": "Mom's Garage",
+      "description": "",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "name": "Mom's Shed",
+      "description": "",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "name": "Mom's Attic",
+      "description": "",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "name": "Dad's Garage",
+      "description": "",
+      "userId": 1,
+      "id": 10
+    },
+    {
+      "name": "Basketball ",
+      "description": "",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "name": "Football",
+      "description": "",
+      "userId": 1,
+      "id": 12
+    },
+    {
+      "id": 13,
+      "name": "soccer",
+      "description": "tester location",
+      "userId": 1
+    },
+    {
+      "name": "Tennis",
+      "description": "",
+      "userId": 1,
+      "id": 14
+    },
+    {
+      "name": "Shoes",
+      "description": "",
+      "userId": 1,
+      "id": 15
+    },
+    {
+      "name": "Socks",
+      "description": "",
+      "userId": 1,
+      "id": 16
+    },
+    {
+      "name": "Pants",
+      "description": "",
+      "userId": 1,
+      "id": 17
+    },
+    {
+      "name": "Undies",
+      "description": "",
+      "userId": 1,
+      "id": 18
+    },
+    {
+      "name": "Leggings",
+      "description": "",
+      "userId": 1,
+      "id": 19
+    },
+    {
+      "name": "Shirt",
+      "description": "",
+      "userId": 1,
+      "id": 20
+    },
+    {
+      "name": "Other Office",
+      "description": "",
+      "userId": 1,
+      "id": 21
+    },
+    {
+      "name": "Mom's Bathroom",
+      "description": "",
+      "userId": 1,
+      "id": 22
     }
   ],
   "categories": [

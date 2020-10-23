@@ -26,17 +26,21 @@ export const ApplicationViews = (props) => {
 
           <ItemProvider>
             <CategoryProvider>
+              <LocationProvider>
               <Route exact path="/items/add">
                 <ItemForm/>
               </Route>
+              </LocationProvider>
             </CategoryProvider>
           </ItemProvider>
 
           <ItemProvider>
             <CategoryProvider>
+              <LocationProvider>
             <Route exact path="/items/edit/:itemId(\d+)">
               <ItemForm/>
             </Route>
+            </LocationProvider>
             </CategoryProvider>
           </ItemProvider>
 

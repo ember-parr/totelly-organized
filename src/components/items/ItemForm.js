@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from "react"
 import { CategoryContext } from "../categories/CategoryProvider"
+import { LocationContext } from "../locations/LocationProvider"
 import { ItemContext } from "./ItemProvider"
 import { useHistory, useParams } from 'react-router-dom';
 import { Button, Grid, Header, Icon, Form, Dropdown, Item, Modal } from 'semantic-ui-react'
@@ -8,6 +9,7 @@ import { Button, Grid, Header, Icon, Form, Dropdown, Item, Modal } from 'semanti
 export const ItemForm = () => {
     const { addItem, getItemById, updateItem, deleteItem } = useContext(ItemContext)
     const { Categories, getCategories } = useContext(CategoryContext)
+    const { Locations, getLocations } = useContext(LocationContext)
     const [item, setItem] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {itemId} = useParams();
@@ -32,7 +34,7 @@ export const ItemForm = () => {
 
 
     useEffect(() => {
-        getCategories().then().then(() => {
+        getCategories().then(getLocations).then(() => {
             if (itemId){
                 getItemById(itemId)
                 .then(item => {
@@ -73,7 +75,7 @@ export const ItemForm = () => {
                     placement: item.placement,
                     notes: item.notes,
                     categoryId: item.categoryId,
-                    locationId: 1,
+                    locationId: item.locationId,
                     dateLastSearched: 1601409045668,
                     userId: parseInt(user)
                 })
@@ -108,6 +110,16 @@ export const ItemForm = () => {
                                             value: cat.id
                                         }
                                     ))} selection onChange={handleDropdown} name="categoryId" defaultValue={item.categoryId} label="categories" search />
+
+                            </Grid.Row><br />
+                            <Grid.Row>
+                                    <Dropdown placeholder='Select a Location' options={Locations.map(loc => (
+                                        {
+                                            key: loc.id,
+                                            text: loc.name,
+                                            value: loc.id
+                                        }
+                                    ))} selection onChange={handleDropdown} name="locationId" defaultValue={item.locationId} label="locations" search />
 
                             </Grid.Row><br />
                             <Grid.Row>                                
@@ -150,6 +162,16 @@ export const ItemForm = () => {
                                         ))} selection onChange={handleDropdown} name="categoryId" defaultValue={item.categoryId} label="categories" search />
     
                                 </Grid.Row><br />
+                                <Grid.Row>
+                                    <Dropdown placeholder='Select a Location' options={Locations.map(loc => (
+                                        {
+                                            key: loc.id,
+                                            text: loc.name,
+                                            value: loc.id
+                                        }
+                                    ))} selection onChange={handleDropdown} name="locationId" defaultValue={item.locationId} label="locations" search />
+
+                            </Grid.Row><br />
                                 <Grid.Row>
                                     
                                     

@@ -96,71 +96,69 @@ export const ItemForm = () => {
         }
     }
 
-    
-
-
-    // const [values, setValues] = useState({itemName: '', description: '', room: '', categoryId: 2, locationId: 1, placement: '', notes: '', lists: []})
     if (!itemId) {
-    return (
-        <div>
-            <Grid.Column>
-                        <Header>
-                            <h2>{"Add New Item"}</h2>
-                        </Header>
-                        <div>
-                        <form >
-                            <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="itemName" icon='hand point up outline' iconPosition='left' placeholder='Name of Item' size='large' defaultValue={item.itemName} /> </Grid.Row> <br/>
-                            <Grid.Row><Form.Input onChange={handleControlledInputChange} name="description" icon='hand peace outline' iconPosition='left' placeholder='Description' size='large' defaultValue={item.description}/> </Grid.Row><br/>
-                            <Grid.Row><Form.Input onChange={handleControlledInputChange} name="room" icon='envelope outline' iconPosition='left' placeholder='Room' size='large' defaultValue={item.room}/> </Grid.Row><br/>
-                            <Grid.Row><Form.Input onChange={handleControlledInputChange} name="placement" icon='mobile alternate' iconPosition='left' placeholder='Placement' size='large' defaultValue={item.placement}/> </Grid.Row> <br/>
-                            <Grid.Row><Form.Input onChange={handleControlledInputChange} name="notes" icon='mobile alternate' iconPosition='left' placeholder='Notes' size='large' defaultValue={item.notes}/> </Grid.Row> <br/>
-                            <Grid.Row>
-                                    <Dropdown placeholder='Select a Category' options={Categories.map(cat => (
-                                        {
-                                            key: cat.id,
-                                            text: cat.name,
-                                            value: cat.id
-                                        }
-                                    ))} selection onChange={handleDropdown} name="categoryId" defaultValue={item.categoryId} label="categories" search />
-
-                            </Grid.Row><br />
-                            <Grid.Row>
-                                    <Dropdown 
-                                        value={currentLocation}
-                                        placeholder='Select a Location' 
-                                        options={usersLocations.map(loc => (
+        // if there is no itemId, meaning the user is creating a new item
+        return (
+            <div>
+                <Grid.Column>
+                            <Header>
+                                <h2>{"Add New Item"}</h2>
+                            </Header>
+                            <div>
+                            <form >
+                                <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="itemName" icon='hand point up outline' iconPosition='left' placeholder='Name of Item' size='large' defaultValue={item.itemName} /> </Grid.Row> <br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="description" icon='hand peace outline' iconPosition='left' placeholder='Description' size='large' defaultValue={item.description}/> </Grid.Row><br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="room" icon='envelope outline' iconPosition='left' placeholder='Room' size='large' defaultValue={item.room}/> </Grid.Row><br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="placement" icon='mobile alternate' iconPosition='left' placeholder='Placement' size='large' defaultValue={item.placement}/> </Grid.Row> <br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="notes" icon='mobile alternate' iconPosition='left' placeholder='Notes' size='large' defaultValue={item.notes}/> </Grid.Row> <br/>
+                                <Grid.Row>
+                                        <Dropdown placeholder='Select a Category' options={Categories.map(cat => (
                                             {
-                                                key: loc.id,
-                                                text: loc.name,
-                                                value: loc.id
+                                                key: cat.id,
+                                                text: cat.name,
+                                                value: cat.id
                                             }
-                                        ))} 
-                                        onChange={handleDropdown} 
-                                        onAddItem={handleLocationAddition}
-                                        name="locationId" 
-                                        label="locations" 
-                                        allowAdditions
-                                        selection 
-                                        search 
-                                        />
+                                        ))} selection onChange={handleDropdown} name="categoryId" defaultValue={item.categoryId} label="categories" search />
 
-                            </Grid.Row><br />
-                            <Grid.Row>                                
-                                <Form.Button animated disabled={isLoading} onClick={event=> {
-                                event.preventDefault() 
-                                constructItemObject()
-                                }}>
-                                <Button.Content visible>{itemId ? "Save Changes" : "Add Item"}</Button.Content>
-                                <Button.Content hidden>
-                                    <Icon name='arrow right' />
-                                </Button.Content>
-                            </Form.Button></Grid.Row>
-                            </form>
-                        </div>
-                    </Grid.Column>
-                    
-        </div>
+                                </Grid.Row><br />
+                                <Grid.Row>
+                                        <Dropdown 
+                                            value={currentLocation}
+                                            placeholder='Select a Location' 
+                                            options={usersLocations.map(loc => (
+                                                {
+                                                    key: loc.id,
+                                                    text: loc.name,
+                                                    value: loc.id
+                                                }
+                                            ))} 
+                                            onChange={handleDropdown} 
+                                            onAddItem={handleLocationAddition}
+                                            name="locationId" 
+                                            label="locations" 
+                                            allowAdditions
+                                            selection 
+                                            search 
+                                            />
+
+                                </Grid.Row><br />
+                                <Grid.Row>                                
+                                    <Form.Button animated disabled={isLoading} onClick={event=> {
+                                    event.preventDefault() 
+                                    constructItemObject()
+                                    }}>
+                                    <Button.Content visible>{itemId ? "Save Changes" : "Add Item"}</Button.Content>
+                                    <Button.Content hidden>
+                                        <Icon name='arrow right' />
+                                    </Button.Content>
+                                </Form.Button></Grid.Row>
+                                </form>
+                            </div>
+                        </Grid.Column>
+                        
+            </div>
     )} else if (itemId && item.userId===parseInt(user)) {
+        // if there is an itemId, so the user is viewing item details, and the item's userId matches the logged in userID
         return (
             <div>
                 <Grid.Column>
@@ -196,7 +194,7 @@ export const ItemForm = () => {
                                                 text: loc.name,
                                                 value: loc.id
                                             }
-                                        ))} 
+                                        )).sort()} 
                                         onChange={handleDropdown} 
                                         onAddItem={handleLocationAddition}
                                         name="locationId" 
@@ -265,29 +263,26 @@ export const ItemForm = () => {
                         
             </div>
         )} else if (itemId && item.userId !== parseInt(user)) {
-                                    return (
-                                        <div>
-                                            <Header>
-                                                <h2>{`${item.itemName}`}</h2>
-                                                <h3>{`${item.user?.firstName} ${item.user?.lastName} entered this item`}</h3>
-                                            </Header>
+            // if there is an itemId, so the user is viewing item details, and the item's userId does NOT match the logged in userID
+            return (
+                <div>
+                    <Header>
+                        <h2>{`${item.itemName}`}</h2>
+                        <h3>{`${item.user?.firstName} ${item.user?.lastName} entered this item`}</h3>
+                    </Header>
 
-                                            <Item>
-                                                <Item.Content>
-                                                    <h5>Location:   {item.location?.name}</h5>
-                                                    <h5>Room:   {item.room}</h5>
-                                                    <h5>Placement:   {item.placement}</h5>
-                                                    <h5>Category:   {item.category?.name}</h5>
-                                                    <h5>Description:   {item.description}</h5>
-                                                    <h5>Notes:   {item.notes}</h5>
-                                                </Item.Content>
-                                            </Item>
-                                        </div>
-                                    )
-
-
-                                
-
+                    <Item>
+                        <Item.Content>
+                            <h5>Location:   {item.location?.name}</h5>
+                            <h5>Room:   {item.room}</h5>
+                            <h5>Placement:   {item.placement}</h5>
+                            <h5>Category:   {item.category?.name}</h5>
+                            <h5>Description:   {item.description}</h5>
+                            <h5>Notes:   {item.notes}</h5>
+                        </Item.Content>
+                    </Item>
+                </div>
+            )
     } else {
         return(
             <div>

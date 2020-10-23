@@ -103,30 +103,6 @@
       "dateLastSearched": 1601409045668,
       "userId": 1,
       "id": 9
-    },
-    {
-      "itemName": "testing function",
-      "description": "of name check",
-      "room": "one",
-      "placement": "two",
-      "notes": "three",
-      "categoryId": 4,
-      "locationId": 1,
-      "dateLastSearched": 1601409045668,
-      "userId": 1,
-      "id": 10
-    },
-    {
-      "id": 11,
-      "itemName": "asdve",
-      "description": "left the name blank",
-      "room": "sdfa",
-      "placement": "sdovia",
-      "notes": "oivjasd",
-      "categoryId": 3,
-      "locationId": 1,
-      "dateLastSearched": 1601409045668,
-      "userId": 1
     }
   ],
   "locations": [
@@ -255,6 +231,12 @@
       "description": "",
       "userId": 1,
       "id": 21
+    },
+    {
+      "name": "Mom's Bathroom",
+      "description": "",
+      "userId": 1,
+      "id": 22
     }
   ],
   "categories": [

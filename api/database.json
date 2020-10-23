@@ -54,7 +54,7 @@
       "categoryId": 6,
       "locationId": 5,
       "dateLastSearched": 1601409045668,
-      "userId": 1
+      "userId": 2
     },
     {
       "itemName": "Macbook Pro Charger",
@@ -77,32 +77,8 @@
       "categoryId": 6,
       "locationId": 4,
       "dateLastSearched": 1601409045668,
-      "userId": 1,
+      "userId": 2,
       "id": 5
-    },
-    {
-      "itemName": "Brown Bags",
-      "description": "Lunch Sacks",
-      "room": "Kitchen",
-      "placement": "consumables bin",
-      "notes": "not for drugs",
-      "categoryId": 8,
-      "locationId": 6,
-      "dateLastSearched": 1601409045668,
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "itemName": "GoSund smart plugs",
-      "description": "the ones that hate IFTTT",
-      "room": "living room",
-      "placement": "Smart Home Gadget Bin",
-      "notes": "these kinda suck",
-      "categoryId": 2,
-      "locationId": 3,
-      "dateLastSearched": 1601409045668,
-      "userId": 1,
-      "id": 7
     },
     {
       "itemName": "Charging Block",
@@ -113,7 +89,7 @@
       "locationId": 1,
       "categoryId": 2,
       "dateLastSearched": 1601409045668,
-      "userId": 1,
+      "userId": 2,
       "id": 8
     },
     {
@@ -201,21 +177,8 @@
       "id": 8
     }
   ],
-  "sharedLocations": [
-    {
-      "locationId": 1,
-      "connectedUsersId": 2,
-      "id": 1
-    }
-  ],
-  "connectedUsers": [
-    {
-      "userId": 1,
-      "connectedUserId": 2,
-      "status": false,
-      "id": 1
-    }
-  ],
+  "sharedLocations": [],
+  "connectedUsers": [],
   "lists": [
     {
       "userId": 1,

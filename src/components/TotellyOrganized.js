@@ -36,7 +36,7 @@ export const TotellyOrganized = () => {
     visible: false,
     color: 'grey'
   })
-  const { dimmed, visible, } = state
+  const { dimmed } = state
    
   return (
   <>
@@ -51,8 +51,8 @@ export const TotellyOrganized = () => {
               <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible style={{backgroundColor: '#def2f1'}}>
                 <SidebarNavitation />
               </Sidebar>
-              <Sidebar.Pusher dimmed={dimmed && visible}>
-                <Segment basic >
+              <Sidebar.Pusher dimmed={dimmed} style={{margin: '0 0 0 -100px'}}>
+                <Segment basic style={{margin: '0 30px 0 0'}}>
                   <ApplicationViews />
                   <Footer/>
                 </Segment>

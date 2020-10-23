@@ -15,6 +15,10 @@ export const ApplicationViews = (props) => {
       <>
       <section className="pageContent">
         {/* Render the location list when http://localhost:3000/ */}
+        <Route exact path="/home">
+            <Home />
+          </Route>
+          
           <Route exact path="/">
             <DashboardView />
           </Route>

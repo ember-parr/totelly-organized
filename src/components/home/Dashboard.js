@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image, Header, Placeholder } from 'semantic-ui-react'
+import { Grid, Header, Placeholder } from 'semantic-ui-react'
 
 export const DashboardView = () => {
 
@@ -8,27 +8,27 @@ export const DashboardView = () => {
 
     return (
         <>
-            <Grid divided='vertically'>
-                <Grid.Row columns={2}>
-                    <Grid.Column>
+            <Grid divided='vertically' style={{width: '100%'}}>
+                <Grid.Row columns={2} centered>
+                    <Grid.Column floated>
                         <Header size='large'>Recently Added</Header>
                         <Placeholder>
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-  </Placeholder>
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                        </Placeholder>
                     </Grid.Column>
-                    <Grid.Column>
+                    <Grid.Column floated>
                         <Header size='large'>Requests</Header>
                         <Placeholder>
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-  </Placeholder>
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                        </Placeholder>
                     </Grid.Column>
                 </Grid.Row>
 
@@ -36,12 +36,12 @@ export const DashboardView = () => {
                     <Grid.Column>
                         <Header size='large'>Feed</Header>
                         <Placeholder>
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-    <Placeholder.Line />
-  </Placeholder>
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                            <Placeholder.Line />
+                        </Placeholder>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

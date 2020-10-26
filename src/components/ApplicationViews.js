@@ -9,6 +9,8 @@ import { LocationForm } from "./locations/LocationForm";
 import {ItemTable} from "./items/ItemTable"
 import {ItemForm} from "./items/ItemForm"
 import { CategoryProvider } from "./categories/CategoryProvider";
+import { UserProvider } from './user/UserProvider'
+import { ListOfAllUsers } from './user/ListOfAllUsers'
 
 export const ApplicationViews = (props) => {
     return (
@@ -66,6 +68,13 @@ export const ApplicationViews = (props) => {
             <LocationForm />
           </Route>
         </LocationProvider>
+
+
+        <UserProvider>
+          <Route exact path="/Users">
+            <ListOfAllUsers />
+          </Route>
+        </UserProvider>
 
 
         </section>

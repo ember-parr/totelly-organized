@@ -17,6 +17,15 @@
       "darkMode": false,
       "lastFmUsername": "",
       "id": 2
+    },
+    {
+      "email": "aiden@home.com",
+      "firstName": "Aiden",
+      "lastName": "Parr",
+      "phoneNumber": "6154748741",
+      "darkMode": false,
+      "lastFmUsername": "",
+      "id": 3
     }
   ],
   "items": [
@@ -274,7 +283,29 @@
     }
   ],
   "sharedLocations": [],
-  "connectedUsers": [],
+  "connectedUsers": [
+    {
+      "id": 1,
+      "userId": 1,
+      "connectedUserId": 2,
+      "status": true,
+      "dateConnected": 1603725829      
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "connectedUserId": 3,
+      "status": true,
+      "dateConnected": 1603725829      
+    },
+    {
+      "id": 3,
+      "userId": 1,
+      "connectedUserId": 1,
+      "status": false,
+      "dateConnected": 1603725829      
+    }
+  ],
   "lists": [
     {
       "userId": 1,

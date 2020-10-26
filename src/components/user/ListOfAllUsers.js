@@ -1,6 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom'
 import { List, Header, Search } from 'semantic-ui-react'
 import { UserCard } from './UserCard'
 import { UserContext } from './UserProvider'
@@ -10,7 +9,6 @@ export const ListOfAllUsers = () => {
     const {Users, getUsers, searchTerms} = useContext(UserContext)
 
     const [filteredUsers, setFiltered] = useState([])
-    const domHistory = useHistory()
 
     useEffect(()=> {
         getUsers()

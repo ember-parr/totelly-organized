@@ -19,12 +19,15 @@ export const UserProvider = (props) => {
 		.then(setConnectedUsers)
 	}	
 
+	const getUserById = (id) => {
+	return fetch(`http://localhost:8088/users/${id}`).then((res) => res.json());
+	};
 	
 
 	return (
 		<UserContext.Provider
 			value={{
-				Users, setUsers, getUsers, setSearchTerms, searchTerms, getUserConnections, setConnectedUsers, ConnectedUsers
+				Users, setUsers, getUsers, setSearchTerms, searchTerms, getUserConnections, setConnectedUsers, ConnectedUsers, getUserById
 			}}>
 			{props.children}
 		</UserContext.Provider>

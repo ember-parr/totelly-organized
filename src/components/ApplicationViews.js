@@ -12,6 +12,7 @@ import { CategoryProvider } from "./categories/CategoryProvider";
 import { UserProvider } from './user/UserProvider'
 import { ListOfAllUsers } from './user/ListOfAllUsers'
 import { ListOfConnectedUsers } from "./user/ListOfConnectedUsers"
+import { ConnectedUserDetail } from "./user/ConnectedUserDetail";
 
 export const ApplicationViews = (props) => {
     return (
@@ -72,9 +73,15 @@ export const ApplicationViews = (props) => {
 
 
         <UserProvider>
-          <Route exact path="/Users">
+          <Route exact path="/users">
             
             <ListOfConnectedUsers />
+          </Route>
+        </UserProvider>
+
+        <UserProvider>
+          <Route exact path="/users/edit/:userId(\d+)">
+            <ConnectedUserDetail />
           </Route>
         </UserProvider>
 

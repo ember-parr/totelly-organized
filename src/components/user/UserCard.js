@@ -1,10 +1,11 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import { Image, List, Button } from 'semantic-ui-react'
+import { Image, List } from 'semantic-ui-react'
 
-export const UserCard = ({connection}) => {
+export const UserCard = ({connection, status, user}) => {
     const history=useHistory()
 
+    if (status === true) {
     return (
         <>
             <List.Item onClick ={()=> history.push(`/users/edit/${connection.user.id}`)}>
@@ -17,7 +18,21 @@ export const UserCard = ({connection}) => {
             </List.Item>
 
         </>
-    )
+    )} else {
+        return (
+            <>
+                <List.Item onClick ={()=> history.push(`/users/add/${user.id}`)}>
+                    <List.Content>
+                        <List.Header>{`${user.firstName} ${user.lastName}`}</List.Header>
+                        <List.Description>
+                            {`You are not yet connected with ${user.firstName} ${user.lastName}`}
+                        </List.Description>
+                    </List.Content>
+                </List.Item>
+    
+            </>
+        )
+    }
 }
 
 

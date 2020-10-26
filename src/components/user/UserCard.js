@@ -1,17 +1,17 @@
 import React from 'react'
 import { useHistory } from 'react-router-dom'
-import { Image, List } from 'semantic-ui-react'
+import { Image, List, Button } from 'semantic-ui-react'
 
-export const UserCard = ({user}) => {
+export const UserCard = ({connection}) => {
     const history=useHistory()
 
     return (
         <>
-            <List.Item onClick ={()=> history.push(`/users/edit/${user.id}`)}>
+            <List.Item onClick ={()=> history.push(`/users/edit/${connection.user.id}`)}>
                 <List.Content>
-                    <List.Header>{`${user.firstName} ${user.lastName}`}</List.Header>
+                    <List.Header>{`${connection.user.firstName} ${connection.user.lastName}`}</List.Header>
                     <List.Description>
-                        Add user description things here. 
+                        {`Connected on ${connection.dateConnected}`}
                     </List.Description>
                 </List.Content>
             </List.Item>

@@ -4,6 +4,7 @@ export const UserContext = createContext();
 
 export const UserProvider = (props) => {
 	const [Users, setUsers] = useState([])
+	const [ConnectedUsers, setConnectedUsers] = useState([])
 	const [searchTerms, setSearchTerms] = useState("")
 
 	const getUsers = () => {
@@ -12,12 +13,18 @@ export const UserProvider = (props) => {
 			.then(setUsers);
 	};
 
+	const getUserConnections = () => {
+	return fetch(`http://localhost:8088/connectedUsers?_expand=connectedUser&_expand=user`)
+		.then((res)=>res.json())
+		.then(setConnectedUsers)
+	}	
+
 	
 
 	return (
 		<UserContext.Provider
 			value={{
-				Users, setUsers, getUsers, setSearchTerms, searchTerms
+				Users, setUsers, getUsers, setSearchTerms, searchTerms, getUserConnections, setConnectedUsers, ConnectedUsers
 			}}>
 			{props.children}
 		</UserContext.Provider>

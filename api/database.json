@@ -286,21 +286,21 @@
   "connectedUsers": [
     {
       "id": 1,
-      "userId": 1,
-      "connectedUserId": 2,
-      "status": true,
-      "dateConnected": 1603725829      
-    },
-    {
-      "id": 2,
-      "userId": 1,
+      "userId": 2,
       "connectedUserId": 3,
       "status": true,
       "dateConnected": 1603725829      
     },
     {
+      "id": 2,
+      "userId": 3,
+      "connectedUserId": 2,
+      "status": true,
+      "dateConnected": 1603725829      
+    },
+    {
       "id": 3,
-      "userId": 1,
+      "userId": 2,
       "connectedUserId": 1,
       "status": false,
       "dateConnected": 1603725829      

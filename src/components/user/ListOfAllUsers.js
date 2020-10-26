@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from 'react'
 import { useHistory } from 'react-router-dom'
-import { List } from 'semantic-ui-react'
+import { List, Header, Search } from 'semantic-ui-react'
 import { UserCard } from './UserCard'
 import { UserContext } from './UserProvider'
 
@@ -29,10 +29,17 @@ export const ListOfAllUsers = () => {
 
 
     return (
+        <>
+        <Header as='h2'>Add New User</Header>
+        <Search fluid placeholder="Search by name, email or phone number" style={{ width: '200px'}}/>
+
+
+        <Header as='h2'>All Users:</Header>
         <List selection verticalAlign='middle'>
             {filteredUsers.map(user => {
                 return <UserCard key={user.id} user={user} />
             })}
         </List>
+        </>
     )
 }

@@ -11,6 +11,7 @@ import {ItemForm} from "./items/ItemForm"
 import { CategoryProvider } from "./categories/CategoryProvider";
 import { UserProvider } from './user/UserProvider'
 import { ListOfAllUsers } from './user/ListOfAllUsers'
+import { ListOfConnectedUsers } from "./user/ListOfConnectedUsers"
 
 export const ApplicationViews = (props) => {
     return (
@@ -72,7 +73,8 @@ export const ApplicationViews = (props) => {
 
         <UserProvider>
           <Route exact path="/Users">
-            <ListOfAllUsers />
+            
+            <ListOfConnectedUsers />
           </Route>
         </UserProvider>
 

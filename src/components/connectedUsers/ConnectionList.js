@@ -5,6 +5,7 @@ import { ConnectionContext } from "./ConnectionProvider";
 import { UserContext } from "../user/UserProvider";
 import { UserCard } from "./ConnectedUserCard";
 import { Button, Segment, Grid } from 'semantic-ui-react';
+import Notifications, {notify} from 'react-notify-toast';
 
 export const ConnectionList = () => {
     const {
@@ -33,6 +34,8 @@ export const ConnectionList = () => {
             }
         })
     }
+
+    let myColor = { background: '#2b7a78', text: "#FFFFFF" };
 
     //add two way friendship to database
     const addNewConnection = (id) => {
@@ -151,6 +154,7 @@ export const ConnectionList = () => {
                         onClick={(e) => {
                             e.preventDefault();
                             addNewConnection(user.id);
+                            notify.show('Request Sent!', "custom", 5000, myColor)
                         }}
                         >
                         {" "}
@@ -158,6 +162,7 @@ export const ConnectionList = () => {
                         </Button>
                     }
                     />
+                    <Notifications />
                 </Grid.Column>
                 ))}
             </Grid.Row>

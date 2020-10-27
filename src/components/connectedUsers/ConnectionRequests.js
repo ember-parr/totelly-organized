@@ -4,6 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ConnectionContext } from "./ConnectionProvider";
 import { UserContext } from "../user/UserProvider";
 import { Button, Card } from 'semantic-ui-react';
+import Notifications, {notify} from 'react-notify-toast';
 
 export const ConnectionRequest = () => {
     const {
@@ -78,6 +79,8 @@ export const ConnectionRequest = () => {
         getConnection().then(getUsers);
     }, [])
 
+    let myColor = { background: '#2b7a78', text: "#FFFFFF" };
+    let myRejectColor = { background: '#1e0001', text: "#FFFFFF" };
     //get friends and users from database on page load
     useEffect(() => {
         const currentUser = parseInt(localStorage.user);
@@ -85,7 +88,6 @@ export const ConnectionRequest = () => {
         const friendsOfUser = connections.filter(
             (connection) => connection.userId === currentUser && connection.status === false
         );
-
         // get an array of the current users connected user id's 
         const connectionId = friendsOfUser.map((friend) => friend.connectedUserId)
 
@@ -118,12 +120,14 @@ export const ConnectionRequest = () => {
                                     <Button user={user} basic color='green' onClick={(e) => {
                                             e.preventDefault();
                                             approveConnection(user.id);
+                                            notify.show('You are now connected!', "custom", 5000, myColor)
                                         }}>
                                         Approve
                                     </Button>
                                     <Button user={user} basic color='red' onClick={(e) => {
                                             e.preventDefault();
                                             removeConnection(user.id);
+                                            notify.show('Request Deleted!', "custom", 5000, myRejectColor)
                                         }}>
                                         Decline
                                     </Button>
@@ -134,6 +138,7 @@ export const ConnectionRequest = () => {
                         )
                     })}
                     </Card.Group>
+                    <Notifications />
         </>
     )
 }

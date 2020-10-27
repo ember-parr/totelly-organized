@@ -44,6 +44,15 @@
       "darkMode": false,
       "lastFmUsername": "",
       "id": 5
+    },
+    {
+      "email": "biggie@home.com",
+      "firstName": "Biggie",
+      "lastName": "Pawz",
+      "phoneNumber": "6154748741",
+      "darkMode": false,
+      "lastFmUsername": "",
+      "id": 6
     }
   ],
   "items": [
@@ -331,13 +340,6 @@
       "id": 4
     },
     {
-      "userId": 4,
-      "connectedUserId": 3,
-      "status": false,
-      "dateConnected": 1601409045668,
-      "id": 5
-    },
-    {
       "userId": 1,
       "connectedUserId": 3,
       "status": false,
@@ -352,18 +354,53 @@
       "id": 7
     },
     {
-      "userId": 4,
+      "userId": 2,
       "connectedUserId": 3,
       "status": false,
       "dateConnected": 1601409045668,
-      "id": 8
+      "id": 10
+    },
+    {
+      "userId": 1,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 11
+    },
+    {
+      "userId": 4,
+      "connectedUserId": 3,
+      "status": true,
+      "dateConnected": 1601409045668,
+      "id": 22
+    },
+    {
+      "userId": 4,
+      "connectedUserId": 3,
+      "status": true,
+      "dateConnected": 1601409045668,
+      "id": 23
+    },
+    {
+      "userId": 4,
+      "connectedUserId": 3,
+      "status": true,
+      "dateConnected": 1601409045668,
+      "id": 24
     },
     {
       "userId": 3,
       "connectedUserId": 4,
+      "status": true,
+      "dateConnected": 1601409045668,
+      "id": 25
+    },
+    {
+      "userId": 1,
+      "connectedUserId": 3,
       "status": false,
       "dateConnected": 1601409045668,
-      "id": 9
+      "id": 26
     }
   ],
   "lists": []

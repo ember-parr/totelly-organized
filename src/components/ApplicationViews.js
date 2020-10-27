@@ -10,7 +10,7 @@ import {ItemTable} from "./items/ItemTable"
 import {ItemForm} from "./items/ItemForm"
 import { CategoryProvider } from "./categories/CategoryProvider";
 import { UserProvider } from './user/UserProvider'
-import { ConnectedUserDetail } from "./user/ConnectedUserDetail";
+import { ConnectedUserDetail } from "./connectedUsers/ConnectedUserDetail";
 import { ConnectionProvider } from './connectedUsers/ConnectionProvider';
 import {ConnectionList} from './connectedUsers/ConnectionList'
 import { ConnectionSearch } from './connectedUsers/ConnectionSearch'
@@ -74,9 +74,11 @@ export const ApplicationViews = (props) => {
 
 
         <UserProvider>
-          <Route exact path="/users/edit/:userId(\d+)">
+          <LocationProvider>
+          <Route exact path="/user/detail/:userId(\d+)">
             <ConnectedUserDetail />
           </Route>
+          </LocationProvider>
         </UserProvider>
 
         < UserProvider>

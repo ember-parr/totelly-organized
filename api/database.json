@@ -160,7 +160,7 @@
     {
       "name": "Office Basement",
       "description": "from parking garage, go through door 5a",
-      "userId": 1,
+      "userId": 2,
       "id": 5
     },
     {
@@ -178,7 +178,7 @@
     {
       "name": "Mom's Shed",
       "description": "",
-      "userId": 1,
+      "userId": 2,
       "id": 8
     },
     {
@@ -202,7 +202,7 @@
     {
       "name": "Football",
       "description": "",
-      "userId": 1,
+      "userId": 2,
       "id": 12
     },
     {
@@ -301,6 +301,35 @@
     }
   ],
   "sharedLocations": [],
-  "connectedUsers": [],
+  "connectedUsers": [
+    {
+      "userId": 1,
+      "connectedUserId": 2,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "connectedUserId": 1,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 2
+    },
+    {
+      "userId": 3,
+      "connectedUserId": 2,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 4
+    }
+  ],
   "lists": []
 }

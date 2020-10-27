@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable array-callback-return */
 import React, { useContext, useEffect, useState } from "react";
 import { ConnectionContext } from "./ConnectionProvider";
@@ -23,7 +24,6 @@ export const ConnectionList = () => {
         connections.map((connection) => {
             if (connection.userId === UserToDelete && connection.connectedUserId === currentUser) {
                 console.log("deleteing user id: ", UserToDelete, "ConnectionId: ", connection.id)
-                debugger;
                 deleteConnection(connection.id)
             } else if (connection.connectedUserId === UserToDelete && connection.userId === currentUser) {
                 console.log("deleteing connectedUser id: ", UserToDelete, "ConnectionId: ", connection.id)
@@ -81,7 +81,7 @@ export const ConnectionList = () => {
                     .includes(searchTerms.toLowerCase().trim()) || 
                 friend.lastName
                     .toLowerCase()
-                    .includes(searchTerms.toLowerCase().trim()) 
+                    .includes(searchTerms.toLowerCase().trim())
             );
             //search through nonFriends by email/name
             const nonFriendSubset = nonFriendInformation.filter(

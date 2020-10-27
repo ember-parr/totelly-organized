@@ -7,7 +7,7 @@ export const UserCard = ({ friend, isFriend }) => (
         <Card.Content>
         <Card.Header>
             <h3 className="friend__username">
-            <Link to={`/friends/detail/${friend.id}`}>{friend.firstName} {friend.lastName}</Link>
+            <Link to={`/user/detail/${friend.id}`}>{friend.firstName} {friend.lastName}</Link>
             </h3>
         </Card.Header>
         <Card.Meta>

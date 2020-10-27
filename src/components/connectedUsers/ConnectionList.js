@@ -52,7 +52,7 @@ export const ConnectionList = () => {
         const currentUser = parseInt(localStorage.user);
         //get the current users connections
         const friendsOfUser = connections.filter(
-            (connection) => connection.userId === currentUser
+            (connection) => connection.userId === currentUser && connection.status === true
         );
 
         // get an array of the current users connected user id's 

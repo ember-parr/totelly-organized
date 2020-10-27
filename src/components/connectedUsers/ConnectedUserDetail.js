@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useContext, useState } from 'react'
-import {useParams} from 'react-router-dom'
+import {useParams, useHistory} from 'react-router-dom'
 import { UserContext } from '../user/UserProvider'
 import { Header, Table} from 'semantic-ui-react'
 import { LocationContext } from '../locations/LocationProvider'
@@ -10,6 +10,7 @@ export const ConnectedUserDetail = () => {
     const {getUser, getUserById } = useContext(UserContext)
     const [isLoading, setIsLoading] = useState(true);
     const {userId} = useParams();
+    const history = useHistory()
     const [user, setUser] = useState([])
     const [location, setLocation] = useState([])
     const currentUser = localStorage.getItem("user")
@@ -41,14 +42,21 @@ export const ConnectedUserDetail = () => {
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>Location Name</Table.HeaderCell>
-                        <Table.HeaderCell>Owner</Table.HeaderCell>
                         <Table.HeaderCell>Description</Table.HeaderCell>
                         <Table.HeaderCell>Shared With:</Table.HeaderCell>
                     </Table.Row>
                     </Table.Header>
                 <Table.Body>
                     {usersLocations?.map(location => {
-                            return <LocationTableRow key={location.id} location={location} />
+                            return (
+                                <>
+                                    <Table.Row onClick ={()=> history.push(`/locations/edit/${location.id}`)}>
+                                        <Table.Cell>{ location.name }</Table.Cell>
+                                        <Table.Cell>{ location.description }</Table.Cell>
+                                        <Table.Cell>Shared With:</Table.Cell>
+                                    </Table.Row>
+                                </>
+                            )
                         })
                     }
                 </Table.Body>

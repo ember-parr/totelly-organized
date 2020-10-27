@@ -1,5 +1,5 @@
 import React from 'react'
-import { Feed, Header, Link } from 'semantic-ui-react'
+import { Feed, Header } from 'semantic-ui-react'
 
 export const DashboardFeed = () => {
     
@@ -18,21 +18,21 @@ export const DashboardFeed = () => {
                 <Feed.Event>
                     <Feed.Content>
                         <Feed.Summary>
-                            Ember P. shared <a>Storage Unit</a> with Snoop C.
+                            Ember P. shared <a href="/items">Storage Unit</a> with Snoop C.
                         </Feed.Summary>
                     </Feed.Content>
                 </Feed.Event>
                 <Feed.Event>
                     <Feed.Content>
                         <Feed.Summary>
-                            Ember P. Connected with <a>Snoop C.</a>
+                            Ember P. Connected with <a href="/users">Snoop C.</a>
                         </Feed.Summary>
                     </Feed.Content>
                 </Feed.Event>
                 <Feed.Event>
                     <Feed.Content>
                         <Feed.Summary>
-                            You shared <a>Adams House</a> with Lexi A.
+                            You shared <a href="/locations">Adams House</a> with Lexi A.
                         </Feed.Summary>
                     </Feed.Content>
                 </Feed.Event>
@@ -43,4 +43,4 @@ export const DashboardFeed = () => {
 }
 
 
-{/* <img src='#' alt="placeholder imgg"/> */}
+/* <img src='#' alt="placeholder imgg"/> */

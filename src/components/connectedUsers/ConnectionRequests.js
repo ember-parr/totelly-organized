@@ -72,13 +72,6 @@ export const ConnectionRequest = () => {
         })
     }
 
-    //add two way friendship to database
-    // const addConnection = (id) => {
-    //     const currentUser = parseInt(localStorage.user)
-    //     console.log("adding user id: ", id)
-    //     updateConnection({userId: id, connectedUserId: currentUser, status: true, dateConnected: 1601409045668})
-    //     updateConnection({userId: currentUser, connectedUserId: id, status: true, dateConnected: 1601409045668})
-    // }
 
     //get friends and users from database when searchTerms or friend status changes
     useEffect(() => {
@@ -103,40 +96,16 @@ export const ConnectionRequest = () => {
         
             setFriendUsers(friendInformation)
             console.log("friend info: ", friendInformation)
-        // get the user objects of who the user is not friends with
-        
 
-        // if (searchTerms !== "") {
-        //     //search through friends by email/name
-        //     const friendSubset = friendInformation.filter(
-        //         (friend) => 
-        //         friend.email
-        //             .toLowerCase()
-        //             .includes(searchTerms.toLowerCase().trim()) || 
-        //         friend.firstName
-        //             .toLowerCase()
-        //             .includes(searchTerms.toLowerCase().trim()) || 
-        //         friend.lastName
-        //             .toLowerCase()
-        //             .includes(searchTerms.toLowerCase().trim())
-        //     );
-            
-            
-        //     // if the search field is not blank, display matching friends/nonfriends
-        //     setFriendUsers(friendSubset);
-        //     } else {
-        //     // if the search field is blank, display all friends & non friends
-        //     setFriendUsers(friendInformation);
-        //     }
         }, [connections, Users, searchTerms])
 
     return (
         <>
-                {/* map through friends */}
+        <Card.Group>
                     {filteredFriendUsers.map((user) => {
                         return (
                             <>
-                            <Card>
+                            <Card key={user.id}>
                                 <Card.Content>
                                     <Card.Header>{user.firstName} {user.lastName}</Card.Header>
                                     <Card.Meta>Requested To Connect</Card.Meta>
@@ -144,15 +113,15 @@ export const ConnectionRequest = () => {
                                         
                                     </Card.Description>
                                 </Card.Content>
-                                <Card.Content extra key={user.id}>
+                                <Card.Content extra >
                                     <div className='ui two buttons'>
-                                    <Button key={user.firstName} user={user} basic color='green' onClick={(e) => {
+                                    <Button user={user} basic color='green' onClick={(e) => {
                                             e.preventDefault();
                                             approveConnection(user.id);
                                         }}>
                                         Approve
                                     </Button>
-                                    <Button key={user.id} user={user} basic color='red' onClick={(e) => {
+                                    <Button user={user} basic color='red' onClick={(e) => {
                                             e.preventDefault();
                                             removeConnection(user.id);
                                         }}>
@@ -164,6 +133,7 @@ export const ConnectionRequest = () => {
                             </>
                         )
                     })}
+                    </Card.Group>
         </>
     )
 }

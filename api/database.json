@@ -3,7 +3,7 @@
     {
       "firstName": "Ember",
       "lastName": "Parr",
-      "phoneNumber": 6158150173,
+      "phoneNumber": "6158150173",
       "email": "ember@emberparr.com",
       "lastFmUsername": "emberparr",
       "darkMode": false,
@@ -17,6 +17,33 @@
       "darkMode": false,
       "lastFmUsername": "",
       "id": 2
+    },
+    {
+      "email": "aiden@home.com",
+      "firstName": "Aiden",
+      "lastName": "Parr",
+      "phoneNumber": "6154748741",
+      "darkMode": false,
+      "lastFmUsername": "",
+      "id": 3
+    },
+    {
+      "email": "lexi@home.com",
+      "firstName": "Lexi",
+      "lastName": "Adams",
+      "phoneNumber": "6154748741",
+      "darkMode": false,
+      "lastFmUsername": "",
+      "id": 4
+    },
+    {
+      "email": "snoop@home.com",
+      "firstName": "Snoop",
+      "lastName": "Cat",
+      "phoneNumber": "6154748741",
+      "darkMode": false,
+      "lastFmUsername": "",
+      "id": 5
     }
   ],
   "items": [
@@ -133,7 +160,7 @@
     {
       "name": "Office Basement",
       "description": "from parking garage, go through door 5a",
-      "userId": 1,
+      "userId": 2,
       "id": 5
     },
     {
@@ -151,7 +178,7 @@
     {
       "name": "Mom's Shed",
       "description": "",
-      "userId": 1,
+      "userId": 2,
       "id": 8
     },
     {
@@ -175,7 +202,7 @@
     {
       "name": "Football",
       "description": "",
-      "userId": 1,
+      "userId": 2,
       "id": 12
     },
     {
@@ -274,19 +301,70 @@
     }
   ],
   "sharedLocations": [],
-  "connectedUsers": [],
-  "lists": [
+  "connectedUsers": [
+    {
+      "id": 1,
+      "userId": 1,
+      "connectedUserId": 2,
+      "status": true,
+      "dateConnected": 1601409045668
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "connectedUserId": 1,
+      "status": true,
+      "dateConnected": 1601409045668
+    },
+    {
+      "id": 3,
+      "userId": 5,
+      "connectedUserId": 2,
+      "status": true,
+      "dateConnected": 1601409045668
+    },
+    {
+      "userId": 2,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 4
+    },
+    {
+      "userId": 4,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 5
+    },
     {
       "userId": 1,
-      "name": "Take To Goodwill",
-      "details": "the most recent order of air filters was awful quality. do not order again.",
-      "date": 1601409045668,
-      "items": [
-        4,
-        21,
-        16
-      ],
-      "id": 1
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "connectedUserId": 4,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 9
     }
-  ]
+  ],
+  "lists": []
 }

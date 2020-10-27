@@ -9,6 +9,11 @@ import { LocationForm } from "./locations/LocationForm";
 import {ItemTable} from "./items/ItemTable"
 import {ItemForm} from "./items/ItemForm"
 import { CategoryProvider } from "./categories/CategoryProvider";
+import { UserProvider } from './user/UserProvider'
+import { ConnectedUserDetail } from "./connectedUsers/ConnectedUserDetail";
+import { ConnectionProvider } from './connectedUsers/ConnectionProvider';
+import {ConnectionList} from './connectedUsers/ConnectionList'
+import { ConnectionSearch } from './connectedUsers/ConnectionSearch'
 
 export const ApplicationViews = (props) => {
     return (
@@ -66,6 +71,24 @@ export const ApplicationViews = (props) => {
             <LocationForm />
           </Route>
         </LocationProvider>
+
+
+        <UserProvider>
+          <LocationProvider>
+          <Route exact path="/user/detail/:userId(\d+)">
+            <ConnectedUserDetail />
+          </Route>
+          </LocationProvider>
+        </UserProvider>
+
+        < UserProvider>
+          <ConnectionProvider>
+              <Route exact path="/users">
+                  <ConnectionSearch />
+                  <ConnectionList />
+              </Route>
+          </ConnectionProvider>
+        </UserProvider>
 
 
         </section>

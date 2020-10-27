@@ -39,7 +39,6 @@ export const ConnectionList = () => {
         const currentUser = parseInt(localStorage.user)
         console.log("adding user id: ", id)
         addConnection({userId: id, connectedUserId: currentUser, status: false, dateConnected: 1601409045668})
-        addConnection({userId: currentUser, connectedUserId: id, status: false, dateConnected: 1601409045668})
     }
 
     //get friends and users from database when searchTerms or friend status changes

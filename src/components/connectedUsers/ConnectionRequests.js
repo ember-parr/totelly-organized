@@ -11,7 +11,8 @@ export const ConnectionRequest = () => {
         getConnection,
         deleteConnection,
         updateConnection,
-        searchTerms
+        searchTerms,
+        addConnection
     } = useContext(ConnectionContext);
     const { Users, getUsers } = useContext(UserContext);
     const [filteredFriendUsers, setFriendUsers] = useState([])
@@ -44,12 +45,24 @@ export const ConnectionRequest = () => {
                     status: true,
                     dateConnected: 1601409045668
                 })
+                addConnection({
+                    userId: UserToapprove,
+                    connectedUserId: currentUser,
+                    status: true,
+                    dateConnected: 1601409045668
+                })
             } else if (connection.userId === UserToapprove && connection.connectedUserId === currentUser) {
                 console.log("approveing connectedUser id: ", UserToapprove, "ConnectionId: ", connection.id)
                 updateConnection({
                     id: connection.id,
                     userId: UserToapprove,
                     connectedUserId: currentUser,
+                    status: true,
+                    dateConnected: 1601409045668
+                })
+                addConnection({
+                    userId: currentUser,
+                    connectedUserId: UserToapprove,
                     status: true,
                     dateConnected: 1601409045668
                 })

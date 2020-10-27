@@ -3,6 +3,7 @@ import { Grid, Header, Placeholder, Card } from 'semantic-ui-react'
 import { ConnectionRequest } from '../connectedUsers/ConnectionRequests'
 import { ConnectionProvider } from '../connectedUsers/ConnectionProvider'
 import { UserProvider } from '../user/UserProvider'
+import { DashboardFeed } from './Feed'
 
 export const DashboardView = () => {
 
@@ -26,45 +27,21 @@ export const DashboardView = () => {
                     <Grid.Column >
                         <Header size='large'>Requests</Header>
                             <Card.Group>
-
-
-
-
-
                         <ConnectionProvider>
                             <UserProvider>
                                 <ConnectionRequest />
                             </UserProvider>
                         </ConnectionProvider>
-
-
-
-
-
-
                         </Card.Group>
-
-
-
-
-
-
-
-
-
                     </Grid.Column>
                 </Grid.Row>
 
                 <Grid.Row columns={1}>
                     <Grid.Column>
                         <Header size='large'>Feed</Header>
-                        <Placeholder>
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                        </Placeholder>
+                        <DashboardFeed>
+                            
+                        </DashboardFeed>
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

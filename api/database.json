@@ -303,18 +303,18 @@
   "sharedLocations": [],
   "connectedUsers": [
     {
+      "id": 1,
       "userId": 1,
       "connectedUserId": 2,
-      "status": false,
-      "dateConnected": 1601409045668,
-      "id": 1
+      "status": true,
+      "dateConnected": 1601409045668
     },
     {
+      "id": 2,
       "userId": 2,
       "connectedUserId": 1,
-      "status": false,
-      "dateConnected": 1601409045668,
-      "id": 2
+      "status": true,
+      "dateConnected": 1601409045668
     },
     {
       "id": 3,
@@ -324,11 +324,46 @@
       "dateConnected": 1601409045668
     },
     {
-      "id": 4,
       "userId": 2,
-      "connectedUserId": 5,
-      "status": true,
-      "dateConnected": 1601409045668
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 4
+    },
+    {
+      "userId": 4,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 6
+    },
+    {
+      "userId": 5,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 7
+    },
+    {
+      "userId": 4,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 8
+    },
+    {
+      "userId": 3,
+      "connectedUserId": 4,
+      "status": false,
+      "dateConnected": 1601409045668,
+      "id": 9
     }
   ],
   "lists": []

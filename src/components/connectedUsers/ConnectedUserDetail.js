@@ -4,27 +4,20 @@ import {useParams, useHistory} from 'react-router-dom'
 import { UserContext } from '../user/UserProvider'
 import { Header, Table} from 'semantic-ui-react'
 import { LocationContext } from '../locations/LocationProvider'
-import { LocationTableRow } from '../locations/LocationTableRow'
 
 export const ConnectedUserDetail = () => {
-    const {getUser, getUserById } = useContext(UserContext)
-    const [isLoading, setIsLoading] = useState(true);
+    const {getUserById } = useContext(UserContext)
     const {userId} = useParams();
     const history = useHistory()
     const [user, setUser] = useState([])
-    const [location, setLocation] = useState([])
-    const currentUser = localStorage.getItem("user")
-    const { Locations, getLocations, addLocation } = useContext(LocationContext)
+    const { Locations, getLocations } = useContext(LocationContext)
     const usersLocations = Locations.filter(loc => loc.userId === parseInt(userId))
-    console.log("all locations: ", Locations)
 
-   
+
 
     useEffect(() => {
         getUserById(userId).then(user => {
             setUser(user)
-            setIsLoading(false)
-            console.log("This page's user id: ", userId)
         }).then(getLocations).then(() => {
             console.log("users locations: ", usersLocations)
         })

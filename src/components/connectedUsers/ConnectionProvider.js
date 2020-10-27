@@ -34,6 +34,16 @@ export const ConnectionProvider = (props) => {
         ).then((res) => res.json());
     };
 
+    const updateConnection = (id) => {
+        return fetch(`http://localhost:8088/connectedUsers/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(Location)
+        })
+    }
+
     return (
         <ConnectionContext.Provider
         value={{
@@ -45,6 +55,7 @@ export const ConnectionProvider = (props) => {
             deleteConnection,
             searchTerms,
             setSearchTerms,
+            updateConnection
         }}
         >
         {props.children}

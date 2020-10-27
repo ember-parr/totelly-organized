@@ -1,5 +1,8 @@
 import React from 'react'
-import { Grid, Header, Placeholder } from 'semantic-ui-react'
+import { Grid, Header, Placeholder, Card } from 'semantic-ui-react'
+import { ConnectionRequest } from '../connectedUsers/ConnectionRequests'
+import { ConnectionProvider } from '../connectedUsers/ConnectionProvider'
+import { UserProvider } from '../user/UserProvider'
 
 export const DashboardView = () => {
 
@@ -10,7 +13,7 @@ export const DashboardView = () => {
         <>
             <Grid divided='vertically' style={{width: '100%'}}>
                 <Grid.Row columns={2} centered>
-                    <Grid.Column floated>
+                    <Grid.Column >
                         <Header size='large'>Recently Added</Header>
                         <Placeholder>
                             <Placeholder.Line />
@@ -20,15 +23,35 @@ export const DashboardView = () => {
                             <Placeholder.Line />
                         </Placeholder>
                     </Grid.Column>
-                    <Grid.Column floated>
+                    <Grid.Column >
                         <Header size='large'>Requests</Header>
-                        <Placeholder>
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                            <Placeholder.Line />
-                        </Placeholder>
+                            <Card.Group>
+
+
+
+
+
+                        <ConnectionProvider>
+                            <UserProvider>
+                                <ConnectionRequest />
+                            </UserProvider>
+                        </ConnectionProvider>
+
+
+
+
+
+
+                        </Card.Group>
+
+
+
+
+
+
+
+
+
                     </Grid.Column>
                 </Grid.Row>
 

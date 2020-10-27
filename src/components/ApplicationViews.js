@@ -10,9 +10,10 @@ import {ItemTable} from "./items/ItemTable"
 import {ItemForm} from "./items/ItemForm"
 import { CategoryProvider } from "./categories/CategoryProvider";
 import { UserProvider } from './user/UserProvider'
-import { ListOfAllUsers } from './user/ListOfAllUsers'
-import { ListOfConnectedUsers } from "./user/ListOfConnectedUsers"
 import { ConnectedUserDetail } from "./user/ConnectedUserDetail";
+import { ConnectionProvider } from './connectedUsers/ConnectionProvider';
+import {ConnectionList} from './connectedUsers/ConnectionList'
+import { ConnectionSearch } from './connectedUsers/ConnectionSearch'
 
 export const ApplicationViews = (props) => {
     return (
@@ -73,16 +74,18 @@ export const ApplicationViews = (props) => {
 
 
         <UserProvider>
-          <Route exact path="/users">
-            
-            <ListOfConnectedUsers />
-          </Route>
-        </UserProvider>
-
-        <UserProvider>
           <Route exact path="/users/edit/:userId(\d+)">
             <ConnectedUserDetail />
           </Route>
+        </UserProvider>
+
+        < UserProvider>
+          <ConnectionProvider>
+              <Route exact path="/users">
+                  <ConnectionSearch />
+                  <ConnectionList />
+              </Route>
+          </ConnectionProvider>
         </UserProvider>
 
 

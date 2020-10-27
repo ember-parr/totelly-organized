@@ -3,7 +3,7 @@
     {
       "firstName": "Ember",
       "lastName": "Parr",
-      "phoneNumber": 6158150173,
+      "phoneNumber": "6158150173",
       "email": "ember@emberparr.com",
       "lastFmUsername": "emberparr",
       "darkMode": false,
@@ -26,6 +26,24 @@
       "darkMode": false,
       "lastFmUsername": "",
       "id": 3
+    },
+    {
+      "email": "lexi@home.com",
+      "firstName": "Lexi",
+      "lastName": "Adams",
+      "phoneNumber": "6154748741",
+      "darkMode": false,
+      "lastFmUsername": "",
+      "id": 4
+    },
+    {
+      "email": "snoop@home.com",
+      "firstName": "Snoop",
+      "lastName": "Cat",
+      "phoneNumber": "6154748741",
+      "darkMode": false,
+      "lastFmUsername": "",
+      "id": 5
     }
   ],
   "items": [
@@ -283,62 +301,6 @@
     }
   ],
   "sharedLocations": [],
-  "connectedUsers": [
-    {
-      "id": 1,
-      "userId": 2,
-      "connectedUserId": 3,
-      "status": true,
-      "dateConnected": 1603725829      
-    },
-    {
-      "id": 2,
-      "userId": 3,
-      "connectedUserId": 2,
-      "status": true,
-      "dateConnected": 1603725829      
-    },
-    {
-      "id": 3,
-      "userId": 2,
-      "connectedUserId": 1,
-      "status": false,
-      "dateConnected": 1603725829      
-    },
-    {
-      "id": 4,
-      "userId": 3,
-      "connectedUserId": 1,
-      "status": false,
-      "dateConnected": 1603725829      
-    },
-    {
-      "id": 3,
-      "userId": 1,
-      "connectedUserId": 2,
-      "status": false,
-      "dateConnected": 1603725829      
-    },
-    {
-      "id": 4,
-      "userId": 1,
-      "connectedUserId": 3,
-      "status": false,
-      "dateConnected": 1603725829      
-    }
-  ],
-  "lists": [
-    {
-      "userId": 1,
-      "name": "Take To Goodwill",
-      "details": "the most recent order of air filters was awful quality. do not order again.",
-      "date": 1601409045668,
-      "items": [
-        4,
-        21,
-        16
-      ],
-      "id": 1
-    }
-  ]
+  "connectedUsers": [],
+  "lists": []
 }

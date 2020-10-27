@@ -32,13 +32,40 @@ export const ConnectionRequest = () => {
         })
     }
 
-    //add two way friendship to database
-    const approveConnection = (id) => {
+    const approveConnection = (UserToapprove) => {
         const currentUser = parseInt(localStorage.user)
-        console.log("adding user id: ", id)
-        updateConnection({userId: id, connectedUserId: currentUser, status: true, dateConnected: 1601409045668})
-        updateConnection({userId: currentUser, connectedUserId: id, status: true, dateConnected: 1601409045668})
+        connections.map((connection) => {
+            if (connection.connectedUserId === UserToapprove && connection.userId === currentUser) {
+                console.log("approveing connectedUser id: ", UserToapprove, "ConnectionId: ", connection.id)
+                updateConnection({
+                    id: connection.id,
+                    userId: currentUser,
+                    connectedUserId: UserToapprove,
+                    status: true,
+                    dateConnected: 1601409045668
+                })
+            } else if (connection.userId === UserToapprove && connection.connectedUserId === currentUser) {
+                console.log("approveing connectedUser id: ", UserToapprove, "ConnectionId: ", connection.id)
+                updateConnection({
+                    id: connection.id,
+                    userId: UserToapprove,
+                    connectedUserId: currentUser,
+                    status: true,
+                    dateConnected: 1601409045668
+                })
+            } else {
+                console.log("nothing to approve?")
+            }
+        })
     }
+
+    //add two way friendship to database
+    // const addConnection = (id) => {
+    //     const currentUser = parseInt(localStorage.user)
+    //     console.log("adding user id: ", id)
+    //     updateConnection({userId: id, connectedUserId: currentUser, status: true, dateConnected: 1601409045668})
+    //     updateConnection({userId: currentUser, connectedUserId: id, status: true, dateConnected: 1601409045668})
+    // }
 
     //get friends and users from database when searchTerms or friend status changes
     useEffect(() => {
@@ -59,32 +86,35 @@ export const ConnectionRequest = () => {
         //get the user objects for the current users connected users
         const friendInformation = Users.filter(
             (user) => connectionId.includes(user.id) && user.id !== currentUser
-        );
-
+            );
+        
+            setFriendUsers(friendInformation)
+            console.log("friend info: ", friendInformation)
         // get the user objects of who the user is not friends with
         
 
-        if (searchTerms !== "") {
-            //search through friends by email/name
-            const friendSubset = friendInformation.filter(
-                (friend) => 
-                friend.email
-                    .toLowerCase()
-                    .includes(searchTerms.toLowerCase().trim()) || 
-                friend.firstName
-                    .toLowerCase()
-                    .includes(searchTerms.toLowerCase().trim()) || 
-                friend.lastName
-                    .toLowerCase()
-                    .includes(searchTerms.toLowerCase().trim())
-            );
+        // if (searchTerms !== "") {
+        //     //search through friends by email/name
+        //     const friendSubset = friendInformation.filter(
+        //         (friend) => 
+        //         friend.email
+        //             .toLowerCase()
+        //             .includes(searchTerms.toLowerCase().trim()) || 
+        //         friend.firstName
+        //             .toLowerCase()
+        //             .includes(searchTerms.toLowerCase().trim()) || 
+        //         friend.lastName
+        //             .toLowerCase()
+        //             .includes(searchTerms.toLowerCase().trim())
+        //     );
             
-            // if the search field is not blank, display matching friends/nonfriends
-            setFriendUsers(friendSubset);
-            } else {
-            // if the search field is blank, display all friends & non friends
-            setFriendUsers(friendInformation);
-            }
+            
+        //     // if the search field is not blank, display matching friends/nonfriends
+        //     setFriendUsers(friendSubset);
+        //     } else {
+        //     // if the search field is blank, display all friends & non friends
+        //     setFriendUsers(friendInformation);
+        //     }
         }, [connections, Users, searchTerms])
 
     return (
@@ -94,22 +124,22 @@ export const ConnectionRequest = () => {
                         return (
                             <>
                             <Card>
-                                <Card.Content key={user.id}>
+                                <Card.Content>
                                     <Card.Header>{user.firstName} {user.lastName}</Card.Header>
                                     <Card.Meta>Requested To Connect</Card.Meta>
                                     <Card.Description>
-                                        Request sent: date
+                                        
                                     </Card.Description>
                                 </Card.Content>
-                                <Card.Content extra>
+                                <Card.Content extra key={user.id}>
                                     <div className='ui two buttons'>
-                                    <Button basic color='green' onClick={(e) => {
+                                    <Button key={user.firstName} user={user} basic color='green' onClick={(e) => {
                                             e.preventDefault();
                                             approveConnection(user.id);
                                         }}>
                                         Approve
                                     </Button>
-                                    <Button basic color='red' onClick={(e) => {
+                                    <Button key={user.id} user={user} basic color='red' onClick={(e) => {
                                             e.preventDefault();
                                             removeConnection(user.id);
                                         }}>

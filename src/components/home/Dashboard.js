@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Header, Placeholder, Card, Feed } from 'semantic-ui-react'
+import { Grid, Header, Card, Feed } from 'semantic-ui-react'
 import { ConnectionRequest } from '../connectedUsers/ConnectionRequests'
 import { ConnectionProvider } from '../connectedUsers/ConnectionProvider'
 import {FeedProvider} from './FeedProvider'

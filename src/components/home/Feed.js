@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable array-callback-return */
 import React, {useContext, useEffect} from 'react'
 import { Feed, Icon } from 'semantic-ui-react'
 import { FeedContext } from './FeedProvider'

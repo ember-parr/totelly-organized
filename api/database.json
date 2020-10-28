@@ -458,36 +458,36 @@
   "feed": [
     {
       "activityType": "Added A New Location",
-      "dataOne": 3,
-      "dataTwo": "Sock Drawer",
+      "userId": 3,
+      "locationId": 3,
       "date": "October 27, 2020",
       "id": 1
     },
     {
       "activityType": "Connected With",
-      "dataOne": 3,
-      "dataTwo": 2,
+      "userId": 3,
+      "connectedUsersId": 2,
       "date": "October 27, 2020",
       "id": 2
     },
     {
       "activityType": "Added A New Item",
-      "dataOne": 3,
-      "dataTwo": "Blue Socks",
+      "userId": 3,
+      "itemId": 4,
       "date": "October 27, 2020",
       "id": 3
     },
     {
       "activityType": "Added A New Location",
-      "dataOne": 3,
-      "dataTwo": "Other Sock Drawer",
+      "userId": 3,
+      "locationId": 2,
       "date": "October 27, 2020",
       "id": 4
     },
     {
       "activityType": "Added A New Location",
-      "dataOne": 3,
-      "dataTwo": "Other Sock Drawer",
+      "userId": 3,
+      "locationId": 4,
       "date": "October 27, 2020",
       "id": 5
     }

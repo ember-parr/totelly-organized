@@ -6,9 +6,16 @@ export const FeedProvider = (props) => {
     const [Activities, setActivities] = useState([])
     const [Personals, setPersonals] = useState([])
     const [searchTerms, setSearchTerms] = useState("")
+    const currentUser = parseInt(localStorage.user)
 
     const getActivities = () => {
-        return fetch(`http://localhost:8088/feed`)
+        return fetch(`http://localhost:8088/feed?_sort=date&_order=desc&_limit=10`)
+        .then(result => result.json())
+        .then(setActivities)
+    }
+
+    const getCurrentUserActivities = () => {
+        return fetch(`http://localhost:8088/feed?userId=${currentUser}&_sort=date&_order=desc&_limit=5`)
         .then(result => result.json())
         .then(setActivities)
     }
@@ -59,7 +66,7 @@ export const FeedProvider = (props) => {
 
     return (
         <FeedContext.Provider value={{
-            Personals, Activities, getActivities, addFeed, getFeedById, deleteFeed, updateFeed, setSearchTerms, searchTerms, getItemActivities, getLocationActivities
+            getCurrentUserActivities, Personals, Activities, getActivities, addFeed, getFeedById, deleteFeed, updateFeed, setSearchTerms, searchTerms, getItemActivities, getLocationActivities
         }}>
             {props.children}
         </FeedContext.Provider>

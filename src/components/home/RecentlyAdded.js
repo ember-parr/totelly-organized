@@ -1,16 +1,17 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useContext, useEffect, useState} from 'react'
 import { Feed, Icon } from 'semantic-ui-react'
 import {ItemContext} from "../items/ItemProvider"
 import { FeedContext } from './FeedProvider'
 
 export const RecentlyAdded = () => {
-    const {Activities, getActivities} = useContext(FeedContext)
+    const {Activities, getCurrentUserActivities} = useContext(FeedContext)
     const { Items, getItems } = useContext(ItemContext)
     const currentUser = parseInt(localStorage.user)
     const [itemDetails, setItemDetails] = useState([])
 
     useEffect(()=> {
-        getActivities().then(getItems())
+        getCurrentUserActivities().then(getItems())
     }, [])
 
 

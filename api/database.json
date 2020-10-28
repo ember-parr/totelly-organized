@@ -126,7 +126,7 @@
       "categoryId": 2,
       "dateAdded": "October 26, 2020",
       "userId": 2,
-      "id": 8
+      "id": 6
     },
     {
       "itemName": "3\" Curling Iron",
@@ -137,6 +137,30 @@
       "categoryId": 4,
       "locationId": 1,
       "dateAdded": "October 27, 2020",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "itemName": "Trucker Hat",
+      "description": "Blue & White Gap Hat",
+      "room": "Closet",
+      "placement": "in the 'junk' bin",
+      "notes": "Kindof smells like sweat & bad decisions",
+      "categoryId": 4,
+      "locationId": 1,
+      "dateAdded": "October 28, 2020",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "itemName": "Office Ping Pong",
+      "description": "Mini version of ping pong to play at work desk",
+      "room": "Closet",
+      "placement": "in the 'junk' bin",
+      "notes": "Almost got fired for this...",
+      "categoryId": 4,
+      "locationId": 1,
+      "dateAdded": "October 28, 2020",
       "userId": 1,
       "id": 9
     }
@@ -458,58 +482,100 @@
   "feed": [
     {
       "activityType": "Added A New Location",
-      "userId": 3,
+      "userId": 2,
       "locationId": 3,
-      "date": "October 27, 2020",
+      "date": "October 20, 2020",
       "id": 1
     },
     {
       "activityType": "Connected With",
-      "userId": 3,
+      "userId": 1,
       "connectedUsersId": 2,
-      "date": "October 27, 2020",
+      "date": "October 24, 2020",
       "id": 2
     },
     {
       "activityType": "Added A New Item",
       "userId": 3,
       "itemId": 4,
-      "date": "October 27, 2020",
+      "date": "October 1, 2020",
       "id": 3
     },
     {
       "activityType": "Added A New Location",
       "userId": 3,
       "locationId": 2,
-      "date": "October 27, 2020",
+      "date": "October 12, 2020",
       "id": 4
     },
     {
       "activityType": "Added A New Location",
       "userId": 3,
       "locationId": 4,
-      "date": "October 27, 2020",
+      "date": "October 8, 2020",
       "id": 5
     },
     {
       "activityType": "Added A New Item",
-      "userId": 3,
+      "userId": 2,
       "itemId": 2,
-      "date": "October 27, 2020",
+      "date": "October 21, 2020",
       "id": 3
     },
     {
       "activityType": "Added A New Item",
-      "userId": 3,
+      "userId": 4,
       "itemId": 1,
-      "date": "October 27, 2020",
+      "date": "October 12, 2020",
       "id": 3
     },
     {
       "activityType": "Added A New Item",
       "userId": 3,
       "itemId": 6,
-      "date": "October 27, 2020",
+      "date": "October 05, 2020",
+      "id": 3
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 2,
+      "date": "October 19, 2020",
+      "id": 3
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 1,
+      "date": "October 22, 2020",
+      "id": 3
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 8,
+      "date": "October 05, 2019",
+      "id": 3
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 6,
+      "date": "September 30, 2020",
+      "id": 3
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 2,
+      "date": "October 20, 2020",
+      "id": 3
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 9,
+      "date": "October 28, 2020",
       "id": 3
     }
   ],

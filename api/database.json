@@ -65,7 +65,7 @@
       "notes": "Don't burn yourself again though...",
       "categoryId": 1,
       "locationId": 1,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": "October 25, 2020",
       "userId": 1
     },
     {
@@ -77,7 +77,7 @@
       "notes": "it wiggles. pretend it doesn't though. ",
       "categoryId": 1,
       "locationId": 4,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": "October 25, 2020",
       "userId": 1
     },
     {
@@ -89,7 +89,7 @@
       "notes": "They say anti-smudge... they lied. ",
       "categoryId": 6,
       "locationId": 5,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": "October 25, 2020",
       "userId": 2
     },
     {
@@ -101,7 +101,7 @@
       "notes": "Throwback Charger Type",
       "categoryId": 2,
       "locationId": 21,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": "October 26, 2020",
       "userId": 1
     },
     {
@@ -112,7 +112,7 @@
       "notes": "roughly fifty million packs",
       "categoryId": 6,
       "locationId": 4,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": "October 26, 2020",
       "userId": 2,
       "id": 5
     },
@@ -124,7 +124,7 @@
       "notes": "3 three foot cords and 1 six food cord",
       "locationId": 1,
       "categoryId": 2,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": "October 26, 2020",
       "userId": 2,
       "id": 8
     },
@@ -136,7 +136,7 @@
       "notes": "holds a good curl! ",
       "categoryId": 4,
       "locationId": 1,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": "October 27, 2020",
       "userId": 1,
       "id": 9
     }
@@ -490,6 +490,27 @@
       "locationId": 4,
       "date": "October 27, 2020",
       "id": 5
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 2,
+      "date": "October 27, 2020",
+      "id": 3
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 1,
+      "date": "October 27, 2020",
+      "id": 3
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 6,
+      "date": "October 27, 2020",
+      "id": 3
     }
   ],
   "lists": []

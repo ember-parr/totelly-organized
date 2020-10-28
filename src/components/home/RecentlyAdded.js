@@ -4,7 +4,7 @@ import {ItemContext} from "../items/ItemProvider"
 import { FeedContext } from './FeedProvider'
 
 export const RecentlyAdded = () => {
-    const {Activities, getActivities, getItemActivities } = useContext(FeedContext)
+    const {Activities, getActivities} = useContext(FeedContext)
     const { Items, getItems } = useContext(ItemContext)
     const currentUser = parseInt(localStorage.user)
     const [itemDetails, setItemDetails] = useState([])
@@ -26,7 +26,6 @@ export const RecentlyAdded = () => {
             (item) => itemsId.includes(item.id) 
         );
             setItemDetails(activityInfo)
-            console.log("item details: ", itemDetails)
 
     }, [Activities, Items, currentUser])
     
@@ -39,10 +38,12 @@ export const RecentlyAdded = () => {
                             <Icon name="plus circle" />
                         </Feed.Label>
                     <Feed.Content>
-                        <Feed.Date>date</Feed.Date>
                         <Feed.Summary>
-                            You added {item.itemName}
+                        <a href={`/items/edit/${item.id}`} alt="items">You added {item.itemName} </a>
                         </Feed.Summary>
+                <Feed.Date> Location: {item.location.name}</Feed.Date>
+                <Feed.Date>Room: {item.room}</Feed.Date>
+                <Feed.Date>Placement: {item.placement}</Feed.Date>
                     </Feed.Content>
                 </Feed.Event>
                 ))}

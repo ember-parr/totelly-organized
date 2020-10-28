@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Header, Placeholder, Card } from 'semantic-ui-react'
+import { Grid, Header, Placeholder, Card, Feed } from 'semantic-ui-react'
 import { ConnectionRequest } from '../connectedUsers/ConnectionRequests'
 import { ConnectionProvider } from '../connectedUsers/ConnectionProvider'
 import { UserProvider } from '../user/UserProvider'
@@ -38,10 +38,16 @@ export const DashboardView = () => {
 
                 <Grid.Row columns={1}>
                     <Grid.Column>
-                        <Header size='large'>Feed</Header>
-                        <DashboardFeed>
+                        <Feed size="small">
+                            <Header as='h4'>Recent Activity</Header>
+
+                            <DashboardFeed />
                             
-                        </DashboardFeed>
+                        
+                        </Feed>
+                        
+                            
+                        
                     </Grid.Column>
                 </Grid.Row>
             </Grid>

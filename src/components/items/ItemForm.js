@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { CategoryContext } from "../categories/CategoryProvider"
 import { LocationContext } from "../locations/LocationProvider"
 import { ItemContext } from "./ItemProvider"
+import { FeedContext } from '../home/FeedProvider'
 import { useHistory, useParams } from 'react-router-dom';
 import { Button, Grid, Header, Icon, Form, Dropdown, Item, Modal } from 'semantic-ui-react'
 
@@ -10,6 +11,7 @@ export const ItemForm = () => {
     const { addItem, getItemById, updateItem, deleteItem } = useContext(ItemContext)
     const { Categories, getCategories } = useContext(CategoryContext)
     const { Locations, getLocations, addLocation } = useContext(LocationContext)
+    const { addFeed } = useContext(FeedContext)
     const [item, setItem] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {itemId} = useParams();
@@ -18,6 +20,9 @@ export const ItemForm = () => {
     const [open, setOpen] = React.useState(false)
     const usersLocations = Locations.filter(loc => loc.userId === parseInt(user))
     let currentLocation = item.locationId
+    let dateFormat = require('dateformat')
+    let now = new Date()
+    let currentDate = dateFormat(now, "longDate")
 
     const handleControlledInputChange = (event) => {
         const newItem = { ...item }
@@ -78,6 +83,12 @@ export const ItemForm = () => {
                     dateLastSearched: 1601409045668,
                     userId: parseInt(user)
                 })
+                addFeed({
+                    activityType: "Updated an Item",
+                    userId: parseInt(user),
+                    dataTwo: item.name,
+                    date: currentDate
+                })
                 .then(() => history.push(`/items`))
             }else {
                 addItem({
@@ -90,6 +101,12 @@ export const ItemForm = () => {
                     locationId: item.locationId,
                     dateLastSearched: 1601409045668,
                     userId: parseInt(user)
+                })
+                addFeed({
+                    activityType: "Added A New Item",
+                    userId: parseInt(user),
+                    dataTwo: item.name,
+                    date: currentDate
                 })
                 .then(() => history.push("/items"))
             }

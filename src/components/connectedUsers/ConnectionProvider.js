@@ -34,6 +34,12 @@ export const ConnectionProvider = (props) => {
         ).then((res) => res.json());
     };
 
+    const getConnectionByUser = (userId) => {
+        return fetch(
+        `http://localhost:8088/connectedUsers?userId=${userId}`
+        ).then((res) => res.json());
+    };
+
     const updateConnection = connection => {
         return fetch(`http://localhost:8088/connectedUsers/${connection.id}`, {
             method: "PUT",
@@ -55,7 +61,8 @@ export const ConnectionProvider = (props) => {
             deleteConnection,
             searchTerms,
             setSearchTerms,
-            updateConnection
+            updateConnection,
+            getConnectionByUser
         }}
         >
         {props.children}

@@ -3,8 +3,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ConnectionContext } from "./ConnectionProvider";
 import { UserContext } from "../user/UserProvider";
+import { FeedContext } from '../home/FeedProvider'
 import { Button, Card } from 'semantic-ui-react';
 import Notifications, {notify} from 'react-notify-toast';
+
 
 export const ConnectionRequest = () => {
     const {
@@ -17,6 +19,12 @@ export const ConnectionRequest = () => {
     } = useContext(ConnectionContext);
     const { Users, getUsers } = useContext(UserContext);
     const [filteredFriendUsers, setFriendUsers] = useState([])
+    const { addFeed } = useContext(FeedContext)
+    let dateFormat = require('dateformat')
+    let now = new Date()
+    let currentDate = dateFormat(now, "longDate")
+    
+    
     
     //delete two-way friendship from database
     const removeConnection = (UserToDelete) => {
@@ -44,13 +52,19 @@ export const ConnectionRequest = () => {
                     userId: currentUser,
                     connectedUserId: UserToapprove,
                     status: true,
-                    dateConnected: 1601409045668
+                    dateConnected: currentDate
                 })
                 addConnection({
                     userId: UserToapprove,
                     connectedUserId: currentUser,
                     status: true,
-                    dateConnected: 1601409045668
+                    dateConnected: currentDate
+                })
+                addFeed({
+                    activityType: "Connected With",
+                    userId: parseInt(currentUser),
+                    dataTwo: parseInt(currentUser),
+                    date: currentDate
                 })
             } else if (connection.userId === UserToapprove && connection.connectedUserId === currentUser) {
                 console.log("approveing connectedUser id: ", UserToapprove, "ConnectionId: ", connection.id)
@@ -59,13 +73,13 @@ export const ConnectionRequest = () => {
                     userId: UserToapprove,
                     connectedUserId: currentUser,
                     status: true,
-                    dateConnected: 1601409045668
+                    dateConnected: currentDate
                 })
                 addConnection({
                     userId: currentUser,
                     connectedUserId: UserToapprove,
                     status: true,
-                    dateConnected: 1601409045668
+                    dateConnected: currentDate
                 })
             } else {
                 console.log("nothing to approve?")
@@ -112,7 +126,7 @@ export const ConnectionRequest = () => {
                                     <Card.Header>{user.firstName} {user.lastName}</Card.Header>
                                     <Card.Meta>Requested To Connect</Card.Meta>
                                     <Card.Description>
-                                        
+                                        Request sent: {currentDate}
                                     </Card.Description>
                                 </Card.Content>
                                 <Card.Content extra >

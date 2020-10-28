@@ -6,6 +6,10 @@ import { UserContext } from "../user/UserProvider";
 import { UserCard } from "./ConnectedUserCard";
 import { Button, Segment, Grid } from 'semantic-ui-react';
 import Notifications, {notify} from 'react-notify-toast';
+let dateFormat = require('dateformat')
+let now = new Date()
+let currentDate = dateFormat(now, "longDate")
+
 
 export const ConnectionList = () => {
     const {
@@ -18,6 +22,7 @@ export const ConnectionList = () => {
     const { Users, getUsers } = useContext(UserContext);
     const [filteredFriendUsers, setFriendUsers] = useState([])
     const [filteredNotFriendUsers, setNonFriendUsers] = useState([])
+    
     
     //delete two-way friendship from database
     const removeConnection = (UserToDelete) => {
@@ -41,7 +46,7 @@ export const ConnectionList = () => {
     const addNewConnection = (id) => {
         const currentUser = parseInt(localStorage.user)
         console.log("adding user id: ", id)
-        addConnection({userId: id, connectedUserId: currentUser, status: false, dateConnected: 1601409045668})
+        addConnection({userId: id, connectedUserId: currentUser, status: false, dateConnected: currentDate})
     }
 
     //get friends and users from database when searchTerms or friend status changes
@@ -83,6 +88,8 @@ export const ConnectionList = () => {
                     .includes(searchTerms.toLowerCase().trim()) || 
                 friend.lastName
                     .toLowerCase()
+                    .includes(searchTerms.toLowerCase().trim())  || 
+                friend.phoneNumber
                     .includes(searchTerms.toLowerCase().trim())
             );
             //search through nonFriends by email/name
@@ -96,6 +103,8 @@ export const ConnectionList = () => {
                     .includes(searchTerms.toLowerCase().trim()) ||
                 friend.lastName
                     .toLowerCase()
+                    .includes(searchTerms.toLowerCase().trim()) ||
+                friend.phoneNumber
                     .includes(searchTerms.toLowerCase().trim())
             );
             // if the search field is not blank, display matching friends/nonfriends
@@ -104,19 +113,19 @@ export const ConnectionList = () => {
             } else {
             // if the search field is blank, display all friends & non friends
             setFriendUsers(friendInformation);
-            setNonFriendUsers(nonFriendInformation)
             }
         }, [connections, Users, searchTerms])
 
     return (
         <>
-            <Segment>
+            <Segment basic>
                 <div>
                 {/* map through friends */}
                 <Grid.Row>
                     {filteredFriendUsers.map((user) => (
                     <Grid.Column key={user.id}>
                         <UserCard
+                        status={'Connected'}
                         friend={user}
                         isFriend={
                             <Button
@@ -137,15 +146,15 @@ export const ConnectionList = () => {
                 </Grid.Row>
                 </div>
             </Segment>
-        <Segment>
-            <h2 className="text-center">Connect With Other Users</h2>
+        <Segment basic>
+            
             {/* map through nonfriends */}
             <div className="friends">
-                <p>*** REMOVE THIS LIST FROM VIEW AFTER DATA DELETION PROBLEM SOLVED ***</p>
             <Grid.Row>
                 {filteredNotFriendUsers.map((user) => (
                 <Grid.Column key={user.id}>
                     <UserCard
+                    status={'Not Yet Connected'}
                     friend={user}
                     isFriend={
                         <Button

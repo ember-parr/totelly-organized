@@ -11,6 +11,7 @@ import {ItemForm} from "./items/ItemForm"
 import { CategoryProvider } from "./categories/CategoryProvider";
 import { UserProvider } from './user/UserProvider'
 import { ConnectedUserDetail } from "./connectedUsers/ConnectedUserDetail";
+import { FeedProvider } from "./home/FeedProvider"
 import { ConnectionProvider } from './connectedUsers/ConnectionProvider';
 import {ConnectionList} from './connectedUsers/ConnectionList'
 import { ConnectionSearch } from './connectedUsers/ConnectionSearch'
@@ -25,7 +26,9 @@ export const ApplicationViews = (props) => {
           </Route>
           
           <Route exact path="/">
+            <FeedProvider>
             <DashboardView />
+            </FeedProvider>
           </Route>
 
           <ItemProvider>
@@ -36,21 +39,25 @@ export const ApplicationViews = (props) => {
 
           <ItemProvider>
             <CategoryProvider>
+              <FeedProvider>
               <LocationProvider>
               <Route exact path="/items/add">
                 <ItemForm/>
               </Route>
               </LocationProvider>
+              </FeedProvider>
             </CategoryProvider>
           </ItemProvider>
 
           <ItemProvider>
             <CategoryProvider>
+              <FeedProvider>
               <LocationProvider>
             <Route exact path="/items/edit/:itemId(\d+)">
               <ItemForm/>
             </Route>
             </LocationProvider>
+            </FeedProvider>
             </CategoryProvider>
           </ItemProvider>
 
@@ -61,9 +68,11 @@ export const ApplicationViews = (props) => {
         </LocationProvider>
 
         <LocationProvider>
+          <FeedProvider>
           <Route exact path="/locations/add">
             <LocationForm />
           </Route>
+          </FeedProvider>
         </LocationProvider>
 
         <LocationProvider>

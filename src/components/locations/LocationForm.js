@@ -1,17 +1,22 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from "react"
 import { LocationContext } from "./LocationProvider"
+import { FeedContext } from '../home/FeedProvider'
 import { useHistory, useParams } from 'react-router-dom';
 import { Button, Grid, Header, Icon, Form, Item, Modal } from 'semantic-ui-react'
 
 export const LocationForm = () => {
     const { addLocation, getLocationById, updateLocation, getLocations, deleteLocation } = useContext(LocationContext)
+    const { addFeed } = useContext(FeedContext)
     const [location, setLocation] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {locationId} = useParams();
     const history = useHistory();
     const user = localStorage.getItem("user")
     const [open, setOpen] = React.useState(false)
+    let dateFormat = require('dateformat')
+    let now = new Date()
+    let currentDate = dateFormat(now, "longDate")
 
     const handleControlledInputChange = (event) => {
         const newLocation = { ...location }
@@ -45,12 +50,24 @@ export const LocationForm = () => {
                     description: location.description,
                     userId: parseInt(user)
                 })
+                addFeed({
+                    activityType: "Updated Their Location",
+                    dataOne: parseInt(user),
+                    dataTwo: location.name,
+                    date: currentDate
+                })
                 .then(() => history.push(`/locations`))
             }else {
                 addLocation({
                     name: location.name,
                     description: location.description,
                     userId: parseInt(user)
+                })
+                addFeed({
+                    activityType: "Added A New Location",
+                    dataOne: parseInt(user),
+                    dataTwo: location.name,
+                    date: currentDate
                 })
                 .then(() => history.push("/locations"))
             }

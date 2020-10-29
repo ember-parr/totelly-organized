@@ -468,29 +468,27 @@
       "userId": 3,
       "itemId": 9,
       "locationId": 0,
+      "connectedUserId": 0,
       "date": "October 28, 2020",
-      "id": 14
+      "id": 1
     },
     {
-      "activityType": "Updated Their Location",
-      "dataOne": 3,
-      "dataTwo": "Sock Drawer",
-      "date": "October 29, 2020",
-      "id": 15
+      "activityType": "Added A New Location",
+      "userId": 2,
+      "itemId": 0,
+      "locationId": 3,
+      "connectedUserId": 0,
+      "date": "October 24, 2020",
+      "id": 2
     },
     {
       "activityType": "Connected With",
-      "userId": 1,
-      "dataTwo": 1,
-      "date": "October 29, 2020",
-      "id": 16
-    },
-    {
-      "activityType": "Updated Their Location",
-      "dataOne": 3,
-      "dataTwo": "Sock Drawer",
-      "date": "October 29, 2020",
-      "id": 17
+      "userId": 3,
+      "itemId": 0,
+      "locationId": 0,
+      "connectedUserId": 4,
+      "date": "October 14, 2020",
+      "id": 3
     }
   ],
   "lists": []

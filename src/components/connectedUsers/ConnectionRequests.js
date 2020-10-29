@@ -19,7 +19,7 @@ export const ConnectionRequest = () => {
     } = useContext(ConnectionContext);
     const { Users, getUsers } = useContext(UserContext);
     const [filteredFriendUsers, setFriendUsers] = useState([])
-    const { addFeed } = useContext(ActivityContext)
+    const { addActivity } = useContext(ActivityContext)
     let dateFormat = require('dateformat')
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")
@@ -57,10 +57,12 @@ export const ConnectionRequest = () => {
                     status: true,
                     dateConnected: currentDate
                 })
-                addFeed({
+                addActivity({
                     activityType: "Connected With",
-                    userId: parseInt(currentUser),
-                    dataTwo: parseInt(currentUser),
+                    userId: currentUser,
+                    itemId: 0,
+                    locationId: 0,
+                    connectedUserId: connection.id,
                     date: currentDate
                 })
             } else if (connection.userId === UserToapprove && connection.connectedUserId === currentUser) {
@@ -76,6 +78,14 @@ export const ConnectionRequest = () => {
                     connectedUserId: UserToapprove,
                     status: true,
                     dateConnected: currentDate
+                })
+                addActivity({
+                    activityType: "Connected With",
+                    userId: currentUser,
+                    itemId: 0,
+                    locationId: 0,
+                    connectedUserId: connection.id,
+                    date: currentDate
                 })
             } else {
                 console.log("nothing to approve?")

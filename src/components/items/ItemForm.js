@@ -11,7 +11,7 @@ export const ItemForm = () => {
     const { addItem, getItemById, updateItem, deleteItem } = useContext(ItemContext)
     const { Categories, getCategories } = useContext(CategoryContext)
     const { Locations, getLocations, addLocation } = useContext(LocationContext)
-    const { addFeed } = useContext(ActivityContext)
+    const { addActivity } = useContext(ActivityContext)
     const [item, setItem] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {itemId} = useParams();
@@ -83,10 +83,12 @@ export const ItemForm = () => {
                     dateLastSearched: 1601409045668,
                     userId: parseInt(user)
                 })
-                addFeed({
+                addActivity({
                     activityType: "Updated an Item",
                     userId: parseInt(user),
-                    dataTwo: item.name,
+                    itemId: item.id,
+                    locationId: 0,
+                    connectedUserId: 0,
                     date: currentDate
                 })
                 .then(() => history.push(`/items`))
@@ -102,10 +104,12 @@ export const ItemForm = () => {
                     dateLastSearched: 1601409045668,
                     userId: parseInt(user)
                 })
-                addFeed({
+                addActivity({
                     activityType: "Added A New Item",
                     userId: parseInt(user),
-                    dataTwo: item.name,
+                    itemId: item.id,
+                    locationId: 0,
+                    connectedUserId: 0,
                     date: currentDate
                 })
                 .then(() => history.push("/items"))

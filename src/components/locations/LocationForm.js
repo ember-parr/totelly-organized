@@ -10,7 +10,7 @@ import { Button, Grid, Header, Icon, Form, Item, Modal } from 'semantic-ui-react
 
 export const LocationForm = () => {
     const { addLocation, getLocationById, updateLocation, getLocations, deleteLocation } = useContext(LocationContext)
-    const { addFeed } = useContext(ActivityContext)
+    const { addActivity } = useContext(ActivityContext)
     const [location, setLocation] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {locationId} = useParams();
@@ -53,10 +53,12 @@ export const LocationForm = () => {
                     description: location.description,
                     userId: parseInt(user)
                 })
-                addFeed({
+                addActivity({
                     activityType: "Updated Their Location",
-                    dataOne: parseInt(user),
-                    dataTwo: location.name,
+                    userId: parseInt(user),
+                    itemId: 0,
+                    locationId: location.id,
+                    connectedUserId: 0,
                     date: currentDate
                 })
                 .then(() => history.push(`/locations`))
@@ -66,10 +68,12 @@ export const LocationForm = () => {
                     description: location.description,
                     userId: parseInt(user)
                 })
-                addFeed({
+                addActivity({
                     activityType: "Added A New Location",
-                    dataOne: parseInt(user),
-                    dataTwo: location.name,
+                    userId: parseInt(user),
+                    itemId: 0,
+                    locationId: location.id,
+                    connectedUserId: 0,
                     date: currentDate
                 })
                 .then(() => history.push("/locations"))

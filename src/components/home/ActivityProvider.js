@@ -31,11 +31,20 @@ export const ActivityProvider = (props) => {
         .then(result => result.json())
     }
 
+    const addActivity = activity => {
+        return fetch("http://localhost:8088/activity", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(activity)
+        })
+    }
     
 
     return (
         <ActivityContext.Provider value={{
-            getCurrentUserActivities, UserActivities, Activities, getActivities, setSearchTerms, searchTerms, getItemActivities, getLocationActivities
+            getCurrentUserActivities, addActivity, UserActivities, Activities, getActivities, setSearchTerms, searchTerms, getItemActivities, getLocationActivities
         }}>
             {props.children}
         </ActivityContext.Provider>

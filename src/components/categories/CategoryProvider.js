@@ -7,7 +7,7 @@ export const CategoryProvider = (props) => {
     const [searchTerms, setSearchTerms] = useState("")
 
     const getCategories = () => {
-        return fetch(`http://localhost:8088/categories`)
+        return fetch(`http://localhost:8088/categories?_sort=name`)
         .then(result => result.json())
         .then(setCategories)
     }

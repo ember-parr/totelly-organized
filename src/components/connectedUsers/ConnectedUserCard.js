@@ -1,21 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { useHistory } from 'react-router-dom'
 import { Card } from "semantic-ui-react";
 
-export const UserCard = ({ friend, isFriend }) => (
-    <Card>
+
+export const UserCard = ({ friend, isFriend, status  }) => {
+    const history = useHistory()
+    const PhoneNumber = require('@reallyuseful/phonenumber')
+
+    return (
+    <Card  onClick ={()=> history.push(`/user/detail/${friend.id}`)} style={{margin: "0em 1em"}}>
+        <Card.Content header={`${friend.firstName} ${friend.lastName}`} />
         <Card.Content>
-        <Card.Header>
-            <h3 className="friend__username">
-            <Link to={`/user/detail/${friend.id}`}>{friend.firstName} {friend.lastName}</Link>
-            </h3>
-        </Card.Header>
-        <Card.Meta>
-            {friend.firstName} {friend.lastName}
-        </Card.Meta>
-        <Card.Meta>{friend.email}</Card.Meta>
-        <Card.Meta>{friend.phoneNumber}</Card.Meta>
-        <Card.Meta>{isFriend}</Card.Meta>
+            <Card.Meta>{status}</Card.Meta>
+            Email: {friend.email} <br />
+            Phone: {PhoneNumber.formatFriendly(`${friend.phoneNumber}`)} </Card.Content>
+        
+        <Card.Content extra>
+            {isFriend}
         </Card.Content>
     </Card>
-);
+    )
+};
+
+

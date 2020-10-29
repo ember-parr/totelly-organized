@@ -3,7 +3,10 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ConnectionContext } from "./ConnectionProvider";
 import { UserContext } from "../user/UserProvider";
+import { FeedContext } from '../home/FeedProvider'
 import { Button, Card } from 'semantic-ui-react';
+import Notifications, {notify} from 'react-notify-toast';
+
 
 export const ConnectionRequest = () => {
     const {
@@ -16,16 +19,20 @@ export const ConnectionRequest = () => {
     } = useContext(ConnectionContext);
     const { Users, getUsers } = useContext(UserContext);
     const [filteredFriendUsers, setFriendUsers] = useState([])
+    const { addFeed } = useContext(FeedContext)
+    let dateFormat = require('dateformat')
+    let now = new Date()
+    let currentDate = dateFormat(now, "longDate")
+    
+    
     
     //delete two-way friendship from database
     const removeConnection = (UserToDelete) => {
         const currentUser = parseInt(localStorage.user)
         connections.map((connection) => {
             if (connection.userId === UserToDelete && connection.connectedUserId === currentUser) {
-                console.log("deleteing user id: ", UserToDelete, "ConnectionId: ", connection.id)
                 deleteConnection(connection.id)
             } else if (connection.connectedUserId === UserToDelete && connection.userId === currentUser) {
-                console.log("deleteing connectedUser id: ", UserToDelete, "ConnectionId: ", connection.id)
                 deleteConnection(connection.id)
             } else {
                 console.log("nothing to delete?")
@@ -37,34 +44,38 @@ export const ConnectionRequest = () => {
         const currentUser = parseInt(localStorage.user)
         connections.map((connection) => {
             if (connection.connectedUserId === UserToapprove && connection.userId === currentUser) {
-                console.log("approveing connectedUser id: ", UserToapprove, "ConnectionId: ", connection.id)
                 updateConnection({
                     id: connection.id,
                     userId: currentUser,
                     connectedUserId: UserToapprove,
                     status: true,
-                    dateConnected: 1601409045668
+                    dateConnected: currentDate
                 })
                 addConnection({
                     userId: UserToapprove,
                     connectedUserId: currentUser,
                     status: true,
-                    dateConnected: 1601409045668
+                    dateConnected: currentDate
+                })
+                addFeed({
+                    activityType: "Connected With",
+                    userId: parseInt(currentUser),
+                    dataTwo: parseInt(currentUser),
+                    date: currentDate
                 })
             } else if (connection.userId === UserToapprove && connection.connectedUserId === currentUser) {
-                console.log("approveing connectedUser id: ", UserToapprove, "ConnectionId: ", connection.id)
                 updateConnection({
                     id: connection.id,
                     userId: UserToapprove,
                     connectedUserId: currentUser,
                     status: true,
-                    dateConnected: 1601409045668
+                    dateConnected: currentDate
                 })
                 addConnection({
                     userId: currentUser,
                     connectedUserId: UserToapprove,
                     status: true,
-                    dateConnected: 1601409045668
+                    dateConnected: currentDate
                 })
             } else {
                 console.log("nothing to approve?")
@@ -78,6 +89,8 @@ export const ConnectionRequest = () => {
         getConnection().then(getUsers);
     }, [])
 
+    let myColor = { background: '#2b7a78', text: "#FFFFFF" };
+    let myRejectColor = { background: '#1e0001', text: "#FFFFFF" };
     //get friends and users from database on page load
     useEffect(() => {
         const currentUser = parseInt(localStorage.user);
@@ -85,7 +98,6 @@ export const ConnectionRequest = () => {
         const friendsOfUser = connections.filter(
             (connection) => connection.userId === currentUser && connection.status === false
         );
-
         // get an array of the current users connected user id's 
         const connectionId = friendsOfUser.map((friend) => friend.connectedUserId)
 
@@ -110,7 +122,7 @@ export const ConnectionRequest = () => {
                                     <Card.Header>{user.firstName} {user.lastName}</Card.Header>
                                     <Card.Meta>Requested To Connect</Card.Meta>
                                     <Card.Description>
-                                        
+                                        Request sent: {currentDate}
                                     </Card.Description>
                                 </Card.Content>
                                 <Card.Content extra >
@@ -118,12 +130,14 @@ export const ConnectionRequest = () => {
                                     <Button user={user} basic color='green' onClick={(e) => {
                                             e.preventDefault();
                                             approveConnection(user.id);
+                                            notify.show('You are now connected!', "custom", 5000, myColor)
                                         }}>
                                         Approve
                                     </Button>
                                     <Button user={user} basic color='red' onClick={(e) => {
                                             e.preventDefault();
                                             removeConnection(user.id);
+                                            notify.show('Request Deleted!', "custom", 5000, myRejectColor)
                                         }}>
                                         Decline
                                     </Button>
@@ -134,6 +148,7 @@ export const ConnectionRequest = () => {
                         )
                     })}
                     </Card.Group>
+                    <Notifications />
         </>
     )
 }

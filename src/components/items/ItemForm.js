@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { CategoryContext } from "../categories/CategoryProvider"
 import { LocationContext } from "../locations/LocationProvider"
 import { ItemContext } from "./ItemProvider"
+import { FeedContext } from '../home/FeedProvider'
 import { useHistory, useParams } from 'react-router-dom';
 import { Button, Grid, Header, Icon, Form, Dropdown, Item, Modal } from 'semantic-ui-react'
 
@@ -10,6 +11,7 @@ export const ItemForm = () => {
     const { addItem, getItemById, updateItem, deleteItem } = useContext(ItemContext)
     const { Categories, getCategories } = useContext(CategoryContext)
     const { Locations, getLocations, addLocation } = useContext(LocationContext)
+    const { addFeed } = useContext(FeedContext)
     const [item, setItem] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {itemId} = useParams();
@@ -18,6 +20,9 @@ export const ItemForm = () => {
     const [open, setOpen] = React.useState(false)
     const usersLocations = Locations.filter(loc => loc.userId === parseInt(user))
     let currentLocation = item.locationId
+    let dateFormat = require('dateformat')
+    let now = new Date()
+    let currentDate = dateFormat(now, "longDate")
 
     const handleControlledInputChange = (event) => {
         const newItem = { ...item }
@@ -78,6 +83,12 @@ export const ItemForm = () => {
                     dateLastSearched: 1601409045668,
                     userId: parseInt(user)
                 })
+                addFeed({
+                    activityType: "Updated an Item",
+                    userId: parseInt(user),
+                    dataTwo: item.name,
+                    date: currentDate
+                })
                 .then(() => history.push(`/items`))
             }else {
                 addItem({
@@ -90,6 +101,12 @@ export const ItemForm = () => {
                     locationId: item.locationId,
                     dateLastSearched: 1601409045668,
                     userId: parseInt(user)
+                })
+                addFeed({
+                    activityType: "Added A New Item",
+                    userId: parseInt(user),
+                    dataTwo: item.name,
+                    date: currentDate
                 })
                 .then(() => history.push("/items"))
             }
@@ -106,25 +123,26 @@ export const ItemForm = () => {
                             </Header>
                             <div>
                             <form >
-                                <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="itemName" icon='hand point up outline' iconPosition='left' placeholder='Name of Item' size='large' defaultValue={item.itemName} /> </Grid.Row> <br/>
-                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="description" icon='hand peace outline' iconPosition='left' placeholder='Description' size='large' defaultValue={item.description}/> </Grid.Row><br/>
-                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="room" icon='envelope outline' iconPosition='left' placeholder='Room' size='large' defaultValue={item.room}/> </Grid.Row><br/>
-                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="placement" icon='mobile alternate' iconPosition='left' placeholder='Placement' size='large' defaultValue={item.placement}/> </Grid.Row> <br/>
-                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="notes" icon='mobile alternate' iconPosition='left' placeholder='Notes' size='large' defaultValue={item.notes}/> </Grid.Row> <br/>
+                            
+                                <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="itemName" icon='plus square outline' iconPosition='left' placeholder='Name of Item'  defaultValue={item.itemName} /> </Grid.Row> <br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="description" icon='newspaper outline' iconPosition='left' placeholder='Description'  defaultValue={item.description}/> </Grid.Row><br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="room" icon='hotel' iconPosition='left' placeholder='Room'  defaultValue={item.room}/> </Grid.Row><br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="placement" icon='box' iconPosition='left' placeholder='Placement'  defaultValue={item.placement}/> </Grid.Row> <br/>
+                                <Grid.Row><Form.TextArea onChange={handleControlledInputChange} name="notes" icon='write'  placeholder='Notes'  defaultValue={item.notes}/> </Grid.Row> <br/>
                                 <Grid.Row>
-                                        <Dropdown placeholder='Select a Category' options={Categories.map(cat => (
+                                        <Form.Select placeholder='Select a Category' options={Categories.map(cat => (
                                             {
                                                 key: cat.id,
                                                 text: cat.name,
                                                 value: cat.id
                                             }
-                                        ))} selection onChange={handleDropdown} name="categoryId" defaultValue={item.categoryId} label="categories" search />
+                                        ))} selection onChange={handleDropdown} name="categoryId" defaultValue={item.categoryId} search />
 
                                 </Grid.Row><br />
                                 <Grid.Row>
                                         <Dropdown 
                                             value={currentLocation}
-                                            placeholder='Select a Location' 
+                                            placeholder='Select (or add) a Location' 
                                             options={usersLocations.map(loc => (
                                                 {
                                                     key: loc.id,
@@ -152,6 +170,7 @@ export const ItemForm = () => {
                                         <Icon name='arrow right' />
                                     </Button.Content>
                                 </Form.Button></Grid.Row>
+                                
                                 </form>
                             </div>
                         </Grid.Column>
@@ -168,11 +187,11 @@ export const ItemForm = () => {
                             </Header>
                             <div>
                             <form >
-                                <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="itemName" icon='hand point up outline' iconPosition='left' placeholder='Name of Item' size='large' defaultValue={item.itemName} /> </Grid.Row> <br/>
-                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="description" icon='hand peace outline' iconPosition='left' placeholder='Description' size='large' defaultValue={item.description}/> </Grid.Row><br/>
-                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="room" icon='envelope outline' iconPosition='left' placeholder='Room' size='large' defaultValue={item.room}/> </Grid.Row><br/>
-                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="placement" icon='mobile alternate' iconPosition='left' placeholder='Placement' size='large' defaultValue={item.placement}/> </Grid.Row> <br/>
-                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="notes" icon='mobile alternate' iconPosition='left' placeholder='Notes' size='large' defaultValue={item.notes}/> </Grid.Row> <br/>
+                                <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="itemName" icon='plus square outline' iconPosition='left' placeholder='Name of Item' size='large' defaultValue={item.itemName} /> </Grid.Row> <br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="description" icon='newspaper outline' iconPosition='left' placeholder='Description' size='large' defaultValue={item.description}/> </Grid.Row><br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="room" icon='hotel' iconPosition='left' placeholder='Room' size='large' defaultValue={item.room}/> </Grid.Row><br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="placement" icon='box' iconPosition='left' placeholder='Placement' size='large' defaultValue={item.placement}/> </Grid.Row> <br/>
+                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="notes" icon='write' iconPosition='left' placeholder='Notes' size='large' defaultValue={item.notes}/> </Grid.Row> <br/>
                                 <Grid.Row>
                                         <Dropdown placeholder='Select a Category' options={Categories.map(cat => (
                                             {
@@ -186,7 +205,7 @@ export const ItemForm = () => {
                                 <Grid.Row>
                                 <Dropdown 
                                         value={currentLocation}
-                                        placeholder='Select a Location' 
+                                        placeholder='Select (or add) a Location' 
                                         defaultValue={item.locationId}
                                         options={usersLocations.map(loc => (
                                             {

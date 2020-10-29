@@ -22,6 +22,11 @@ export const LocationProvider = (props) => {
         })
     }
 
+    const getSharedLocation = (locationId) => {
+        return fetch (`http://localhost:8088/sharedLocations?locationId=${locationId}&_expand=user`)
+        .then(result => result.json())
+    }
+
     const getLocationByUser = userId => {
         return fetch(`http://localhost:8088/locations?userId=${userId}`)
         .then(result => result.json())
@@ -38,6 +43,16 @@ export const LocationProvider = (props) => {
         })
     }
 
+    const shareLocationWithUser = (Location) => {
+        return fetch ("http://localhost:8088/sharedLocations", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(Location)
+        })
+    }
+
     const updateLocation = Location => {
         return fetch(`http://localhost:8088/locations/${Location.id}`, {
             method: "PUT",
@@ -50,7 +65,17 @@ export const LocationProvider = (props) => {
 
     return (
         <LocationContext.Provider value={{
-            Locations, getLocations, addLocation, getLocationById, deleteLocation, updateLocation, setSearchTerms, searchTerms, getLocationByUser
+            Locations, 
+            getLocations, 
+            addLocation, 
+            getLocationById, 
+            deleteLocation, 
+            updateLocation, 
+            setSearchTerms, 
+            searchTerms, 
+            getLocationByUser, 
+            getSharedLocation, 
+            shareLocationWithUser
         }}>
             {props.children}
         </LocationContext.Provider>

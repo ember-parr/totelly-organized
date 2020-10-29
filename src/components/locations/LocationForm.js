@@ -3,6 +3,9 @@ import React, { useContext, useEffect, useState } from "react"
 import { LocationContext } from "./LocationProvider"
 import { FeedContext } from '../home/FeedProvider'
 import { useHistory, useParams } from 'react-router-dom';
+import {ShareLocationSegment } from './ShareLocationSegment'
+import {ConnectionProvider} from '../connectedUsers/ConnectionProvider'
+import { SharedWithSegment } from './SharedWithSegment'
 import { Button, Grid, Header, Icon, Form, Item, Modal } from 'semantic-ui-react'
 
 export const LocationForm = () => {
@@ -86,6 +89,9 @@ export const LocationForm = () => {
                             <h2>{locationId ? `Update ${location.name}` : "Add New Location"}</h2>
                                 <h4>This is a brand new location</h4>
                         </Header>
+                        <ConnectionProvider>
+                            <ShareLocationSegment />
+                        </ConnectionProvider>
                         <div>
                         <form >
                             <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="name" icon='hand point up outline' iconPosition='left' placeholder='Name of Location' size='large' defaultValue={location.name} /> </Grid.Row> <br/>
@@ -106,30 +112,61 @@ export const LocationForm = () => {
     )} else if (locationId && location.userId===parseInt(user)) {
         return (
             <div>
-                <Grid.Column>
-                            <Header>
-                                <h2>{locationId ? `Update ${location.name}` : "Add New Location"}</h2>
-                                <h4>This is your location</h4>
-                            </Header>
-                            <div>
-                            <form >
-                                <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="name" icon='hand point up outline' iconPosition='left' placeholder='Name of Location' size='large' defaultValue={location.name} /> </Grid.Row> <br/>
-                                <Grid.Row><Form.Input onChange={handleControlledInputChange} name="description" icon='hand peace outline' iconPosition='left' placeholder='Description' size='large' defaultValue={location.description}/> </Grid.Row><br/>
-                                <Grid.Row><Form.Button animated disabled={isLoading} onClick={event=> {
-                                    event.preventDefault() 
-                                    constructLocationObject()
-                                    }}>
+                <Header>
+                    <h2>{locationId ? `Update ${location.name}` : "Add New Location"}</h2>
+                </Header>
+                <ConnectionProvider>
+                    <ShareLocationSegment />
+                </ConnectionProvider>
+                            
+                <Grid columns={2} stackable style={{width: "775px"}} divided>
+                    <Grid.Column>
+                        <form >
+                            <Grid.Row>
+                                <h4>{`Edit ${location.name}'s Details`}</h4>
+                                    <label>Name of Location</label>
+                                    <Form.Input  
+                                        onChange={handleControlledInputChange} 
+                                        name="name" icon='hand point up outline' 
+                                        iconPosition='left' 
+                                        placeholder='Name of Location' 
+                                        size='large' 
+                                        defaultValue={location.name} 
+                                    /> 
+                            </Grid.Row> 
+                            <br/>
+                            <Grid.Row>
+                                <label>Description</label>
+                                <Form.Input 
+                                    onChange={handleControlledInputChange} 
+                                    name="description" 
+                                    icon='hand peace outline' 
+                                    iconPosition='left' 
+                                    placeholder='Description' 
+                                    size='large' 
+                                    defaultValue={location.description}
+                                /> 
+                            </Grid.Row>
+                            <br/>
+                            <Grid.Row>
+                                <Form.Button 
+                                    animated 
+                                    disabled={isLoading} 
+                                    
+                                    onClick={event=> {
+                                        event.preventDefault() 
+                                        constructLocationObject()
+                                        }}>
                                     <Button.Content visible>{locationId ? "Save Changes" : "Add Location"}</Button.Content>
                                     <Button.Content hidden>
                                         <Icon name='arrow right' />
                                     </Button.Content>
                                 </Form.Button>
-                                
-                                
+                            
                                 <Modal 
                                     closeIcon 
                                     open={open} 
-                                    trigger={<Button style={{backgroundColor: 'grey', width: '130px'}}> <Icon name='trash alternate outline' /> </Button>} 
+                                    trigger={<Button style={{backgroundColor: 'grey', width: '130px', margin: "15px 0px"}}> <Icon name='trash alternate outline' /> {`Delete`}</Button>} 
                                     onClose={() => setOpen(false)} 
                                     onOpen={(event) => {
                                         event.preventDefault()
@@ -158,14 +195,20 @@ export const LocationForm = () => {
                                         </Button>
                                     </Modal.Actions>
                                 </Modal>
-                                
-                                
-                                
-                                
                                 </Grid.Row>
-                                </form>
-                            </div>
+                            </form>
                         </Grid.Column>
+
+
+                        <Grid.Column>
+                            
+                                <h4>Shared with:</h4>
+                                    <SharedWithSegment location={location} />
+
+
+
+                        </Grid.Column>
+                        </Grid>
             </div>
         )
     } else if (locationId && location.userId!==parseInt(user)) {

@@ -15,6 +15,8 @@ import { FeedProvider } from "./home/FeedProvider"
 import { ConnectionProvider } from './connectedUsers/ConnectionProvider';
 import {ConnectionList} from './connectedUsers/ConnectionList'
 import { ConnectionSearch } from './connectedUsers/ConnectionSearch'
+import { ListsPlaceholder } from './lists/ListsPlaceholder'
+import { MyAccountPlaceholder } from './account/MyAccountPlaceholder'
 
 export const ApplicationViews = (props) => {
     return (
@@ -23,6 +25,14 @@ export const ApplicationViews = (props) => {
         {/* Render the location list when http://localhost:3000/ */}
         <Route exact path="/home">
             <Home />
+          </Route>
+
+          <Route exact path="/lists">
+            <ListsPlaceholder />
+          </Route>
+
+          <Route exact path="/account">
+            <MyAccountPlaceholder />
           </Route>
           
           <Route exact path="/">

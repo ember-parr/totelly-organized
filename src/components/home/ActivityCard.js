@@ -1,13 +1,11 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable array-callback-return */
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext, useEffect } from 'react'
 import { Feed, Icon } from 'semantic-ui-react'
 import { FeedContext } from './FeedProvider'
 
 export const ActivityCard = () => {
-    const {Activities, getActivities, getItemActivities, getLocationActivities, ItemActs, LocActs} = useContext(FeedContext)
-    const currentUser = parseInt(localStorage.user)
-    const [activityDetails, setActivityDetails] = useState([])
+    const {Activities, getActivities } = useContext(FeedContext)
     
 
     useEffect(()=> {
@@ -16,7 +14,7 @@ export const ActivityCard = () => {
 
     return (
         
-            <Feed size="small" fluid>
+            <Feed size="small">
                 {Activities.map((activity) => (
                     <Feed.Event >
                     <Feed.Label>

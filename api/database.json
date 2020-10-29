@@ -301,7 +301,7 @@
     {
       "id": 23,
       "name": "Sock Drawer",
-      "description": "Not that one....",
+      "description": "Where I definitely DON'T hide snacks...",
       "userId": 3
     },
     {
@@ -345,7 +345,68 @@
       "id": 8
     }
   ],
-  "sharedLocations": [],
+  "sharedLocations": [
+    {
+      "id": 1,
+      "locationId": 2,
+      "userId": 1,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 2,
+      "locationId": 3,
+      "userId": 2,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 3,
+      "locationId": 2,
+      "userId": 2,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 4,
+      "locationId": 23,
+      "userId": 4,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 5,
+      "locationId": 23,
+      "userId": 2,
+      "date": "October 24, 2020"
+    },
+    {
+      "userId": 5,
+      "locationId": 24,
+      "id": 6,
+      "date": "October 24, 2020"
+    },
+    {
+      "userId": 2,
+      "locationId": 24,
+      "id": 7,
+      "date": "October 24, 2020"
+    },
+    {
+      "userId": 5,
+      "locationId": 24,
+      "id": 8,
+      "date": "October 24, 2020"
+    },
+    {
+      "userId": 1,
+      "locationId": 23,
+      "id": 9,
+      "date": "October 24, 2020"
+    },
+    {
+      "userId": 5,
+      "locationId": 23,
+      "date": "October 29, 2020",
+      "id": 10
+    }
+  ],
   "connectedUsers": [
     {
       "id": 1,
@@ -379,14 +440,6 @@
       "dateConnected": "October 27, 2020"
     },
     {
-      "userId": 1,
-      "connectedUserId": 3,
-      "status": false,
-      "dateConnected": "October 27, 2020",
-      "id": 6,
-      "jsDate": 1601409045668
-    },
-    {
       "userId": 5,
       "connectedUserId": 3,
       "status": false,
@@ -395,224 +448,49 @@
       "jsDate": 1601409045668
     },
     {
-      "id": 10,
-      "userId": 2,
-      "connectedUserId": 3,
-      "status": true,
-      "dateConnected": "October 27, 2020"
-    },
-    {
+      "id": 8,
       "userId": 1,
       "connectedUserId": 3,
-      "status": false,
-      "dateConnected": "October 27, 2020",
-      "id": 11,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 4,
-      "connectedUserId": 3,
       "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 22,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 4,
-      "connectedUserId": 3,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 23,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 4,
-      "connectedUserId": 3,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 24,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 3,
-      "connectedUserId": 4,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 25,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 1,
-      "connectedUserId": 3,
-      "status": false,
-      "dateConnected": "October 27, 2020",
-      "id": 26,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 1,
-      "connectedUserId": 3,
-      "status": false,
-      "dateConnected": "October 27, 2020",
-      "id": 27,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 3,
-      "connectedUserId": 2,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 28
-    },
-    {
-      "userId": 3,
-      "connectedUserId": 2,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 29
-    },
-    {
-      "userId": 5,
-      "connectedUserId": 3,
-      "status": false,
-      "dateConnected": "October 27, 2020",
-      "id": 30
+      "dateConnected": "October 29, 2020"
     },
     {
       "userId": 3,
       "connectedUserId": 1,
-      "status": false,
-      "dateConnected": "October 28, 2020",
-      "id": 31
-    },
-    {
-      "userId": 3,
-      "connectedUserId": 1,
-      "status": false,
-      "dateConnected": "October 28, 2020",
-      "id": 32
+      "status": true,
+      "dateConnected": "October 29, 2020",
+      "id": 9
     }
   ],
   "feed": [
     {
-      "activityType": "Added A New Location",
-      "userId": 1,
-      "locationId": 3,
-      "itemId": 0,
-      "date": "October 20, 2020",
-      "id": 1
-    },
-    {
-      "activityType": "Connected With",
-      "userId": 1,
-      "locationId": 0,
-      "itemId": 2,
-      "date": "October 24, 2020",
-      "id": 2
-    },
-    {
-      "activityType": "Added A New Item",
-      "userId": 3,
-      "itemId": 4,
-      "locationId": 0,
-      "date": "October 1, 2020",
-      "id": 3
-    },
-    {
-      "activityType": "Added A New Location",
-      "userId": 3,
-      "locationId": 2,
-      "itemId": 0,
-      "date": "October 12, 2020",
-      "id": 4
-    },
-    {
-      "activityType": "Added A New Location",
-      "userId": 2,
-      "locationId": 4,
-      "itemId": 0,
-      "date": "October 8, 2020",
-      "id": 5
-    },
-    {
-      "activityType": "Added A New Item",
-      "userId": 2,
-      "itemId": 2,
-      "locationId": 0,
-      "date": "October 21, 2020",
-      "id": 6
-    },
-    {
-      "activityType": "Added A New Item",
-      "userId": 4,
-      "itemId": 1,
-      "locationId": 0,
-      "date": "October 12, 2020",
-      "id": 7
-    },
-    {
-      "activityType": "Added A New Item",
-      "userId": 3,
-      "itemId": 6,
-      "locationId": 0,
-      "date": "October 05, 2020",
-      "id": 8
-    },
-    {
-      "activityType": "Added A New Item",
-      "userId": 3,
-      "itemId": 2,
-      "locationId": 0,
-      "date": "October 19, 2020",
-      "id": 9
-    },
-    {
-      "activityType": "Added A New Item",
-      "userId": 3,
-      "itemId": 1,
-      "locationId": 0,
-      "date": "October 22, 2020",
-      "id": 10
-    },
-    {
-      "activityType": "Added A New Item",
-      "userId": 3,
-      "itemId": 8,
-      "locationId": 0,
-      "date": "October 05, 2019",
-      "id": 11
-    },
-    {
-      "activityType": "Added A New Item",
-      "userId": 3,
-      "itemId": 6,
-      "locationId": 0,
-      "date": "September 30, 2020",
-      "id": 12
-    },
-    {
-      "activityType": "Added A New Item",
-      "userId": 3,
-      "itemId": 2,
-      "locationId": 0,
-      "date": "October 20, 2020",
-      "id": 13
-    },
-    {
       "activityType": "Added A New Item",
       "userId": 3,
       "itemId": 9,
-      "locationId": 2,
+      "locationId": 0,
       "date": "October 28, 2020",
       "id": 14
     },
     {
-      "activityType": "Added A New Item",
-      "userId": 3,
-      "itemId": 9,
-      "date": "October 28, 2020",
-      "locationId": 0,
+      "activityType": "Updated Their Location",
+      "dataOne": 3,
+      "dataTwo": "Sock Drawer",
+      "date": "October 29, 2020",
       "id": 15
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 1,
+      "dataTwo": 1,
+      "date": "October 29, 2020",
+      "id": 16
+    },
+    {
+      "activityType": "Updated Their Location",
+      "dataOne": 3,
+      "dataTwo": "Sock Drawer",
+      "date": "October 29, 2020",
+      "id": 17
     }
   ],
   "lists": []

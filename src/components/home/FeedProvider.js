@@ -11,7 +11,7 @@ export const FeedProvider = (props) => {
     const currentUser = parseInt(localStorage.user)
 
     const getActivities = () => {
-        return fetch(`http://localhost:8088/feed?_sort=date&_order=desc&_limit=20`)
+        return fetch(`http://localhost:8088/feed?_sort=date&_order=desc&_limit=20&_expand=item&_expand=location&_expand=user`)
         .then(result => result.json())
         .then(setActivities)
     }
@@ -23,16 +23,14 @@ export const FeedProvider = (props) => {
     }
 
 
-    const getItemActivities = (id, expand) => {
-        return fetch(`http://localhost:8088/feed/${id}/?_expand=user&_expand=${expand}`)
+    const getItemActivities = (id) => {
+        return fetch(`http://localhost:8088/feed/${id}/?_expand=user&_expand=item`)
         .then(result => result.json())
-        .then(setItemActs)
     }
 
     const getLocationActivities = (id) => {
-        return fetch(`http://localhost:8088/feed/${id}/?_expand=user&_expand=location`)
+        return fetch(`http://localhost:8088/feed/${id}?_expand=user&_expand=location`)
         .then(result => result.json())
-
     }
 
     const addFeed = Feed => {

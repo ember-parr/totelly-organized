@@ -14,48 +14,17 @@ export const ActivityCard = () => {
         getActivities()
     }, [])
 
-    // const activityInformation = Activities.map((activity) => {
-    //     if (activity.activityType === "Added A New Item" && activity.userId !== currentUser) {
-    //         getItemActivities(activity.id)
-    //     } else if (activity.activityType === "Added A New Location" && activity.userId !== currentUser) {
-    //         getLocationActivities(activity.id)
-    //     }
-    // })
-    // setActivityDetails(activityInformation)
-    
-
-
-    useEffect(() => {
-        const arrayOfActivities = []
-        const activityInformation = Activities.map((activity) => {
-                if (activity.itemId) {
-                    getItemActivities(activity.id, 'item')
-                    .then(arrayOfActivities.push(ItemActs))
-                } 
-                if (activity.locationId) {
-                    getItemActivities(activity.id, 'location')
-                    .then(arrayOfActivities.push(ItemActs))
-                }
-            })
-            
-        setActivityDetails(arrayOfActivities)
-        console.log("activity info: ", activityInformation)
-        console.log("array of activities: ", arrayOfActivities)
-            
-        }, [])
-    
-
     return (
         
-            <Feed size="small">
-                {activityDetails.map((activity) => (
+            <Feed size="small" fluid>
+                {Activities.map((activity) => (
                     <Feed.Event >
                     <Feed.Label>
                             <Icon name="plus circle" />
                         </Feed.Label>
                     <Feed.Content>
                         <Feed.Summary>
-                        {activity?.user?.firstName} added {activity?.item?.itemName} {activity?.location?.itemName} 
+                        <Feed.User>{activity?.user?.firstName} {activity?.user?.lastName}</Feed.User> added {activity?.item?.itemName} {activity?.location?.name} 
                         </Feed.Summary>
                 
                     </Feed.Content>

@@ -301,7 +301,7 @@
     {
       "id": 23,
       "name": "Sock Drawer",
-      "description": "Where I definitely don't hide snacks...",
+      "description": "Where I definitely DON'T hide snacks...",
       "userId": 3
     },
     {
@@ -349,42 +349,62 @@
     {
       "id": 1,
       "locationId": 2,
-      "userId": 1
+      "userId": 1,
+      "date": "October 24, 2020"
     },
     {
       "id": 2,
       "locationId": 3,
-      "userId": 2
+      "userId": 2,
+      "date": "October 24, 2020"
     },
     {
       "id": 3,
       "locationId": 2,
-      "userId": 2
+      "userId": 2,
+      "date": "October 24, 2020"
     },
     {
       "id": 4,
       "locationId": 23,
-      "userId": 4
+      "userId": 4,
+      "date": "October 24, 2020"
     },
     {
       "id": 5,
       "locationId": 23,
-      "userId": 2
+      "userId": 2,
+      "date": "October 24, 2020"
     },
     {
       "userId": 5,
       "locationId": 24,
-      "id": 6
+      "id": 6,
+      "date": "October 24, 2020"
     },
     {
       "userId": 2,
       "locationId": 24,
-      "id": 7
+      "id": 7,
+      "date": "October 24, 2020"
     },
     {
       "userId": 5,
       "locationId": 24,
-      "id": 8
+      "id": 8,
+      "date": "October 24, 2020"
+    },
+    {
+      "userId": 1,
+      "locationId": 23,
+      "id": 9,
+      "date": "October 24, 2020"
+    },
+    {
+      "userId": 5,
+      "locationId": 23,
+      "date": "October 29, 2020",
+      "id": 10
     }
   ],
   "connectedUsers": [
@@ -426,6 +446,20 @@
       "dateConnected": "October 27, 2020",
       "id": 7,
       "jsDate": 1601409045668
+    },
+    {
+      "id": 8,
+      "userId": 1,
+      "connectedUserId": 3,
+      "status": true,
+      "dateConnected": "October 29, 2020"
+    },
+    {
+      "userId": 3,
+      "connectedUserId": 1,
+      "status": true,
+      "dateConnected": "October 29, 2020",
+      "id": 9
     }
   ],
   "feed": [
@@ -443,6 +477,20 @@
       "dataTwo": "Sock Drawer",
       "date": "October 29, 2020",
       "id": 15
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 1,
+      "dataTwo": 1,
+      "date": "October 29, 2020",
+      "id": 16
+    },
+    {
+      "activityType": "Updated Their Location",
+      "dataOne": 3,
+      "dataTwo": "Sock Drawer",
+      "date": "October 29, 2020",
+      "id": 17
     }
   ],
   "lists": []

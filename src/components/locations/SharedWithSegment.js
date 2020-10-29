@@ -22,9 +22,9 @@ export const SharedWithSegment = ({location}) => {
                         <Card>
                             <Card.Content>
                             <Card.Header>{loc.user.firstName} {loc.user.lastName}</Card.Header>
-                                <Card.Meta>Co-Worker</Card.Meta>
+                                <Card.Meta>{loc.user.email}</Card.Meta>
                                 <Card.Description>
-                                Matthew is a pianist living in Nashville.
+                                Shared On: {loc.date}
                                 </Card.Description>
                             </Card.Content>
                             </Card>

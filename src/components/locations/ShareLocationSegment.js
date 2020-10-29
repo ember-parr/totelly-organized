@@ -3,13 +3,15 @@ import { Segment, Dropdown, Button  } from 'semantic-ui-react'
 import { useParams } from 'react-router-dom';
 import {ConnectionContext} from '../connectedUsers/ConnectionProvider'
 import {LocationContext} from './LocationProvider'
+let dateFormat = require('dateformat')
+let now = new Date()
+let currentDate = dateFormat(now, "longDate")
 
 export const ShareLocationSegment = () => {
     const {connections, getConnection} = useContext(ConnectionContext)
-    const {shareLocationWithUser, getLocationById} = useContext(LocationContext)
+    const {shareLocationWithUser} = useContext(LocationContext)
     const currentUser = localStorage.getItem("user")
     const [thing, setThing] = useState({})
-    const [location, setLocation] = useState({})
     const locationId = useParams()
     const usersConnectedUsers = connections.filter(cons => cons.connectedUserId === parseInt(currentUser))
     // let currentLocation = location.id
@@ -32,7 +34,8 @@ export const ShareLocationSegment = () => {
         console.log("thing: ", thing.userId)
         shareLocationWithUser({
             userId: thing.userId,
-            locationId: parseInt(locationId.locationId)
+            locationId: parseInt(locationId.locationId),
+            date: currentDate
         })
     }
 

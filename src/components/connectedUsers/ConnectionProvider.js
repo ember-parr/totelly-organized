@@ -4,6 +4,7 @@ export const ConnectionContext = createContext();
 
 export const ConnectionProvider = (props) => {
     const [connections, setConnection] = useState([]);
+    const [UsersConnections, setUsersConnections] = useState([])
     const [searchTerms, setSearchTerms] = useState("");
 
     const getConnection = () => {
@@ -31,7 +32,8 @@ export const ConnectionProvider = (props) => {
     const getConnectionById = (id) => {
         return fetch(
         `http://localhost:8088/connectedUsers/${id}?_expand=user`
-        ).then((res) => res.json());
+        ).then((res) => res.json())
+        .then(setUsersConnections);
     };
 
     const getConnectionByUser = (userId) => {
@@ -62,7 +64,8 @@ export const ConnectionProvider = (props) => {
             searchTerms,
             setSearchTerms,
             updateConnection,
-            getConnectionByUser
+            getConnectionByUser,
+            UsersConnections
         }}
         >
         {props.children}

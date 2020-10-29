@@ -370,6 +370,18 @@
       "id": 5,
       "locationId": 6,
       "userId": 2
+    },
+    {
+      "locationId": {
+        "locationId": "23"
+      },
+      "id": 6
+    },
+    {
+      "locationId": {
+        "locationId": "23"
+      },
+      "id": 7
     }
   ],
   "connectedUsers": [

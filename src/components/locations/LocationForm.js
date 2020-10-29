@@ -3,6 +3,8 @@ import React, { useContext, useEffect, useState } from "react"
 import { LocationContext } from "./LocationProvider"
 import { FeedContext } from '../home/FeedProvider'
 import { useHistory, useParams } from 'react-router-dom';
+import {ShareLocationSegment } from './ShareLocationSegment'
+import {ConnectionProvider} from '../connectedUsers/ConnectionProvider'
 import { Button, Grid, Header, Icon, Form, Item, Modal } from 'semantic-ui-react'
 
 export const LocationForm = () => {
@@ -86,6 +88,9 @@ export const LocationForm = () => {
                             <h2>{locationId ? `Update ${location.name}` : "Add New Location"}</h2>
                                 <h4>This is a brand new location</h4>
                         </Header>
+                        <ConnectionProvider>
+                            <ShareLocationSegment />
+                        </ConnectionProvider>
                         <div>
                         <form >
                             <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="name" icon='hand point up outline' iconPosition='left' placeholder='Name of Location' size='large' defaultValue={location.name} /> </Grid.Row> <br/>
@@ -111,6 +116,9 @@ export const LocationForm = () => {
                                 <h2>{locationId ? `Update ${location.name}` : "Add New Location"}</h2>
                                 <h4>This is your location</h4>
                             </Header>
+                            <ConnectionProvider>
+                            <ShareLocationSegment />
+                        </ConnectionProvider>
                             <div>
                             <form >
                                 <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="name" icon='hand point up outline' iconPosition='left' placeholder='Name of Location' size='large' defaultValue={location.name} /> </Grid.Row> <br/>

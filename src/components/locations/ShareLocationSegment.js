@@ -1,6 +1,6 @@
 import React, {useContext, useEffect, useState} from 'react'
-import { Segment, Header, Dropdown, Button  } from 'semantic-ui-react'
-import { useHistory, useParams } from 'react-router-dom';
+import { Segment, Dropdown, Button  } from 'semantic-ui-react'
+import { useParams } from 'react-router-dom';
 import {ConnectionContext} from '../connectedUsers/ConnectionProvider'
 import {LocationContext} from './LocationProvider'
 

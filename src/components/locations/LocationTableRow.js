@@ -12,41 +12,26 @@ export const LocationTableRow = ({location}) => {
     useEffect(()=> {
         getSharedLocation(location.id).then(location => {
             setFilteredLocations(location)
-            console.log("filteredLocations: ", filteredLocations, "location func scope: ", location)
         })
     }, [])
-
-    // useEffect(() => {
-    //     const sharedWith = SharedLocations.filter(
-    //         (location) => location.locationId === location.id
-            
-    //     )
-    //     setFilteredLocations(sharedWith)
-    //     console.log("shared with: ", sharedWith)
-    //     console.log("filtered locations: ", filteredLocations)
-    // }, [])
-
-
-
-
-
-
 
     return (
         
         <>
             <Table.Row onClick ={()=> history.push(`/locations/edit/${location.id}`)}>
                 <Table.Cell>{ location.name }</Table.Cell>
-                <Table.Cell>{ location.user.firstName }</Table.Cell>
+                <Table.Cell>{ location.user.firstName } {location.user.lastName} </Table.Cell>
                 <Table.Cell>{ location.description }</Table.Cell>
                 <Table.Cell>
                     {filteredLocations.map((loc) => {
-                        return (
-                            <>
-                                {loc.user.firstName}
-                            </>
-                        )
-                    })}
+                            return (
+                                <>
+                                    {loc.user.firstName} {loc.user.lastName}, <br />
+                                </>
+                            )
+                    })
+                    
+                    }
                 </Table.Cell>
             </Table.Row>
         </>

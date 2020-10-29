@@ -301,7 +301,7 @@
     {
       "id": 23,
       "name": "Sock Drawer",
-      "description": "Not that one....",
+      "description": "Where I definitely don't hide snacks...",
       "userId": 3
     },
     {
@@ -380,6 +380,11 @@
       "userId": 2,
       "locationId": 24,
       "id": 7
+    },
+    {
+      "userId": 5,
+      "locationId": 24,
+      "id": 8
     }
   ],
   "connectedUsers": [
@@ -431,6 +436,13 @@
       "locationId": 0,
       "date": "October 28, 2020",
       "id": 14
+    },
+    {
+      "activityType": "Updated Their Location",
+      "dataOne": 3,
+      "dataTwo": "Sock Drawer",
+      "date": "October 29, 2020",
+      "id": 15
     }
   ],
   "lists": []

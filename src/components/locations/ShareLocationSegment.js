@@ -6,15 +6,17 @@ import {LocationContext} from './LocationProvider'
 
 export const ShareLocationSegment = () => {
     const {connections, getConnection} = useContext(ConnectionContext)
-    const {shareLocationWithUser} = useContext(LocationContext)
+    const {shareLocationWithUser, getLocationById} = useContext(LocationContext)
     const currentUser = localStorage.getItem("user")
     const [thing, setThing] = useState({})
+    const [location, setLocation] = useState({})
     const locationId = useParams()
     const usersConnectedUsers = connections.filter(cons => cons.connectedUserId === parseInt(currentUser))
     // let currentLocation = location.id
 
     useEffect(() => {
         getConnection()
+        
         
     })
 
@@ -38,7 +40,7 @@ export const ShareLocationSegment = () => {
         <>
             <Segment raised>
                 <p>
-                    To share <strong>* LOCATION NAME * </strong> with another user, please select user from dropdown below
+                    To share <strong> {'this location'} </strong> with another user, please select user from dropdown below
                 </p>
             
                 <Dropdown 

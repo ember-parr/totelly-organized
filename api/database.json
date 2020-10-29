@@ -173,7 +173,7 @@
       "notes": "not the T9 calculator",
       "categoryId": 2,
       "locationId": 25,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": 1601409045668,
       "userId": 3
     },
     {
@@ -184,7 +184,7 @@
       "notes": "Why is there an extra though? ",
       "categoryId": 2,
       "locationId": 25,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": 1601409045668,
       "userId": 3,
       "id": 11
     },
@@ -195,7 +195,7 @@
       "notes": "rechargeable  ",
       "categoryId": 2,
       "locationId": 25,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": 1601409045668,
       "userId": 3,
       "id": 12
     },
@@ -205,7 +205,7 @@
       "placement": "Medicine Cabinet",
       "categoryId": 4,
       "locationId": 25,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": 1601409045668,
       "userId": 3,
       "id": 13
     },
@@ -215,7 +215,7 @@
       "placement": "Desk Bottom Drawer",
       "categoryId": 6,
       "locationId": 25,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": 1601409045668,
       "userId": 3,
       "id": 14
     },
@@ -227,7 +227,7 @@
       "notes": "just",
       "categoryId": 3,
       "locationId": 23,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": 1601409045668,
       "userId": 3,
       "id": 15
     },
@@ -239,9 +239,90 @@
       "notes": "4:10",
       "locationId": 25,
       "categoryId": 2,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": 1601409045668,
       "userId": 3,
       "id": 16
+    },
+    {
+      "itemName": "one",
+      "description": "two",
+      "room": "three",
+      "placement": "four",
+      "notes": "five",
+      "categoryId": 7,
+      "locationId": 25,
+      "dateAdded": 1601409045668,
+      "userId": 3,
+      "id": 17
+    },
+    {
+      "itemName": "ilug",
+      "description": "jygq",
+      "room": "gcfutq",
+      "placement": "ufdqq",
+      "categoryId": 2,
+      "locationId": 24,
+      "dateAdded": 1601409045668,
+      "userId": 3,
+      "id": 18
+    },
+    {
+      "itemName": "asdf",
+      "description": "lskdfj",
+      "room": "sdvoihg",
+      "placement": "sovdih",
+      "categoryId": 3,
+      "locationId": 23,
+      "dateAdded": 1601409045668,
+      "userId": 3,
+      "id": 19
+    },
+    {
+      "itemName": "asdv",
+      "description": "sdvewaw",
+      "room": "awvbaw",
+      "placement": "abvwrw",
+      "notes": "abawrba",
+      "categoryId": 7,
+      "locationId": 25,
+      "dateAdded": 1601409045668,
+      "userId": 3,
+      "id": 20
+    },
+    {
+      "itemName": "asdve",
+      "description": "asewfge",
+      "room": "asbawb",
+      "placement": "arbaw",
+      "notes": "arga",
+      "categoryId": 7,
+      "locationId": 24,
+      "dateAdded": 1601409045668,
+      "userId": 3,
+      "id": 21
+    },
+    {
+      "itemName": "sdfca",
+      "description": "asvawe",
+      "room": "avwdawe",
+      "placement": "avwe",
+      "notes": "awv",
+      "categoryId": 7,
+      "locationId": 24,
+      "dateAdded": 1601409045668,
+      "userId": 3,
+      "id": 22
+    },
+    {
+      "itemName": "dsaf",
+      "description": "asdf",
+      "room": "asdf",
+      "placement": "asdf",
+      "categoryId": 7,
+      "locationId": 24,
+      "dateLastSearched": 1601409045668,
+      "userId": 3,
+      "id": 23
     }
   ],
   "locations": [
@@ -646,6 +727,24 @@
       "connectedUserId": 0,
       "date": "October 29, 2020 at 4:09 PM",
       "id": 11
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "locationId": 0,
+      "itemId": 17,
+      "connectedUserId": 0,
+      "date": "October 29, 2020 at 9:22 PM",
+      "id": 12
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 23,
+      "locationId": 0,
+      "connectedUserId": 0,
+      "date": "October 29, 2020 at 10:32 PM",
+      "id": 13
     }
   ],
   "lists": []

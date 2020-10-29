@@ -105,11 +105,12 @@ export const ItemForm = () => {
                     dateLastSearched: 1601409045668,
                     userId: parseInt(user)
                 }).then(getMostRecentItem).then((newItem)=> {
-                    console.log(newItem)
+                    setItem(newItem)
+                    console.log(newItem[0].id)
                     addActivity({
                         activityType: "Added A New Item",
                         userId: parseInt(user),
-                        itemId: newItem.id,
+                        itemId: newItem[0].id,
                         locationId: 0,
                         connectedUserId: 0,
                         date: currentDate + " at " + currentTime

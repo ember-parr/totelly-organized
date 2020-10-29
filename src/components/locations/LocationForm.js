@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useContext, useEffect, useState } from "react"
 import { LocationContext } from "./LocationProvider"
-import { FeedContext } from '../home/FeedProvider'
+import { ActivityContext } from '../home/ActivityProvider'
 import { useHistory, useParams } from 'react-router-dom';
 import {ShareLocationSegment } from './ShareLocationSegment'
 import {ConnectionProvider} from '../connectedUsers/ConnectionProvider'
@@ -10,7 +10,7 @@ import { Button, Grid, Header, Icon, Form, Item, Modal } from 'semantic-ui-react
 
 export const LocationForm = () => {
     const { addLocation, getLocationById, updateLocation, getLocations, deleteLocation } = useContext(LocationContext)
-    const { addFeed } = useContext(FeedContext)
+    const { addFeed } = useContext(ActivityContext)
     const [location, setLocation] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {locationId} = useParams();
@@ -83,7 +83,7 @@ export const LocationForm = () => {
     // const [values, setValues] = useState({itemName: '', description: '', room: '', categoryId: 2, locationId: 1, placement: '', notes: '', lists: []})
     if(!locationId) {
     return (
-        <div>
+        <div class="pageComponent">
             <Grid.Column>
                         <Header>
                             <h2>{locationId ? `Update ${location.name}` : "Add New Location"}</h2>
@@ -111,7 +111,7 @@ export const LocationForm = () => {
         </div>
     )} else if (locationId && location.userId===parseInt(user)) {
         return (
-            <div>
+            <div class="pageComponent">
                 <Header>
                     <h2>{locationId ? `Update ${location.name}` : "Add New Location"}</h2>
                 </Header>
@@ -213,7 +213,7 @@ export const LocationForm = () => {
         )
     } else if (locationId && location.userId!==parseInt(user)) {
         return (
-            <div>
+            <div class="pageComponent">
                 <Header>
                     <h2>{`${location.name}`}</h2>
                     <h3>{`${location.user?.firstName} ${location.user?.lastName} entered this location`}</h3>

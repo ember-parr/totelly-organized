@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react"
 import { CategoryContext } from "../categories/CategoryProvider"
 import { LocationContext } from "../locations/LocationProvider"
 import { ItemContext } from "./ItemProvider"
-import { FeedContext } from '../home/FeedProvider'
+import { ActivityContext } from '../home/ActivityProvider'
 import { useHistory, useParams } from 'react-router-dom';
 import { Button, Grid, Header, Icon, Form, Dropdown, Item, Modal } from 'semantic-ui-react'
 
@@ -11,7 +11,7 @@ export const ItemForm = () => {
     const { addItem, getItemById, updateItem, deleteItem } = useContext(ItemContext)
     const { Categories, getCategories } = useContext(CategoryContext)
     const { Locations, getLocations, addLocation } = useContext(LocationContext)
-    const { addFeed } = useContext(FeedContext)
+    const { addFeed } = useContext(ActivityContext)
     const [item, setItem] = useState({})
     const [isLoading, setIsLoading] = useState(true);
     const {itemId} = useParams();
@@ -116,7 +116,7 @@ export const ItemForm = () => {
     if (!itemId) {
         // if there is no itemId, meaning the user is creating a new item
         return (
-            <div>
+            <div class="pageComponent">
                 <Grid.Column>
                             <Header>
                                 <h2>{"Add New Item"}</h2>
@@ -179,7 +179,7 @@ export const ItemForm = () => {
     )} else if (itemId && item.userId===parseInt(user)) {
         // if there is an itemId, so the user is viewing item details, and the item's userId matches the logged in userID
         return (
-            <div>
+            <div class="pageComponent">
                 <Grid.Column>
                             <Header>
                                 <h2>{itemId ? `Update ${item.itemName}` : "Add New Item"}</h2>
@@ -284,7 +284,7 @@ export const ItemForm = () => {
         )} else if (itemId && item.userId !== parseInt(user)) {
             // if there is an itemId, so the user is viewing item details, and the item's userId does NOT match the logged in userID
             return (
-                <div>
+                <div class="pageComponent">
                     <Header>
                         <h2>{`${item.itemName}`}</h2>
                         <h3>{`${item.user?.firstName} ${item.user?.lastName} entered this item`}</h3>

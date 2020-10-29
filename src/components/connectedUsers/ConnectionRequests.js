@@ -3,7 +3,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ConnectionContext } from "./ConnectionProvider";
 import { UserContext } from "../user/UserProvider";
-import { FeedContext } from '../home/FeedProvider'
+import { ActivityContext } from '../home/ActivityProvider'
 import { Button, Card } from 'semantic-ui-react';
 import Notifications, {notify} from 'react-notify-toast';
 
@@ -19,7 +19,7 @@ export const ConnectionRequest = () => {
     } = useContext(ConnectionContext);
     const { Users, getUsers } = useContext(UserContext);
     const [filteredFriendUsers, setFriendUsers] = useState([])
-    const { addFeed } = useContext(FeedContext)
+    const { addFeed } = useContext(ActivityContext)
     let dateFormat = require('dateformat')
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")

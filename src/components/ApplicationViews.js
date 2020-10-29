@@ -11,7 +11,7 @@ import {ItemForm} from "./items/ItemForm"
 import { CategoryProvider } from "./categories/CategoryProvider";
 import { UserProvider } from './user/UserProvider'
 import { ConnectedUserDetail } from "./connectedUsers/ConnectedUserDetail";
-import { FeedProvider } from "./home/FeedProvider"
+import { ActivityProvider } from "./home/ActivityProvider"
 import { ConnectionProvider } from './connectedUsers/ConnectionProvider';
 import {ConnectionList} from './connectedUsers/ConnectionList'
 import { ConnectionSearch } from './connectedUsers/ConnectionSearch'
@@ -36,9 +36,9 @@ export const ApplicationViews = (props) => {
           </Route>
           
           <Route exact path="/">
-            <FeedProvider>
+            <ActivityProvider>
               <DashboardView />
-            </FeedProvider>
+            </ActivityProvider>
           </Route>
 
           <ItemProvider>
@@ -49,25 +49,25 @@ export const ApplicationViews = (props) => {
 
           <ItemProvider>
             <CategoryProvider>
-              <FeedProvider>
+              <ActivityProvider>
                 <LocationProvider>
                   <Route exact path="/items/add">
                     <ItemForm/>
                   </Route>
                 </LocationProvider>
-              </FeedProvider>
+              </ActivityProvider>
             </CategoryProvider>
           </ItemProvider>
 
           <ItemProvider>
             <CategoryProvider>
-              <FeedProvider>
+              <ActivityProvider>
                 <LocationProvider>
                   <Route exact path="/items/edit/:itemId(\d+)">
                     <ItemForm/>
                   </Route>
                 </LocationProvider>
-              </FeedProvider>
+              </ActivityProvider>
             </CategoryProvider>
           </ItemProvider>
 
@@ -78,40 +78,40 @@ export const ApplicationViews = (props) => {
         </LocationProvider>
 
         <LocationProvider>
-          <FeedProvider>
+          <ActivityProvider>
             <Route exact path="/locations/add">
               <LocationForm />
             </Route>
-          </FeedProvider>
+          </ActivityProvider>
         </LocationProvider>
 
         <LocationProvider>
-          <FeedProvider>
+          <ActivityProvider>
             <Route exact path="/locations/edit/:locationId(\d+)">
               <LocationForm />
             </Route>
-          </FeedProvider>
+          </ActivityProvider>
         </LocationProvider>
 
 
         <UserProvider>
           <LocationProvider>
-            <FeedProvider>
+            <ActivityProvider>
               <Route exact path="/user/detail/:userId(\d+)">
                 <ConnectedUserDetail />
               </Route>
-            </FeedProvider>
+            </ActivityProvider>
           </LocationProvider>
         </UserProvider>
 
         < UserProvider>
           <ConnectionProvider>
-            <FeedProvider>
+            <ActivityProvider>
               <Route exact path="/users">
                   <ConnectionSearch />
                   <ConnectionList />
               </Route>
-              </FeedProvider>
+              </ActivityProvider>
           </ConnectionProvider>
         </UserProvider>
 

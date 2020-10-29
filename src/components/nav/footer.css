@@ -1,6 +1,8 @@
 p {
     height: 50px;
     margin-top: -50px;
+    margin-left: -150px;
+    text-align: center;
   }
 
   .sidebarBox {

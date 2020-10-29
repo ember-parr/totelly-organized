@@ -2,10 +2,10 @@
 /* eslint-disable array-callback-return */
 import React, {useContext, useEffect } from 'react'
 import { Feed, Icon } from 'semantic-ui-react'
-import { FeedContext } from './FeedProvider'
+import { ActivityContext } from './ActivityProvider'
 
 export const ActivityCard = () => {
-    const {Activities, getActivities } = useContext(FeedContext)
+    const {Activities, getActivities } = useContext(ActivityContext)
     
 
     useEffect(()=> {

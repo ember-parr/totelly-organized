@@ -56,9 +56,9 @@ function exampleReducer(state, action) {
             <Icon name='users' color={color} />
             Connected Users
           </Menu.Item>
-          <Menu.Item as='a' onClick={() => history.push("/settings")}>
+          <Menu.Item as='a' onClick={() => history.push("/account")}>
             <Icon name='setting' color={color} />
-            Settings
+            My Account
           </Menu.Item>
       </>
     )

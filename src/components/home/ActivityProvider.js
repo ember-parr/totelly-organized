@@ -9,7 +9,7 @@ export const ActivityProvider = (props) => {
     const currentUser = parseInt(localStorage.user)
 
     const getActivities = () => {
-        return fetch(`http://localhost:8088/activity?_sort=date&_order=desc&_limit=20&_expand=item&_expand=location&_expand=user`)
+        return fetch(`http://localhost:8088/activity?_sort=date&_order=desc&_limit=10&_expand=item&_expand=location&_expand=user`)
         .then(result => result.json())
         .then(setActivities)
     }

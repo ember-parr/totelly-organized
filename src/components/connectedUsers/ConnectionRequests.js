@@ -23,6 +23,7 @@ export const ConnectionRequest = () => {
     let dateFormat = require('dateformat')
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")
+    let currentTime = dateFormat(now, "shortTime")
     
     
     
@@ -63,7 +64,7 @@ export const ConnectionRequest = () => {
                     itemId: 0,
                     locationId: 0,
                     connectedUserId: connection.id,
-                    date: currentDate
+                    date: currentDate + " at " + currentTime
                 })
             } else if (connection.userId === UserToapprove && connection.connectedUserId === currentUser) {
                 updateConnection({
@@ -85,7 +86,7 @@ export const ConnectionRequest = () => {
                     itemId: 0,
                     locationId: 0,
                     connectedUserId: connection.id,
-                    date: currentDate
+                    date: currentDate + " at " + currentTime
                 })
             } else {
                 console.log("nothing to approve?")

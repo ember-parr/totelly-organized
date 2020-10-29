@@ -20,6 +20,7 @@ export const LocationForm = () => {
     let dateFormat = require('dateformat')
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")
+    let currentTime = dateFormat(now, "shortTime")
 
     const handleControlledInputChange = (event) => {
         const newLocation = { ...location }
@@ -59,7 +60,7 @@ export const LocationForm = () => {
                     itemId: 0,
                     locationId: location.id,
                     connectedUserId: 0,
-                    date: currentDate
+                    date: currentDate + " at " + currentTime
                 })
                 .then(() => history.push(`/locations`))
             }else {
@@ -74,7 +75,7 @@ export const LocationForm = () => {
                     itemId: 0,
                     locationId: location.id,
                     connectedUserId: 0,
-                    date: currentDate
+                    date: currentDate + " at " + currentTime
                 })
                 .then(() => history.push("/locations"))
             }

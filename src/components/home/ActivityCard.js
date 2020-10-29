@@ -14,7 +14,7 @@ export const ActivityCard = () => {
 
     return (
         <>
-            <Grid columns={4} divided="internally">
+            <Grid  divided="internally" columns={4} relaxed>
                 <Card.Group>
                     {Activities.map((activity) => (
                         <Card >

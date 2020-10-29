@@ -40,9 +40,13 @@ export const LocationTableRow = ({location}) => {
                 <Table.Cell>{ location.user.firstName }</Table.Cell>
                 <Table.Cell>{ location.description }</Table.Cell>
                 <Table.Cell>
-                    {filteredLocations.map((loc) => (
-                        <span style={{ padding:10, marginHorizontal:10}}>{loc.user.firstName}</span>
-                    ))}
+                    {filteredLocations.map((loc) => {
+                        return (
+                            <>
+                                {loc.user.firstName}
+                            </>
+                        )
+                    })}
                 </Table.Cell>
             </Table.Row>
         </>

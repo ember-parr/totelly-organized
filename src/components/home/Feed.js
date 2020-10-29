@@ -16,7 +16,7 @@ export const DashboardFeed = () => {
     Activities.map((activity)=> {
         if (activity.activityType === "Added A New Location") {
             return (
-                <Feed.Event>
+                <Feed.Event key={activity.id}>
                     <Feed.Label>
                         <Icon name="map outline" />
                     </Feed.Label>
@@ -30,21 +30,21 @@ export const DashboardFeed = () => {
             )
         } else if (activity.activityType === "Connected With") {
             return (
-                <Feed.Event>
-                <Feed.Label>
-                        <Icon name="user plus" />
-                    </Feed.Label>
-                <Feed.Content>
-                    <Feed.Date>{activity.date}</Feed.Date>
-                    <Feed.Summary>
-                        Someone {activity.activityType} Someone Else
-                    </Feed.Summary>
-                </Feed.Content>
-            </Feed.Event>
+                <Feed.Event key={activity.id}>
+                    <Feed.Label>
+                            <Icon name="user plus" />
+                        </Feed.Label>
+                    <Feed.Content>
+                        <Feed.Date>{activity.date}</Feed.Date>
+                        <Feed.Summary>
+                            Someone {activity.activityType} Someone Else
+                        </Feed.Summary>
+                    </Feed.Content>
+                </Feed.Event>
             )
         } else if (activity.activityType === "Added A New Item") {
             return (
-                <Feed.Event>
+                <Feed.Event key={activity.id}>
                 <Feed.Label>
                         <Icon name="plus circle" />
                     </Feed.Label>

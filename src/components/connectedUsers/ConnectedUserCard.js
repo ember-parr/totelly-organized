@@ -8,7 +8,7 @@ export const UserCard = ({ friend, isFriend, status  }) => {
     const PhoneNumber = require('@reallyuseful/phonenumber')
 
     return (
-    <Card onClick ={()=> history.push(`/user/detail/${friend.id}`)}>
+    <Card  onClick ={()=> history.push(`/user/detail/${friend.id}`)} style={{margin: "0em 1em"}}>
         <Card.Content header={`${friend.firstName} ${friend.lastName}`} />
         <Card.Content>
             <Card.Meta>{status}</Card.Meta>

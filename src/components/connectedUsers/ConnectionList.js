@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ConnectionContext } from "./ConnectionProvider";
 import { UserContext } from "../user/UserProvider";
 import { UserCard } from "./ConnectedUserCard";
-import { Button, Segment, Grid } from 'semantic-ui-react';
+import { Button, Segment, Grid, Card } from 'semantic-ui-react';
 import Notifications, {notify} from 'react-notify-toast';
 let dateFormat = require('dateformat')
 let now = new Date()
@@ -122,6 +122,7 @@ export const ConnectionList = () => {
                 <div>
                 {/* map through friends */}
                 <Grid.Row>
+                    <Card.Group >
                     {filteredFriendUsers.map((user) => (
                     <Grid.Column key={user.id}>
                         <UserCard
@@ -129,7 +130,7 @@ export const ConnectionList = () => {
                         friend={user}
                         isFriend={
                             <Button
-                            
+                            style={{"background-color": "#2b7a78"}}
                             type="submit"
                             onClick={(e) => {
                                 e.preventDefault();
@@ -143,6 +144,7 @@ export const ConnectionList = () => {
                         />
                     </Grid.Column>
                     ))}
+                    </Card.Group>
                 </Grid.Row>
                 </div>
             </Segment>
@@ -151,6 +153,7 @@ export const ConnectionList = () => {
             {/* map through nonfriends */}
             <div className="friends">
             <Grid.Row>
+            <Card.Group >
                 {filteredNotFriendUsers.map((user) => (
                 <Grid.Column key={user.id}>
                     <UserCard
@@ -174,6 +177,7 @@ export const ConnectionList = () => {
                     <Notifications />
                 </Grid.Column>
                 ))}
+                </Card.Group>
             </Grid.Row>
             </div>
         </Segment>

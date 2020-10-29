@@ -31,10 +31,8 @@ export const ConnectionRequest = () => {
         const currentUser = parseInt(localStorage.user)
         connections.map((connection) => {
             if (connection.userId === UserToDelete && connection.connectedUserId === currentUser) {
-                console.log("deleteing user id: ", UserToDelete, "ConnectionId: ", connection.id)
                 deleteConnection(connection.id)
             } else if (connection.connectedUserId === UserToDelete && connection.userId === currentUser) {
-                console.log("deleteing connectedUser id: ", UserToDelete, "ConnectionId: ", connection.id)
                 deleteConnection(connection.id)
             } else {
                 console.log("nothing to delete?")
@@ -46,7 +44,6 @@ export const ConnectionRequest = () => {
         const currentUser = parseInt(localStorage.user)
         connections.map((connection) => {
             if (connection.connectedUserId === UserToapprove && connection.userId === currentUser) {
-                console.log("approveing connectedUser id: ", UserToapprove, "ConnectionId: ", connection.id)
                 updateConnection({
                     id: connection.id,
                     userId: currentUser,
@@ -67,7 +64,6 @@ export const ConnectionRequest = () => {
                     date: currentDate
                 })
             } else if (connection.userId === UserToapprove && connection.connectedUserId === currentUser) {
-                console.log("approveing connectedUser id: ", UserToapprove, "ConnectionId: ", connection.id)
                 updateConnection({
                     id: connection.id,
                     userId: UserToapprove,

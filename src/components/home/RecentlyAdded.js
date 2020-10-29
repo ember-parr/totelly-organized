@@ -34,13 +34,13 @@ export const RecentlyAdded = () => {
     return (
             <Feed size="small">
                 {itemDetails.map((item) => (
-                    <Feed.Event>
+                    <Feed.Event key={item.id}>
                     <Feed.Label>
                             <Icon name="plus circle" />
                         </Feed.Label>
                     <Feed.Content>
                         <Feed.Summary>
-                        <a href={`/items/edit/${item.id}`} alt="items">You added {item.itemName} </a>
+                        <a  href={`/items/edit/${item.id}`} alt="items">You added {item.itemName} </a>
                         </Feed.Summary>
                 <Feed.Date> Location: {item.location.name}</Feed.Date>
                 <Feed.Date>Room: {item.room}</Feed.Date>

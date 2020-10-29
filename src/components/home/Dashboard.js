@@ -5,8 +5,8 @@ import { ConnectionProvider } from '../connectedUsers/ConnectionProvider'
 import {FeedProvider} from './FeedProvider'
 import { ItemProvider} from '../items/ItemProvider'
 import { UserProvider } from '../user/UserProvider'
-import { DashboardFeed } from './Feed'
 import { RecentlyAdded } from './RecentlyAdded'
+import { ActivityCard } from './ActivityCard'
 
 export const DashboardView = () => {
 
@@ -19,26 +19,21 @@ export const DashboardView = () => {
                 <Grid.Row columns={2} centered>
                 <Grid.Column>
                         
-                            <Header as='h4'>Recent Activity</Header>
-                            <ItemProvider><FeedProvider>
-                            <RecentlyAdded />
-                            </FeedProvider>
+                            <Header as='h4'>Recent Added Items</Header>
+                            <ItemProvider>
+                                <FeedProvider>
+                                    <RecentlyAdded />
+                                </FeedProvider>
                             </ItemProvider>
-                            
-                        
-                        
-                        
-                            
-                        
                     </Grid.Column>
                     <Grid.Column >
                         <Header size='large'>Requests</Header>
-                            <Card.Group>
-                        <ConnectionProvider>
-                            <UserProvider>
-                                <ConnectionRequest />
-                            </UserProvider>
-                        </ConnectionProvider>
+                        <Card.Group>
+                            <ConnectionProvider>
+                                <UserProvider>
+                                    <ConnectionRequest />
+                                </UserProvider>
+                            </ConnectionProvider>
                         </Card.Group>
                     </Grid.Column>
                 </Grid.Row>
@@ -47,8 +42,10 @@ export const DashboardView = () => {
                     <Grid.Column>
                         <Feed size="small">
                             <Header as='h4'>Recent Activity</Header>
-
-                            <DashboardFeed />
+                                <FeedProvider>
+                                    <ActivityCard />
+                                </FeedProvider>
+                                
                             
                         
                         </Feed>

@@ -5,7 +5,7 @@ import { LocationContext } from "../locations/LocationProvider"
 import { ItemContext } from "./ItemProvider"
 import { FeedContext } from '../home/FeedProvider'
 import { useHistory, useParams } from 'react-router-dom';
-import { Button, Grid, Header, Icon, Form, Dropdown, Item, Modal, TextArea } from 'semantic-ui-react'
+import { Button, Grid, Header, Icon, Form, Dropdown, Item, Modal } from 'semantic-ui-react'
 
 export const ItemForm = () => {
     const { addItem, getItemById, updateItem, deleteItem } = useContext(ItemContext)

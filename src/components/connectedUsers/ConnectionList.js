@@ -130,7 +130,7 @@ export const ConnectionList = () => {
                         friend={user}
                         isFriend={
                             <Button
-                            style={{"background-color": "#2b7a78"}}
+                            style={{"backgroundColor": "#2b7a78"}}
                             type="submit"
                             onClick={(e) => {
                                 e.preventDefault();

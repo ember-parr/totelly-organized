@@ -5,8 +5,6 @@ export const FeedContext = createContext()
 export const FeedProvider = (props) => {
     const [Activities, setActivities] = useState([])
     const [UserActivities, setUserActivities] = useState([])
-    const [ItemActs, setItemActs] = useState([])
-    const [LocActs, setLocActs] = useState([])
     const [searchTerms, setSearchTerms] = useState("")
     const currentUser = parseInt(localStorage.user)
 
@@ -66,7 +64,7 @@ export const FeedProvider = (props) => {
 
     return (
         <FeedContext.Provider value={{
-            getCurrentUserActivities, UserActivities, ItemActs, LocActs, Activities, getActivities, addFeed, getFeedById, deleteFeed, updateFeed, setSearchTerms, searchTerms, getItemActivities, getLocationActivities
+            getCurrentUserActivities, UserActivities, Activities, getActivities, addFeed, getFeedById, deleteFeed, updateFeed, setSearchTerms, searchTerms, getItemActivities, getLocationActivities
         }}>
             {props.children}
         </FeedContext.Provider>

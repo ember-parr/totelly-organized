@@ -27,10 +27,10 @@ export const ShareLocationSegment = () => {
     }
 
     const createSharedLocation = () => {
-        console.log("thing: ", thing)
+        console.log("thing: ", thing.userId)
         shareLocationWithUser({
-            userId: thing.id,
-            locationId: locationId
+            userId: thing.userId,
+            locationId: parseInt(locationId.locationId)
         })
     }
 
@@ -45,13 +45,13 @@ export const ShareLocationSegment = () => {
                     placeholder='Choose from your connected users'
                     options={usersConnectedUsers.map(connection => (
                         {
-                            key: connection.id,
+                            key: connection.userId,
                             text: connection.user.firstName +" " + connection.user.lastName,
-                            value: connection.id
+                            value: connection.userId
                         }
                     ))}
                     onChange={handleDropdown}
-                    name="connectionId"
+                    name="userId"
                     label="connections"
                     selection
                     search

@@ -372,15 +372,13 @@
       "userId": 2
     },
     {
-      "locationId": {
-        "locationId": "23"
-      },
+      "userId": 5,
+      "locationId": 24,
       "id": 6
     },
     {
-      "locationId": {
-        "locationId": "23"
-      },
+      "userId": 5,
+      "locationId": 24,
       "id": 7
     }
   ],
@@ -431,104 +429,6 @@
       "dateConnected": "October 27, 2020",
       "id": 7,
       "jsDate": 1601409045668
-    },
-    {
-      "id": 10,
-      "userId": 2,
-      "connectedUserId": 3,
-      "status": true,
-      "dateConnected": "October 27, 2020"
-    },
-    {
-      "userId": 1,
-      "connectedUserId": 3,
-      "status": false,
-      "dateConnected": "October 27, 2020",
-      "id": 11,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 4,
-      "connectedUserId": 3,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 22,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 4,
-      "connectedUserId": 3,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 23,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 4,
-      "connectedUserId": 3,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 24,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 3,
-      "connectedUserId": 4,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 25,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 1,
-      "connectedUserId": 3,
-      "status": false,
-      "dateConnected": "October 27, 2020",
-      "id": 26,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 1,
-      "connectedUserId": 3,
-      "status": false,
-      "dateConnected": "October 27, 2020",
-      "id": 27,
-      "jsDate": 1601409045668
-    },
-    {
-      "userId": 3,
-      "connectedUserId": 2,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 28
-    },
-    {
-      "userId": 3,
-      "connectedUserId": 2,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "id": 29
-    },
-    {
-      "userId": 5,
-      "connectedUserId": 3,
-      "status": false,
-      "dateConnected": "October 27, 2020",
-      "id": 30
-    },
-    {
-      "userId": 3,
-      "connectedUserId": 1,
-      "status": false,
-      "dateConnected": "October 28, 2020",
-      "id": 31
-    },
-    {
-      "userId": 3,
-      "connectedUserId": 1,
-      "status": false,
-      "dateConnected": "October 28, 2020",
-      "id": 32
     }
   ],
   "feed": [

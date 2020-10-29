@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable array-callback-return */
 import React, {useContext, useEffect } from 'react'
-import { Feed, Icon } from 'semantic-ui-react'
+import { Feed, Icon, Grid, Card } from 'semantic-ui-react'
 import { ActivityContext } from './ActivityProvider'
 
 export const ActivityCard = () => {
@@ -13,23 +13,38 @@ export const ActivityCard = () => {
     }, [])
 
     return (
+        <>
+            <Grid columns={4} divided="internally">
+                <Card.Group>
+                    {Activities.map((activity) => (
+                        <Card >
+                            <Card.Content>
+                                <Card.Header>
+                                    {activity?.user?.firstName} {activity?.user?.lastName}
+                                </Card.Header>
+                                <Card.Meta>
+                                    {activity.date}
+                                </Card.Meta>
+                                <Card.Description>
+                                    {activity.activityType}: {activity?.item?.itemName} {activity?.location?.name} {activity.connectedUserId !== 0 ? "a new user" : ""} 
+                                </Card.Description>
+                        </Card.Content>
+                    </Card>
+                    ))}
+                    
+                </Card.Group>
+            </Grid>
         
-            <Feed size="small">
-                {Activities.map((activity) => (
-                    <Feed.Event >
-                    <Feed.Label>
-                            <Icon name="plus circle" />
-                        </Feed.Label>
-                    <Feed.Content>
-                        <Feed.Summary>
-                        <Feed.User>{activity?.user?.firstName} {activity?.user?.lastName}</Feed.User> added {activity?.item?.itemName} {activity?.location?.name} 
-                        </Feed.Summary>
-                
-                    </Feed.Content>
-                </Feed.Event>
-                ))}
-                </Feed>
+        
+            
+
+
+        </>
             
     )
+
+
+
+
     
 }

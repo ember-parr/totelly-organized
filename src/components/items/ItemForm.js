@@ -8,7 +8,7 @@ import { useHistory, useParams } from 'react-router-dom';
 import { Button, Grid, Header, Icon, Form, Dropdown, Item, Modal } from 'semantic-ui-react'
 
 export const ItemForm = () => {
-    const { addItem, getItemById, updateItem, deleteItem } = useContext(ItemContext)
+    const { addItem, getItemById, updateItem, deleteItem, getMostRecentItem } = useContext(ItemContext)
     const { Categories, getCategories } = useContext(CategoryContext)
     const { Locations, getLocations, addLocation } = useContext(LocationContext)
     const { addActivity } = useContext(ActivityContext)
@@ -23,6 +23,7 @@ export const ItemForm = () => {
     let dateFormat = require('dateformat')
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")
+    let currentTime = dateFormat(now, "shortTime")
 
     const handleControlledInputChange = (event) => {
         const newItem = { ...item }
@@ -89,7 +90,7 @@ export const ItemForm = () => {
                     itemId: item.id,
                     locationId: 0,
                     connectedUserId: 0,
-                    date: currentDate
+                    date: currentDate + " at " + currentTime
                 })
                 .then(() => history.push(`/items`))
             }else {
@@ -103,14 +104,16 @@ export const ItemForm = () => {
                     locationId: item.locationId,
                     dateLastSearched: 1601409045668,
                     userId: parseInt(user)
-                })
-                addActivity({
-                    activityType: "Added A New Item",
-                    userId: parseInt(user),
-                    itemId: item.id,
-                    locationId: 0,
-                    connectedUserId: 0,
-                    date: currentDate
+                }).then(getMostRecentItem).then((newItem)=> {
+                    console.log(newItem)
+                    addActivity({
+                        activityType: "Added A New Item",
+                        userId: parseInt(user),
+                        itemId: newItem.id,
+                        locationId: 0,
+                        connectedUserId: 0,
+                        date: currentDate + " at " + currentTime
+                    })
                 })
                 .then(() => history.push("/items"))
             }

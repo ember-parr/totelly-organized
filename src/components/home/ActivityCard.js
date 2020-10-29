@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable array-callback-return */
 import React, {useContext, useEffect } from 'react'
-import { Feed, Icon, Grid, Card } from 'semantic-ui-react'
+import { Grid, Card } from 'semantic-ui-react'
 import { ActivityContext } from './ActivityProvider'
 
 export const ActivityCard = () => {

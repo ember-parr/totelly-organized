@@ -8,7 +8,6 @@ export const ActivityCard = () => {
     const {Activities, getActivities, getItemActivities, getLocationActivities, ItemActs, LocActs} = useContext(FeedContext)
     const currentUser = parseInt(localStorage.user)
     const [activityDetails, setActivityDetails] = useState([])
-    const [curActivity, setCurActivity] = useState({})
     
 
     useEffect(()=> {
@@ -29,15 +28,13 @@ export const ActivityCard = () => {
     useEffect(() => {
         const arrayOfActivities = []
         const activityInformation = Activities.map((activity) => {
-                if (activity.activityType === "Added A New Item" && activity.userId !== currentUser) {
-                    getItemActivities(activity.id)
+                if (activity.itemId) {
+                    getItemActivities(activity.id, 'item')
                     .then(arrayOfActivities.push(ItemActs))
                 } 
-                if (activity.activityType === "Added A New Location" && activity.userId !== currentUser) {
-                    getLocationActivities(activity.id)
-                    .then(activity => {
-                        setCurActivity(activity)
-                    })
+                if (activity.locationId) {
+                    getItemActivities(activity.id, 'location')
+                    .then(arrayOfActivities.push(ItemActs))
                 }
             })
             
@@ -58,7 +55,7 @@ export const ActivityCard = () => {
                         </Feed.Label>
                     <Feed.Content>
                         <Feed.Summary>
-                        {activity?.user.firstName} added {activity?.item?.itemName} {activity?.location?.itemName} 
+                        {activity?.user?.firstName} added {activity?.item?.itemName} {activity?.location?.itemName} 
                         </Feed.Summary>
                 
                     </Feed.Content>

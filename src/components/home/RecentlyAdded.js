@@ -5,7 +5,7 @@ import {ItemContext} from "../items/ItemProvider"
 import { FeedContext } from './FeedProvider'
 
 export const RecentlyAdded = () => {
-    const {Activities, getCurrentUserActivities} = useContext(FeedContext)
+    const {UserActivities, getCurrentUserActivities} = useContext(FeedContext)
     const { Items, getItems } = useContext(ItemContext)
     const currentUser = parseInt(localStorage.user)
     const [itemDetails, setItemDetails] = useState([])
@@ -17,7 +17,7 @@ export const RecentlyAdded = () => {
 
 
     useEffect(() => {
-        const activitiesByUser = Activities.filter(
+        const activitiesByUser = UserActivities.filter(
             (activity) => activity.userId === currentUser
         );
 
@@ -28,7 +28,7 @@ export const RecentlyAdded = () => {
         );
             setItemDetails(activityInfo)
 
-    }, [Activities, Items, currentUser])
+    }, [UserActivities, Items, currentUser])
     
 
     return (

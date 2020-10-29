@@ -4,13 +4,14 @@ export const FeedContext = createContext()
 
 export const FeedProvider = (props) => {
     const [Activities, setActivities] = useState([])
+    const [UserActivities, setUserActivities] = useState([])
     const [ItemActs, setItemActs] = useState([])
     const [LocActs, setLocActs] = useState([])
     const [searchTerms, setSearchTerms] = useState("")
     const currentUser = parseInt(localStorage.user)
 
     const getActivities = () => {
-        return fetch(`http://localhost:8088/feed?_sort=date&_order=desc&_limit=10`)
+        return fetch(`http://localhost:8088/feed?_sort=date&_order=desc&_limit=20`)
         .then(result => result.json())
         .then(setActivities)
     }
@@ -18,12 +19,12 @@ export const FeedProvider = (props) => {
     const getCurrentUserActivities = () => {
         return fetch(`http://localhost:8088/feed?userId=${currentUser}&_sort=date&_order=desc&_limit=5`)
         .then(result => result.json())
-        .then(setActivities)
+        .then(setUserActivities)
     }
 
 
-    const getItemActivities = (id) => {
-        return fetch(`http://localhost:8088/feed/${id}/?_expand=user&_expand=item`)
+    const getItemActivities = (id, expand) => {
+        return fetch(`http://localhost:8088/feed/${id}/?_expand=user&_expand=${expand}`)
         .then(result => result.json())
         .then(setItemActs)
     }
@@ -31,7 +32,7 @@ export const FeedProvider = (props) => {
     const getLocationActivities = (id) => {
         return fetch(`http://localhost:8088/feed/${id}/?_expand=user&_expand=location`)
         .then(result => result.json())
-        
+
     }
 
     const addFeed = Feed => {
@@ -67,7 +68,7 @@ export const FeedProvider = (props) => {
 
     return (
         <FeedContext.Provider value={{
-            getCurrentUserActivities, ItemActs, LocActs, Activities, getActivities, addFeed, getFeedById, deleteFeed, updateFeed, setSearchTerms, searchTerms, getItemActivities, getLocationActivities
+            getCurrentUserActivities, UserActivities, ItemActs, LocActs, Activities, getActivities, addFeed, getFeedById, deleteFeed, updateFeed, setSearchTerms, searchTerms, getItemActivities, getLocationActivities
         }}>
             {props.children}
         </FeedContext.Provider>

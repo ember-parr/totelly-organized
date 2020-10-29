@@ -14,7 +14,7 @@ export const ActivityCard = () => {
 
     return (
         
-            <Feed size="small" fluid>
+            <Feed size="small">
                 {Activities.map((activity) => (
                     <Feed.Event >
                     <Feed.Label>

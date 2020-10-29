@@ -345,7 +345,33 @@
       "id": 8
     }
   ],
-  "sharedLocations": [],
+  "sharedLocations": [
+    {
+      "id": 1,
+      "locationId": 2,
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "locationId": 3,
+      "userId": 2
+    },
+    {
+      "id": 3,
+      "locationId": 2,
+      "userId": 2
+    },
+    {
+      "id": 4,
+      "locationId": 3,
+      "userId": 2
+    },
+    {
+      "id": 5,
+      "locationId": 6,
+      "userId": 2
+    }
+  ],
   "connectedUsers": [
     {
       "id": 1,

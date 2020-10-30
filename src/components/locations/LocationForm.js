@@ -6,6 +6,7 @@ import {ItemContext} from '../items/ItemProvider'
 import { ItemTableRow } from '../items/ItemTableRow'
 import { useHistory, useParams } from 'react-router-dom';
 import {ShareLocationSegment } from './ShareLocationSegment'
+import Notifications, {notify} from 'react-notify-toast';
 import {ConnectionProvider} from '../connectedUsers/ConnectionProvider'
 import { SharedWithSegment } from './SharedWithSegment'
 import { Button, Grid, Header, Icon, Form, Item, Modal, Table } from 'semantic-ui-react'
@@ -32,6 +33,7 @@ export const LocationForm = () => {
         newLocation[event.target.name] = event.target.value
         setLocation(newLocation)
     }
+    let myColor = { background: '#2b7a78', text: "#FFFFFF" };
 
     useEffect(() => {
         getLocations().then(() => {
@@ -72,7 +74,6 @@ export const LocationForm = () => {
                     connectedUserId: 0,
                     date: currentDate + " at " + currentTime
                 })
-                .then(() => history.push(`/locations`))
             }else {
                 addLocation({
                     name: location.name,
@@ -87,7 +88,6 @@ export const LocationForm = () => {
                     connectedUserId: 0,
                     date: currentDate + " at " + currentTime
                 })
-                .then(() => history.push("/locations"))
             }
         }
     }
@@ -175,13 +175,14 @@ export const LocationForm = () => {
                                     onClick={event=> {
                                         event.preventDefault() 
                                         constructLocationObject()
+                                        notify.show('Location Updated!', "custom", 4000, myColor)
                                         }}>
                                     <Button.Content visible>{locationId ? "Save Changes" : "Add Location"}</Button.Content>
                                     <Button.Content hidden>
                                         <Icon name='arrow right' />
                                     </Button.Content>
                                 </Form.Button>
-                            
+                                        <Notifications />
                                 <Modal 
                                     closeIcon 
                                     open={open} 
@@ -208,7 +209,7 @@ export const LocationForm = () => {
                                             onClick={() => { 
                                                 setOpen(false)
                                                 deleteLocation(locationId)
-                                                history.push('/locations')
+                                                history.push("/locations")
                                             }}>
                                         <Icon name='checkmark' /> Yes
                                         </Button>

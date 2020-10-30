@@ -1,9 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useContext, useEffect, useState, createRef} from "react";
-import { Redirect } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./header.css"
 import _ from 'lodash'
 import HorizontalLogo from "../../images/LLogoHoriz.png";
+import { MyAccountPlaceholder } from '../account/MyAccountPlaceholder'
 import {UserContext} from '../user/UserProvider'
 import { Segment, Image, Icon, Dropdown, Grid, Sticky, Menu } from 'semantic-ui-react'
 
@@ -12,6 +13,7 @@ export const Header = () => {
     const user = parseInt(localStorage.getItem("user"))
     const [currentUser, setCurrentUser] = useState({})
     const contextRef = createRef()
+    const history = useHistory()
 
     useEffect(()=> {
         getUserById(user)
@@ -42,7 +44,8 @@ export const Header = () => {
         if (data.value === 'logout') {
             localStorage.clear()
             window.location.reload()
-            
+        } else if (data.value === 'profile') {
+            history.push("/account")
         }
     }
 

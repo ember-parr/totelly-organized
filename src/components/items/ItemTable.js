@@ -29,15 +29,15 @@ export const ItemTable = () => {
         <>
         <Button onClick={() => domHistory.push("/items/add")}>New Item</Button>
         
-        <Table celled selectable collapsing>
+        <Table celled selectable collapsing compact size="small" className="pageComponent">
             <Table.Header>
                 <Table.Row>
-                    <Table.HeaderCell>Item Name</Table.HeaderCell>
-                    <Table.HeaderCell>Location</Table.HeaderCell>
-                    <Table.HeaderCell>Room</Table.HeaderCell>
-                    <Table.HeaderCell>Placement</Table.HeaderCell>
-                    <Table.HeaderCell>Category</Table.HeaderCell>
-                    <Table.HeaderCell>Details</Table.HeaderCell>
+                    <Table.HeaderCell width={1}>Item Name</Table.HeaderCell>
+                    <Table.HeaderCell width={1}>Location</Table.HeaderCell>
+                    <Table.HeaderCell width={1}>Room</Table.HeaderCell>
+                    <Table.HeaderCell width={1}>Placement</Table.HeaderCell>
+                    <Table.HeaderCell width={1}>Category</Table.HeaderCell>
+                    <Table.HeaderCell width={4}>Details</Table.HeaderCell>
                 </Table.Row>
                 </Table.Header>
 

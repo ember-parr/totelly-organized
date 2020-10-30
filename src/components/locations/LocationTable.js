@@ -26,16 +26,16 @@ export const LocationTable = () => {
     }, [searchTerms, Locations])
 
     return (
-        <>
+        <div class="pageComponent">
             <Button onClick={() => domHistory.push("/locations/add")}>New Location</Button>
             
-            <Table celled selectable collapsing>
+            <Table celled selectable collapsing compact size="small">
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell>Location Name</Table.HeaderCell>
-                        <Table.HeaderCell>Owner</Table.HeaderCell>
-                        <Table.HeaderCell>Description</Table.HeaderCell>
-                        <Table.HeaderCell>Shared With:</Table.HeaderCell>
+                        <Table.HeaderCell width={3}>Location Name</Table.HeaderCell>
+                        <Table.HeaderCell width={3}>Owner</Table.HeaderCell>
+                        <Table.HeaderCell width={5}>Description</Table.HeaderCell>
+                        <Table.HeaderCell width={3}>Shared With:</Table.HeaderCell>
                     </Table.Row>
                     </Table.Header>
                 <Table.Body>
@@ -45,6 +45,6 @@ export const LocationTable = () => {
                     }
                 </Table.Body>
             </Table>
-        </>
+        </div>
     )
 }

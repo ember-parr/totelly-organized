@@ -2,10 +2,10 @@
 import React, {useContext, useEffect, useState} from 'react'
 import { Feed, Icon } from 'semantic-ui-react'
 import {ItemContext} from "../items/ItemProvider"
-import { FeedContext } from './FeedProvider'
+import { ActivityContext } from './ActivityProvider'
 
 export const RecentlyAdded = () => {
-    const {UserActivities, getCurrentUserActivities} = useContext(FeedContext)
+    const {UserActivities, getCurrentUserActivities} = useContext(ActivityContext)
     const { Items, getItems } = useContext(ItemContext)
     const currentUser = parseInt(localStorage.user)
     const [itemDetails, setItemDetails] = useState([])

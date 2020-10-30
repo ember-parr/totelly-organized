@@ -27,6 +27,11 @@ export const ItemProvider = (props) => {
         .then(result => result.json())
     }
 
+    const getMostRecentItem = () => {
+        return fetch(`http://localhost:8088/items?_sort=dateAdded&_order=desc&_limit=1`)
+        .then(result => result.json())
+    }
+
     const deleteItem = ItemId => {
         return fetch(`http://localhost:8088/items/${ItemId}`, {
             method: "DELETE"
@@ -45,7 +50,7 @@ export const ItemProvider = (props) => {
 
     return (
         <ItemContext.Provider value={{
-            Items, getItems, addItem, getItemById, deleteItem, updateItem, setSearchTerms, searchTerms
+            Items, getItems, addItem, getItemById, deleteItem, updateItem, setSearchTerms, searchTerms, getMostRecentItem
         }}>
             {props.children}
         </ItemContext.Provider>

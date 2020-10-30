@@ -3,7 +3,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { ConnectionContext } from "./ConnectionProvider";
 import { UserContext } from "../user/UserProvider";
-import { FeedContext } from '../home/FeedProvider'
+import { ActivityContext } from '../home/ActivityProvider'
 import { Button, Card } from 'semantic-ui-react';
 import Notifications, {notify} from 'react-notify-toast';
 
@@ -19,10 +19,11 @@ export const ConnectionRequest = () => {
     } = useContext(ConnectionContext);
     const { Users, getUsers } = useContext(UserContext);
     const [filteredFriendUsers, setFriendUsers] = useState([])
-    const { addFeed } = useContext(FeedContext)
+    const { addActivity } = useContext(ActivityContext)
     let dateFormat = require('dateformat')
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")
+    let currentTime = dateFormat(now, "shortTime")
     
     
     
@@ -57,11 +58,13 @@ export const ConnectionRequest = () => {
                     status: true,
                     dateConnected: currentDate
                 })
-                addFeed({
+                addActivity({
                     activityType: "Connected With",
-                    userId: parseInt(currentUser),
-                    dataTwo: parseInt(currentUser),
-                    date: currentDate
+                    userId: currentUser,
+                    itemId: 0,
+                    locationId: 0,
+                    connectedUserId: connection.id,
+                    date: currentDate + " at " + currentTime
                 })
             } else if (connection.userId === UserToapprove && connection.connectedUserId === currentUser) {
                 updateConnection({
@@ -76,6 +79,14 @@ export const ConnectionRequest = () => {
                     connectedUserId: UserToapprove,
                     status: true,
                     dateConnected: currentDate
+                })
+                addActivity({
+                    activityType: "Connected With",
+                    userId: currentUser,
+                    itemId: 0,
+                    locationId: 0,
+                    connectedUserId: connection.id,
+                    date: currentDate + " at " + currentTime
                 })
             } else {
                 console.log("nothing to approve?")

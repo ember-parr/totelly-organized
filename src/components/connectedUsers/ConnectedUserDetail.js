@@ -18,9 +18,7 @@ export const ConnectedUserDetail = () => {
     useEffect(() => {
         getUserById(userId).then(user => {
             setUser(user)
-        }).then(getLocations).then(() => {
-            console.log("users locations: ", usersLocations)
-        })
+        }).then(getLocations)
     }, [])
 
 

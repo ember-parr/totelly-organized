@@ -11,34 +11,11 @@ import { Header } from './nav/Header'
 import "./TotellyOrganized.css"
 
 
-//function to enable sliding content 
-function exampleReducer(state, action) {
-  switch (action.type) {
-    case 'SHOW_ANIMATION':
-      return { ...state, animation: action.animation, visible: true}
-    case 'HIDE_ANIMATION':
-        return { ...state, animation: action.animation, visible: false }  
-    case 'ICON_CLICKED':
-        return { ...state, color: "teal", active: true}
-    case 'CHANGE_DIMMED':
-      return { ...state, dimmed: action.dimmed }
-    case 'CHANGE_DIRECTION':
-      return { ...state, direction: action.direction, visible: false }
-    default:
-      throw new Error()
-  }
-}
+
 
 //whole page render
 export const TotellyOrganized = () => {
-  const [state ] = React.useReducer(exampleReducer, {
-    animation: 'show',
-    direction: "left",
-    dimmed: false,
-    visible: false,
-    color: 'grey'
-  })
-   
+
   return (
   <>
   <main >

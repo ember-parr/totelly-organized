@@ -16,8 +16,8 @@ export const DashboardView = () => {
     return (
         <div class="pageComponent">
 
-            <Grid celled='internally'>
-                <Grid.Row columns={2} centered >
+            <Grid stackable celled='internally'>
+                <Grid.Row  columns={2} centered >
                     <Grid.Column>
                         <Header as='h4'>Recent Added Items</Header>
                         <ItemProvider>

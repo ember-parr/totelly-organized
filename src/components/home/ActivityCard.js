@@ -6,7 +6,7 @@ import { ActivityContext } from './ActivityProvider'
 
 export const ActivityCard = () => {
     const {Activities, getActivities } = useContext(ActivityContext)
-    
+    const currentUser = localStorage.getItem("user")
 
     useEffect(()=> {
         getActivities()
@@ -16,7 +16,11 @@ export const ActivityCard = () => {
         <>
             <Grid  divided="internally" columns={4} relaxed>
                 <Card.Group>
-                    {Activities.map((activity) => (
+                    {Activities.map((activity) => {
+                        if (activity.userId !== currentUser) {
+                            return (
+                                <>
+
                         <Card >
                             <Card.Content>
                                 <Card.Header>
@@ -30,7 +34,10 @@ export const ActivityCard = () => {
                                 </Card.Description>
                         </Card.Content>
                     </Card>
-                    ))}
+                                </>
+                            )
+                        }
+})}
                     
                 </Card.Group>
             </Grid>

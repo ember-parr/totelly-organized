@@ -191,9 +191,7 @@ export const ConnectionList = () => {
                                 <Notifications />
                             </Grid.Column>
                         )
-                    }
-                
-                })}
+                )}
                 </Card.Group>
             </Grid.Row>
             </div>

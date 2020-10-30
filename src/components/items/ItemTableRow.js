@@ -13,6 +13,7 @@ export const ItemTableRow = ({item}) => {
                 <Table.Cell collapsing>{ item?.placement }</Table.Cell>
                 <Table.Cell collapsing>{ item.category?.name }</Table.Cell>
                 <Table.Cell fixed>{ item?.description }</Table.Cell>
+                
             </Table.Row>
         </>
 

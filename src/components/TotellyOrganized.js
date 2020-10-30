@@ -4,8 +4,10 @@ import { SignIn } from "./auth/SignIn";
 import { Register } from "./auth/Register";
 import { Route, Redirect } from "react-router-dom";
 import { Footer } from "./nav/Footer";
+import {UserProvider} from './user/UserProvider'
 import {  Menu, Segment, Sidebar } from 'semantic-ui-react'
 import { SidebarNavitation } from "./nav/Navbar";
+import { Header } from './nav/Header'
 import "./TotellyOrganized.css"
 
 
@@ -36,26 +38,28 @@ export const TotellyOrganized = () => {
     visible: false,
     color: 'grey'
   })
-  const { dimmed } = state
    
   return (
   <>
   <main >
-    <section className="pageContent">
+      <section className="pageContent">
     <Route
       render={() => {
         if (localStorage.getItem("user")) {
           return (
             <>
-              <Sidebar.Pushable as={Segment} style={{ overflow: 'hidden' }}  >
+    <UserProvider>
+      <Header />
+    </UserProvider>
+              <Sidebar.Pushable    >
               <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible style={{backgroundColor: '#def2f1'}}>
                 <SidebarNavitation />
               </Sidebar>
-              <Sidebar.Pusher dimmed={dimmed} style={{margin: '0 0 0 -100px'}}>
-                <Segment basic style={{margin: '0 30px 0 0'}}>
+              <Sidebar.Pusher className='pusherContent' >
+                <Segment basic >
                   <ApplicationViews />
                   <Footer/>
-                </Segment>
+                </Segment>z
               </Sidebar.Pusher>
               </Sidebar.Pushable>
             </>

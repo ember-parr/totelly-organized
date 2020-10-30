@@ -13,9 +13,9 @@ code {
 }
 
 .pageContent {
-  max-width: 99% !important;
+  max-width: 98% !important;
 }
 
 .pageComponent {
-  max-width: 80% !important;
+  max-width: 100% !important;
 }

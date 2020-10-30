@@ -6,3 +6,7 @@
 .customSidebar {
     background-color: #2b7a78 !important 
 }
+
+.pusherContent {
+    margin: 0 240px 0 -100px !important;
+}

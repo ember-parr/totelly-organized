@@ -744,6 +744,27 @@
       "status": false,
       "dateConnected": "October 30, 2020",
       "id": 12
+    },
+    {
+      "userId": 1,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": "October 30, 2020",
+      "id": 13
+    },
+    {
+      "userId": 6,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": "October 30, 2020",
+      "id": 14
+    },
+    {
+      "userId": 7,
+      "connectedUserId": 3,
+      "status": false,
+      "dateConnected": "October 30, 2020",
+      "id": 15
     }
   ],
   "activity": [

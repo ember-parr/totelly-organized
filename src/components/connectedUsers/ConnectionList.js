@@ -4,7 +4,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { ConnectionContext } from "./ConnectionProvider";
 import { UserContext } from "../user/UserProvider";
 import { UserCard } from "./ConnectedUserCard";
-import { Button, Segment, Grid, Card } from 'semantic-ui-react';
+import { Button, Segment, Grid, Card, Label } from 'semantic-ui-react';
 import Notifications, {notify} from 'react-notify-toast';
 let dateFormat = require('dateformat')
 let now = new Date()
@@ -22,6 +22,7 @@ export const ConnectionList = () => {
     const { Users, getUsers } = useContext(UserContext);
     const [filteredFriendUsers, setFriendUsers] = useState([])
     const [filteredNotFriendUsers, setNonFriendUsers] = useState([])
+    const [pending, setPending] = useState([])
     
     
     //delete two-way friendship from database
@@ -62,6 +63,12 @@ export const ConnectionList = () => {
             (connection) => connection.userId === currentUser && connection.status === true
         );
 
+        const currentUserSentRequest = connections.filter(
+            (connection) => connection.connectedUserId === currentUser && connection.status === false
+        )
+
+        const opositeConnectionId = currentUserSentRequest.map((friend) => friend.userId)
+
         // get an array of the current users connected user id's 
         const connectionId = friendsOfUser.map((friend) => friend.connectedUserId)
 
@@ -75,6 +82,13 @@ export const ConnectionList = () => {
             (user) => 
                 connectionId.includes(user.id) === false && user.id !== currentUser
         );
+
+        const pendingRequest = Users.filter(
+            (user) => 
+                opositeConnectionId.includes(user.id) && user.id !== currentUser
+        )
+
+        setPending(pendingRequest)
 
         if (searchTerms !== "") {
             //search through friends by email/name
@@ -109,9 +123,11 @@ export const ConnectionList = () => {
             );
             // if the search field is not blank, display matching friends/nonfriends
             setFriendUsers(friendSubset);
+            
             setNonFriendUsers(nonFriendSubset);
             } else {
             // if the search field is blank, display all friends & non friends
+            
             setNonFriendUsers()
             setFriendUsers(friendInformation);
             }
@@ -155,29 +171,48 @@ export const ConnectionList = () => {
             <div className="friends">
             <Grid.Row>
             <Card.Group >
-                {filteredNotFriendUsers?.map((user) => (
-                <Grid.Column key={user.id}>
-                    <UserCard
-                    status={'Not Yet Connected'}
-                    friend={user}
-                    isFriend={
-                        <Button
-                        secondary
-                        type="submit"
-                        onClick={(e) => {
-                            e.preventDefault();
-                            addNewConnection(user.id);
-                            notify.show('Request Sent!', "custom", 5000, myColor)
-                        }}
-                        >
-                        {" "}
-                        Request{" "}
-                        </Button>
+                {filteredNotFriendUsers?.map((user) => {
+                    if (pending.includes(user)) {
+                        return (
+                            <Grid.Column key={user.id}>
+                                
+                                <UserCard
+                                status={'Not Yet Connected'}
+                                friend={user}
+                                isFriend={
+                                    <Label as='a' color='teal' tag>Request Pending</Label>
+                                }
+                                />
+                                
+                            </Grid.Column>
+                        )
+                    } else {
+                        return (
+                            <Grid.Column key={user.id}>
+                                <UserCard
+                                status={'Not Yet Connected'}
+                                friend={user}
+                                isFriend={
+                                    <Button
+                                    secondary
+                                    type="submit"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        addNewConnection(user.id);
+                                        notify.show('Request Sent!', "custom", 5000, myColor)
+                                    }}
+                                    >
+                                    {" "}
+                                    Request{" "}
+                                    </Button>
+                                }
+                                />
+                                <Notifications />
+                            </Grid.Column>
+                        )
                     }
-                    />
-                    <Notifications />
-                </Grid.Column>
-                ))}
+                
+                })}
                 </Card.Group>
             </Grid.Row>
             </div>

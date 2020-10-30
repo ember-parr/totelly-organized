@@ -26,7 +26,7 @@ export const UserCard = ({ friend, isFriend, status  }) => {
             <Card  onClick ={()=> history.push(`/user/detail/${friend.id}`)} style={{margin: "0em 1em"}}>
                 <Card.Content header={`${friend.firstName} ${friend.lastName}`} />
                 <Card.Content>
-                    <Card.Meta>{`You are connected, click HERE to view ${friend.firstName}'s Items`}</Card.Meta>
+                    <Card.Meta>{`You are connected, click HERE to view ${friend.firstName}'s Locations & Items`}</Card.Meta>
                     Email: {friend.email} <br />
                     Phone: {PhoneNumber.formatFriendly(`${friend.phoneNumber}`)} </Card.Content>
                 

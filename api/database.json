@@ -591,48 +591,11 @@
       "jsDate": 1601409045668
     },
     {
-      "id": 3,
       "userId": 5,
       "connectedUserId": 2,
-      "status": true,
-      "dateConnected": "October 27, 2020",
-      "jsDate": 1601409045668
-    },
-    {
-      "id": 4,
-      "userId": 2,
-      "connectedUserId": 3,
-      "status": true,
-      "dateConnected": "October 27, 2020"
-    },
-    {
-      "userId": 5,
-      "connectedUserId": 3,
       "status": false,
-      "dateConnected": "October 27, 2020",
-      "id": 7,
-      "jsDate": 1601409045668
-    },
-    {
-      "id": 8,
-      "userId": 1,
-      "connectedUserId": 3,
-      "status": true,
-      "dateConnected": "October 29, 2020"
-    },
-    {
-      "userId": 3,
-      "connectedUserId": 1,
-      "status": true,
-      "dateConnected": "October 29, 2020",
-      "id": 9
-    },
-    {
-      "userId": 6,
-      "connectedUserId": 2,
-      "status": false,
-      "dateConnected": "October 29, 2020",
-      "id": 10
+      "dateConnected": "October 30, 2020",
+      "id": 3
     }
   ],
   "activity": [

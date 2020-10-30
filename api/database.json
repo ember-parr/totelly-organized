@@ -626,6 +626,13 @@
       "status": true,
       "dateConnected": "October 29, 2020",
       "id": 9
+    },
+    {
+      "userId": 6,
+      "connectedUserId": 2,
+      "status": false,
+      "dateConnected": "October 29, 2020",
+      "id": 10
     }
   ],
   "activity": [

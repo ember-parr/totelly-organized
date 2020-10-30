@@ -162,7 +162,7 @@ export const ConnectionList = () => {
                     friend={user}
                     isFriend={
                         <Button
-                        
+                        secondary
                         type="submit"
                         onClick={(e) => {
                             e.preventDefault();

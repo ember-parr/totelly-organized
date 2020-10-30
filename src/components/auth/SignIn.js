@@ -2,7 +2,7 @@ import React, {useState}  from "react";
 import { useHistory } from "react-router-dom";
 import { Button, Form, Divider, Grid, Header, Icon, Segment, Image, Modal } from 'semantic-ui-react'
 import horizLogo from "../../images/LLogoHoriz.png";
-import 'semantic-ui-css/semantic.css'
+
 
 
 export const SignIn = () => {
@@ -90,7 +90,7 @@ export const SignIn = () => {
                     </Grid.Column>
 
 
-                    <Grid.Column>
+                    <Grid.Column centered>
                         <Header>
                             <h2>Register</h2>
                         </Header>

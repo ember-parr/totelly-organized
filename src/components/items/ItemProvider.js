@@ -27,6 +27,11 @@ export const ItemProvider = (props) => {
         .then(result => result.json())
     }
 
+    const getItemsByLocation = (locationId) => {
+        return fetch(`http://localhost:8088/items?locationId=${locationId}`)
+        .then(result => result.json())
+    }
+
     const getMostRecentItem = () => {
         return fetch(`http://localhost:8088/items?_sort=dateAdded&_order=desc&_limit=1`)
         .then(result => result.json())
@@ -50,7 +55,7 @@ export const ItemProvider = (props) => {
 
     return (
         <ItemContext.Provider value={{
-            Items, getItems, addItem, getItemById, deleteItem, updateItem, setSearchTerms, searchTerms, getMostRecentItem
+            Items, getItems, addItem, getItemById, deleteItem, updateItem, setSearchTerms, searchTerms, getMostRecentItem, getItemsByLocation
         }}>
             {props.children}
         </ItemContext.Provider>

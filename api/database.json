@@ -571,6 +571,12 @@
       "locationId": 23,
       "date": "October 29, 2020",
       "id": 10
+    },
+    {
+      "userId": 5,
+      "locationId": 5,
+      "date": "October 30, 2020",
+      "id": 11
     }
   ],
   "connectedUsers": [

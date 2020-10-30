@@ -41,6 +41,7 @@ export const ShareLocationSegment = () => {
 
     return (
         <>
+        <div class="pageComponent">
             <Segment raised>
                 <p>
                     To share <strong> {'this location'} </strong> with another user, please select user from dropdown below
@@ -72,6 +73,7 @@ export const ShareLocationSegment = () => {
             
             
             </Segment>
+            </div>
         </>
     )
 

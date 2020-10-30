@@ -112,6 +112,7 @@ export const ConnectionList = () => {
             setNonFriendUsers(nonFriendSubset);
             } else {
             // if the search field is blank, display all friends & non friends
+            setNonFriendUsers()
             setFriendUsers(friendInformation);
             }
         }, [connections, Users, searchTerms])
@@ -154,7 +155,7 @@ export const ConnectionList = () => {
             <div className="friends">
             <Grid.Row>
             <Card.Group >
-                {filteredNotFriendUsers.map((user) => (
+                {filteredNotFriendUsers?.map((user) => (
                 <Grid.Column key={user.id}>
                     <UserCard
                     status={'Not Yet Connected'}

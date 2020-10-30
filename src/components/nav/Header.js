@@ -1,10 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {useContext, useEffect, useState, createRef} from "react";
+import React, {useContext, useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./header.css"
-import _ from 'lodash'
 import HorizontalLogo from "../../images/LLogoHoriz.png";
-import { MyAccountPlaceholder } from '../account/MyAccountPlaceholder'
 import {UserContext} from '../user/UserProvider'
 import { Segment, Image, Icon, Dropdown, Grid, Sticky, Menu } from 'semantic-ui-react'
 
@@ -12,7 +10,6 @@ export const Header = () => {
     const {getUserById} = useContext(UserContext)
     const user = parseInt(localStorage.getItem("user"))
     const [currentUser, setCurrentUser] = useState({})
-    const contextRef = createRef()
     const history = useHistory()
 
     useEffect(()=> {
@@ -53,7 +50,7 @@ export const Header = () => {
 
     return (
         <Sticky >
-            <Menu attached='top'>
+            <Menu borderless attached='top'>
                 <Grid columns={2} className="headerContent">
                     <Grid.Column width={13} floated='left'>
                         <Segment basic='very'>

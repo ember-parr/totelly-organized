@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { ConnectionContext } from "./ConnectionProvider";
-import { Segment, Input } from "semantic-ui-react";
+import { Segment, Input, Header } from "semantic-ui-react";
 
 export const ConnectionSearch = () => {
   const { setSearchTerms } = useContext(ConnectionContext);
@@ -8,7 +8,7 @@ export const ConnectionSearch = () => {
   return (
     <>
       <Segment basic style={{width: "60%"} }>
-        <h1 className="text-center">Connected Users</h1>
+        <Header as='h4'>Connect with Users To Share Locations, Items and More!</Header>
         <Input
           type="text"
           fluid

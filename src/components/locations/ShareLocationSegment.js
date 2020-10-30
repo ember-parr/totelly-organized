@@ -24,14 +24,11 @@ export const ShareLocationSegment = () => {
 
     const handleDropdown = (event, data) => {
         const newThing = { ...thing }
-        console.log("dropdown selection: ", thing)
         newThing[data.name] = data.value
         setThing(newThing)
-        console.log("data.value: ", data.value)
     }
 
     const createSharedLocation = () => {
-        console.log("thing: ", thing.userId)
         shareLocationWithUser({
             userId: thing.userId,
             locationId: parseInt(locationId.locationId),

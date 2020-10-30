@@ -81,7 +81,7 @@ export const ItemForm = () => {
                     notes: item.notes,
                     categoryId: item.categoryId,
                     locationId: item.locationId,
-                    dateLastSearched: 1601409045668,
+                    dateAdded: item.dateAdded,
                     userId: parseInt(user)
                 })
                 addActivity({
@@ -102,7 +102,7 @@ export const ItemForm = () => {
                     notes: item.notes,
                     categoryId: item.categoryId,
                     locationId: item.locationId,
-                    dateLastSearched: 1601409045668,
+                    dateAdded: currentDate + " at " + currentTime,
                     userId: parseInt(user)
                 }).then(getMostRecentItem).then((newItem)=> {
                     setItem(newItem)

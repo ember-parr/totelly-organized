@@ -66,7 +66,7 @@
     {
       "email": "adam@nss.com",
       "firstName": "Adam",
-      "lastName": "ShefSomething",
+      "lastName": "S.",
       "phoneNumber": "4514785454",
       "darkMode": false,
       "lastFmUsername": "",
@@ -414,6 +414,30 @@
       "dateAdded": "October 30, 2020 at 1:47 AM",
       "userId": 5,
       "id": 29
+    },
+    {
+      "itemName": "Cat Wings",
+      "description": "super scary costume",
+      "room": "basement",
+      "placement": "storage area, 4th shelf",
+      "notes": "fits snoop but too big for biggie",
+      "categoryId": 5,
+      "locationId": 6,
+      "dateAdded": "October 30, 2020 at 9:13 AM",
+      "userId": 1,
+      "id": 30
+    },
+    {
+      "itemName": "Toenail Clippers",
+      "description": "Sharpest Ones",
+      "room": "Bathroom",
+      "placement": "bottom drawer under sink",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 6,
+      "dateAdded": "October 30, 2020 at 9:14 AM",
+      "userId": 1,
+      "id": 31
     }
   ],
   "locations": [
@@ -765,6 +789,13 @@
       "status": false,
       "dateConnected": "October 30, 2020",
       "id": 15
+    },
+    {
+      "userId": 9,
+      "connectedUserId": 1,
+      "status": false,
+      "dateConnected": "October 30, 2020",
+      "id": 16
     }
   ],
   "activity": [
@@ -983,6 +1014,24 @@
       "connectedUserId": 0,
       "date": "October 30, 2020 at 1:47 AM",
       "id": 24
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 30,
+      "locationId": 0,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 9:13 AM",
+      "id": 25
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 31,
+      "locationId": 0,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 9:14 AM",
+      "id": 26
     }
   ],
   "lists": []

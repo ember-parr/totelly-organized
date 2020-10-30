@@ -3,6 +3,7 @@ import { Segment, Dropdown, Button  } from 'semantic-ui-react'
 import { useParams } from 'react-router-dom';
 import {ConnectionContext} from '../connectedUsers/ConnectionProvider'
 import {LocationContext} from './LocationProvider'
+import Notifications, {notify} from 'react-notify-toast';
 let dateFormat = require('dateformat')
 let now = new Date()
 let currentDate = dateFormat(now, "longDate")
@@ -36,8 +37,11 @@ export const ShareLocationSegment = () => {
         })
     }
 
+    let myColor = { background: '#2b7a78', text: "#FFFFFF" };
+
     return (
         <>
+        <div class="pageComponent">
             <Segment raised>
                 <p>
                     To share <strong> {'this location'} </strong> with another user, please select user from dropdown below
@@ -65,10 +69,12 @@ export const ShareLocationSegment = () => {
                 onClick={event => {
                     event.preventDefault()
                     createSharedLocation()
+                    notify.show('Location Shared!', "custom", 4000, myColor)
                 }}> Share Location </Button>
-            
+            <Notifications />
             
             </Segment>
+            </div>
         </>
     )
 

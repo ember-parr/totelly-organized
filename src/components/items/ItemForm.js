@@ -290,19 +290,20 @@ export const ItemForm = () => {
             // if there is an itemId, so the user is viewing item details, and the item's userId does NOT match the logged in userID
             return (
                 <div class="pageComponent">
-                    <Header>
-                        <h2>{`${item.itemName}`}</h2>
-                        <h3>{`${item.user?.firstName} ${item.user?.lastName} entered this item`}</h3>
-                    </Header>
+                    
 
                     <Item>
                         <Item.Content>
-                            <h5>Location:   {item.location?.name}</h5>
-                            <h5>Room:   {item.room}</h5>
-                            <h5>Placement:   {item.placement}</h5>
-                            <h5>Category:   {item.category?.name}</h5>
-                            <h5>Description:   {item.description}</h5>
-                            <h5>Notes:   {item.notes}</h5>
+                            <Item.Header as="h2">{`${item.itemName}`}</Item.Header>
+                            <Item.Meta>{`${item.user?.firstName} ${item.user?.lastName} entered this item`}</Item.Meta>
+                            <Item.Description>
+                            <strong>Location: </strong> {item.location?.name}<br />
+                            <strong>Room: </strong> {item.room}<br />
+                            <strong>Placement: </strong> {item.placement}<br />
+                            <strong>Category: </strong> {item.category?.name}<br />
+                            <strong>Description: </strong> {item.description}<br />
+                            <strong>Notes: </strong> {item.notes}
+                            </Item.Description>
                         </Item.Content>
                     </Item>
                 </div>

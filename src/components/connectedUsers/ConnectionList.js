@@ -168,40 +168,24 @@ export const ConnectionList = () => {
             <div className="friends">
             <Grid.Row>
             <Card.Group >
-                {filteredNotFriendUsers?.map((user) => {
-                    if (pending.includes(user)) {
-                        return (
-                            <Grid.Column key={user.id}>
-                                
-                                <UserCard
-                                status={'Not Yet Connected'}
-                                friend={user}
-                                isFriend={
-                                    <Label as='a' color='teal' tag>Request Pending</Label>
-                                }
-                                />
-                                
-                            </Grid.Column>
-                        )
-                    } else {
-                        return (
-                            <Grid.Column key={user.id}>
-                                <UserCard
-                                status={'Not Yet Connected'}
-                                friend={user}
-                                isFriend={
-                                    <Button
-                                    secondary
-                                    type="submit"
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        addNewConnection(user.id);
-                                        notify.show('Request Sent!', "custom", 5000, myColor)
-                                    }}
-                                    >
-                                    {" "}
-                                    Request{" "}
-                                    </Button>
+                {filteredNotFriendUsers.map((user) => (
+                <Grid.Column key={user.id}>
+                    <UserCard
+                    status={'Not Yet Connected'}
+                    friend={user}
+                    isFriend={
+                        <Button
+                        
+                        type="submit"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            addNewConnection(user.id);
+                            notify.show('Request Sent!', "custom", 5000, myColor)
+                        }}
+                        >
+                        {" "}
+                    Request{" "}
+                        </Button>
                                 }
                                 />
                                 <Notifications />

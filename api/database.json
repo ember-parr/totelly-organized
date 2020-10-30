@@ -53,6 +53,33 @@
       "darkMode": false,
       "lastFmUsername": "",
       "id": 6
+    },
+    {
+      "email": "brenda@nss.com",
+      "firstName": "Brenda",
+      "lastName": "Long",
+      "phoneNumber": "6154748742",
+      "darkMode": false,
+      "lastFmUsername": "",
+      "id": 7
+    },
+    {
+      "email": "adam@nss.com",
+      "firstName": "Adam",
+      "lastName": "ShefSomething",
+      "phoneNumber": "4514785454",
+      "darkMode": false,
+      "lastFmUsername": "",
+      "id": 8
+    },
+    {
+      "email": "sage@nss.com",
+      "firstName": "Sage",
+      "lastName": "K.",
+      "phoneNumber": "4785142424",
+      "darkMode": false,
+      "lastFmUsername": "",
+      "id": 9
     }
   ],
   "items": [
@@ -323,6 +350,61 @@
       "dateLastSearched": 1601409045668,
       "userId": 3,
       "id": 23
+    },
+    {
+      "itemName": "Computer",
+      "description": "Old school mac ",
+      "room": "outdoor shed",
+      "placement": "on a random shelf",
+      "categoryId": 2,
+      "locationId": 26,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 7,
+      "id": 24
+    },
+    {
+      "itemName": "Mouse Pad",
+      "description": "The one with cats on it",
+      "room": "Office",
+      "placement": "Desk",
+      "categoryId": 2,
+      "locationId": 26,
+      "dateAdded": "October 30, 2020 at 1:04 AM",
+      "userId": 7,
+      "id": 25
+    },
+    {
+      "id": 26,
+      "itemName": "Smiley Stickers",
+      "description": "for when I do a great job",
+      "room": "kitchen",
+      "placement": "junk drawer",
+      "categoryId": 6,
+      "locationId": 27,
+      "dateAdded": "October 30, 2020 at 1:05 AM",
+      "userId": 8
+    },
+    {
+      "itemName": "Jeff Goldblum Poster",
+      "description": "collectors edition",
+      "room": "bedroom",
+      "placement": "on the wall",
+      "categoryId": 4,
+      "locationId": 28,
+      "dateAdded": "October 30, 2020 at 1:23 AM",
+      "userId": 9,
+      "id": 27
+    },
+    {
+      "itemName": "Mouse Pad",
+      "description": "With Jeff Goldblum's Face",
+      "room": "Guest Room",
+      "placement": "on my desk... obviously",
+      "categoryId": 6,
+      "locationId": 28,
+      "dateAdded": "October 30, 2020 at 1:33 AM",
+      "userId": 9,
+      "id": 28
     }
   ],
   "locations": [
@@ -475,6 +557,24 @@
       "description": "",
       "userId": 3,
       "id": 25
+    },
+    {
+      "name": "Brenda's House",
+      "description": "",
+      "userId": 7,
+      "id": 26
+    },
+    {
+      "name": "Adam's House",
+      "description": "",
+      "userId": 8,
+      "id": 27
+    },
+    {
+      "id": 28,
+      "name": "Sage's House",
+      "description": "The one with the turtle.",
+      "userId": 9
     }
   ],
   "categories": [
@@ -571,6 +671,18 @@
       "locationId": 23,
       "date": "October 29, 2020",
       "id": 10
+    },
+    {
+      "userId": 5,
+      "locationId": 5,
+      "date": "October 30, 2020",
+      "id": 11
+    },
+    {
+      "userId": 7,
+      "locationId": 28,
+      "date": "October 30, 2020",
+      "id": 12
     }
   ],
   "connectedUsers": [
@@ -601,8 +713,23 @@
       "userId": 2,
       "connectedUserId": 5,
       "status": true,
+      "dateConnected": "October 29, 2020",
+      "id": 9
+    },
+    {
+      "userId": 7,
+      "connectedUserId": 8,
+      "status": false,
       "dateConnected": "October 30, 2020",
-      "id": 4
+      "id": 10
+    },
+    {
+      "userId": 7,
+      "connectedUserId": 9,
+      "status": false,
+      "dateConnected": "October 30, 2020",
+      "id": 12
+
     }
   ],
   "activity": [
@@ -724,13 +851,94 @@
       "id": 13
     },
     {
-      "activityType": "Connected With",
-      "userId": 5,
-      "itemId": 0,
+      "activityType": "Added A New Item",
+      "userId": 7,
+      "itemId": 23,
       "locationId": 0,
-      "connectedUserId": 3,
-      "date": "October 30, 2020 at 12:11 AM",
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 1:03 AM",
       "id": 14
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 7,
+      "itemId": 23,
+      "locationId": 0,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 1:04 AM",
+      "id": 15
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 8,
+      "itemId": 23,
+      "locationId": 0,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 1:05 AM",
+      "id": 16
+    },
+    {
+      "activityType": "Updated an Item",
+      "userId": 8,
+      "itemId": 26,
+      "locationId": 0,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 1:05 AM",
+      "id": 17
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 9,
+      "itemId": 23,
+      "locationId": 0,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 1:23 AM",
+      "id": 18
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 9,
+      "itemId": 0,
+      "locationId": 28,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 1:28 AM",
+      "id": 19
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 9,
+      "itemId": 0,
+      "locationId": 28,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 1:30 AM",
+      "id": 20
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 9,
+      "itemId": 0,
+      "locationId": 28,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 1:31 AM",
+      "id": 21
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 9,
+      "itemId": 0,
+      "locationId": 28,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 1:31 AM",
+      "id": 22
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 9,
+      "itemId": 23,
+      "locationId": 0,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 1:33 AM",
+      "id": 23
     }
   ],
   "lists": []

@@ -2,11 +2,14 @@
 import React, { useContext, useEffect, useState } from "react"
 import { LocationContext } from "./LocationProvider"
 import { ActivityContext } from '../home/ActivityProvider'
+import {ItemContext} from '../items/ItemProvider'
+import { ItemTableRow } from '../items/ItemTableRow'
 import { useHistory, useParams } from 'react-router-dom';
 import {ShareLocationSegment } from './ShareLocationSegment'
+import Notifications, {notify} from 'react-notify-toast';
 import {ConnectionProvider} from '../connectedUsers/ConnectionProvider'
 import { SharedWithSegment } from './SharedWithSegment'
-import { Button, Grid, Header, Icon, Form, Item, Modal } from 'semantic-ui-react'
+import { Button, Grid, Header, Icon, Form, Item, Modal, Table } from 'semantic-ui-react'
 
 export const LocationForm = () => {
     const { addLocation, getLocationById, updateLocation, getLocations, deleteLocation } = useContext(LocationContext)
@@ -21,20 +24,29 @@ export const LocationForm = () => {
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")
     let currentTime = dateFormat(now, "shortTime")
+    const {getItemsByLocation } = useContext(ItemContext)
+
+    const [filteredItems, setItems] = useState([])
 
     const handleControlledInputChange = (event) => {
         const newLocation = { ...location }
         newLocation[event.target.name] = event.target.value
         setLocation(newLocation)
     }
+    let myColor = { background: '#2b7a78', text: "#FFFFFF" };
 
     useEffect(() => {
-        getLocations().then().then(() => {
+        getLocations().then(() => {
             if (locationId){
                 getLocationById(locationId)
                 .then(location => {
                     setLocation(location)
                     setIsLoading(false)
+                }).then(() => {
+                    getItemsByLocation(locationId)
+                    .then(items => {
+                        setItems(items)
+                    })
                 })
             } else {
                 setIsLoading(false)
@@ -62,7 +74,6 @@ export const LocationForm = () => {
                     connectedUserId: 0,
                     date: currentDate + " at " + currentTime
                 })
-                .then(() => history.push(`/locations`))
             }else {
                 addLocation({
                     name: location.name,
@@ -77,7 +88,6 @@ export const LocationForm = () => {
                     connectedUserId: 0,
                     date: currentDate + " at " + currentTime
                 })
-                .then(() => history.push("/locations"))
             }
         }
     }
@@ -120,14 +130,18 @@ export const LocationForm = () => {
                 <Header>
                     <h2>{locationId ? `Update ${location.name}` : "Add New Location"}</h2>
                 </Header>
-                <ConnectionProvider>
-                    <ShareLocationSegment />
-                </ConnectionProvider>
+                <Grid stackable divided centered>
+                    <Grid.Row columns={1} centered>
+                        <ConnectionProvider>
+                            <ShareLocationSegment />
+                        </ConnectionProvider>
+                    </Grid.Row>
                             
-                <Grid columns={2} stackable style={{width: "775px"}} divided>
+
+                    <Grid.Row columns={2} fluid>
                     <Grid.Column>
                         <form >
-                            <Grid.Row>
+                            
                                 <h4>{`Edit ${location.name}'s Details`}</h4>
                                     <label>Name of Location</label>
                                     <Form.Input  
@@ -138,9 +152,9 @@ export const LocationForm = () => {
                                         size='large' 
                                         defaultValue={location.name} 
                                     /> 
-                            </Grid.Row> 
+                            
                             <br/>
-                            <Grid.Row>
+                            
                                 <label>Description</label>
                                 <Form.Input 
                                     onChange={handleControlledInputChange} 
@@ -151,9 +165,9 @@ export const LocationForm = () => {
                                     size='large' 
                                     defaultValue={location.description}
                                 /> 
-                            </Grid.Row>
+                            
                             <br/>
-                            <Grid.Row>
+                            
                                 <Form.Button 
                                     animated 
                                     disabled={isLoading} 
@@ -161,13 +175,14 @@ export const LocationForm = () => {
                                     onClick={event=> {
                                         event.preventDefault() 
                                         constructLocationObject()
+                                        notify.show('Location Updated!', "custom", 4000, myColor)
                                         }}>
                                     <Button.Content visible>{locationId ? "Save Changes" : "Add Location"}</Button.Content>
                                     <Button.Content hidden>
                                         <Icon name='arrow right' />
                                     </Button.Content>
                                 </Form.Button>
-                            
+                                        <Notifications />
                                 <Modal 
                                     closeIcon 
                                     open={open} 
@@ -194,13 +209,13 @@ export const LocationForm = () => {
                                             onClick={() => { 
                                                 setOpen(false)
                                                 deleteLocation(locationId)
-                                                history.push('/locations')
+                                                history.push("/locations")
                                             }}>
                                         <Icon name='checkmark' /> Yes
                                         </Button>
                                     </Modal.Actions>
                                 </Modal>
-                                </Grid.Row>
+                                
                             </form>
                         </Grid.Column>
 
@@ -213,22 +228,68 @@ export const LocationForm = () => {
 
 
                         </Grid.Column>
-                        </Grid>
+                        </Grid.Row>
+                        <Grid.Row columns={1} centered>
+
+                        <Table unstackable celled selectable collapsing compact size="small" className="pageComponent" style={{margin: '35px 0 0 0'}}>
+                    <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell width={1}>Item Name</Table.HeaderCell>
+                            <Table.HeaderCell width={1}>Location</Table.HeaderCell>
+                            <Table.HeaderCell width={1}>Room</Table.HeaderCell>
+                            <Table.HeaderCell width={1}>Placement</Table.HeaderCell>
+                            <Table.HeaderCell width={1}>Category</Table.HeaderCell>
+                            <Table.HeaderCell width={4}>Details</Table.HeaderCell>
+                        </Table.Row>
+                    </Table.Header>
+
+                
+                    <Table.Body>
+                    {filteredItems?.map(item => {
+                        return <ItemTableRow key={item.id} item={item} />
+                    })}
+
+                    </Table.Body>
+                </Table>
+                </Grid.Row>
+                    </Grid>
             </div>
         )
     } else if (locationId && location.userId!==parseInt(user)) {
         return (
+            
             <div class="pageComponent">
-                <Header>
-                    <h2>{`${location.name}`}</h2>
-                    <h3>{`${location.user?.firstName} ${location.user?.lastName} entered this location`}</h3>
-                </Header>
-
                 <Item>
                     <Item.Content>
-                        <h5>Description:   {location.description}</h5>
+                        <Item.Header as='h4'>{`${location.name}`}</Item.Header>
+                        <Item.Meta>{`${location.user?.firstName} ${location.user?.lastName} entered this location`}</Item.Meta>
+                        <Item.Description>Description:   {location.description}</Item.Description>
                     </Item.Content>
                 </Item>
+
+                <Table unstackable celled selectable collapsing compact size="small" className="pageComponent">
+                    <Table.Header>
+                        <Table.Row>
+                            <Table.HeaderCell width={1}>Item Name</Table.HeaderCell>
+                            <Table.HeaderCell width={1}>Location</Table.HeaderCell>
+                            <Table.HeaderCell width={1}>Room</Table.HeaderCell>
+                            <Table.HeaderCell width={1}>Placement</Table.HeaderCell>
+                            <Table.HeaderCell width={1}>Category</Table.HeaderCell>
+                            <Table.HeaderCell width={4}>Details</Table.HeaderCell>
+                        </Table.Row>
+                    </Table.Header>
+
+                
+                    <Table.Body>
+                    {filteredItems?.map(item => {
+                            return <ItemTableRow key={item.id} item={item} />
+                        })}
+
+                    </Table.Body>
+                </Table>
+
+
+                
             </div>
         )
     };

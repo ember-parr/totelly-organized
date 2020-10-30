@@ -34,7 +34,6 @@ export const ConnectedUserDetail = () => {
                     <Table.Row>
                         <Table.HeaderCell>Location Name</Table.HeaderCell>
                         <Table.HeaderCell>Description</Table.HeaderCell>
-                        <Table.HeaderCell>Shared With:</Table.HeaderCell>
                     </Table.Row>
                     </Table.Header>
                 <Table.Body>
@@ -44,7 +43,7 @@ export const ConnectedUserDetail = () => {
                                     <Table.Row onClick ={()=> history.push(`/locations/edit/${location.id}`)}>
                                         <Table.Cell>{ location.name }</Table.Cell>
                                         <Table.Cell>{ location.description }</Table.Cell>
-                                        <Table.Cell>Shared With:</Table.Cell>
+                                        
                                     </Table.Row>
                                 </>
                             )

@@ -9,17 +9,21 @@ export const UserCard = ({ friend, isFriend, status  }) => {
 
     if (status === 'Not Yet Connected') {
     return (
-    <Card style={{margin: "0em 1em"}}>
+        <>
+    <Card  onClick ={()=> history.push(`/user/detail/${friend.id}`)} style={{margin: "0em 1em"}}>
         <Card.Content header={`${friend.firstName} ${friend.lastName}`} />
         <Card.Content>
-        <Card.Meta>Request to connect with {friend.firstName} to use Totelly Organized together!</Card.Meta>
-            
-        </Card.Content>
+            <Card.Meta>{status}</Card.Meta>
+            Email: {friend.email} <br />
+            Phone: {PhoneNumber.formatFriendly(`${friend.phoneNumber}`)} </Card.Content>
+        </Card>
+
         
-        <Card.Content extra>
+        <Card.Content extra style={{margin: "0em 1em 1em 1em"}} fluid>
             {isFriend}
         </Card.Content>
-    </Card>
+    
+    </>
     )
     } else if (status === 'Connected') {
         return (

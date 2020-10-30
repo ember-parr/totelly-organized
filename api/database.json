@@ -200,7 +200,7 @@
       "notes": "not the T9 calculator",
       "categoryId": 2,
       "locationId": 25,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3
     },
     {
@@ -211,7 +211,7 @@
       "notes": "Why is there an extra though? ",
       "categoryId": 2,
       "locationId": 25,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 11
     },
@@ -222,7 +222,7 @@
       "notes": "rechargeable  ",
       "categoryId": 2,
       "locationId": 25,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 12
     },
@@ -232,7 +232,7 @@
       "placement": "Medicine Cabinet",
       "categoryId": 4,
       "locationId": 25,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 13
     },
@@ -242,7 +242,7 @@
       "placement": "Desk Bottom Drawer",
       "categoryId": 6,
       "locationId": 25,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 14
     },
@@ -254,7 +254,7 @@
       "notes": "just",
       "categoryId": 3,
       "locationId": 23,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 15
     },
@@ -266,7 +266,7 @@
       "notes": "4:10",
       "locationId": 25,
       "categoryId": 2,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 16
     },
@@ -278,7 +278,7 @@
       "notes": "five",
       "categoryId": 7,
       "locationId": 25,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 17
     },
@@ -289,7 +289,7 @@
       "placement": "ufdqq",
       "categoryId": 2,
       "locationId": 24,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 18
     },
@@ -300,7 +300,7 @@
       "placement": "sovdih",
       "categoryId": 3,
       "locationId": 23,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 19
     },
@@ -312,7 +312,7 @@
       "notes": "abawrba",
       "categoryId": 7,
       "locationId": 25,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 20
     },
@@ -324,7 +324,7 @@
       "notes": "arga",
       "categoryId": 7,
       "locationId": 24,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 21
     },
@@ -336,7 +336,7 @@
       "notes": "awv",
       "categoryId": 7,
       "locationId": 24,
-      "dateAdded": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 22
     },
@@ -347,7 +347,7 @@
       "placement": "asdf",
       "categoryId": 7,
       "locationId": 24,
-      "dateLastSearched": 1601409045668,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
       "userId": 3,
       "id": 23
     },
@@ -405,6 +405,15 @@
       "dateAdded": "October 30, 2020 at 1:33 AM",
       "userId": 9,
       "id": 28
+    },
+    {
+      "itemName": "Toy mouse",
+      "placement": "under the couch",
+      "categoryId": 5,
+      "locationId": 29,
+      "dateAdded": "October 30, 2020 at 1:47 AM",
+      "userId": 5,
+      "id": 29
     }
   ],
   "locations": [
@@ -575,6 +584,12 @@
       "name": "Sage's House",
       "description": "The one with the turtle.",
       "userId": 9
+    },
+    {
+      "name": "Homestead",
+      "description": "",
+      "userId": 5,
+      "id": 29
     }
   ],
   "categories": [
@@ -729,7 +744,6 @@
       "status": false,
       "dateConnected": "October 30, 2020",
       "id": 12
-
     }
   ],
   "activity": [
@@ -939,6 +953,15 @@
       "connectedUserId": 0,
       "date": "October 30, 2020 at 1:33 AM",
       "id": 23
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 5,
+      "itemId": 23,
+      "locationId": 0,
+      "connectedUserId": 0,
+      "date": "October 30, 2020 at 1:47 AM",
+      "id": 24
     }
   ],
   "lists": []

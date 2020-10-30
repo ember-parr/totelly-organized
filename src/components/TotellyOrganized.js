@@ -4,8 +4,10 @@ import { SignIn } from "./auth/SignIn";
 import { Register } from "./auth/Register";
 import { Route, Redirect } from "react-router-dom";
 import { Footer } from "./nav/Footer";
+import {UserProvider} from './user/UserProvider'
 import {  Menu, Segment, Sidebar } from 'semantic-ui-react'
 import { SidebarNavitation } from "./nav/Navbar";
+import { Header } from './nav/Header'
 import "./TotellyOrganized.css"
 
 
@@ -41,7 +43,10 @@ export const TotellyOrganized = () => {
   return (
   <>
   <main >
-    <section className="pageContent">
+    <UserProvider>
+      <Header />
+    </UserProvider>
+      <section className="pageContent">
     <Route
       render={() => {
         if (localStorage.getItem("user")) {

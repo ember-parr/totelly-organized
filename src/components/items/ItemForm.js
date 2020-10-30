@@ -27,14 +27,12 @@ export const ItemForm = () => {
 
     const handleControlledInputChange = (event) => {
         const newItem = { ...item }
-        console.log("category: ", item.categoryId)
         newItem[event.target.name] = event.target.value
         setItem(newItem)
     }
 
     const handleDropdown = (event, data)=> {
         const newItem = { ...item }
-        console.log("category: ", item.categoryId)
         newItem[data.name] = data.value
         setItem(newItem)
     }
@@ -106,7 +104,6 @@ export const ItemForm = () => {
                     userId: parseInt(user)
                 }).then(getMostRecentItem).then((newItem)=> {
                     setItem(newItem)
-                    console.log(newItem[0].id)
                     addActivity({
                         activityType: "Added A New Item",
                         userId: parseInt(user),

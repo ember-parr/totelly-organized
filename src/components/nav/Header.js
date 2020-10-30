@@ -36,8 +36,6 @@ export const Header = () => {
     ]
 
     const handleChange = (event, data) => {
-        console.log("data.value", data.value)
-        console.log("data.key", data.key)
         if (data.value === 'logout') {
             localStorage.clear()
             window.location.reload()

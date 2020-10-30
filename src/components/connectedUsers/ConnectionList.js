@@ -30,10 +30,8 @@ export const ConnectionList = () => {
         const currentUser = parseInt(localStorage.user)
         connections.map((connection) => {
             if (connection.userId === UserToDelete && connection.connectedUserId === currentUser) {
-                console.log("deleteing user id: ", UserToDelete, "ConnectionId: ", connection.id)
                 deleteConnection(connection.id)
             } else if (connection.connectedUserId === UserToDelete && connection.userId === currentUser) {
-                console.log("deleteing connectedUser id: ", UserToDelete, "ConnectionId: ", connection.id)
                 deleteConnection(connection.id)
             } else {
                 console.log("nothing to delete?")
@@ -46,7 +44,6 @@ export const ConnectionList = () => {
     //add two way friendship to database
     const addNewConnection = (id) => {
         const currentUser = parseInt(localStorage.user)
-        console.log("adding user id: ", id)
         addConnection({userId: id, connectedUserId: currentUser, status: false, dateConnected: currentDate})
     }
 

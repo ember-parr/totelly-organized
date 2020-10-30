@@ -118,7 +118,6 @@ export const ConnectionRequest = () => {
             );
         
             setFriendUsers(friendInformation)
-            console.log("friend info: ", friendInformation)
 
         }, [connections, Users, searchTerms])
 

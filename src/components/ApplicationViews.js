@@ -43,9 +43,11 @@ export const ApplicationViews = (props) => {
 
           <ItemProvider>
             <ConnectionProvider>
-              <Route exact path="/items">
-                <ItemTable />
-              </Route>
+              <LocationProvider>
+                <Route exact path="/items">
+                  <ItemTable />
+                </Route>
+              </LocationProvider>
             </ConnectionProvider>
           </ItemProvider>
 

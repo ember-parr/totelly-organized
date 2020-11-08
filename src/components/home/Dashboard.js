@@ -14,7 +14,7 @@ export const DashboardView = () => {
 
 
     return (
-        <div class="pageComponent">
+        <div className="pageComponent">
 
             <Grid stackable celled='internally'>
                 <Grid.Row  columns={2} centered >

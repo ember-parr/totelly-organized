@@ -4,7 +4,6 @@ import {LocationContext} from './LocationProvider'
 import { LocationTableRow } from './LocationTableRow'
 import { useHistory } from 'react-router-dom'
 import { Table, Button, Input } from "semantic-ui-react"
-import {ConnectionContext} from '../connectedUsers/ConnectionProvider'
 
 
 export const LocationTable = () => {

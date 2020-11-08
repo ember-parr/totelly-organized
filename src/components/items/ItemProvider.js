@@ -12,6 +12,11 @@ export const ItemProvider = (props) => {
         .then(setItems)
     }
 
+    const getSelectItems = () => {
+        return fetch(`http://localhost:8088/items?_expand=location&_expand=category&_expand=user`)
+        .then(result => result.json())
+        
+    }
     const addItem = Item => {
         return fetch("http://localhost:8088/items", {
             method: "POST",
@@ -25,6 +30,12 @@ export const ItemProvider = (props) => {
     const getItemById = (id) => {
         return fetch(`http://localhost:8088/items/${id}?_expand=user`)
         .then(result => result.json())
+    }
+
+    const getUsersItems = (userId) => {
+        return fetch(`http://localhost:8088/items?userId=${userId}&_expand=location&_expand=category&_expand=user`)
+        .then(result => result.json())
+        
     }
 
     const getItemsByLocation = (locationId) => {
@@ -55,7 +66,7 @@ export const ItemProvider = (props) => {
 
     return (
         <ItemContext.Provider value={{
-            Items, getItems, addItem, getItemById, deleteItem, updateItem, setSearchTerms, searchTerms, getMostRecentItem, getItemsByLocation
+            Items, getSelectItems, getUsersItems, getItems, addItem, getItemById, deleteItem, updateItem, setSearchTerms, searchTerms, getMostRecentItem, getItemsByLocation
         }}>
             {props.children}
         </ItemContext.Provider>

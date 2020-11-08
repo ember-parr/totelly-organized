@@ -94,9 +94,9 @@ export const ApplicationViews = (props) => {
         <LocationProvider>
           <ActivityProvider>
             <ItemProvider>
-            <Route exact path="/locations/edit/:locationId(\d+)">
-              <LocationForm />
-            </Route>
+              <Route exact path="/locations/edit/:locationId(\d+)">
+                <LocationForm />
+              </Route>
             </ItemProvider>
           </ActivityProvider>
         </LocationProvider>

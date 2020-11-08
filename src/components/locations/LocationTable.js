@@ -13,14 +13,10 @@ export const LocationTable = () => {
     const [filteredLocations, setFiltered] = useState([])
     const [sharedLocations, setSharedLocations] = useState([])
     const domHistory = useHistory()
-    const { getConnectionByUser } = useContext(ConnectionContext)
-    const [usersConnections, setConnections] = useState([])
-    const connectedUsersId = usersConnections.map((user) => user.connectedUserId)
     const thisUsersLocations = Locations.filter(location => location.userId === user)
     const sharedLocationIds = sharedLocations.map((location) => location.locationId)
     const locationsSharedWithThisUser = Locations.filter(location => sharedLocationIds.includes(location.id))
     const combinedLocations = locationsSharedWithThisUser.concat(thisUsersLocations)
-    const userIdsForSearch = connectedUsersId.concat(user)
 
     useEffect(()=> {
         getLocationByUser(user)
@@ -30,6 +26,7 @@ export const LocationTable = () => {
     }, [])
 
     useEffect(() => {
+        getLocations()
         getLocationsSharedWithUser(user)
         .then(shared => {
             setSharedLocations(shared)
@@ -37,14 +34,6 @@ export const LocationTable = () => {
 
     }, [])
 
-    useEffect(() => {
-        getLocations()
-        getConnectionByUser(user)
-        .then(connections => {
-            setConnections(connections)
-        })
-
-    }, [])
 
     useEffect(() => {
         if (searchTerms !== "") {
@@ -76,8 +65,8 @@ export const LocationTable = () => {
 
 
     return (
-        <div class="pageComponent">
-            <Button onClick={() => domHistory.push("/locations/add")}>New Location</Button>
+        <div className="pageComponent">
+            <Button color='teal' onClick={() => domHistory.push("/locations/add")}>New Location</Button>
             
             <Input
             type="text"
@@ -98,15 +87,17 @@ export const LocationTable = () => {
 
 
 
-            <Table celled selectable collapsing compact size="small">
+            <Table unstackable celled selectable collapsing compact className="pageComponent">
                 <Table.Header>
-                    <Table.Row>
+                    <Table.Row width={16}>
                         <Table.HeaderCell width={3}>Location Name</Table.HeaderCell>
                         <Table.HeaderCell width={3}>Owner</Table.HeaderCell>
-                        <Table.HeaderCell width={5}>Description</Table.HeaderCell>
+                        <Table.HeaderCell width={7}>Description</Table.HeaderCell>
                         <Table.HeaderCell width={3}>Shared With:</Table.HeaderCell>
                     </Table.Row>
                     </Table.Header>
+
+
                 <Table.Body>
                     {filteredLocations.map(location => {
                             return <LocationTableRow key={location.id} location={location} />

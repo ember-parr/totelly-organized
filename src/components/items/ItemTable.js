@@ -115,12 +115,12 @@ export const ItemTable = () => {
                 </Table.Header>
 
         
-        <Table.Body>
-        {filteredItems.map(item => {
-                return <ItemTableRow key={item.id} item={item} />
-            })}
+            <Table.Body>
+            {filteredItems.map(item => {
+                    return <ItemTableRow key={item.id} item={item} />
+                })}
 
-        </Table.Body>
+            </Table.Body>
         </Table>
         
         

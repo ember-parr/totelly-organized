@@ -39,7 +39,7 @@ export const ItemProvider = (props) => {
     }
 
     const getItemsByLocation = (locationId) => {
-        return fetch(`http://localhost:8088/items?locationId=${locationId}`)
+        return fetch(`http://localhost:8088/items?locationId=${locationId}&_expand=location&_expand=category&_expand=user`)
         .then(result => result.json())
     }
 

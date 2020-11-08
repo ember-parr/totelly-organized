@@ -27,8 +27,13 @@ export const LocationProvider = (props) => {
         .then(result => result.json())
     }
 
+    const getLocationsSharedWithUser = (userId) => {
+        return fetch(`http://localhost:8088/sharedLocations?userId=${userId}`)
+        .then(result => result.json())
+    }
+
     const getLocationByUser = userId => {
-        return fetch(`http://localhost:8088/locations?userId=${userId}`)
+        return fetch(`http://localhost:8088/locations?userId=${userId}&_expand=user`)
         .then(result => result.json())
     }
 
@@ -75,7 +80,8 @@ export const LocationProvider = (props) => {
             searchTerms, 
             getLocationByUser, 
             getSharedLocation, 
-            shareLocationWithUser
+            shareLocationWithUser,
+            getLocationsSharedWithUser
         }}>
             {props.children}
         </LocationContext.Provider>

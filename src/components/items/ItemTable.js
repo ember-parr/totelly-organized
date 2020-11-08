@@ -43,11 +43,13 @@ export const ItemTable = () => {
                     (item) => connectedUsersId.includes(item.userId) || item.userId === user
                 )
                 setFiltered(connectionsItems)
+                console.log("my connections items: ", connectionsItems)
             })
         }
     }, [searchTerms, Items])
 
 
+    
     
     let myItemClicked = () => {
         getUsersItems(user).then((items) => {
@@ -113,12 +115,12 @@ export const ItemTable = () => {
                 </Table.Header>
 
         
-        <Table.Body>
-        {filteredItems.map(item => {
-                return <ItemTableRow key={item.id} item={item} />
-            })}
+            <Table.Body>
+            {filteredItems.map(item => {
+                    return <ItemTableRow key={item.id} item={item} />
+                })}
 
-        </Table.Body>
+            </Table.Body>
         </Table>
         
         

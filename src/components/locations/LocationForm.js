@@ -104,9 +104,7 @@ export const LocationForm = () => {
                             <h2>{locationId ? `Update ${location.name}` : "Add New Location"}</h2>
                                 <h4>This is a brand new location</h4>
                         </Header>
-                        <ConnectionProvider>
-                            <ShareLocationSegment />
-                        </ConnectionProvider>
+                        
                         <div>
                         <form >
                             <Grid.Row><Form.Input  onChange={handleControlledInputChange} name="name" icon='hand point up outline' iconPosition='left' placeholder='Name of Location' size='large' defaultValue={location.name} /> </Grid.Row> <br/>
@@ -235,7 +233,6 @@ export const LocationForm = () => {
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell width={1}>Item Name</Table.HeaderCell>
-                            <Table.HeaderCell width={1}>Location</Table.HeaderCell>
                             <Table.HeaderCell width={1}>Room</Table.HeaderCell>
                             <Table.HeaderCell width={1}>Placement</Table.HeaderCell>
                             <Table.HeaderCell width={1}>Category</Table.HeaderCell>
@@ -246,7 +243,7 @@ export const LocationForm = () => {
                 
                     <Table.Body>
                     {filteredItems?.map(item => {
-                        return <ItemTableRow key={item.id} item={item} />
+                        return <ItemTableRow key={item.id} item={item}  type={'fiveCols'} />
                     })}
 
                     </Table.Body>
@@ -258,11 +255,11 @@ export const LocationForm = () => {
     } else if (locationId && location.userId!==parseInt(user)) {
         return (
             
-            <div class="pageComponent">
+            <div className="pageComponent">
                 <Item>
                     <Item.Content>
-                        <Item.Header as='h4'>{`${location.name}`}</Item.Header>
-                        <Item.Meta>{`${location.user?.firstName} ${location.user?.lastName} entered this location`}</Item.Meta>
+                        <Item.Header as='h2'>{`${location.name}`}</Item.Header>
+                        <Item.Header as='h4'>{`${location.user?.firstName} ${location.user?.lastName} entered this location`}</Item.Header>
                         <Item.Description>Description:   {location.description}</Item.Description>
                     </Item.Content>
                 </Item>
@@ -271,7 +268,6 @@ export const LocationForm = () => {
                     <Table.Header>
                         <Table.Row>
                             <Table.HeaderCell width={1}>Item Name</Table.HeaderCell>
-                            <Table.HeaderCell width={1}>Location</Table.HeaderCell>
                             <Table.HeaderCell width={1}>Room</Table.HeaderCell>
                             <Table.HeaderCell width={1}>Placement</Table.HeaderCell>
                             <Table.HeaderCell width={1}>Category</Table.HeaderCell>
@@ -282,7 +278,7 @@ export const LocationForm = () => {
                 
                     <Table.Body>
                     {filteredItems?.map(item => {
-                            return <ItemTableRow key={item.id} item={item} />
+                            return <ItemTableRow key={item.id} item={item} type={'fiveCols'}/>
                         })}
 
                     </Table.Body>

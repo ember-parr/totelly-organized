@@ -35,7 +35,6 @@ export const ItemTable = () => {
 
     useEffect(() => {
         if (searchTerms !== "") {
-            console.log("search ids: ", userIdsForSearch)
             const subset = Items.filter(item => item.itemName.toLowerCase().includes(searchTerms) && userIdsForSearch.includes(item.userId)) 
             setFiltered(subset)
         } else {
@@ -86,7 +85,7 @@ export const ItemTable = () => {
         <Input
           type="text"
           icon='search'
-          onKeyUp={(keyEvent) => setSearchTerms(keyEvent.target.value)}
+          onKeyUp={(keyEvent) => setSearchTerms(keyEvent.target.value.toLowerCase())}
           placeholder="Search Items... "
         />
 

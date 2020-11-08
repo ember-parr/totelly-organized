@@ -15,8 +15,8 @@ export const ItemTable = () => {
     const { getConnectionByUser } = useContext(ConnectionContext)
     const [usersConnections, setConnections] = useState([])
     const connectedUsersId = usersConnections.map((user) => user.connectedUserId)
+    const userIdsForSearch = connectedUsersId.concat(user)
     
-
     useEffect(()=> {
         getUsersItems(user)
         .then((items) => {
@@ -35,11 +35,15 @@ export const ItemTable = () => {
 
     useEffect(() => {
         if (searchTerms !== "") {
-            const subset = Items.filter(item => item.itemName.toLowerCase().includes(searchTerms) && item.userId === user) 
+            console.log("search ids: ", userIdsForSearch)
+            const subset = Items.filter(item => item.itemName.toLowerCase().includes(searchTerms) && userIdsForSearch.includes(item.userId)) 
             setFiltered(subset)
         } else {
-            getUsersItems(user).then((items) => {
-                setFiltered(items)
+            getSelectItems().then((items) => {
+                let connectionsItems = items.filter(
+                    (item) => connectedUsersId.includes(item.userId) || item.userId === user
+                )
+                setFiltered(connectionsItems)
             })
         }
     }, [searchTerms, Items])

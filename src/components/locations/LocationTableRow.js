@@ -21,8 +21,8 @@ export const LocationTableRow = ({location}) => {
             <Table.Row onClick ={()=> history.push(`/locations/edit/${location.id}`)}>
                 <Table.Cell collapsing>{ location.name }</Table.Cell>
                 <Table.Cell collapsing>{ location.user.firstName } {location.user.lastName} </Table.Cell>
-                <Table.Cell singleLine>{ location.description }</Table.Cell>
-                <Table.Cell singleLine>
+                <Table.Cell >{ location.description }</Table.Cell>
+                <Table.Cell >
                     {filteredLocations.map((loc) => {
                             return (
                                 <>

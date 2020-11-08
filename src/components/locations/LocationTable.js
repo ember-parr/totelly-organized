@@ -65,7 +65,7 @@ export const LocationTable = () => {
 
 
     return (
-        <div className="pageComponent">
+        <div>
             <Button color='teal' onClick={() => domHistory.push("/locations/add")}>New Location</Button>
             
             <Input
@@ -87,15 +87,15 @@ export const LocationTable = () => {
 
 
 
-            <Table unstackable celled selectable collapsing compact className="pageComponent">
+            <Table celled selectable  compact className="pageComponent">
                 <Table.Header>
-                    <Table.Row width={16}>
+                    <Table.Row>
                         <Table.HeaderCell width={3}>Location Name</Table.HeaderCell>
                         <Table.HeaderCell width={3}>Owner</Table.HeaderCell>
-                        <Table.HeaderCell width={7}>Description</Table.HeaderCell>
-                        <Table.HeaderCell width={3}>Shared With:</Table.HeaderCell>
+                        <Table.HeaderCell width={5}>Description</Table.HeaderCell>
+                        <Table.HeaderCell width={5}>Shared With:</Table.HeaderCell>
                     </Table.Row>
-                    </Table.Header>
+                </Table.Header>
 
 
                 <Table.Body>

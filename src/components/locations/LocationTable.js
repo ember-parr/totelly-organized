@@ -48,17 +48,13 @@ export const LocationTable = () => {
 
     useEffect(() => {
         if (searchTerms !== "") {
-            const subset = Locations.filter(loc => loc.name.toLowerCase().includes(searchTerms))
+            const subset = combinedLocations.filter(loc => loc.name.toLowerCase().includes(searchTerms))
             setFiltered(subset)
         } else {
             setFiltered(thisUsersLocations)
         }
     }, [searchTerms, Locations])
 
-
-    console.log("this users locations: ", thisUsersLocations)
-    console.log("location shared with user: ", locationsSharedWithThisUser)
-    console.log("combined Locations: ", combinedLocations)
 
 
 

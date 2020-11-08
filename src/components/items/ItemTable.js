@@ -3,20 +3,19 @@ import React, { useContext, useEffect, useState } from "react"
 import {ItemContext} from './ItemProvider'
 import { ItemTableRow } from './ItemTableRow'
 import { useHistory } from 'react-router-dom'
-import { Table, Button } from "semantic-ui-react"
+import { Table, Button, Input } from "semantic-ui-react"
 import {ConnectionContext} from '../connectedUsers/ConnectionProvider'
 
 
 export const ItemTable = () => {
-    const {Items, getUsersItems, getItems, searchTerms, getSelectItems } = useContext(ItemContext)
+    const {Items, getUsersItems, getItems,setSearchTerms, searchTerms, getSelectItems } = useContext(ItemContext)
     const user = parseInt(localStorage.user)
     const [filteredItems, setFiltered] = useState([])
     const domHistory = useHistory()
     const { getConnectionByUser } = useContext(ConnectionContext)
     const [usersConnections, setConnections] = useState([])
-    const [connectionItems, setConnectionItems] = useState([])
+    const connectedUsersId = usersConnections.map((user) => user.connectedUserId)
     
-
 
     useEffect(()=> {
         getUsersItems(user)
@@ -26,6 +25,7 @@ export const ItemTable = () => {
     }, [])
 
     useEffect(() => {
+        getItems()
         getConnectionByUser(user)
         .then(connections => {
             setConnections(connections)
@@ -35,10 +35,12 @@ export const ItemTable = () => {
 
     useEffect(() => {
         if (searchTerms !== "") {
-            const subset = Items.filter(item => item.name.toLowerCase().includes(searchTerms))
+            const subset = Items.filter(item => item.itemName.toLowerCase().includes(searchTerms) && item.userId === user) 
             setFiltered(subset)
         } else {
-            setFiltered(Items)
+            getUsersItems(user).then((items) => {
+                setFiltered(items)
+            })
         }
     }, [searchTerms, Items])
 
@@ -51,9 +53,6 @@ export const ItemTable = () => {
     }
     
     let sharedItemsClicked = () => {
-        const connectedUsersId = usersConnections.map((user) => user.connectedUserId)
-        console.log("connected user Id: ", connectedUsersId)
-        
         getSelectItems().then((items) => {
             let connectionsItems = items.filter(
                 (item) => connectedUsersId.includes(item.userId)
@@ -63,9 +62,6 @@ export const ItemTable = () => {
     }
     
     let handleClick = () => {
-        const connectedUsersId = usersConnections.map((user) => user.connectedUserId)
-        console.log("connected user Id: ", connectedUsersId)
-        
         getSelectItems().then((items) => {
             let connectionsItems = items.filter(
                 (item) => connectedUsersId.includes(item.userId) || item.userId === user
@@ -82,6 +78,15 @@ export const ItemTable = () => {
         
         <>
         <Button color='teal' onClick={() => domHistory.push("/items/add")}>New Item</Button>
+
+        <Input
+          type="text"
+          icon='search'
+          onKeyUp={(keyEvent) => setSearchTerms(keyEvent.target.value)}
+          placeholder="Search Items... "
+        />
+
+
 
         <Button.Group  floated='right'>
             <Button toggle onClick={myItemClicked}>View Only My Items</Button>

@@ -43,11 +43,13 @@ export const ItemTable = () => {
                     (item) => connectedUsersId.includes(item.userId) || item.userId === user
                 )
                 setFiltered(connectionsItems)
+                console.log("my connections items: ", connectionsItems)
             })
         }
     }, [searchTerms, Items])
 
 
+    
     
     let myItemClicked = () => {
         getUsersItems(user).then((items) => {

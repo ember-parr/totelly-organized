@@ -841,6 +841,42 @@
       "userId": 5,
       "locationId": 3,
       "date": "November 9, 2020"
+    },
+    {
+      "userId": 1,
+      "locationId": 8,
+      "date": "REQUESTED",
+      "id": 34
+    },
+    {
+      "userId": 1,
+      "locationId": 24,
+      "date": "REQUESTED",
+      "id": 35
+    },
+    {
+      "userId": 1,
+      "locationId": 5,
+      "date": "REQUESTED",
+      "id": 36
+    },
+    {
+      "id": 37,
+      "userId": 5,
+      "locationId": 4,
+      "date": "November 9, 2020"
+    },
+    {
+      "userId": 5,
+      "locationId": 11,
+      "date": "REQUESTED",
+      "id": 38
+    },
+    {
+      "id": 39,
+      "userId": 5,
+      "locationId": 10,
+      "date": "November 9, 2020"
     }
   ],
   "connectedUsers": [

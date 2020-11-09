@@ -51,7 +51,7 @@ export const SharedWithSegment = ({location}) => {
                             <Card>
                                 <Card.Content>
                                 <Card.Header>{loc.user.firstName} {loc.user.lastName}</Card.Header>
-                                    <Card.Meta>{loc.user.email}</Card.Meta>
+                                    <Card.Meta>Request Pending...</Card.Meta>
                                     <Button.Group fluid>
                                     <Button  user={loc.user?.firstName} className="approve-btn" onClick={(e) => {
                                             e.preventDefault();

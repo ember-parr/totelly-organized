@@ -5,7 +5,6 @@ export const LocationContext = createContext()
 export const LocationProvider = (props) => {
     const [Locations, setLocations] = useState([])
     const [searchTerms, setSearchTerms] = useState("")
-    const [ shareRequests, setShareRequests ] = useState([])
 
     const getLocations = () => {
         return fetch(`http://localhost:8088/locations?_expand=user`)
@@ -107,8 +106,7 @@ export const LocationProvider = (props) => {
             getLocationsSharedWithUser,
             getShareRequests,
             updateSharedLocation,
-            deleteSharedLocation,
-            shareRequests
+            deleteSharedLocation
         }}>
             {props.children}
         </LocationContext.Provider>

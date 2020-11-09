@@ -25,6 +25,7 @@ export const SharedWithSegment = ({location}) => {
 
     let myColor = { background: '#2b7a78', text: "#FFFFFF" };
     let myRejectColor = { background: '#1e0001', text: "#FFFFFF" };
+    
 
 
     const approveShare = (shareToApprove) => {
@@ -48,7 +49,7 @@ export const SharedWithSegment = ({location}) => {
                     if (loc.date === "REQUESTED") {
                         return (
                             <>
-                            <Card>
+                            <Card key={loc.userId}>
                                 <Card.Content>
                                 <Card.Header>{loc.user.firstName} {loc.user.lastName}</Card.Header>
                                     <Card.Meta>Request Pending...</Card.Meta>
@@ -77,11 +78,11 @@ export const SharedWithSegment = ({location}) => {
                     } else {
                         return (
                             <>
-                            <Card>
+                            <Card key={loc.userId}>
                                 <Card.Content>
                                 <Card.Header>{loc.user.firstName} {loc.user.lastName}</Card.Header>
                                     <Card.Meta>{loc.user.email}</Card.Meta>
-                        <Card.Description>Shared On: {loc.date}</Card.Description>
+                                        <Card.Description>Shared On: {loc.date}</Card.Description>
                                 </Card.Content>
                                 </Card>
                                 <Notifications />

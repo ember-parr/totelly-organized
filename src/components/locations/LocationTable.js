@@ -7,7 +7,7 @@ import { Table, Button, Input } from "semantic-ui-react"
 
 
 export const LocationTable = () => {
-    const {Locations, getLocationByUser, getLocations, setSearchTerms, searchTerms, getLocationsSharedWithUser } = useContext(LocationContext)
+    const {Locations, getLocations, setSearchTerms, searchTerms, getLocationsSharedWithUser } = useContext(LocationContext)
     const user = parseInt(localStorage.user)
     const [filteredLocations, setFiltered] = useState([])
     const [sharedLocations, setSharedLocations] = useState([])
@@ -17,15 +17,11 @@ export const LocationTable = () => {
     const locationsSharedWithThisUser = Locations.filter(location => sharedLocationIds.includes(location.id))
     const combinedLocations = locationsSharedWithThisUser.concat(thisUsersLocations)
 
-    useEffect(()=> {
-        getLocationByUser(user)
-        .then((locations) => {
-            setFiltered(locations)
-        })
-    }, [])
+    
 
     useEffect(() => {
         getLocations()
+        setFiltered(thisUsersLocations)
         getLocationsSharedWithUser(user)
         .then(shared => {
             setSharedLocations(shared)

@@ -80,6 +80,150 @@
       "darkMode": false,
       "lastFmUsername": "",
       "id": 9
+    },
+    {
+      "firstName": "Rinah",
+      "lastName": "Barry",
+      "phoneNumber": "925815493",
+      "email": "eget.nisi@sodalesat.co.uk",
+      "lastFmUsername": "euismod",
+      "darkMode": false,
+      "id": 10
+    },
+    {
+      "firstName": "Hashim",
+      "lastName": "Kane",
+      "phoneNumber": "269121719",
+      "email": "ornare.egestas.ligula@sitamet.edu",
+      "lastFmUsername": "arcu.",
+      "darkMode": true,
+      "id": 11
+    },
+    {
+      "firstName": "Andrew",
+      "lastName": "Farley",
+      "phoneNumber": "776563984",
+      "email": "malesuada.ut@rutrumloremac.org",
+      "lastFmUsername": "volutpat",
+      "darkMode": false,
+      "id": 12
+    },
+    {
+      "firstName": "Jonas",
+      "lastName": "Bond",
+      "phoneNumber": "161274566",
+      "email": "pharetra.sed@euultricessit.net",
+      "lastFmUsername": "nisi.",
+      "darkMode": false,
+      "id": 13
+    },
+    {
+      "firstName": "Shafira",
+      "lastName": "Walton",
+      "phoneNumber": "256561972",
+      "email": "Cum@felis.net",
+      "lastFmUsername": "Donec",
+      "darkMode": false,
+      "id": 14
+    },
+    {
+      "firstName": "Nissim",
+      "lastName": "Christensen",
+      "phoneNumber": "867251129",
+      "email": "purus.ac.tellus@liberoProin.co.uk",
+      "lastFmUsername": "lobortis",
+      "darkMode": false,
+      "id": 15
+    },
+    {
+      "firstName": "Ayanna",
+      "lastName": "Flores",
+      "phoneNumber": "560163854",
+      "email": "vitae.orci@montesnascetur.ca",
+      "lastFmUsername": "id,",
+      "darkMode": false,
+      "id": 16
+    },
+    {
+      "firstName": "Quin",
+      "lastName": "Burch",
+      "phoneNumber": "289225180",
+      "email": "erat.volutpat.Nulla@rutrumFuscedolor.org",
+      "lastFmUsername": "eros.",
+      "darkMode": false,
+      "id": 17
+    },
+    {
+      "firstName": "Edan",
+      "lastName": "Harrell",
+      "phoneNumber": "539918633",
+      "email": "id.sapien@turpisnonenim.edu",
+      "lastFmUsername": "et",
+      "darkMode": false,
+      "id": 18
+    },
+    {
+      "firstName": "Robert",
+      "lastName": "Farrell",
+      "phoneNumber": "691676460",
+      "email": "amet@Donec.edu",
+      "lastFmUsername": "Nunc",
+      "darkMode": true,
+      "id": 19
+    },
+    {
+      "firstName": "Calvin",
+      "lastName": "Pruitt",
+      "phoneNumber": "671300315",
+      "email": "magna@suscipitest.net",
+      "lastFmUsername": "egestas",
+      "darkMode": true,
+      "id": 20
+    },
+    {
+      "firstName": "Burke",
+      "lastName": "Ramos",
+      "phoneNumber": "118155625",
+      "email": "ultrices.posuere.cubilia@sit.ca",
+      "lastFmUsername": "Maecenas",
+      "darkMode": true,
+      "id": 21
+    },
+    {
+      "firstName": "Patience",
+      "lastName": "Ashley",
+      "phoneNumber": "006672045",
+      "email": "arcu.Vestibulum@vulputaterisus.net",
+      "lastFmUsername": "Vivamus",
+      "darkMode": true,
+      "id": 22
+    },
+    {
+      "firstName": "Chloe",
+      "lastName": "Gibson",
+      "phoneNumber": "822156020",
+      "email": "molestie.in.tempus@interdumNuncsollicitudin.ca",
+      "lastFmUsername": "sociosqu",
+      "darkMode": false,
+      "id": 23
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Knight",
+      "phoneNumber": "374087984",
+      "email": "fringilla.cursus@cursusinhendrerit.com",
+      "lastFmUsername": "nec",
+      "darkMode": true,
+      "id": 24
+    },
+    {
+      "firstName": "Keiko",
+      "lastName": "Duke",
+      "phoneNumber": "782825842",
+      "email": "molestie@egetmetus.edu",
+      "lastFmUsername": "tortor",
+      "darkMode": false,
+      "id": 25
     }
   ],
   "items": [
@@ -460,7 +604,7 @@
     },
     {
       "id": 2,
-      "name": "Storage Unit",
+      "name": "Storage Unit (large)",
       "description": "RedDot unit 54",
       "userId": 1
     },
@@ -677,7 +821,7 @@
     {
       "id": 1,
       "locationId": 2,
-      "userId": 1,
+      "userId": 4,
       "date": "October 24, 2020"
     },
     {
@@ -907,6 +1051,12 @@
       "locationId": 18,
       "date": "REQUESTED",
       "id": 44
+    },
+    {
+      "userId": 2,
+      "locationId": 4,
+      "date": "November 9, 2020",
+      "id": 45
     }
   ],
   "connectedUsers": [
@@ -1319,6 +1469,15 @@
       "connectedUserId": 1,
       "date": "November 8, 2020 at 11:58 PM",
       "id": 37
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 2,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 10:24 AM",
+      "id": 38
     }
   ],
   "lists": []

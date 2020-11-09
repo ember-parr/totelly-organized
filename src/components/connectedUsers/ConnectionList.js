@@ -87,7 +87,7 @@ export const ConnectionList = () => {
 
         setPending(pendingRequest)
 
-        if (searchTerms !== "") {
+        if (searchTerms !== "" && searchTerms.length >= 2) {
             //search through friends by email/name
             const friendSubset = friendInformation.filter(
                 (friend) => 

@@ -22,7 +22,9 @@ export const DashboardView = () => {
                         <Header as='h4'>Recent Added Items</Header>
                         <ItemProvider>
                             <ActivityProvider>
-                                <RecentlyAdded />
+                                <ConnectionProvider>
+                                    <RecentlyAdded />
+                                </ConnectionProvider>
                             </ActivityProvider>
                         </ItemProvider>
                     </Grid.Column>
@@ -43,7 +45,9 @@ export const DashboardView = () => {
                         <Feed size="small">
                             <Header as='h4'>Recent Activity</Header>
                                 <ActivityProvider>
-                                    <ActivityCard />
+                                    <ConnectionProvider>
+                                        <ActivityCard />
+                                    </ConnectionProvider>
                                 </ActivityProvider>
                         </Feed>
                     </Grid.Column>

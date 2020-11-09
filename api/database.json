@@ -1486,6 +1486,27 @@
       "dateAdded": "November 9, 2020 at 12:39 PM",
       "userId": 1,
       "id": 107
+    },
+    {
+      "id": 108,
+      "itemName": "Soccer Ball",
+      "description": "Size 4",
+      "room": "Garage",
+      "placement": "rolling around on the floor somewhere",
+      "categoryId": 17,
+      "locationId": 25,
+      "dateAdded": "November 9, 2020 at 12:52 PM",
+      "userId": 3
+    },
+    {
+      "itemName": "Basketball",
+      "room": "Garage",
+      "placement": "not sure, ask mom",
+      "categoryId": 17,
+      "locationId": 25,
+      "dateAdded": "November 9, 2020 at 1:00 PM",
+      "userId": 3,
+      "id": 109
     }
   ],
   "locations": [
@@ -2609,6 +2630,24 @@
       "connectedUserId": 1,
       "date": "November 9, 2020 at 12:39 PM",
       "id": 47
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 108,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:52 PM",
+      "id": 48
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 109,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 1:00 PM",
+      "id": 49
     }
   ],
   "lists": []

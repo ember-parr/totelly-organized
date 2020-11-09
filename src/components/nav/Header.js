@@ -51,7 +51,7 @@ export const Header = () => {
             <Menu borderless attached='top'>
                 <Grid columns={2} className="headerContent">
                     <Grid.Column width={13} floated='left'>
-                        <Segment>
+                        <Segment basic>
                             <Image src={HorizontalLogo} size="medium" className='headerImage'/>
                         </Segment>
                     </Grid.Column>

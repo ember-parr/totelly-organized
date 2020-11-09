@@ -10,7 +10,7 @@ export const UserCard = ({ friend, isFriend, status  }) => {
     if (status === 'Not Yet Connected') {
     return (
         <>
-    <Card  onClick ={()=> history.push(`/user/detail/${friend.id}`)} style={{margin: "0em 1em"}}>
+    <Card   style={{margin: "0em 1em"}}>
         <Card.Content header={`${friend.firstName} ${friend.lastName}`} />
         <Card.Content>
             <Card.Meta>{status}</Card.Meta>

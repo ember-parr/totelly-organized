@@ -28,9 +28,6 @@ export const ItemTable = () => {
         .then((items) => {
             setThisUsersItems(items)
         })
-        .then(() => {
-            setFiltered(thisUsersItems)
-        })
     }, [])
 
     useEffect(() => {
@@ -73,24 +70,28 @@ export const ItemTable = () => {
     return (
         
         <>
-        <Button color='teal' onClick={() => domHistory.push("/items/add")}>New Item</Button>
+        <section className="sectionAboveHeader">
+        <Button className="addNew-btn" onClick={() => domHistory.push("/items/add")}>New Item</Button>
 
         <Input
         type="text"
         icon='search'
         onKeyUp={(keyEvent) => setSearchTerms(keyEvent.target.value.toLowerCase())}
         placeholder="Search Items... "
+        className="searchTable"
         />
 
 
 
-        <Button.Group  floated='right'>
-            <Button toggle onClick={myItemClicked}>View Only My Items</Button>
+        <Button.Group floated='right'>
+            <Button toggle className="filter-btn" onClick={myItemClicked}>View Only My Items</Button>
                 <Button.Or />
-            <Button toggle onClick={sharedItemsClicked}>Items Shared With me</Button>
+            <Button toggle className="filter-btn" onClick={sharedItemsClicked}>Items Shared With me</Button>
                 <Button.Or />
-            <Button toggle onClick={handleClick}>View All Items</Button>
+            <Button toggle className="filter-btn" onClick={handleClick}>View All Items</Button>
         </Button.Group>
+        </section>
+
         
         <Table unstackable celled selectable collapsing compact size="small" className="pageComponent">
             <Table.Header>
@@ -118,7 +119,7 @@ export const ItemTable = () => {
         
         
         
-
+        
         </>
     )
 }

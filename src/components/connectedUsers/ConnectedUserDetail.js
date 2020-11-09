@@ -29,11 +29,11 @@ export const ConnectedUserDetail = () => {
 
             <Header as='h4'>{`${user.firstName}'s Locations:`}</Header>
 
-            <Table celled selectable collapsing>
+            <Table celled selectable compact size="small" className="pageComponent">
                 <Table.Header>
                     <Table.Row>
-                        <Table.HeaderCell>Location Name</Table.HeaderCell>
-                        <Table.HeaderCell>Description</Table.HeaderCell>
+                        <Table.HeaderCell width={4}>Location Name</Table.HeaderCell>
+                        <Table.HeaderCell width={12}>Description</Table.HeaderCell>
                     </Table.Row>
                     </Table.Header>
                 <Table.Body>
@@ -41,7 +41,7 @@ export const ConnectedUserDetail = () => {
                             return (
                                 <>
                                     <Table.Row onClick ={()=> history.push(`/locations/edit/${location.id}`)}>
-                                        <Table.Cell>{ location.name }</Table.Cell>
+                                        <Table.Cell collapsing>{ location.name }</Table.Cell>
                                         <Table.Cell>{ location.description }</Table.Cell>
                                         
                                     </Table.Row>

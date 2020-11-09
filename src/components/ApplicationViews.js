@@ -37,7 +37,9 @@ export const ApplicationViews = (props) => {
           
           <Route exact path="/">
             <ActivityProvider>
-              <DashboardView />
+              <LocationProvider>
+                <DashboardView />
+              </LocationProvider>
             </ActivityProvider>
           </Route>
 

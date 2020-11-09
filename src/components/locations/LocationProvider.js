@@ -5,6 +5,7 @@ export const LocationContext = createContext()
 export const LocationProvider = (props) => {
     const [Locations, setLocations] = useState([])
     const [searchTerms, setSearchTerms] = useState("")
+    const [ shareRequests, setShareRequests ] = useState([])
 
     const getLocations = () => {
         return fetch(`http://localhost:8088/locations?_expand=user`)
@@ -48,6 +49,18 @@ export const LocationProvider = (props) => {
         })
     }
 
+    const deleteSharedLocation = locationId => {
+        return fetch(`http://localhost:8088/sharedLocations/${locationId}`, {
+            method: 'DELETE'
+        })
+    }
+
+    const getShareRequests = () => {
+        return fetch(`http://localhost:8088/sharedLocations?date=REQUESTED&_expand=user&_expand=location`)
+        .then(result => result.json())
+        
+    }
+
     const shareLocationWithUser = (Location) => {
         return fetch ("http://localhost:8088/sharedLocations", {
             method: "POST",
@@ -60,6 +73,16 @@ export const LocationProvider = (props) => {
 
     const updateLocation = Location => {
         return fetch(`http://localhost:8088/locations/${Location.id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(Location)
+        })
+    }
+
+    const updateSharedLocation = Location => {
+        return fetch(`http://localhost:8088/sharedLocations/${Location.id}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"
@@ -81,7 +104,11 @@ export const LocationProvider = (props) => {
             getLocationByUser, 
             getSharedLocation, 
             shareLocationWithUser,
-            getLocationsSharedWithUser
+            getLocationsSharedWithUser,
+            getShareRequests,
+            updateSharedLocation,
+            deleteSharedLocation,
+            shareRequests
         }}>
             {props.children}
         </LocationContext.Provider>

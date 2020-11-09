@@ -18,7 +18,7 @@ export const UserCard = ({ friend, isFriend, status  }) => {
         </Card>
 
         
-        <Card.Content extra style={{margin: "0em 1em 1em 1em"}} fluid>
+        <Card.Content extra style={{margin: "0em 1em 1em 1em"}}>
             {isFriend}
         </Card.Content>
     

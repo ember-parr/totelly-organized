@@ -1,8 +1,9 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useContext, useState } from 'react'
+import Notifications, {notify} from 'react-notify-toast';
 import {useParams, useHistory} from 'react-router-dom'
 import { UserContext } from '../user/UserProvider'
-import { Header, Table, Button} from 'semantic-ui-react'
+import { Header, Table, Button, Label} from 'semantic-ui-react'
 import { LocationContext } from '../locations/LocationProvider'
 
 export const ConnectedUserDetail = () => {
@@ -10,37 +11,64 @@ export const ConnectedUserDetail = () => {
     const {userId} = useParams();
     const history = useHistory()
     const [user, setUser] = useState([])
-    const { Locations, getLocations, getLocationsSharedWithUser } = useContext(LocationContext)
+    const { Locations, getLocations, getLocationsSharedWithUser, shareLocationWithUser } = useContext(LocationContext)
     const usersLocations = Locations.filter(loc => loc.userId === parseInt(userId))
     const [sharedLocations, setSharedLocations] = useState([])
     const currentUser = parseInt(localStorage.user)
     const sharedLocationIds = sharedLocations.map((location) => location.locationId)
+    const requestedLocations = sharedLocations.filter(location => location.date === 'REQUESTED')
+    const requestedLocationIds = requestedLocations.map((location) => location.locationId)
     
 
     useEffect(() => {
         getUserById(userId).then(user => {
             setUser(user)
-        }).then(getLocations)
+        })
     }, [])
 
     useEffect(()=> {
+        getLocations()
         getLocationsSharedWithUser(currentUser)
         .then(shared => {
             setSharedLocations(shared)
         })
-    }, [])
+    }, [Locations])
+
+
+    const locationRequest = (location) => {
+        shareLocationWithUser({
+            userId: currentUser,
+            locationId: location.id,
+            date:"REQUESTED"
+        })
+        sharedLocations.concat(location)
+        
+    }
+
+
 
     const locationActionBtn = (location) => {
 
-        if (sharedLocationIds.includes(location.id)) {
+        
+        if (requestedLocationIds.includes(location.id)) {
+            return <Label tag>Request Pending</Label>
+        } else if (sharedLocationIds.includes(location.id)) {
             return <Button size='tiny' onClick ={()=> history.push(`/locations/edit/${location.id}`)}> View Details </Button>
         } else if ( sharedLocationIds.includes(location.id) === false) {
-            return <Button color='grey' size='tiny'> Request Access </Button>
+            return <Button 
+                    onClick={(e) => {
+                        
+                        locationRequest(location)
+                        notify.show('Request Sent!', "custom", 5000, myColor)
+                    }}
+                    color='grey' size='tiny' type="submit"> Request Access </Button>
         } else {
             return ("uh-oh something broke")
         }
     }
 
+
+    let myColor = { background: '#2b7a78', text: "#FFFFFF" };
 
     return (
         <>
@@ -72,6 +100,7 @@ export const ConnectedUserDetail = () => {
                     }
                 </Table.Body>
             </Table>
+            <Notifications />
         </>
 
     )

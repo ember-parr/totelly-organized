@@ -438,6 +438,17 @@
       "dateAdded": "October 30, 2020 at 9:14 AM",
       "userId": 1,
       "id": 31
+    },
+    {
+      "itemName": "Rose Bud Lip Stuff",
+      "description": "In the tube",
+      "room": "Bathroom",
+      "placement": "Medicine Cabinet",
+      "categoryId": 4,
+      "locationId": 6,
+      "dateAdded": "November 8, 2020 at 11:58 PM",
+      "userId": 1,
+      "id": 32
     }
   ],
   "locations": [
@@ -474,7 +485,7 @@
     {
       "id": 6,
       "name": "Ember's House",
-      "description": "The one I live in!!",
+      "description": "The one I live in!",
       "userId": 1
     },
     {
@@ -746,6 +757,90 @@
       "locationId": 6,
       "date": "October 30, 2020",
       "id": 14
+    },
+    {
+      "id": 15,
+      "userId": 3,
+      "locationId": 3,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 16,
+      "userId": 3,
+      "locationId": 3,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 18,
+      "userId": 3,
+      "locationId": 3,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 20,
+      "userId": 3,
+      "locationId": 18,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 21,
+      "userId": 3,
+      "locationId": 11,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 23,
+      "userId": 3,
+      "locationId": 4,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 24,
+      "userId": 3,
+      "locationId": 6,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 27,
+      "userId": 3,
+      "locationId": 9,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 28,
+      "userId": 5,
+      "locationId": 7,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 29,
+      "userId": 5,
+      "locationId": 2,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 30,
+      "userId": 5,
+      "locationId": 6,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 31,
+      "userId": 5,
+      "locationId": 16,
+      "date": "November 9, 2020"
+    },
+    {
+      "id": 32,
+      "userId": 5,
+      "locationId": 15,
+      "date": "November 9, 2020"
+    },
+    {
+      "id": 33,
+      "userId": 5,
+      "locationId": 3,
+      "date": "November 9, 2020"
     }
   ],
   "connectedUsers": [
@@ -773,34 +868,6 @@
       "dateConnected": "October 30, 2020"
     },
     {
-      "userId": 2,
-      "connectedUserId": 5,
-      "status": true,
-      "dateConnected": "October 29, 2020",
-      "id": 9
-    },
-    {
-      "userId": 7,
-      "connectedUserId": 8,
-      "status": false,
-      "dateConnected": "October 30, 2020",
-      "id": 10
-    },
-    {
-      "userId": 7,
-      "connectedUserId": 9,
-      "status": false,
-      "dateConnected": "October 30, 2020",
-      "id": 12
-    },
-    {
-      "userId": 1,
-      "connectedUserId": 3,
-      "status": false,
-      "dateConnected": "October 30, 2020",
-      "id": 13
-    },
-    {
       "userId": 6,
       "connectedUserId": 3,
       "status": false,
@@ -822,20 +889,6 @@
       "dateConnected": "October 30, 2020"
     },
     {
-      "userId": 1,
-      "connectedUserId": 9,
-      "status": true,
-      "dateConnected": "October 30, 2020",
-      "id": 17
-    },
-    {
-      "id": 18,
-      "userId": 1,
-      "connectedUserId": 5,
-      "status": true,
-      "dateConnected": "October 30, 2020"
-    },
-    {
       "userId": 7,
       "connectedUserId": 1,
       "status": false,
@@ -871,11 +924,18 @@
       "id": 23
     },
     {
-      "userId": 4,
-      "connectedUserId": 2,
-      "status": false,
+      "id": 24,
+      "userId": 1,
+      "connectedUserId": 3,
+      "status": true,
+      "dateConnected": "November 8, 2020"
+    },
+    {
+      "userId": 3,
+      "connectedUserId": 1,
+      "status": true,
       "dateConnected": "November 8, 2020",
-      "id": 24
+      "id": 25
     }
   ],
   "activity": [
@@ -883,44 +943,35 @@
       "activityType": "Added A New Item",
       "userId": 3,
       "itemId": 9,
-      "locationId": 0,
-      "connectedUserId": 0,
+      "locationId": 1,
+      "connectedUserId": 1,
       "date": "October 28, 2020",
       "id": 1
     },
     {
       "activityType": "Added A New Location",
       "userId": 2,
-      "itemId": 0,
+      "itemId": 1,
       "locationId": 3,
-      "connectedUserId": 0,
+      "connectedUserId": 1,
       "date": "October 24, 2020",
       "id": 2
-    },
-    {
-      "activityType": "Connected With",
-      "userId": 3,
-      "itemId": 0,
-      "locationId": 0,
-      "connectedUserId": 4,
-      "date": "October 14, 2020",
-      "id": 3
     },
     {
       "activityType": "Added A New Item",
       "userId": 3,
       "itemId": 4,
-      "locationId": 0,
-      "connectedUserId": 0,
+      "locationId": 1,
+      "connectedUserId": 1,
       "date": "October 29, 2020",
       "id": 4
     },
     {
       "activityType": "Updated an Item",
       "userId": 3,
-      "itemId": 10,
-      "locationId": 0,
-      "connectedUserId": 0,
+      "itemId": 11,
+      "locationId": 1,
+      "connectedUserId": 1,
       "date": "October 29, 2020 at 11:09 AM",
       "id": 5
     },
@@ -928,8 +979,8 @@
       "activityType": "Added A New Item",
       "userId": 3,
       "itemId": 11,
-      "locationId": 0,
-      "connectedUserId": 0,
+      "locationId": 1,
+      "connectedUserId": 1,
       "date": "October 29, 2020 at 3:09 PM",
       "id": 6
     },
@@ -937,35 +988,35 @@
       "activityType": "Added A New Item",
       "userId": 3,
       "itemId": 12,
-      "locationId": 0,
-      "connectedUserId": 0,
+      "locationId": 1,
+      "connectedUserId": 1,
       "date": "October 29, 2020 at 2:09 PM",
       "id": 7
     },
     {
       "activityType": "Added A New Item",
       "userId": 3,
-      "locationId": 0,
+      "locationId": 1,
       "itemId": 13,
-      "connectedUserId": 0,
+      "connectedUserId": 1,
       "date": "October 29, 2020 at 6:09 PM",
       "id": 8
     },
     {
       "activityType": "Added A New Item",
       "userId": 3,
-      "locationId": 0,
+      "locationId": 1,
       "itemId": 14,
-      "connectedUserId": 0,
+      "connectedUserId": 1,
       "date": "October 29, 2020 at 4:09 PM",
       "id": 9
     },
     {
       "activityType": "Added A New Item",
       "userId": 3,
-      "locationId": 0,
+      "locationId": 1,
       "itemId": 15,
-      "connectedUserId": 0,
+      "connectedUserId": 1,
       "date": "October 29, 2020 at 4:09 PM",
       "id": 10
     },
@@ -973,17 +1024,17 @@
       "activityType": "Added A New Item",
       "userId": 3,
       "itemId": 16,
-      "locationId": 0,
-      "connectedUserId": 0,
+      "locationId": 1,
+      "connectedUserId": 1,
       "date": "October 29, 2020 at 4:09 PM",
       "id": 11
     },
     {
       "activityType": "Added A New Item",
       "userId": 3,
-      "locationId": 0,
+      "locationId": 1,
       "itemId": 17,
-      "connectedUserId": 0,
+      "connectedUserId": 1,
       "date": "October 29, 2020 at 9:22 PM",
       "id": 12
     },
@@ -991,8 +1042,8 @@
       "activityType": "Added A New Item",
       "userId": 3,
       "itemId": 23,
-      "locationId": 0,
-      "connectedUserId": 0,
+      "locationId": 1,
+      "connectedUserId": 1,
       "date": "October 29, 2020 at 10:32 PM",
       "id": 13
     },
@@ -1000,190 +1051,208 @@
       "activityType": "Added A New Item",
       "userId": 7,
       "itemId": 23,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 1:03 AM",
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:03 AM",
       "id": 14
     },
     {
       "activityType": "Added A New Item",
       "userId": 7,
       "itemId": 23,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 1:04 AM",
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:04 AM",
       "id": 15
     },
     {
       "activityType": "Added A New Item",
       "userId": 8,
       "itemId": 23,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 1:05 AM",
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:05 AM",
       "id": 16
     },
     {
       "activityType": "Updated an Item",
       "userId": 8,
       "itemId": 26,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 1:05 AM",
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:05 AM",
       "id": 17
     },
     {
       "activityType": "Added A New Item",
       "userId": 9,
       "itemId": 23,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 1:23 AM",
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:23 AM",
       "id": 18
     },
     {
       "activityType": "Updated Their Location",
       "userId": 9,
-      "itemId": 0,
+      "itemId": 1,
       "locationId": 28,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 1:28 AM",
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:28 AM",
       "id": 19
     },
     {
       "activityType": "Updated Their Location",
       "userId": 9,
-      "itemId": 0,
+      "itemId": 1,
       "locationId": 28,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 1:30 AM",
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:30 AM",
       "id": 20
     },
     {
       "activityType": "Updated Their Location",
       "userId": 9,
-      "itemId": 0,
+      "itemId": 1,
       "locationId": 28,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 1:31 AM",
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:31 AM",
       "id": 21
     },
     {
       "activityType": "Added A New Item",
       "userId": 8,
       "itemId": 26,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 1:31 AM",
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:31 AM",
       "id": 22
     },
     {
       "activityType": "Added A New Item",
       "userId": 9,
       "itemId": 27,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 1:33 AM",
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:33 AM",
       "id": 23
     },
     {
       "activityType": "Added A New Item",
       "userId": 5,
       "itemId": 23,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 1:47 AM",
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:47 AM",
       "id": 24
     },
     {
       "activityType": "Added A New Item",
       "userId": 1,
-      "itemId": 30,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 9:13 AM",
+      "itemId": 31,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 9:13 AM",
       "id": 25
     },
     {
       "activityType": "Added A New Item",
       "userId": 1,
       "itemId": 31,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 9:14 AM",
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 9:14 AM",
       "id": 26
     },
     {
       "activityType": "Updated Their Location",
       "userId": 1,
-      "itemId": 0,
+      "itemId": 1,
       "locationId": 6,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 11:05 AM",
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:05 AM",
       "id": 27
     },
     {
       "activityType": "Updated an Item",
       "userId": 1,
-      "itemId": 10,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 11:05 AM",
+      "itemId": 11,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:05 AM",
       "id": 28
     },
     {
       "activityType": "Updated an Item",
       "userId": 1,
       "itemId": 4,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 11:05 AM",
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:05 AM",
       "id": 29
     },
     {
       "activityType": "Connected With",
       "userId": 9,
-      "itemId": 0,
-      "locationId": 0,
+      "itemId": 1,
+      "locationId": 1,
       "connectedUserId": 16,
-      "date": "October 30, 2020 at 11:06 AM",
+      "date": "October 31, 2020 at 11:06 AM",
       "id": 30
     },
     {
       "activityType": "Updated Their Location",
       "userId": 1,
-      "itemId": 0,
+      "itemId": 1,
       "locationId": 6,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 11:11 AM",
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:11 AM",
       "id": 31
-    },
-    {
-      "activityType": "Connected With",
-      "userId": 1,
-      "itemId": 0,
-      "locationId": 0,
-      "connectedUserId": 18,
-      "date": "October 30, 2020 at 11:28 AM",
-      "id": 32
     },
     {
       "activityType": "Updated Their Location",
       "userId": 1,
-      "itemId": 0,
+      "itemId": 1,
       "locationId": 6,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 11:29 AM",
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:29 AM",
       "id": 33
     },
     {
       "activityType": "Updated an Item",
       "userId": 1,
       "itemId": 1,
-      "locationId": 0,
-      "connectedUserId": 0,
-      "date": "October 30, 2020 at 11:29 AM",
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:29 AM",
       "id": 34
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 24,
+      "date": "November 8, 2020 at 11:09 PM",
+      "id": 35
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 6,
+      "connectedUserId": 1,
+      "date": "November 8, 2020 at 11:57 PM",
+      "id": 36
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 31,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 8, 2020 at 11:58 PM",
+      "id": 37
     }
   ],
   "lists": []

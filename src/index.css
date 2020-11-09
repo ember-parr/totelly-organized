@@ -32,6 +32,18 @@ code {
   flex-shrink: 2 !important;
 }
 
+.approve-btn {
+  color: #2b7a78 !important;
+  background-color: #def2f1 !important;
+  flex-shrink: 2 !important;
+}
+
+.deny-btn {
+  color: #2b7a78 !important;
+  background-color: #f2dede !important;
+  flex-shrink: 2 !important;
+}
+
 .filter-btn:focus {
   color: #33515c !important;
   background-color: #99d6d3 !important;
@@ -51,4 +63,31 @@ code {
   flex-wrap: wrap !important;
   justify-content: space-around !important;
   align-items: center !important;
+}
+
+
+
+.userRequestsCardGroup {
+  display: flex !important;
+  flex-flow: row wrap !important;
+  justify-content: space-around !important;
+  align-items: stretch !important;
+  width: 90% !important;
+}
+
+.userRequestCard {
+  flex-grow: 8 !important;
+  min-width: 200px !important;
+}
+
+.spaceBetween {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-around !important;
+}
+
+.recentActivityCard {
+  flex-grow: 3 !important;
+  flex-shrink: 4 !important;
+  min-width: 75px !important;
 }

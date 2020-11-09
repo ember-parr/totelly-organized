@@ -28,7 +28,7 @@ export const DashboardView = () => {
                     </Grid.Column>
                     <Grid.Column >
                         <Header as='h4'>Requests</Header>
-                        <Card.Group>
+                        <Card.Group >
                             <ConnectionProvider>
                                 <UserProvider>
                                     <ConnectionRequest />

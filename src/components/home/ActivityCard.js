@@ -14,14 +14,14 @@ export const ActivityCard = () => {
 
     return (
         <>
-            <Grid  celled='internally' columns={4} relaxed>
-                <Card.Group >
+            <Grid  celled='internally' columns={8}  >
+                <Card.Group className="spaceBetween">
                     {Activities.map((activity) => {
                         if (activity.userId !== currentUser) {
                             return (
                                 <>
 
-                        <Card key={activity.id}>
+                        <Card key={activity.id} className="recentActivityCard">
                             <Card.Content>
                                 <Card.Header>
                                     {activity?.user?.firstName} {activity?.user?.lastName}
@@ -38,7 +38,7 @@ export const ActivityCard = () => {
                             )
                         }
                     })}
-0
+
                 </Card.Group>
             </Grid>
         </>

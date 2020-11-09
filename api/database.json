@@ -593,6 +593,822 @@
       "dateAdded": "November 8, 2020 at 11:58 PM",
       "userId": 1,
       "id": 32
+    },
+    {
+      "itemName": "habitant morbi",
+      "description": "amet risus. Donec egestas. Aliquam",
+      "room": "Donec nibh. Quisque",
+      "placement": "magna. Phasellus dolor elit,",
+      "notes": "et netus et malesuada fames ac",
+      "categoryId": 4,
+      "locationId": 50,
+      "dateAdded": "July 10th, 2020",
+      "userId": 16,
+      "id": 33
+    },
+    {
+      "itemName": "dictum. Proin eget",
+      "description": "Vestibulum ut eros non enim commodo hendrerit. Donec",
+      "room": "Nullam enim. Sed",
+      "placement": "libero",
+      "notes": "odio. Etiam",
+      "categoryId": 13,
+      "locationId": 35,
+      "dateAdded": "February 11th, 2021",
+      "userId": 18,
+      "id": 34
+    },
+    {
+      "itemName": "magna nec",
+      "description": "consectetuer, cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet",
+      "room": "amet",
+      "placement": "a, auctor",
+      "notes": "egestas lacinia. Sed congue, elit sed consequat auctor, nunc nulla vulputate dui, nec tempus",
+      "categoryId": 1,
+      "locationId": 30,
+      "dateAdded": "June 29th, 2020",
+      "userId": 6,
+      "id": 35
+    },
+    {
+      "itemName": "aliquet libero.",
+      "description": "Ut sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean egestas",
+      "room": "lectus pede, ultrices",
+      "placement": "Quisque ac",
+      "notes": "laoreet ipsum. Curabitur consequat, lectus sit amet luctus vulputate, nisi sem semper erat, in consectetuer ipsum nunc id enim.",
+      "categoryId": 4,
+      "locationId": 26,
+      "dateAdded": "August 24th, 2021",
+      "userId": 14,
+      "id": 36
+    },
+    {
+      "itemName": "Nam",
+      "description": "tempus risus. Donec egestas. Duis",
+      "room": "non ante bibendum",
+      "placement": "Mauris non dui",
+      "notes": "felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula et, rutrum eu, ultrices sit amet,",
+      "categoryId": 20,
+      "locationId": 38,
+      "dateAdded": "November 13th, 2019",
+      "userId": 14,
+      "id": 37
+    },
+    {
+      "itemName": "et",
+      "description": "consectetuer adipiscing elit. Etiam laoreet,",
+      "room": "Proin",
+      "placement": "fermentum risus,",
+      "notes": "lacinia. Sed congue, elit sed consequat auctor, nunc nulla",
+      "categoryId": 11,
+      "locationId": 42,
+      "dateAdded": "February 5th, 2021",
+      "userId": 11,
+      "id": 38
+    },
+    {
+      "itemName": "eu",
+      "description": "ac libero nec ligula consectetuer rhoncus. Nullam",
+      "room": "nisl. Nulla eu",
+      "placement": "Sed eu",
+      "notes": "Duis risus odio, auctor vitae, aliquet nec, imperdiet nec, leo. Morbi neque tellus, imperdiet non, vestibulum nec, euismod in, dolor. Fusce feugiat. Lorem ipsum dolor sit amet,",
+      "categoryId": 15,
+      "locationId": 21,
+      "dateAdded": "July 14th, 2021",
+      "userId": 8,
+      "id": 39
+    },
+    {
+      "itemName": "vitae",
+      "description": "turpis non enim. Mauris quis turpis vitae purus gravida sagittis.",
+      "room": "sed,",
+      "placement": "aliquet, metus urna convallis erat,",
+      "notes": "Mauris",
+      "categoryId": 13,
+      "locationId": 35,
+      "dateAdded": "July 26th, 2020",
+      "userId": 25,
+      "id": 40
+    },
+    {
+      "itemName": "sollicitudin adipiscing ligula.",
+      "description": "non, hendrerit id, ante. Nunc mauris sapien,",
+      "room": "non leo.",
+      "placement": "urna, nec luctus felis purus",
+      "notes": "tellus. Aenean egestas hendrerit neque. In ornare sagittis felis. Donec tempor, est ac mattis semper, dui lectus rutrum urna, nec luctus felis purus ac tellus.",
+      "categoryId": 1,
+      "locationId": 34,
+      "dateAdded": "December 3rd, 2020",
+      "userId": 6,
+      "id": 41
+    },
+    {
+      "itemName": "diam vel arcu.",
+      "description": "eget tincidunt dui augue eu tellus. Phasellus elit pede, malesuada vel, venenatis",
+      "room": "neque.",
+      "placement": "dictum augue malesuada malesuada. Integer",
+      "notes": "aliquam iaculis, lacus pede sagittis",
+      "categoryId": 10,
+      "locationId": 33,
+      "dateAdded": "November 6th, 2020",
+      "userId": 9,
+      "id": 42
+    },
+    {
+      "itemName": "Aenean",
+      "description": "enim, condimentum eget, volutpat ornare, facilisis eget, ipsum. Donec sollicitudin adipiscing ligula. Aenean",
+      "room": "Vestibulum ante ipsum",
+      "placement": "sem semper",
+      "notes": "mollis dui, in sodales elit erat vitae risus. Duis a mi fringilla mi lacinia mattis. Integer",
+      "categoryId": 19,
+      "locationId": 36,
+      "dateAdded": "April 24th, 2021",
+      "userId": 24,
+      "id": 43
+    },
+    {
+      "itemName": "ornare",
+      "description": "leo. Morbi neque tellus, imperdiet non,",
+      "room": "Nulla tempor augue",
+      "placement": "ipsum primis in faucibus",
+      "notes": "in molestie tortor nibh sit amet",
+      "categoryId": 15,
+      "locationId": 47,
+      "dateAdded": "June 11th, 2020",
+      "userId": 3,
+      "id": 44
+    },
+    {
+      "itemName": "pellentesque a,",
+      "description": "lorem ut aliquam iaculis, lacus pede sagittis augue, eu tempor erat neque non quam.",
+      "room": "elementum, lorem",
+      "placement": "id",
+      "notes": "orci. Ut semper pretium neque. Morbi quis urna. Nunc quis arcu vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue",
+      "categoryId": 20,
+      "locationId": 47,
+      "dateAdded": "April 24th, 2020",
+      "userId": 21,
+      "id": 45
+    },
+    {
+      "itemName": "vitae",
+      "description": "ut ipsum ac mi eleifend egestas. Sed pharetra, felis eget varius ultrices,",
+      "room": "quam dignissim",
+      "placement": "faucibus",
+      "notes": "rutrum magna. Cras convallis convallis dolor. Quisque",
+      "categoryId": 7,
+      "locationId": 24,
+      "dateAdded": "May 21st, 2021",
+      "userId": 23,
+      "id": 46
+    },
+    {
+      "itemName": "ullamcorper",
+      "description": "imperdiet ullamcorper. Duis at lacus. Quisque purus sapien, gravida non, sollicitudin a, malesuada id, erat.",
+      "room": "elit sed consequat",
+      "placement": "Etiam imperdiet",
+      "notes": "aliquet molestie tellus. Aenean egestas hendrerit",
+      "categoryId": 12,
+      "locationId": 2,
+      "dateAdded": "December 8th, 2020",
+      "userId": 18,
+      "id": 47
+    },
+    {
+      "itemName": "dolor sit amet,",
+      "description": "sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos.",
+      "room": "Praesent",
+      "placement": "eget",
+      "notes": "Duis risus odio, auctor vitae, aliquet nec, imperdiet nec, leo. Morbi neque tellus, imperdiet non, vestibulum nec, euismod in, dolor. Fusce feugiat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+      "categoryId": 17,
+      "locationId": 26,
+      "dateAdded": "October 29th, 2020",
+      "userId": 1,
+      "id": 48
+    },
+    {
+      "itemName": "rhoncus id,",
+      "description": "Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est. Mauris",
+      "room": "enim commodo",
+      "placement": "a, magna.",
+      "notes": "Curabitur egestas",
+      "categoryId": 2,
+      "locationId": 8,
+      "dateAdded": "November 14th, 2020",
+      "userId": 22,
+      "id": 49
+    },
+    {
+      "itemName": "ullamcorper magna. Sed",
+      "description": "vel sapien imperdiet ornare. In faucibus. Morbi vehicula. Pellentesque tincidunt tempus risus. Donec egestas.",
+      "room": "amet, consectetuer adipiscing",
+      "placement": "diam. Pellentesque",
+      "notes": "placerat eget, venenatis a, magna. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam",
+      "categoryId": 7,
+      "locationId": 23,
+      "dateAdded": "October 27th, 2020",
+      "userId": 17,
+      "id": 50
+    },
+    {
+      "itemName": "dictum sapien. Aenean",
+      "description": "at arcu. Vestibulum ante ipsum primis in faucibus orci luctus et",
+      "room": "Curabitur egestas",
+      "placement": "magna et ipsum cursus",
+      "notes": "luctus felis",
+      "categoryId": 12,
+      "locationId": 15,
+      "dateAdded": "March 31st, 2021",
+      "userId": 15,
+      "id": 51
+    },
+    {
+      "itemName": "penatibus et magnis",
+      "description": "eu enim. Etiam imperdiet dictum magna. Ut",
+      "room": "eros. Nam",
+      "placement": "nunc nulla vulputate dui,",
+      "notes": "In lorem. Donec elementum, lorem ut aliquam iaculis, lacus pede sagittis",
+      "categoryId": 8,
+      "locationId": 23,
+      "dateAdded": "October 21st, 2020",
+      "userId": 24,
+      "id": 52
+    },
+    {
+      "itemName": "nec, eleifend",
+      "description": "urna, nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi",
+      "room": "Donec est. Nunc",
+      "placement": "nibh",
+      "notes": "hymenaeos. Mauris ut quam vel sapien imperdiet ornare. In faucibus. Morbi vehicula. Pellentesque tincidunt tempus risus. Donec egestas. Duis ac",
+      "categoryId": 16,
+      "locationId": 7,
+      "dateAdded": "April 27th, 2020",
+      "userId": 17,
+      "id": 53
+    },
+    {
+      "itemName": "semper rutrum.",
+      "description": "aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper. Duis",
+      "room": "massa. Suspendisse",
+      "placement": "venenatis",
+      "notes": "enim, gravida sit amet, dapibus id, blandit at,",
+      "categoryId": 15,
+      "locationId": 44,
+      "dateAdded": "March 1st, 2021",
+      "userId": 16,
+      "id": 54
+    },
+    {
+      "itemName": "nulla.",
+      "description": "lacinia. Sed congue, elit sed consequat auctor, nunc",
+      "room": "ipsum.",
+      "placement": "Pellentesque",
+      "notes": "enim consequat",
+      "categoryId": 10,
+      "locationId": 3,
+      "dateAdded": "February 15th, 2021",
+      "userId": 14,
+      "id": 55
+    },
+    {
+      "itemName": "Integer mollis. Integer",
+      "description": "et tristique pellentesque, tellus sem mollis dui, in sodales elit",
+      "room": "ac metus vitae",
+      "placement": "diam at pretium",
+      "notes": "ligula. Aenean gravida nunc sed pede. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel arcu eu",
+      "categoryId": 7,
+      "locationId": 46,
+      "dateAdded": "November 4th, 2021",
+      "userId": 7,
+      "id": 56
+    },
+    {
+      "itemName": "consequat nec,",
+      "description": "pretium et, rutrum non, hendrerit",
+      "room": "nunc id",
+      "placement": "nisl.",
+      "notes": "dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem ut cursus luctus, ipsum leo elementum sem, vitae aliquam",
+      "categoryId": 14,
+      "locationId": 15,
+      "dateAdded": "July 24th, 2021",
+      "userId": 11,
+      "id": 57
+    },
+    {
+      "itemName": "Duis a",
+      "description": "sed tortor. Integer aliquam adipiscing lacus. Ut nec urna et arcu imperdiet ullamcorper.",
+      "room": "magna,",
+      "placement": "Duis volutpat nunc sit amet",
+      "notes": "hendrerit a, arcu. Sed et libero. Proin mi. Aliquam gravida mauris ut mi. Duis risus odio, auctor vitae, aliquet nec, imperdiet nec, leo. Morbi neque tellus, imperdiet",
+      "categoryId": 3,
+      "locationId": 14,
+      "dateAdded": "November 16th, 2020",
+      "userId": 6,
+      "id": 58
+    },
+    {
+      "itemName": "sed",
+      "description": "nonummy ultricies ornare, elit elit fermentum risus, at",
+      "room": "facilisis",
+      "placement": "rutrum magna. Cras",
+      "notes": "mauris id sapien. Cras dolor dolor, tempus non, lacinia at, iaculis quis, pede. Praesent eu dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+      "categoryId": 13,
+      "locationId": 16,
+      "dateAdded": "November 11th, 2020",
+      "userId": 2,
+      "id": 59
+    },
+    {
+      "itemName": "Nulla",
+      "description": "non, luctus sit amet, faucibus ut,",
+      "room": "lectus quis",
+      "placement": "fermentum",
+      "notes": "vestibulum lorem, sit amet ultricies",
+      "categoryId": 4,
+      "locationId": 12,
+      "dateAdded": "December 30th, 2019",
+      "userId": 2,
+      "id": 60
+    },
+    {
+      "itemName": "dolor. Quisque tincidunt",
+      "description": "aliquam arcu. Aliquam ultrices iaculis odio. Nam interdum enim non nisi. Aenean",
+      "room": "consectetuer mauris id",
+      "placement": "molestie orci tincidunt",
+      "notes": "purus sapien, gravida non, sollicitudin a, malesuada id, erat. Etiam vestibulum massa rutrum magna. Cras convallis convallis dolor. Quisque tincidunt pede ac urna. Ut tincidunt vehicula",
+      "categoryId": 9,
+      "locationId": 11,
+      "dateAdded": "January 23rd, 2021",
+      "userId": 20,
+      "id": 61
+    },
+    {
+      "itemName": "mus.",
+      "description": "Aliquam auctor, velit eget laoreet posuere, enim nisl elementum purus, accumsan interdum libero dui",
+      "room": "Phasellus dolor",
+      "placement": "sed leo.",
+      "notes": "nulla vulputate dui, nec tempus mauris erat eget ipsum. Suspendisse sagittis. Nullam vitae diam. Proin",
+      "categoryId": 11,
+      "locationId": 8,
+      "dateAdded": "February 16th, 2021",
+      "userId": 17,
+      "id": 62
+    },
+    {
+      "itemName": "viverra. Maecenas",
+      "description": "mi. Aliquam gravida mauris ut",
+      "room": "convallis, ante",
+      "placement": "rhoncus. Donec",
+      "notes": "Vivamus non lorem vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae nibh. Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem",
+      "categoryId": 8,
+      "locationId": 3,
+      "dateAdded": "September 19th, 2020",
+      "userId": 1,
+      "id": 63
+    },
+    {
+      "itemName": "netus",
+      "description": "sociis natoque penatibus et magnis dis parturient montes, nascetur",
+      "room": "vel pede",
+      "placement": "vestibulum. Mauris",
+      "notes": "adipiscing fringilla, porttitor vulputate, posuere vulputate,",
+      "categoryId": 10,
+      "locationId": 3,
+      "dateAdded": "January 2nd, 2021",
+      "userId": 23,
+      "id": 64
+    },
+    {
+      "itemName": "enim commodo",
+      "description": "in molestie tortor nibh sit amet",
+      "room": "ac sem ut",
+      "placement": "mauris elit,",
+      "notes": "Sed dictum. Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor.",
+      "categoryId": 12,
+      "locationId": 31,
+      "dateAdded": "March 14th, 2021",
+      "userId": 1,
+      "id": 65
+    },
+    {
+      "itemName": "Quisque",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam laoreet, libero",
+      "room": "rhoncus. Donec",
+      "placement": "Donec egestas.",
+      "notes": "Proin eget odio. Aliquam vulputate ullamcorper magna. Sed eu eros. Nam consequat dolor vitae dolor. Donec fringilla. Donec feugiat metus sit amet ante. Vivamus non lorem vitae odio sagittis",
+      "categoryId": 19,
+      "locationId": 40,
+      "dateAdded": "August 26th, 2020",
+      "userId": 4,
+      "id": 66
+    },
+    {
+      "itemName": "sed, est. Nunc",
+      "description": "risus. Morbi metus. Vivamus euismod urna. Nullam lobortis quam a felis",
+      "room": "mattis. Integer eu",
+      "placement": "Phasellus at augue",
+      "notes": "fames ac turpis egestas. Fusce aliquet magna a neque. Nullam ut nisi a odio semper cursus. Integer mollis. Integer tincidunt aliquam arcu. Aliquam ultrices iaculis",
+      "categoryId": 13,
+      "locationId": 40,
+      "dateAdded": "August 17th, 2021",
+      "userId": 3,
+      "id": 67
+    },
+    {
+      "itemName": "eu tellus. Phasellus",
+      "description": "sem ut cursus luctus, ipsum leo elementum sem, vitae",
+      "room": "odio. Phasellus",
+      "placement": "eu neque pellentesque",
+      "notes": "in lobortis tellus justo sit amet nulla. Donec non justo. Proin non massa non",
+      "categoryId": 6,
+      "locationId": 47,
+      "dateAdded": "May 20th, 2020",
+      "userId": 18,
+      "id": 68
+    },
+    {
+      "itemName": "Vivamus",
+      "description": "In ornare sagittis felis. Donec tempor, est ac mattis semper, dui lectus",
+      "room": "mollis.",
+      "placement": "leo elementum sem, vitae",
+      "notes": "tempor augue ac ipsum. Phasellus vitae mauris sit amet lorem semper auctor. Mauris vel turpis. Aliquam adipiscing lobortis risus. In mi pede, nonummy ut, molestie in, tempus",
+      "categoryId": 5,
+      "locationId": 20,
+      "dateAdded": "February 25th, 2021",
+      "userId": 18,
+      "id": 69
+    },
+    {
+      "itemName": "sem, consequat nec,",
+      "description": "ultricies sem magna nec quam. Curabitur vel lectus. Cum sociis natoque penatibus et magnis dis",
+      "room": "ante blandit",
+      "placement": "Nulla aliquet. Proin velit.",
+      "notes": "lectus, a sollicitudin orci sem eget massa. Suspendisse eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer",
+      "categoryId": 5,
+      "locationId": 41,
+      "dateAdded": "March 31st, 2021",
+      "userId": 15,
+      "id": 70
+    },
+    {
+      "itemName": "arcu",
+      "description": "ac mattis ornare, lectus ante dictum mi, ac mattis",
+      "room": "vestibulum",
+      "placement": "cursus a, enim.",
+      "notes": "vel pede blandit congue. In scelerisque scelerisque dui. Suspendisse ac metus",
+      "categoryId": 6,
+      "locationId": 24,
+      "dateAdded": "January 19th, 2021",
+      "userId": 12,
+      "id": 71
+    },
+    {
+      "itemName": "Vivamus",
+      "description": "risus quis diam luctus lobortis. Class aptent taciti sociosqu ad litora torquent per",
+      "room": "aliquet.",
+      "placement": "mauris",
+      "notes": "fringilla mi lacinia mattis. Integer eu lacus. Quisque imperdiet, erat nonummy ultricies ornare, elit elit fermentum risus, at fringilla",
+      "categoryId": 9,
+      "locationId": 43,
+      "dateAdded": "April 24th, 2020",
+      "userId": 4,
+      "id": 72
+    },
+    {
+      "itemName": "faucibus leo,",
+      "description": "blandit at, nisi. Cum sociis natoque penatibus et magnis dis",
+      "room": "ultrices iaculis odio.",
+      "placement": "egestas hendrerit",
+      "notes": "vitae, aliquet nec, imperdiet nec, leo. Morbi",
+      "categoryId": 13,
+      "locationId": 43,
+      "dateAdded": "December 17th, 2020",
+      "userId": 14,
+      "id": 73
+    },
+    {
+      "itemName": "nunc est, mollis",
+      "description": "consequat auctor, nunc nulla vulputate dui, nec tempus mauris erat eget",
+      "room": "rutrum non,",
+      "placement": "nunc, ullamcorper eu,",
+      "notes": "gravida. Praesent eu nulla at sem molestie sodales. Mauris blandit enim consequat purus. Maecenas libero est, congue a, aliquet vel, vulputate eu, odio. Phasellus",
+      "categoryId": 12,
+      "locationId": 27,
+      "dateAdded": "November 8th, 2020",
+      "userId": 13,
+      "id": 74
+    },
+    {
+      "itemName": "leo. Morbi neque",
+      "description": "lorem eu metus. In lorem. Donec elementum, lorem ut",
+      "room": "dolor.",
+      "placement": "sit amet orci. Ut",
+      "notes": "tempor lorem, eget mollis lectus pede et risus. Quisque libero lacus, varius et, euismod et,",
+      "categoryId": 6,
+      "locationId": 25,
+      "dateAdded": "April 12th, 2020",
+      "userId": 11,
+      "id": 75
+    },
+    {
+      "itemName": "Mauris ut",
+      "description": "ullamcorper eu, euismod ac, fermentum vel, mauris. Integer sem elit, pharetra ut, pharetra sed, hendrerit",
+      "room": "arcu. Vivamus sit",
+      "placement": "nascetur ridiculus",
+      "notes": "Quisque ornare tortor at risus. Nunc ac sem ut dolor dapibus",
+      "categoryId": 14,
+      "locationId": 10,
+      "dateAdded": "June 20th, 2021",
+      "userId": 18,
+      "id": 76
+    },
+    {
+      "itemName": "nascetur",
+      "description": "est arcu ac orci. Ut semper pretium neque. Morbi",
+      "room": "dui,",
+      "placement": "Quisque",
+      "notes": "dictum eu, eleifend nec, malesuada ut, sem. Nulla interdum. Curabitur dictum. Phasellus in felis. Nulla tempor augue ac ipsum. Phasellus",
+      "categoryId": 19,
+      "locationId": 44,
+      "dateAdded": "September 29th, 2021",
+      "userId": 9,
+      "id": 77
+    },
+    {
+      "id": 78,
+      "itemName": "UltraBoosts",
+      "description": "aka-the best sneakers",
+      "room": "",
+      "placement": "",
+      "notes": "",
+      "categoryId": 7,
+      "locationId": 13,
+      "dateAdded": "August 1st, 2021",
+      "userId": 1
+    },
+    {
+      "itemName": "pharetra.",
+      "description": "posuere cubilia Curae; Phasellus ornare. Fusce",
+      "room": "nisi dictum",
+      "placement": "sollicitudin commodo ipsum.",
+      "notes": "Sed congue, elit sed consequat auctor, nunc nulla vulputate dui, nec tempus mauris erat eget ipsum. Suspendisse sagittis. Nullam vitae diam. Proin dolor. Nulla semper tellus",
+      "categoryId": 18,
+      "locationId": 7,
+      "dateAdded": "November 20th, 2020",
+      "userId": 16,
+      "id": 79
+    },
+    {
+      "itemName": "Cum sociis natoque",
+      "description": "est. Nunc laoreet lectus quis massa. Mauris vestibulum, neque sed dictum eleifend, nunc risus",
+      "room": "ipsum nunc id",
+      "placement": "sed orci lobortis",
+      "notes": "neque et nunc. Quisque ornare tortor at risus. Nunc ac sem ut dolor dapibus gravida. Aliquam tincidunt, nunc ac",
+      "categoryId": 11,
+      "locationId": 27,
+      "dateAdded": "October 1st, 2020",
+      "userId": 10,
+      "id": 80
+    },
+    {
+      "itemName": "aliquet vel, vulputate",
+      "description": "varius orci, in consequat enim diam vel arcu. Curabitur ut odio vel",
+      "room": "nunc.",
+      "placement": "turpis. In condimentum. Donec at",
+      "notes": "aliquet molestie tellus. Aenean egestas hendrerit neque. In ornare sagittis felis. Donec tempor, est ac mattis semper, dui lectus rutrum urna, nec luctus felis",
+      "categoryId": 10,
+      "locationId": 49,
+      "dateAdded": "May 29th, 2020",
+      "userId": 3,
+      "id": 81
+    },
+    {
+      "itemName": "mi eleifend",
+      "description": "condimentum eget, volutpat ornare, facilisis eget, ipsum. Donec sollicitudin adipiscing ligula. Aenean gravida nunc sed",
+      "room": "amet metus.",
+      "placement": "elit pede, malesuada",
+      "notes": "Phasellus",
+      "categoryId": 14,
+      "locationId": 23,
+      "dateAdded": "October 23rd, 2021",
+      "userId": 22,
+      "id": 82
+    },
+    {
+      "itemName": "vestibulum nec, euismod",
+      "description": "quis arcu vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue turpis.",
+      "room": "primis in faucibus",
+      "placement": "sit amet",
+      "notes": "tortor, dictum eu, placerat eget, venenatis a, magna.",
+      "categoryId": 2,
+      "locationId": 46,
+      "dateAdded": "August 1st, 2020",
+      "userId": 11,
+      "id": 83
+    },
+    {
+      "itemName": "tellus,",
+      "description": "iaculis quis, pede. Praesent eu dui. Cum",
+      "room": "faucibus",
+      "placement": "scelerisque sed, sapien. Nunc pulvinar",
+      "notes": "nibh lacinia orci, consectetuer euismod est arcu ac orci. Ut semper pretium neque. Morbi quis urna. Nunc quis arcu vel quam dignissim pharetra.",
+      "categoryId": 19,
+      "locationId": 20,
+      "dateAdded": "December 24th, 2019",
+      "userId": 19,
+      "id": 84
+    },
+    {
+      "itemName": "Donec fringilla. Donec",
+      "description": "sagittis lobortis mauris. Suspendisse aliquet molestie tellus. Aenean egestas hendrerit neque.",
+      "room": "adipiscing, enim mi",
+      "placement": "Morbi neque tellus, imperdiet",
+      "notes": "congue",
+      "categoryId": 8,
+      "locationId": 6,
+      "dateAdded": "November 10th, 2019",
+      "userId": 22,
+      "id": 85
+    },
+    {
+      "itemName": "Nulla eu",
+      "description": "porttitor tellus non magna. Nam ligula elit, pretium et, rutrum non, hendrerit id, ante. Nunc",
+      "room": "Cras interdum. Nunc",
+      "placement": "amet, dapibus id,",
+      "notes": "lectus rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi lorem, vehicula",
+      "categoryId": 17,
+      "locationId": 3,
+      "dateAdded": "March 1st, 2021",
+      "userId": 17,
+      "id": 86
+    },
+    {
+      "itemName": "neque. Morbi",
+      "description": "adipiscing. Mauris molestie pharetra nibh. Aliquam ornare, libero at auctor ullamcorper, nisl arcu iaculis enim,",
+      "room": "sem, vitae aliquam",
+      "placement": "ligula. Aliquam",
+      "notes": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Proin vel arcu eu odio tristique pharetra. Quisque ac",
+      "categoryId": 9,
+      "locationId": 22,
+      "dateAdded": "September 15th, 2020",
+      "userId": 18,
+      "id": 87
+    },
+    {
+      "itemName": "Donec tincidunt.",
+      "description": "ultrices iaculis odio. Nam interdum enim non nisi. Aenean eget metus. In nec orci. Donec",
+      "room": "sollicitudin commodo ipsum.",
+      "placement": "mauris a nunc. In at",
+      "notes": "tempor lorem, eget mollis lectus pede et risus. Quisque libero lacus, varius et, euismod et, commodo at, libero. Morbi accumsan laoreet ipsum. Curabitur consequat, lectus sit amet luctus",
+      "categoryId": 20,
+      "locationId": 12,
+      "dateAdded": "May 28th, 2020",
+      "userId": 22,
+      "id": 88
+    },
+    {
+      "itemName": "arcu",
+      "description": "Phasellus ornare. Fusce mollis. Duis",
+      "room": "Nunc ullamcorper, velit",
+      "placement": "justo.",
+      "notes": "Pellentesque ultricies dignissim lacus. Aliquam rutrum lorem ac risus. Morbi metus. Vivamus",
+      "categoryId": 5,
+      "locationId": 2,
+      "dateAdded": "April 20th, 2021",
+      "userId": 23,
+      "id": 89
+    },
+    {
+      "itemName": "Maecenas iaculis",
+      "description": "neque. Morbi quis urna. Nunc quis",
+      "room": "ornare egestas",
+      "placement": "vel arcu. Curabitur ut odio",
+      "notes": "Nullam lobortis",
+      "categoryId": 18,
+      "locationId": 11,
+      "dateAdded": "January 6th, 2020",
+      "userId": 4,
+      "id": 90
+    },
+    {
+      "itemName": "arcu.",
+      "description": "dui augue eu tellus. Phasellus elit pede, malesuada vel, venenatis vel, faucibus id, libero.",
+      "room": "ac mattis",
+      "placement": "montes, nascetur",
+      "notes": "vehicula aliquet libero.",
+      "categoryId": 6,
+      "locationId": 30,
+      "dateAdded": "October 30th, 2021",
+      "userId": 4,
+      "id": 91
+    },
+    {
+      "itemName": "nascetur ridiculus mus.",
+      "description": "mattis semper, dui lectus rutrum urna,",
+      "room": "ullamcorper, nisl",
+      "placement": "Mauris",
+      "notes": "imperdiet",
+      "categoryId": 3,
+      "locationId": 31,
+      "dateAdded": "December 9th, 2019",
+      "userId": 8,
+      "id": 92
+    },
+    {
+      "itemName": "lorem vitae",
+      "description": "lobortis augue scelerisque mollis. Phasellus libero mauris, aliquam",
+      "room": "metus. Aenean sed",
+      "placement": "molestie tortor",
+      "notes": "nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus. Duis elementum, dui quis accumsan convallis,",
+      "categoryId": 11,
+      "locationId": 14,
+      "dateAdded": "February 1st, 2021",
+      "userId": 3,
+      "id": 93
+    },
+    {
+      "itemName": "vulputate",
+      "description": "Nullam suscipit, est ac facilisis facilisis, magna tellus faucibus leo, in lobortis tellus justo sit",
+      "room": "adipiscing",
+      "placement": "Donec tincidunt. Donec",
+      "notes": "elit, pretium et, rutrum non, hendrerit id, ante. Nunc mauris sapien, cursus in, hendrerit consectetuer, cursus et, magna. Praesent interdum ligula eu enim. Etiam imperdiet",
+      "categoryId": 16,
+      "locationId": 27,
+      "dateAdded": "November 6th, 2021",
+      "userId": 4,
+      "id": 94
+    },
+    {
+      "itemName": "lorem",
+      "description": "pede, nonummy ut, molestie in,",
+      "room": "lobortis. Class aptent",
+      "placement": "ut quam vel sapien imperdiet",
+      "notes": "arcu vel quam dignissim pharetra. Nam ac nulla. In tincidunt congue turpis. In condimentum. Donec at arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;",
+      "categoryId": 11,
+      "locationId": 50,
+      "dateAdded": "June 18th, 2020",
+      "userId": 20,
+      "id": 95
+    },
+    {
+      "itemName": "Lorem ipsum",
+      "description": "Vivamus nibh dolor, nonummy ac, feugiat non, lobortis quis, pede. Suspendisse dui. Fusce",
+      "room": "est arcu ac",
+      "placement": "sollicitudin a, malesuada",
+      "notes": "ligula. Aliquam erat volutpat. Nulla dignissim. Maecenas ornare egestas ligula. Nullam feugiat placerat velit. Quisque varius. Nam porttitor scelerisque neque. Nullam nisl. Maecenas malesuada fringilla est.",
+      "categoryId": 5,
+      "locationId": 37,
+      "dateAdded": "January 5th, 2021",
+      "userId": 5,
+      "id": 96
+    },
+    {
+      "itemName": "neque sed dictum",
+      "description": "ut ipsum ac mi eleifend egestas. Sed pharetra, felis eget varius ultrices, mauris ipsum porta",
+      "room": "nulla.",
+      "placement": "ultricies ligula.",
+      "notes": "tempor bibendum. Donec felis orci, adipiscing non, luctus sit amet, faucibus ut, nulla. Cras eu tellus eu augue porttitor interdum. Sed auctor odio a purus. Duis elementum,",
+      "categoryId": 14,
+      "locationId": 49,
+      "dateAdded": "March 17th, 2021",
+      "userId": 22,
+      "id": 97
+    },
+    {
+      "itemName": "sed consequat",
+      "description": "arcu et pede. Nunc sed orci lobortis augue",
+      "room": "ac turpis egestas.",
+      "placement": "Proin sed turpis nec",
+      "notes": "auctor, nunc nulla vulputate dui,",
+      "categoryId": 17,
+      "locationId": 48,
+      "dateAdded": "May 13th, 2020",
+      "userId": 12,
+      "id": 98
+    },
+    {
+      "itemName": "Nunc ullamcorper,",
+      "description": "non dui nec urna suscipit nonummy. Fusce",
+      "room": "purus sapien,",
+      "placement": "amet ante.",
+      "notes": "vulputate, nisi sem semper erat, in consectetuer ipsum nunc id enim. Curabitur massa. Vestibulum accumsan neque",
+      "categoryId": 13,
+      "locationId": 31,
+      "dateAdded": "January 20th, 2020",
+      "userId": 23,
+      "id": 99
+    },
+    {
+      "itemName": "ac, fermentum",
+      "description": "velit eget laoreet posuere, enim nisl elementum purus,",
+      "room": "ut",
+      "placement": "quam, elementum at, egestas a,",
+      "notes": "Nulla eu neque pellentesque",
+      "categoryId": 18,
+      "locationId": 27,
+      "dateAdded": "February 2nd, 2021",
+      "userId": 16,
+      "id": 100
     }
   ],
   "locations": [
@@ -657,10 +1473,10 @@
       "id": 10
     },
     {
-      "name": "Basketball ",
-      "description": "",
-      "userId": 1,
-      "id": 11
+      "id": 11,
+      "name": "Storage Unit (small)",
+      "description": "unit 132",
+      "userId": 1
     },
     {
       "name": "Football",
@@ -670,8 +1486,8 @@
     },
     {
       "id": 13,
-      "name": "soccer",
-      "description": "tester location",
+      "name": "Gym Locker",
+      "description": "locker #14B @ our gym",
       "userId": 1
     },
     {
@@ -781,6 +1597,120 @@
       "description": "",
       "userId": 1,
       "id": 31
+    },
+    {
+      "name": "Nunc ullamcorper,",
+      "description": "Donec est mauris, rhoncus id, mollis nec, cursus a, enim. Suspendisse aliquet, sem",
+      "userId": 7,
+      "id": 32
+    },
+    {
+      "name": "Donec felis orci,",
+      "description": "sollicitudin orci sem eget massa. Suspendisse eleifend. Cras sed leo.",
+      "userId": 18,
+      "id": 33
+    },
+    {
+      "name": "rhoncus. Nullam",
+      "description": "lectus ante dictum mi, ac mattis velit justo nec ante. Maecenas mi felis, adipiscing fringilla,",
+      "userId": 18,
+      "id": 34
+    },
+    {
+      "name": "convallis",
+      "description": "diam. Sed diam lorem, auctor quis, tristique ac, eleifend vitae, erat. Vivamus nisi.",
+      "userId": 5,
+      "id": 35
+    },
+    {
+      "name": "arcu ac",
+      "description": "a, arcu. Sed et libero. Proin mi. Aliquam gravida mauris ut mi. Duis risus",
+      "userId": 14,
+      "id": 36
+    },
+    {
+      "name": "Phasellus dolor",
+      "description": "mi. Aliquam gravida mauris ut mi. Duis risus odio, auctor vitae,",
+      "userId": 15,
+      "id": 37
+    },
+    {
+      "name": "dolor. Quisque tincidunt",
+      "description": "lobortis quam a felis ullamcorper viverra. Maecenas",
+      "userId": 11,
+      "id": 38
+    },
+    {
+      "name": "libero. Donec consectetuer",
+      "description": "tellus. Nunc lectus pede, ultrices a, auctor non, feugiat nec,",
+      "userId": 10,
+      "id": 39
+    },
+    {
+      "name": "montes,",
+      "description": "felis eget varius ultrices, mauris ipsum porta elit,",
+      "userId": 25,
+      "id": 40
+    },
+    {
+      "name": "dui.",
+      "description": "purus mauris a nunc. In at pede. Cras vulputate velit eu sem. Pellentesque",
+      "userId": 16,
+      "id": 41
+    },
+    {
+      "name": "eros. Proin ultrices.",
+      "description": "eros nec tellus. Nunc lectus pede, ultrices a, auctor non, feugiat nec, diam. Duis",
+      "userId": 7,
+      "id": 42
+    },
+    {
+      "name": "Aenean euismod mauris",
+      "description": "amet, consectetuer adipiscing elit. Etiam",
+      "userId": 4,
+      "id": 43
+    },
+    {
+      "name": "Sed malesuada augue",
+      "description": "leo. Cras vehicula aliquet libero. Integer in",
+      "userId": 17,
+      "id": 44
+    },
+    {
+      "name": "scelerisque",
+      "description": "at risus. Nunc ac sem ut dolor dapibus gravida. Aliquam tincidunt,",
+      "userId": 12,
+      "id": 45
+    },
+    {
+      "name": "consectetuer euismod est",
+      "description": "dapibus rutrum, justo. Praesent luctus. Curabitur egestas nunc sed libero.",
+      "userId": 18,
+      "id": 46
+    },
+    {
+      "name": "sem ut dolor",
+      "description": "vitae odio sagittis semper. Nam tempor diam dictum sapien. Aenean massa. Integer vitae",
+      "userId": 25,
+      "id": 47
+    },
+    {
+      "name": "faucibus id,",
+      "description": "tincidunt pede ac urna. Ut tincidunt vehicula",
+      "userId": 20,
+      "id": 48
+    },
+    {
+      "name": "hymenaeos.",
+      "description": "et magnis dis parturient montes, nascetur ridiculus",
+      "userId": 16,
+      "id": 49
+    },
+    {
+      "name": "eros",
+      "description": "semper cursus. Integer mollis. Integer tincidunt aliquam arcu. Aliquam ultrices iaculis",
+      "userId": 11,
+      "id": 50
     }
   ],
   "categories": [
@@ -797,7 +1727,7 @@
       "id": 3
     },
     {
-      "name": "Self Care",
+      "name": "Personal Care / Beauty",
       "id": 4
     },
     {
@@ -809,12 +1739,60 @@
       "id": 6
     },
     {
-      "name": "Clothing",
+      "name": "Clothing, Shoes & Jewelry",
       "id": 7
     },
     {
       "name": "Kitchen Consumables",
       "id": 8
+    },
+    {
+      "name": "Arts, Crafts & Sewing",
+      "id": 9
+    },
+    {
+      "name": "Automotive",
+      "id": 10
+    },
+    {
+      "name": "Kids / Baby",
+      "id": 11
+    },
+    {
+      "name": "Tools & Home Improvement",
+      "id": 12
+    },
+    {
+      "name": "Entertainment",
+      "id": 13
+    },
+    {
+      "name": "Collectibles",
+      "id": 14
+    },
+    {
+      "name": "Outdoor & Garden",
+      "id": 15
+    },
+    {
+      "name": "Health",
+      "id": 16
+    },
+    {
+      "name": "Toys & Games",
+      "id": 17
+    },
+    {
+      "name": "Memorabilia",
+      "id": 18
+    },
+    {
+      "name": "Seasonal",
+      "id": 19
+    },
+    {
+      "name": "- Miscellaneous",
+      "id": 20
     }
   ],
   "sharedLocations": [
@@ -993,10 +1971,10 @@
       "id": 34
     },
     {
+      "id": 35,
       "userId": 1,
       "locationId": 24,
-      "date": "REQUESTED",
-      "id": 35
+      "date": "November 9, 2020"
     },
     {
       "userId": 1,
@@ -1023,28 +2001,10 @@
       "date": "November 9, 2020"
     },
     {
+      "id": 40,
       "userId": 5,
       "locationId": 9,
-      "date": "REQUESTED",
-      "id": 40
-    },
-    {
-      "userId": 5,
-      "locationId": 13,
-      "date": "REQUESTED",
-      "id": 41
-    },
-    {
-      "userId": 5,
-      "locationId": 14,
-      "date": "REQUESTED",
-      "id": 42
-    },
-    {
-      "userId": 5,
-      "locationId": 17,
-      "date": "REQUESTED",
-      "id": 43
+      "date": "November 9, 2020"
     },
     {
       "userId": 5,
@@ -1057,6 +2017,12 @@
       "locationId": 4,
       "date": "November 9, 2020",
       "id": 45
+    },
+    {
+      "userId": 3,
+      "locationId": 19,
+      "date": "REQUESTED",
+      "id": 46
     }
   ],
   "connectedUsers": [
@@ -1133,13 +2099,6 @@
       "id": 22
     },
     {
-      "userId": 4,
-      "connectedUserId": 1,
-      "status": false,
-      "dateConnected": "October 30, 2020",
-      "id": 23
-    },
-    {
       "id": 24,
       "userId": 1,
       "connectedUserId": 3,
@@ -1152,6 +2111,20 @@
       "status": true,
       "dateConnected": "November 8, 2020",
       "id": 25
+    },
+    {
+      "userId": 1,
+      "connectedUserId": 4,
+      "status": false,
+      "dateConnected": "November 9, 2020",
+      "id": 26
+    },
+    {
+      "userId": 2,
+      "connectedUserId": 4,
+      "status": false,
+      "dateConnected": "November 9, 2020",
+      "id": 27
     }
   ],
   "activity": [
@@ -1478,6 +2451,33 @@
       "connectedUserId": 1,
       "date": "November 9, 2020 at 10:24 AM",
       "id": 38
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 11,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 11:33 AM",
+      "id": 39
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 13,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 11:34 AM",
+      "id": 40
+    },
+    {
+      "activityType": "Updated an Item",
+      "userId": 1,
+      "itemId": 78,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 11:52 AM",
+      "id": 41
     }
   ],
   "lists": []

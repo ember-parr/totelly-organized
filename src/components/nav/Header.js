@@ -59,7 +59,7 @@ export const Header = () => {
                     </Grid.Column>
                     <Grid.Column width={3} floated='right'>
                         <Grid.Row stretched>
-                            <Dropdown  trigger={trigger} options={options} onClick={handleChange}/>
+                            <Dropdown  trigger={trigger} options={options} onChange={handleChange}/>
                         </Grid.Row>
                         </Grid.Column>
 

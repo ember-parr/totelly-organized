@@ -6,20 +6,19 @@ export const ActivityProvider = (props) => {
     const [Activities, setActivities] = useState([])
     const [UserActivities, setUserActivities] = useState([])
     const [searchTerms, setSearchTerms] = useState("")
-    const currentUser = parseInt(localStorage.user)
+    // const currentUser = parseInt(localStorage.user)
 
     const getActivities = () => {
-        return fetch(`http://localhost:8088/activity?_sort=date&_order=desc&_limit=10&_expand=item&_expand=location&_expand=user`)
+        return fetch(`http://localhost:8088/activity?_sort=date&_order=asc&_limit=10&_expand=item&_expand=location&_expand=user`)
         .then(result => result.json())
         .then(setActivities)
     }
 
-    const getCurrentUserActivities = () => {
-        return fetch(`http://localhost:8088/activity?userId=${currentUser}&_sort=date&_order=desc&_limit=5`)
+    const getCurrentUserActivities = (userId) => {
+        return fetch(`http://localhost:8088/activity?_sort=id&_order=desc&_limit=6&_expand=item&userId=${userId}&locationId=1&connectedUserId=1`)
         .then(result => result.json())
         .then(setUserActivities)
     }
-
 
     const getItemActivities = (id) => {
         return fetch(`http://localhost:8088/activity/${id}/?_expand=user&_expand=item`)

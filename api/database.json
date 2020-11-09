@@ -1409,6 +1409,83 @@
       "dateAdded": "February 2nd, 2021",
       "userId": 16,
       "id": 100
+    },
+    {
+      "itemName": "Paper Straws",
+      "description": "You're welcome, earth",
+      "room": "Kitchen",
+      "placement": "pantry door shelf, middle row",
+      "categoryId": 8,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:22 PM",
+      "userId": 1,
+      "id": 101
+    },
+    {
+      "itemName": "Yeti Lids",
+      "description": "extras ",
+      "room": "Kitchen",
+      "placement": "Cup Cabinet",
+      "categoryId": 8,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:24 PM",
+      "userId": 1,
+      "id": 102
+    },
+    {
+      "itemName": "Felt Coasters",
+      "description": "for sweaty drinks",
+      "room": "Living Room",
+      "placement": "In drawer under TV",
+      "categoryId": 20,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:28 PM",
+      "userId": 1,
+      "id": 103
+    },
+    {
+      "itemName": "Stone Coasters",
+      "description": "For when we have company",
+      "room": "Living Room",
+      "placement": "Drawer under TV",
+      "categoryId": 20,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:31 PM",
+      "userId": 1,
+      "id": 104
+    },
+    {
+      "itemName": "The Office Sign",
+      "description": "Won in contest",
+      "room": "Bedroom",
+      "placement": "Under-bed storage bin",
+      "categoryId": 14,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:34 PM",
+      "userId": 1,
+      "id": 105
+    },
+    {
+      "itemName": "Toe Socks",
+      "description": "Green & Red Christmas socks",
+      "room": "Master Closet",
+      "placement": "in bin marked \"winter gear\"",
+      "categoryId": 7,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:34 PM",
+      "userId": 1,
+      "id": 106
+    },
+    {
+      "itemName": "Fuzzy House Shoes",
+      "description": "For Winter Cold Toes",
+      "room": "Master Closet",
+      "placement": "In bin labeled \"winter gear\"",
+      "categoryId": 7,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:39 PM",
+      "userId": 1,
+      "id": 107
     }
   ],
   "locations": [
@@ -2437,10 +2514,10 @@
     {
       "activityType": "Added A New Item",
       "userId": 1,
-      "itemId": 31,
+      "itemId": 50,
       "locationId": 1,
       "connectedUserId": 1,
-      "date": "November 8, 2020 at 11:58 PM",
+      "date": "November 1, 2020 at 11:58 PM",
       "id": 37
     },
     {
@@ -2478,6 +2555,60 @@
       "connectedUserId": 1,
       "date": "November 9, 2020 at 11:52 AM",
       "id": 41
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 77,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:22 PM",
+      "id": 42
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "locationId": 1,
+      "itemId": 78,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:24 PM",
+      "id": 43
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 104,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:31 PM",
+      "id": 44
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 105,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:34 PM",
+      "id": 45
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 106,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:34 PM",
+      "id": 46
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 107,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:39 PM",
+      "id": 47
     }
   ],
   "lists": []

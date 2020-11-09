@@ -4,47 +4,47 @@ import {ItemContext} from './ItemProvider'
 import { ItemTableRow } from './ItemTableRow'
 import { useHistory } from 'react-router-dom'
 import { Table, Button, Input } from "semantic-ui-react"
-import {ConnectionContext} from '../connectedUsers/ConnectionProvider'
+import {LocationContext} from '../locations/LocationProvider'
 
 
 export const ItemTable = () => {
-    const {Items, getUsersItems, getItems,setSearchTerms, searchTerms, getSelectItems } = useContext(ItemContext)
+    const {Items, getUsersItems, getItems,setSearchTerms, searchTerms } = useContext(ItemContext)
+    const { getLocationsSharedWithUser } = useContext(LocationContext)
     const user = parseInt(localStorage.user)
     const [filteredItems, setFiltered] = useState([])
     const domHistory = useHistory()
-    const { getConnectionByUser } = useContext(ConnectionContext)
-    const [usersConnections, setConnections] = useState([])
-    const connectedUsersId = usersConnections.map((user) => user.connectedUserId)
-    const userIdsForSearch = connectedUsersId.concat(user)
+    const [thisUsersItems, setThisUsersItems] = useState([])
+
+
+    const [sharedLocations, setSharedLocations] = useState([])
+    const sharedLocationIds = sharedLocations.map((location) => location.locationId)
+    const itemsSharedWithThisUser = Items.filter(item => sharedLocationIds.includes(item.location.id))
+    const combinedItems = itemsSharedWithThisUser.concat(thisUsersItems)
+    
+
     
     useEffect(()=> {
         getUsersItems(user)
         .then((items) => {
-            setFiltered(items)
+            setThisUsersItems(items)
         })
     }, [])
 
     useEffect(() => {
         getItems()
-        getConnectionByUser(user)
-        .then(connections => {
-            setConnections(connections)
+        getLocationsSharedWithUser(user)
+        .then(shared => {
+            setSharedLocations(shared)
         })
 
     }, [])
 
     useEffect(() => {
         if (searchTerms !== "") {
-            const subset = Items.filter(item => item.itemName.toLowerCase().includes(searchTerms) && userIdsForSearch.includes(item.userId)) 
+            const subset = combinedItems.filter(item => item.itemName.toLowerCase().includes(searchTerms))
             setFiltered(subset)
         } else {
-            getSelectItems().then((items) => {
-                let connectionsItems = items.filter(
-                    (item) => connectedUsersId.includes(item.userId) || item.userId === user
-                )
-                setFiltered(connectionsItems)
-                console.log("my connections items: ", connectionsItems)
-            })
+            setFiltered(thisUsersItems)
         }
     }, [searchTerms, Items])
 
@@ -52,27 +52,15 @@ export const ItemTable = () => {
     
     
     let myItemClicked = () => {
-        getUsersItems(user).then((items) => {
-            setFiltered(items)
-        })
+        setFiltered(thisUsersItems)
     }
     
     let sharedItemsClicked = () => {
-        getSelectItems().then((items) => {
-            let connectionsItems = items.filter(
-                (item) => connectedUsersId.includes(item.userId)
-            )
-            setFiltered(connectionsItems)
-        })
+        setFiltered(itemsSharedWithThisUser)
     }
     
     let handleClick = () => {
-        getSelectItems().then((items) => {
-            let connectionsItems = items.filter(
-                (item) => connectedUsersId.includes(item.userId) || item.userId === user
-            )
-            setFiltered(connectionsItems)
-        })
+        setFiltered(combinedItems)
         
     }
 
@@ -82,24 +70,28 @@ export const ItemTable = () => {
     return (
         
         <>
-        <Button color='teal' onClick={() => domHistory.push("/items/add")}>New Item</Button>
+        <section className="sectionAboveHeader">
+        <Button className="addNew-btn" onClick={() => domHistory.push("/items/add")}>New Item</Button>
 
         <Input
-          type="text"
-          icon='search'
-          onKeyUp={(keyEvent) => setSearchTerms(keyEvent.target.value.toLowerCase())}
-          placeholder="Search Items... "
+        type="text"
+        icon='search'
+        onKeyUp={(keyEvent) => setSearchTerms(keyEvent.target.value.toLowerCase())}
+        placeholder="Search Items... "
+        className="searchTable"
         />
 
 
 
-        <Button.Group  floated='right'>
-            <Button toggle onClick={myItemClicked}>View Only My Items</Button>
+        <Button.Group floated='right'>
+            <Button toggle className="filter-btn" onClick={myItemClicked}>View Only My Items</Button>
                 <Button.Or />
-            <Button toggle onClick={sharedItemsClicked}>Items Shared With me</Button>
+            <Button toggle className="filter-btn" onClick={sharedItemsClicked}>Items Shared With me</Button>
                 <Button.Or />
-            <Button toggle onClick={handleClick}>View All Items</Button>
+            <Button toggle className="filter-btn" onClick={handleClick}>View All Items</Button>
         </Button.Group>
+        </section>
+
         
         <Table unstackable celled selectable collapsing compact size="small" className="pageComponent">
             <Table.Header>
@@ -127,7 +119,7 @@ export const ItemTable = () => {
         
         
         
-
+        
         </>
     )
 }

@@ -1,11 +1,13 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable array-callback-return */
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useContext, useEffect, useState } from "react";
 import { ConnectionContext } from "./ConnectionProvider";
 import { UserContext } from "../user/UserProvider";
 import { ActivityContext } from '../home/ActivityProvider'
 import { Button, Card } from 'semantic-ui-react';
 import Notifications, {notify} from 'react-notify-toast';
+import { LocationContext } from '../locations/LocationProvider'
 
 
 export const ConnectionRequest = () => {
@@ -17,19 +19,40 @@ export const ConnectionRequest = () => {
         searchTerms,
         addConnection
     } = useContext(ConnectionContext);
+    const { Locations, getLocations, getShareRequests, updateSharedLocation, deleteSharedLocation } = useContext(LocationContext)
     const { Users, getUsers } = useContext(UserContext);
-    const [filteredFriendUsers, setFriendUsers] = useState([])
+    const [ filteredFriendUsers, setFriendUsers ] = useState([])
+    const [ shareRequests, setShareRequests ] = useState([])
     const { addActivity } = useContext(ActivityContext)
     let dateFormat = require('dateformat')
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")
     let currentTime = dateFormat(now, "shortTime")
+
+    const currentUser = parseInt(localStorage.user)
+    const usersLocations = Locations.filter(loc => loc.userId === currentUser)
+    const usersLocationIds = usersLocations.map(location => location.id)
+    const usersShareRequests = shareRequests.filter(request => usersLocationIds.includes(request.locationId))
     
+
+    useEffect(() => {
+        getLocations()
+        .then(getShareRequests)
+        .then(req => {
+            setShareRequests(req)
+        })
+    }, [Locations, getLocations, getShareRequests])
+
+    //get friends and users from database when searchTerms or friend status changes
+    useEffect(() => {
+        getConnection().then(getUsers);
+    }, [])
+
     
+
     
     //delete two-way friendship from database
     const removeConnection = (UserToDelete) => {
-        const currentUser = parseInt(localStorage.user)
         connections.map((connection) => {
             if (connection.userId === UserToDelete && connection.connectedUserId === currentUser) {
                 deleteConnection(connection.id)
@@ -39,6 +62,11 @@ export const ConnectionRequest = () => {
                 console.log("nothing to delete?")
             }
         })
+    }
+
+    const deleteRequest = (requestId) => {
+        console.log("request id: ", requestId)
+        deleteSharedLocation(requestId)
     }
 
     const approveConnection = (UserToapprove) => {
@@ -61,8 +89,8 @@ export const ConnectionRequest = () => {
                 addActivity({
                     activityType: "Connected With",
                     userId: currentUser,
-                    itemId: 0,
-                    locationId: 0,
+                    itemId: 1,
+                    locationId: 1,
                     connectedUserId: connection.id,
                     date: currentDate + " at " + currentTime
                 })
@@ -83,8 +111,8 @@ export const ConnectionRequest = () => {
                 addActivity({
                     activityType: "Connected With",
                     userId: currentUser,
-                    itemId: 0,
-                    locationId: 0,
+                    itemId: 1,
+                    locationId: 1,
                     connectedUserId: connection.id,
                     date: currentDate + " at " + currentTime
                 })
@@ -94,11 +122,17 @@ export const ConnectionRequest = () => {
         })
     }
 
+    const approveShare = (shareToApprove) => {
+        updateSharedLocation({
+            id: shareToApprove.id,
+            userId: shareToApprove.userId,
+            locationId: shareToApprove.locationId,
+            date: currentDate
+        })
+    }
 
-    //get friends and users from database when searchTerms or friend status changes
-    useEffect(() => {
-        getConnection().then(getUsers);
-    }, [])
+
+    
 
     let myColor = { background: '#2b7a78', text: "#FFFFFF" };
     let myRejectColor = { background: '#1e0001', text: "#FFFFFF" };
@@ -123,42 +157,83 @@ export const ConnectionRequest = () => {
 
     return (
         <>
-        <Card.Group>
-                    {filteredFriendUsers.map((user) => {
-                        return (
-                            <>
-                            <Card key={user.id}>
-                                <Card.Content>
-                                    <Card.Header>{user.firstName} {user.lastName}</Card.Header>
-                                    <Card.Meta>Requested To Connect</Card.Meta>
-                                    <Card.Description>
-                                        Request sent: {currentDate}
-                                    </Card.Description>
-                                </Card.Content>
-                                <Card.Content extra >
-                                    <div className='ui two buttons'>
-                                    <Button user={user} basic color='green' onClick={(e) => {
+        <Card.Group itemsPerRow={2} className="userRequestsCardGroup">
+            {filteredFriendUsers.map((user) => {
+                return (
+                    <>
+                    <Card key={user.id} className="userRequestCard">
+                        <Card.Content>
+                            <Card.Header>{user.firstName} {user.lastName}</Card.Header>
+                            <Card.Meta>Requested To Connect</Card.Meta>
+                            <Card.Description>
+                                Request sent: {currentDate}
+                            </Card.Description>
+                        </Card.Content>
+                        <Card.Content extra >
+                            <Button.Group fluid>
+                            <Button  user={user} className="approve-btn"  onClick={(e) => {
+                                    e.preventDefault();
+                                    approveConnection(user.id);
+                                    notify.show('You are now connected!', "custom", 5000, myColor)
+                                }}>
+                                Approve
+                            </Button>
+                            <Button.Or />
+                            <Button user={user}  className="deny-btn" onClick={(e) => {
+                                    e.preventDefault();
+                                    removeConnection(user.id);
+                                    notify.show('Request Deleted!', "custom", 5000, myRejectColor)
+                                }}>
+                                Decline
+                            </Button>
+                            </Button.Group>
+                            
+                        </Card.Content>
+                    </Card>
+                    </>
+                )
+            })}
+
+
+            {usersShareRequests.map((request) => {
+                return (
+                    <>
+                        <Card key={request.id} className="userRequestCard">
+                            <Card.Content>
+                                <Card.Header>{request.user?.firstName} {request.user?.lastName}</Card.Header>
+                                <Card.Meta>Requested Access to Your Location</Card.Meta>
+                                <Card.Description>
+                                    Location: <a  href={`/locations/edit/${request.location?.id}`} alt="items">{request.location?.name} </a> 
+                                </Card.Description>
+                            </Card.Content>
+                            <Card.Content extra className="buttonGroup--CardExtra">
+                                <Button.Group fluid>
+                                    <Button  user={request.user?.firstName} className="approve-btn" onClick={(e) => {
                                             e.preventDefault();
-                                            approveConnection(user.id);
-                                            notify.show('You are now connected!', "custom", 5000, myColor)
+                                            approveShare(request);
+                                            notify.show('Location Shared!', "custom", 5000, myColor)
                                         }}>
                                         Approve
                                     </Button>
-                                    <Button user={user} basic color='red' onClick={(e) => {
+                                    <Button.Or />
+                                    <Button  user={request.user?.firstName} className="deny-btn" onClick={(e) => {
                                             e.preventDefault();
-                                            removeConnection(user.id);
+                                            deleteRequest(request.id);
                                             notify.show('Request Deleted!', "custom", 5000, myRejectColor)
                                         }}>
                                         Decline
                                     </Button>
-                                    </div>
-                                </Card.Content>
-                            </Card>
-                            </>
-                        )
-                    })}
-                    </Card.Group>
-                    <Notifications />
+                                </Button.Group>
+                        </Card.Content>
+                        </Card>
+
+
+
+                    </>
+                )
+            })}
+        </Card.Group>
+        <Notifications />
         </>
     )
 }

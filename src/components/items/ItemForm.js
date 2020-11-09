@@ -86,8 +86,8 @@ export const ItemForm = () => {
                     activityType: "Updated an Item",
                     userId: parseInt(user),
                     itemId: item.id,
-                    locationId: 0,
-                    connectedUserId: 0,
+                    locationId: 1,
+                    connectedUserId: 1,
                     date: currentDate + " at " + currentTime
                 })
                 .then(() => history.push(`/items`))
@@ -108,8 +108,8 @@ export const ItemForm = () => {
                         activityType: "Added A New Item",
                         userId: parseInt(user),
                         itemId: newItem[0].id,
-                        locationId: 0,
-                        connectedUserId: 0,
+                        locationId: 1,
+                        connectedUserId: 1,
                         date: currentDate + " at " + currentTime
                     })
                 })

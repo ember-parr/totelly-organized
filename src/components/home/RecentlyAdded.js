@@ -1,6 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useContext, useEffect, useState} from 'react'
-import { Feed, Icon } from 'semantic-ui-react'
+import { Icon, Grid, Card } from 'semantic-ui-react'
 import {ItemContext} from "../items/ItemProvider"
 import { ActivityContext } from './ActivityProvider'
 
@@ -32,27 +32,40 @@ export const RecentlyAdded = () => {
     
 
     return (
-            <Feed size="small">
+        <>
+        <Grid celled='internally' columns={3}>
+            <Card.Group className="spaceBetween">
                 {itemDetails.map((item) => (
-                    <Feed.Event key={item.id}>
-                    <Feed.Label>
-                            <Icon name="plus circle" />
-                        </Feed.Label>
-                    <Feed.Content>
-                        <Feed.Summary>
-                        <a  href={`/items/edit/${item.id}`} alt="items">You added {item.itemName} </a>
-                        </Feed.Summary>
-                <Feed.Date> Location: {item.location.name}</Feed.Date>
-                <Feed.Date>Room: {item.room}</Feed.Date>
-                <Feed.Date>Placement: {item.placement}</Feed.Date>
-                    </Feed.Content>
-                </Feed.Event>
-                ))}
-                </Feed>
+                        <Card key={item.id} className="recentActivityCard">
+                            <Card.Content>
+                            <Card.Header >
+                                <Icon name="plus circle" />
+                                <a  href={`/items/edit/${item.id}`} alt="items">You added {item.itemName} </a>
+                            </Card.Header>
+                            <Card.Description>
+                                Location: {item.location.name} <br />
+                                Room: {item.room} <br />
+                                Placement: {item.placement} <br />
+                                </Card.Description>
+                            </Card.Content>
+
+
+
+
+
+
+
+
+
+                        
+                        
+                    </Card>
+                    ))}
+</Card.Group>
+                </Grid>
             
-        
+        </>
     )
 }
 
 
-/* <img src='#' alt="placeholder imgg"/> */

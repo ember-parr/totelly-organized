@@ -123,7 +123,7 @@ export const ConnectionList = () => {
             
             setNonFriendUsers(nonFriendSubset);
             } else {
-            // if the search field is blank, display all friends & non friends
+            // if the search field is blank, display all friends 
             
             setNonFriendUsers()
             setFriendUsers(friendInformation);

@@ -4,7 +4,6 @@ import {LocationContext} from './LocationProvider'
 import { LocationTableRow } from './LocationTableRow'
 import { useHistory } from 'react-router-dom'
 import { Table, Button, Input } from "semantic-ui-react"
-import {ConnectionContext} from '../connectedUsers/ConnectionProvider'
 
 
 export const LocationTable = () => {
@@ -66,26 +65,28 @@ export const LocationTable = () => {
 
     return (
         <div>
-            <Button color='teal' onClick={() => domHistory.push("/locations/add")}>New Location</Button>
+            <section className="sectionAboveHeader">
+            <Button className="addNew-btn" onClick={() => domHistory.push("/locations/add")}>New Location</Button>
             
             <Input
             type="text"
             icon='search'
             onKeyUp={(keyEvent) => setSearchTerms(keyEvent.target.value.toLowerCase())}
             placeholder="Search Locations... "
+            className="searchTable"
             />
 
 
 
             <Button.Group  floated='right'>
-                <Button toggle onClick={myLocationClicked}>View Only My Locations</Button>
+                <Button toggle className="filter-btn" onClick={myLocationClicked}>View Only My Locations</Button>
                     <Button.Or />
-                <Button toggle onClick={sharedLocationsClicked}>Locations Shared With me</Button>
+                <Button toggle className="filter-btn" onClick={sharedLocationsClicked}>Locations Shared With me</Button>
                     <Button.Or />
-                <Button toggle onClick={handleClick}>View All Locations</Button>
+                <Button toggle className="filter-btn" onClick={handleClick}>View All Locations</Button>
             </Button.Group>
 
-
+            </section>
 
             <Table celled selectable  compact className="pageComponent">
                 <Table.Header>

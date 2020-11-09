@@ -69,9 +69,9 @@ export const LocationForm = () => {
                 addActivity({
                     activityType: "Updated Their Location",
                     userId: parseInt(user),
-                    itemId: 0,
+                    itemId: 1,
                     locationId: location.id,
-                    connectedUserId: 0,
+                    connectedUserId: 1,
                     date: currentDate + " at " + currentTime
                 })
             }else {
@@ -83,9 +83,9 @@ export const LocationForm = () => {
                 addActivity({
                     activityType: "Added A New Location",
                     userId: parseInt(user),
-                    itemId: 0,
+                    itemId: 1,
                     locationId: location.id,
-                    connectedUserId: 0,
+                    connectedUserId: 1,
                     date: currentDate + " at " + currentTime
                 })
             }

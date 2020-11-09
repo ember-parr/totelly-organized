@@ -1,0 +1,661 @@
+{
+    "users": [
+      {
+        "firstName": "Ember",
+        "lastName": "Parr",
+        "phoneNumber": "6158150173",
+        "email": "ember@emberparr.com",
+        "lastFmUsername": "emberparr",
+        "darkMode": false,
+        "id": 1
+      },
+      {
+        "email": "justin@home.com",
+        "firstName": "Justin",
+        "lastName": "Adams",
+        "phoneNumber": "6148745147",
+        "darkMode": false,
+        "lastFmUsername": "",
+        "id": 2
+      },
+      {
+        "email": "aiden@home.com",
+        "firstName": "Aiden",
+        "lastName": "Parr",
+        "phoneNumber": "6154748741",
+        "darkMode": false,
+        "lastFmUsername": "",
+        "id": 3
+      },
+      {
+        "email": "lexi@home.com",
+        "firstName": "Lexi",
+        "lastName": "Adams",
+        "phoneNumber": "6154748741",
+        "darkMode": false,
+        "lastFmUsername": "",
+        "id": 4
+      },
+      {
+        "email": "snoop@home.com",
+        "firstName": "Snoop",
+        "lastName": "Cat",
+        "phoneNumber": "6154748741",
+        "darkMode": false,
+        "lastFmUsername": "",
+        "id": 5
+      },
+      {
+        "email": "biggie@home.com",
+        "firstName": "Biggie",
+        "lastName": "Pawz",
+        "phoneNumber": "6154748741",
+        "darkMode": false,
+        "lastFmUsername": "",
+        "id": 6
+      }
+    ],
+    "items": [
+      {
+        "id": 1,
+        "itemName": "Iron",
+        "description": "Steamy One",
+        "room": "Laundry Room ",
+        "placement": "On shelf, with dust",
+        "notes": "Don't burn yourself again though...",
+        "categoryId": 1,
+        "locationId": 1,
+        "dateAdded": "October 25, 2020",
+        "userId": 1
+      },
+      {
+        "id": 2,
+        "itemName": "Ironing Board",
+        "description": "the mini table top one",
+        "room": "Laundry Room",
+        "placement": "Hanging beside dryer",
+        "notes": "it wiggles. pretend it doesn't though. ",
+        "categoryId": 1,
+        "locationId": 4,
+        "dateAdded": "October 25, 2020",
+        "userId": 1
+      },
+      {
+        "id": 3,
+        "itemName": "Glasses Wipes",
+        "description": "Individually Wrapped",
+        "room": "Home Office",
+        "placement": "2nd Drawer",
+        "notes": "They say anti-smudge... they lied. ",
+        "categoryId": 6,
+        "locationId": 5,
+        "dateAdded": "October 25, 2020",
+        "userId": 2
+      },
+      {
+        "id": 4,
+        "itemName": "Macbook Pro Charger",
+        "description": "MagSafe",
+        "room": "Kids Room",
+        "placement": "Closet, Tech Bin",
+        "notes": "Throwback Charger Type",
+        "categoryId": 2,
+        "locationId": 21,
+        "dateAdded": "October 26, 2020",
+        "userId": 1
+      },
+      {
+        "itemName": "Index Cards",
+        "description": "blank on both sides",
+        "room": "Home Office",
+        "placement": "School Supply Bin",
+        "notes": "roughly fifty million packs",
+        "categoryId": 6,
+        "locationId": 4,
+        "dateAdded": "October 26, 2020",
+        "userId": 2,
+        "id": 5
+      },
+      {
+        "itemName": "Charging Block",
+        "description": "To plug USB cord into wall",
+        "room": "Home Office",
+        "placement": "Cables Bin",
+        "notes": "3 three foot cords and 1 six food cord",
+        "locationId": 1,
+        "categoryId": 2,
+        "dateAdded": "October 26, 2020",
+        "userId": 2,
+        "id": 6
+      },
+      {
+        "itemName": "3\" Curling Iron",
+        "description": "Hot Tools Brand",
+        "room": "Bathroom",
+        "placement": "Under sink, hot tool bin",
+        "notes": "holds a good curl! ",
+        "categoryId": 4,
+        "locationId": 1,
+        "dateAdded": "October 27, 2020",
+        "userId": 1,
+        "id": 7
+      },
+      {
+        "itemName": "Trucker Hat",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "room": "Closet",
+        "placement": "in the 'junk' bin",
+        "notes": "Kindof smells like sweat & bad decisions",
+        "categoryId": 4,
+        "locationId": 1,
+        "dateAdded": "October 28, 2020",
+        "userId": 1,
+        "id": 8
+      },
+      {
+        "itemName": "Office Ping Pong",
+        "description": "Mini version of ping pong to play at work desk",
+        "room": "Closet",
+        "placement": "in the 'junk' bin",
+        "notes": "Almost got fired for this...",
+        "categoryId": 4,
+        "locationId": 1,
+        "dateAdded": "October 28, 2020",
+        "userId": 1,
+        "id": 9
+      },
+      {
+        "id": 10,
+        "itemName": "Calculator",
+        "description": "Basic with big buttons",
+        "room": "Home Office",
+        "placement": "2nd desk drawer",
+        "notes": "not the T9 calculator",
+        "categoryId": 2,
+        "locationId": 25,
+        "dateAdded": "October 28, 2020",
+        "userId": 3
+      },
+      {
+        "itemName": "Extra TCL Remote",
+        "description": "Just a spare",
+        "room": "Office",
+        "placement": "Desk Bottom Drawer",
+        "notes": "Why is there an extra though? ",
+        "categoryId": 2,
+        "locationId": 25,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 11
+      },
+      {
+        "itemName": "Apple Watch Power Bank",
+        "room": "Office",
+        "placement": "Desk Bottom Drawer",
+        "notes": "rechargeable  ",
+        "categoryId": 2,
+        "locationId": 25,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 12
+      },
+      {
+        "itemName": "Tiny Tweezers",
+        "room": "Bathroom",
+        "placement": "Medicine Cabinet",
+        "categoryId": 4,
+        "locationId": 25,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 13
+      },
+      {
+        "itemName": "Rubber Ducky",
+        "room": "Office",
+        "placement": "Desk Bottom Drawer",
+        "categoryId": 6,
+        "locationId": 25,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 14
+      },
+      {
+        "itemName": "arg ",
+        "description": "why",
+        "room": "doesnt",
+        "placement": "this",
+        "notes": "just",
+        "categoryId": 3,
+        "locationId": 23,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 15
+      },
+      {
+        "itemName": "what",
+        "description": "time",
+        "room": "will",
+        "placement": "this ",
+        "notes": "4:10",
+        "locationId": 25,
+        "categoryId": 2,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 16
+      },
+      {
+        "itemName": "one",
+        "description": "two",
+        "room": "three",
+        "placement": "four",
+        "notes": "five",
+        "categoryId": 7,
+        "locationId": 25,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 17
+      },
+      {
+        "itemName": "ilug",
+        "description": "jygq",
+        "room": "gcfutq",
+        "placement": "ufdqq",
+        "categoryId": 2,
+        "locationId": 24,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 18
+      },
+      {
+        "itemName": "asdf",
+        "description": "lskdfj",
+        "room": "sdvoihg",
+        "placement": "sovdih",
+        "categoryId": 3,
+        "locationId": 23,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 19
+      },
+      {
+        "itemName": "asdv",
+        "description": "sdvewaw",
+        "room": "awvbaw",
+        "placement": "abvwrw",
+        "notes": "abawrba",
+        "categoryId": 7,
+        "locationId": 25,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 20
+      },
+      {
+        "itemName": "asdve",
+        "description": "asewfge",
+        "room": "asbawb",
+        "placement": "arbaw",
+        "notes": "arga",
+        "categoryId": 7,
+        "locationId": 24,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 21
+      },
+      {
+        "itemName": "sdfca",
+        "description": "asvawe",
+        "room": "avwdawe",
+        "placement": "avwe",
+        "notes": "awv",
+        "categoryId": 7,
+        "locationId": 24,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 22
+      },
+      {
+        "itemName": "dsaf",
+        "description": "asdf",
+        "room": "asdf",
+        "placement": "asdf",
+        "categoryId": 7,
+        "locationId": 24,
+        "dateAdded": "October 28, 2020",
+        "userId": 3,
+        "id": 23
+      }
+    ],
+    "locations": [
+      {
+        "name": "Adams House",
+        "description": "Mama Adam's House",
+        "userId": 2,
+        "id": 1
+      },
+      {
+        "id": 2,
+        "name": "Storage Unit",
+        "description": "RedDot unit 54",
+        "userId": 1
+      },
+      {
+        "name": "Office",
+        "description": "physical office, not home office",
+        "userId": 1,
+        "id": 3
+      },
+      {
+        "name": "Backyard Shed",
+        "description": "",
+        "userId": 1,
+        "id": 4
+      },
+      {
+        "name": "Office Basement",
+        "description": "from parking garage, go through door 5a",
+        "userId": 2,
+        "id": 5
+      },
+      {
+        "name": "Home",
+        "description": "",
+        "userId": 1,
+        "id": 6
+      },
+      {
+        "name": "Mom's Garage",
+        "description": "",
+        "userId": 1,
+        "id": 7
+      },
+      {
+        "name": "Mom's Shed",
+        "description": "",
+        "userId": 2,
+        "id": 8
+      },
+      {
+        "name": "Mom's Attic",
+        "description": "",
+        "userId": 1,
+        "id": 9
+      },
+      {
+        "name": "Dad's Garage",
+        "description": "",
+        "userId": 1,
+        "id": 10
+      },
+      {
+        "name": "Basketball ",
+        "description": "",
+        "userId": 1,
+        "id": 11
+      },
+      {
+        "name": "Football",
+        "description": "",
+        "userId": 2,
+        "id": 12
+      },
+      {
+        "id": 13,
+        "name": "soccer",
+        "description": "tester location",
+        "userId": 1
+      },
+      {
+        "name": "Tennis",
+        "description": "",
+        "userId": 1,
+        "id": 14
+      },
+      {
+        "name": "Shoes",
+        "description": "",
+        "userId": 1,
+        "id": 15
+      },
+      {
+        "name": "Socks",
+        "description": "",
+        "userId": 1,
+        "id": 16
+      },
+      {
+        "name": "Pants",
+        "description": "",
+        "userId": 1,
+        "id": 17
+      },
+      {
+        "name": "Undies",
+        "description": "",
+        "userId": 1,
+        "id": 18
+      },
+      {
+        "name": "Leggings",
+        "description": "",
+        "userId": 1,
+        "id": 19
+      },
+      {
+        "name": "Shirt",
+        "description": "",
+        "userId": 1,
+        "id": 20
+      },
+      {
+        "name": "Other Office",
+        "description": "",
+        "userId": 1,
+        "id": 21
+      },
+      {
+        "name": "Mom's Bathroom",
+        "description": "",
+        "userId": 1,
+        "id": 22
+      },
+      {
+        "id": 23,
+        "name": "Sock Drawer",
+        "description": "Where I definitely DON'T hide snacks...",
+        "userId": 3
+      },
+      {
+        "name": "Other Sock Drawer",
+        "description": "yeah that one",
+        "userId": 3,
+        "id": 24
+      },
+      {
+        "name": "Our House",
+        "description": "",
+        "userId": 3,
+        "id": 25
+      }
+    ],
+    "categories": [
+      {
+        "name": "Small Applances",
+        "id": 1
+      },
+      {
+        "name": "Electronics",
+        "id": 2
+      },
+      {
+        "name": "Cleaning",
+        "id": 3
+      },
+      {
+        "name": "Self Care",
+        "id": 4
+      },
+      {
+        "name": "Pet",
+        "id": 5
+      },
+      {
+        "name": "Office Supply",
+        "id": 6
+      },
+      {
+        "name": "Clothing",
+        "id": 7
+      },
+      {
+        "name": "Kitchen Consumables",
+        "id": 8
+      }
+    ],
+    "sharedLocations": [
+      {
+        "id": 1,
+        "locationId": 2,
+        "userId": 1,
+        "date": "October 24, 2020"
+      },
+      {
+        "id": 2,
+        "locationId": 3,
+        "userId": 2,
+        "date": "October 24, 2020"
+      },
+      {
+        "id": 3,
+        "locationId": 2,
+        "userId": 2,
+        "date": "October 24, 2020"
+      },
+      {
+        "id": 4,
+        "locationId": 23,
+        "userId": 4,
+        "date": "October 24, 2020"
+      },
+      {
+        "id": 5,
+        "locationId": 23,
+        "userId": 2,
+        "date": "October 24, 2020"
+      },
+      {
+        "userId": 5,
+        "locationId": 24,
+        "id": 6,
+        "date": "October 24, 2020"
+      },
+      {
+        "userId": 2,
+        "locationId": 24,
+        "id": 7,
+        "date": "October 24, 2020"
+      },
+      {
+        "userId": 5,
+        "locationId": 24,
+        "id": 8,
+        "date": "October 24, 2020"
+      },
+      {
+        "userId": 1,
+        "locationId": 23,
+        "id": 9,
+        "date": "October 24, 2020"
+      },
+      {
+        "userId": 5,
+        "locationId": 23,
+        "date": "October 29, 2020",
+        "id": 10
+      }
+    ],
+    "connectedUsers": [
+      {
+        "id": 1,
+        "userId": 1,
+        "connectedUserId": 2,
+        "status": true,
+        "dateConnected": "October 27, 2020"
+      },
+      {
+        "id": 2,
+        "userId": 2,
+        "connectedUserId": 1,
+        "status": true,
+        "dateConnected": "October 27, 2020"
+      },
+      {
+        "id": 3,
+        "userId": 5,
+        "connectedUserId": 2,
+        "status": true,
+        "dateConnected": "October 30, 2020"
+      },
+      {
+        "userId": 2,
+        "connectedUserId": 5,
+        "status": true,
+        "dateConnected": "October 30, 2020",
+        "id": 4
+      },
+      {
+        "userId": 1,
+        "connectedUserId": 3,
+        "status": false,
+        "dateConnected": "November 8, 2020",
+        "id": 5
+      }
+    ],
+    "activity": [
+      {
+        "activityType": "Added A New Item",
+        "userId": 3,
+        "itemId": 9,
+        "locationId": 0,
+        "connectedUserId": 0,
+        "date": "October 28, 2020",
+        "id": 1
+      },
+      {
+        "activityType": "Added A New Location",
+        "userId": 2,
+        "itemId": 0,
+        "locationId": 3,
+        "connectedUserId": 0,
+        "date": "October 24, 2020",
+        "id": 2
+      },
+      {
+        "activityType": "Connected With",
+        "userId": 3,
+        "itemId": 0,
+        "locationId": 0,
+        "connectedUserId": 4,
+        "date": "October 14, 2020",
+        "id": 3
+      },
+      {
+        "activityType": "Added A New Item",
+        "userId": 3,
+        "itemId": 4,
+        "locationId": 0,
+        "connectedUserId": 0,
+        "date": "October 29, 2020",
+        "id": 4
+      },
+      {
+        "activityType": "Updated an Item",
+        "userId": 3,
+        "itemId": 10,
+        "locationId": 0,
+        "connectedUserId": 0,
+        "date": "October 29, 2020 at 11:09 AM",
+        "id": 5
+      }
+    ],
+    "lists": []
+  }

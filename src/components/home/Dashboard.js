@@ -14,7 +14,7 @@ export const DashboardView = () => {
 
 
     return (
-        <div class="pageComponent">
+        <div className="pageComponent">
 
             <Grid stackable celled='internally'>
                 <Grid.Row  columns={2} centered >
@@ -28,7 +28,7 @@ export const DashboardView = () => {
                     </Grid.Column>
                     <Grid.Column >
                         <Header as='h4'>Requests</Header>
-                        <Card.Group>
+                        <Card.Group >
                             <ConnectionProvider>
                                 <UserProvider>
                                     <ConnectionRequest />

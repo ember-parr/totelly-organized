@@ -5,7 +5,7 @@ import "./header.css"
 import HorizontalLogo from "../../images/LLogoHoriz.png";
 import {UserContext} from '../user/UserProvider'
 import { Segment, Image, Icon, Dropdown, Grid, Sticky, Menu } from 'semantic-ui-react'
-
+// ***** IMPORTANT: for mvp, code commented out. line 34 & line 44 deal with "my profile" button. line 45 is placeholder for MVP *****
 export const Header = () => {
     const {getUserById} = useContext(UserContext)
     const user = parseInt(localStorage.getItem("user"))
@@ -31,7 +31,7 @@ export const Header = () => {
             value: 'user',
             disabled: true
         },
-        { key: 'profile', text: 'Your Profile', value: 'profile'},
+        // { key: 'profile', text: 'Your Profile', value: 'profile'},
         { key: 'logout', text: 'Log Out', value: 'logout'}
     ]
 
@@ -40,7 +40,9 @@ export const Header = () => {
             localStorage.clear()
             window.location.reload()
         } else if (data.value === 'profile') {
-            history.push("/account")
+            console.log("account button pressed, commented out for MVP")
+            // history.push("/account")
+            history.push("/")
         }
     }
 
@@ -57,7 +59,7 @@ export const Header = () => {
                     </Grid.Column>
                     <Grid.Column width={3} floated='right'>
                         <Grid.Row stretched>
-                            <Dropdown  trigger={trigger} options={options} onChange={handleChange}/>
+                            <Dropdown  trigger={trigger} options={options} onClick={handleChange}/>
                         </Grid.Row>
                         </Grid.Column>
 

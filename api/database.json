@@ -877,6 +877,36 @@
       "userId": 5,
       "locationId": 10,
       "date": "November 9, 2020"
+    },
+    {
+      "userId": 5,
+      "locationId": 9,
+      "date": "REQUESTED",
+      "id": 40
+    },
+    {
+      "userId": 5,
+      "locationId": 13,
+      "date": "REQUESTED",
+      "id": 41
+    },
+    {
+      "userId": 5,
+      "locationId": 14,
+      "date": "REQUESTED",
+      "id": 42
+    },
+    {
+      "userId": 5,
+      "locationId": 17,
+      "date": "REQUESTED",
+      "id": 43
+    },
+    {
+      "userId": 5,
+      "locationId": 18,
+      "date": "REQUESTED",
+      "id": 44
     }
   ],
   "connectedUsers": [

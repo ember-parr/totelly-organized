@@ -104,7 +104,7 @@ export const ItemTable = () => {
                     <Table.HeaderCell width={1}>Category</Table.HeaderCell>
                     <Table.HeaderCell width={4}>Details</Table.HeaderCell>
                 </Table.Row>
-                </Table.Header>
+            </Table.Header>
 
         
             <Table.Body>

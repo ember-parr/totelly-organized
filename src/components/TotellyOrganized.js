@@ -6,7 +6,7 @@ import { Route, Redirect } from "react-router-dom";
 import { Footer } from "./nav/Footer";
 import {UserProvider} from './user/UserProvider'
 import {  Menu, Segment, Sidebar } from 'semantic-ui-react'
-import { SidebarNavitation } from "./nav/Navbar";
+import { SidebarNavigation } from "./nav/Navbar";
 import { Header } from './nav/Header'
 import "./TotellyOrganized.css"
 
@@ -30,7 +30,7 @@ export const TotellyOrganized = () => {
     </UserProvider>
               <Sidebar.Pushable    >
               <Sidebar as={Menu} animation='push' vertical icon='labeled' direction='left' visible style={{backgroundColor: '#def2f1'}}>
-                <SidebarNavitation />
+                <SidebarNavigation />
               </Sidebar>
               <Sidebar.Pusher className='pusherContent' >
                 <Segment basic >

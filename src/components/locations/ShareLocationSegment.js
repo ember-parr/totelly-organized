@@ -78,6 +78,7 @@ export const ShareLocationSegment = () => {
                     label="connections"
                     selection
                     search
+                    
                     />
             
             <Button 
@@ -87,6 +88,7 @@ export const ShareLocationSegment = () => {
                     event.preventDefault()
                     createSharedLocation()
                     notify.show('Location Shared!', "custom", 4000, myColor)
+                    
                 }}> Share Location </Button>
             <Notifications />
             

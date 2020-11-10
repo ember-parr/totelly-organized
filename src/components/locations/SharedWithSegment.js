@@ -4,9 +4,10 @@ import { LocationContext } from './LocationProvider'
 import Notifications, {notify} from 'react-notify-toast';
 import { Card, Button, Grid } from 'semantic-ui-react'
 
-export const SharedWithSegment = ({location}) => {
+export const SharedWithSegment = ({location, newAddition}) => {
     const {getSharedLocation, updateSharedLocation, deleteSharedLocation, getLocations } = useContext(LocationContext)
     const [filteredLocations, setFilteredLocations] = useState([])
+    const [requestClicked, setRequestClicked] = useState(false)
     let dateFormat = require('dateformat')
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")
@@ -15,12 +16,16 @@ export const SharedWithSegment = ({location}) => {
     useEffect(()=> {
         getLocations()
         .then(() => {
-
             getSharedLocation(location.id).then(location => {
                 setFilteredLocations(location)
             })
         })
-    }, [])
+        if(newAddition === true) {
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
+    }, [newAddition, requestClicked])
     
 
     let myColor = { background: '#2b7a78', text: "#FFFFFF" };
@@ -35,11 +40,23 @@ export const SharedWithSegment = ({location}) => {
             locationId: shareToApprove.locationId,
             date: currentDate
         })
+        if (requestClicked === false) {
+
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
     }
 
     const deleteRequest = (requestId) => {
         console.log("request id: ", requestId)
         deleteSharedLocation(requestId)
+        if (requestClicked === false) {
+
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
     }
 
     return (

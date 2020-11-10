@@ -153,7 +153,7 @@ export const LocationForm = () => {
                             
 
                     <Grid.Row columns={2}>
-                    <Grid.Column>
+                    <Grid.Column width={4}>
                         <form >
                             
                                 <h4>{`Edit ${location.name}'s Details`}</h4>
@@ -234,7 +234,7 @@ export const LocationForm = () => {
                         </Grid.Column>
 
 
-                        <Grid.Column key={location.userId}>
+                        <Grid.Column key={location.userId} width={12}>
                             
                                 <h4>Shared with:</h4>
                                     <SharedWithSegment location={location} />

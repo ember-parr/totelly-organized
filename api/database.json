@@ -109,10 +109,10 @@
       "id": 12
     },
     {
-      "firstName": "Jonas",
-      "lastName": "Bond",
+      "firstName": "Jeff",
+      "lastName": "Goldblum",
       "phoneNumber": 8675309615,
-      "email": "pharetra.sed@euultricessit.net",
+      "email": "jeff@home.com",
       "lastFmUsername": "nisi.",
       "darkMode": false,
       "id": 13
@@ -1568,10 +1568,10 @@
       "id": 5
     },
     {
+      "id": 6,
       "name": "My House",
-      "description": "The one I live in!",
-      "userId": 1,
-      "id": 6
+      "description": "The one I live in, most days",
+      "userId": 1
     },
     {
       "name": "Mom's Shed",
@@ -1764,6 +1764,12 @@
       "description": "",
       "userId": 4,
       "id": 54
+    },
+    {
+      "name": "garage",
+      "description": "",
+      "userId": 1,
+      "id": 55
     }
   ],
   "categories": [
@@ -2038,6 +2044,60 @@
       "locationId": 11,
       "date": "November 10, 2020",
       "id": 37
+    },
+    {
+      "userId": 2,
+      "locationId": 3,
+      "date": "REQUESTED",
+      "id": 38
+    },
+    {
+      "userId": 2,
+      "locationId": 4,
+      "date": "REQUESTED",
+      "id": 39
+    },
+    {
+      "userId": 3,
+      "locationId": 3,
+      "date": "REQUESTED",
+      "id": 40
+    },
+    {
+      "userId": 3,
+      "locationId": 4,
+      "date": "REQUESTED",
+      "id": 41
+    },
+    {
+      "userId": 3,
+      "locationId": 11,
+      "date": "REQUESTED",
+      "id": 42
+    },
+    {
+      "userId": 3,
+      "locationId": 13,
+      "date": "REQUESTED",
+      "id": 43
+    },
+    {
+      "id": 46,
+      "userId": 13,
+      "locationId": 6,
+      "date": "November 10, 2020"
+    },
+    {
+      "userId": 12,
+      "locationId": 6,
+      "date": "November 10, 2020",
+      "id": 47
+    },
+    {
+      "userId": 1,
+      "locationId": 8,
+      "date": "REQUESTED",
+      "id": 48
     }
   ],
   "connectedUsers": [
@@ -2112,11 +2172,11 @@
       "dateConnected": "November 9, 2020"
     },
     {
+      "id": 11,
       "userId": 8,
       "connectedUserId": 1,
-      "status": false,
-      "dateConnected": "November 9, 2020",
-      "id": 11
+      "status": true,
+      "dateConnected": "November 10, 2020"
     },
     {
       "userId": 1,
@@ -2133,11 +2193,60 @@
       "id": 13
     },
     {
+      "id": 14,
       "userId": 1,
       "connectedUserId": 12,
+      "status": true,
+      "dateConnected": "November 10, 2020"
+    },
+    {
+      "id": 15,
+      "userId": 1,
+      "connectedUserId": 11,
+      "status": true,
+      "dateConnected": "November 10, 2020"
+    },
+    {
+      "userId": 1,
+      "connectedUserId": 8,
+      "status": true,
+      "dateConnected": "November 10, 2020",
+      "id": 16
+    },
+    {
+      "userId": 12,
+      "connectedUserId": 1,
+      "status": true,
+      "dateConnected": "November 10, 2020",
+      "id": 19
+    },
+    {
+      "id": 20,
+      "userId": 1,
+      "connectedUserId": 13,
+      "status": true,
+      "dateConnected": "November 10, 2020"
+    },
+    {
+      "userId": 13,
+      "connectedUserId": 1,
+      "status": true,
+      "dateConnected": "November 10, 2020",
+      "id": 21
+    },
+    {
+      "userId": 7,
+      "connectedUserId": 1,
       "status": false,
-      "dateConnected": "November 9, 2020",
-      "id": 14
+      "dateConnected": "November 10, 2020",
+      "id": 22
+    },
+    {
+      "userId": 11,
+      "connectedUserId": 1,
+      "status": true,
+      "dateConnected": "November 10, 2020",
+      "id": 23
     }
   ],
   "activity": [
@@ -2581,6 +2690,51 @@
       "connectedUserId": 10,
       "date": "November 9, 2020 at 5:05 PM",
       "id": 53
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 8,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 11,
+      "date": "November 10, 2020 at 1:54 AM",
+      "id": 54
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 14,
+      "date": "November 10, 2020 at 2:00 AM",
+      "id": 55
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 20,
+      "date": "November 10, 2020 at 2:03 AM",
+      "id": 56
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 6,
+      "connectedUserId": 1,
+      "date": "November 10, 2020 at 11:22 AM",
+      "id": 57
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 15,
+      "date": "November 10, 2020 at 11:23 AM",
+      "id": 58
     }
   ],
   "lists": []

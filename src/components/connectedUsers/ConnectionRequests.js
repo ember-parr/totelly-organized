@@ -188,7 +188,7 @@ export const ConnectionRequest = () => {
     return (
         <>
         <Card.Group itemsPerRow={2} className="userRequestsCardGroup">
-            {filteredFriendUsers.map((user) => {
+            {filteredFriendUsers.slice(0,3).map((user) => {
                 return (
                     <>
                     <Card key={user.id} className="userRequestCard">
@@ -225,7 +225,7 @@ export const ConnectionRequest = () => {
             })}
 
 
-            {usersShareRequests.map((request) => {
+            {usersShareRequests.slice(0,3).map((request) => {
                 return (
                     <>
                         <Card key={request.id} className="userRequestCard">

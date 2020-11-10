@@ -11,7 +11,7 @@ let currentDate = dateFormat(now, "longDate")
 
 export const ShareLocationSegment = () => {
     const {connections, getConnection} = useContext(ConnectionContext)
-    const {shareLocationWithUser, getSharedLocation, getLocations, Locations} = useContext(LocationContext)
+    const {shareLocationWithUser, getSharedLocation } = useContext(LocationContext)
     const currentUser = localStorage.getItem("user")
     const [thing, setThing] = useState({})
     const [sharedWith, setSharedWith] = useState([])

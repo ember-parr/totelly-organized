@@ -5,7 +5,7 @@ import Notifications, {notify} from 'react-notify-toast';
 import { Card, Button, Grid } from 'semantic-ui-react'
 
 export const SharedWithSegment = ({location}) => {
-    const {getSharedLocation, updateSharedLocation, deleteSharedLocation, getLocations, Locations} = useContext(LocationContext)
+    const {getSharedLocation, updateSharedLocation, deleteSharedLocation, getLocations } = useContext(LocationContext)
     const [filteredLocations, setFilteredLocations] = useState([])
     let dateFormat = require('dateformat')
     let now = new Date()

@@ -28,7 +28,7 @@ export const ConnectionRequest = () => {
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")
     let currentTime = dateFormat(now, "shortTime")
-
+    const [requestClicked, setRequestClicked] = useState(false)
     const currentUser = parseInt(localStorage.user)
     const usersLocations = Locations.filter(loc => loc.userId === currentUser)
     const usersLocationIds = usersLocations.map(location => location.id)
@@ -41,12 +41,12 @@ export const ConnectionRequest = () => {
         .then(req => {
             setShareRequests(req)
         })
-    }, [Locations, getLocations, getShareRequests])
+    }, [requestClicked])
 
     //get friends and users from database when searchTerms or friend status changes
     useEffect(() => {
         getConnection().then(getUsers);
-    }, [])
+    }, [requestClicked])
 
     
 
@@ -62,11 +62,23 @@ export const ConnectionRequest = () => {
                 console.log("nothing to delete?")
             }
         })
+        if (requestClicked === false) {
+
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
     }
 
     const deleteRequest = (requestId) => {
         console.log("request id: ", requestId)
         deleteSharedLocation(requestId)
+        if (requestClicked === false) {
+
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
     }
 
     const approveConnection = (UserToapprove) => {
@@ -94,6 +106,12 @@ export const ConnectionRequest = () => {
                     connectedUserId: connection.id,
                     date: currentDate + " at " + currentTime
                 })
+                if (requestClicked === false) {
+
+                    setRequestClicked(true)
+                } else {
+                    setRequestClicked(false)
+                }
             } else if (connection.userId === UserToapprove && connection.connectedUserId === currentUser) {
                 updateConnection({
                     id: connection.id,
@@ -116,6 +134,12 @@ export const ConnectionRequest = () => {
                     connectedUserId: connection.id,
                     date: currentDate + " at " + currentTime
                 })
+                if (requestClicked === false) {
+
+                    setRequestClicked(true)
+                } else {
+                    setRequestClicked(false)
+                }
             } else {
                 console.log("nothing to approve?")
             }
@@ -129,6 +153,12 @@ export const ConnectionRequest = () => {
             locationId: shareToApprove.locationId,
             date: currentDate
         })
+        if (requestClicked === false) {
+
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
     }
 
 

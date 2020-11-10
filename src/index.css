@@ -91,3 +91,9 @@ code {
   flex-shrink: 4 !important;
   min-width: 75px !important;
 }
+
+.sharedWithCard {
+  flex-grow: 3 !important;
+  flex-shrink: 4 !important;
+  min-width: 30px !important;
+}

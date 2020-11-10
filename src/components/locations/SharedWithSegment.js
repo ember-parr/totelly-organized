@@ -2,7 +2,7 @@
 import React, {useContext, useEffect, useState} from "react"
 import { LocationContext } from './LocationProvider'
 import Notifications, {notify} from 'react-notify-toast';
-import { Card, Button } from 'semantic-ui-react'
+import { Card, Button, Grid } from 'semantic-ui-react'
 
 export const SharedWithSegment = ({location}) => {
     const {getSharedLocation, updateSharedLocation, deleteSharedLocation, getLocations, Locations} = useContext(LocationContext)
@@ -44,12 +44,13 @@ export const SharedWithSegment = ({location}) => {
 
     return (
         <>
-            <Card.Group>
+        <Grid  columns={8}  >
+            <Card.Group className="spaceBetween">
                 {filteredLocations.map((loc) => {
                     if (loc.date === "REQUESTED") {
                         return (
                             <>
-                            <Card key={loc.userId}>
+                            <Card key={loc.userId} className="sharedWithCard">
                                 <Card.Content>
                                 <Card.Header>{loc.user.firstName} {loc.user.lastName}</Card.Header>
                                     <Card.Meta>Request Pending...</Card.Meta>
@@ -78,7 +79,7 @@ export const SharedWithSegment = ({location}) => {
                     } else {
                         return (
                             <>
-                            <Card key={loc.userId}>
+                            <Card key={loc.userId} className="sharedWithCard">
                                 <Card.Content>
                                 <Card.Header>{loc.user.firstName} {loc.user.lastName}</Card.Header>
                                     <Card.Meta>{loc.user.email}</Card.Meta>
@@ -94,6 +95,7 @@ export const SharedWithSegment = ({location}) => {
                     }
                 })}
             </Card.Group>
+            </Grid>
         </>
     )
 }

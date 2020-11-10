@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useContext, useEffect, useState} from 'react'
 import { Segment, Dropdown, Button  } from 'semantic-ui-react'
 import { useParams } from 'react-router-dom';
@@ -10,15 +11,29 @@ let currentDate = dateFormat(now, "longDate")
 
 export const ShareLocationSegment = () => {
     const {connections, getConnection} = useContext(ConnectionContext)
-    const {shareLocationWithUser} = useContext(LocationContext)
+    const {shareLocationWithUser, getSharedLocation, getLocations, Locations} = useContext(LocationContext)
     const currentUser = localStorage.getItem("user")
     const [thing, setThing] = useState({})
+    const [sharedWith, setSharedWith] = useState([])
+    const userIdsWithAccess = sharedWith.map((share) => share.userId)
     const locationId = useParams()
-    const connectedUsers = connections.filter(connection => connection.connectedUserId === parseInt(currentUser) && connection.status === true)
+    const fixedLocationId = parseInt(locationId.locationId)
+    const connectedUsers = connections.filter(connection => connection.connectedUserId === parseInt(currentUser) && connection.status === true && userIdsWithAccess.includes(connection.userId) === false)
 
-    useEffect(() => {
+    useEffect(()=> {
         getConnection()
     })
+
+    useEffect(()=> {
+        getLocations()
+        .then(() => {
+
+            getSharedLocation(fixedLocationId).then(location => {
+                setSharedWith(location)
+            })
+        })
+    }, [Locations])
+
 
     const handleDropdown = (event, data) => {
         const newThing = { ...thing }

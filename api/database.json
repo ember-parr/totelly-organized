@@ -2002,6 +2002,30 @@
       "locationId": 39,
       "userId": 5,
       "date": "November 8, 2020"
+    },
+    {
+      "id": 31,
+      "userId": 9,
+      "locationId": 3,
+      "date": "November 9, 2020"
+    },
+    {
+      "userId": 9,
+      "locationId": 2,
+      "date": "REQUESTED",
+      "id": 32
+    },
+    {
+      "userId": 2,
+      "locationId": 13,
+      "date": "REQUESTED",
+      "id": 33
+    },
+    {
+      "userId": 1,
+      "locationId": 8,
+      "date": "REQUESTED",
+      "id": 34
     }
   ],
   "connectedUsers": [
@@ -2088,6 +2112,34 @@
       "status": true,
       "dateConnected": "November 9, 2020",
       "id": 12
+    },
+    {
+      "userId": 4,
+      "connectedUserId": 1,
+      "status": false,
+      "dateConnected": "November 9, 2020",
+      "id": 13
+    },
+    {
+      "id": 14,
+      "userId": 1,
+      "connectedUserId": 12,
+      "status": true,
+      "dateConnected": "November 9, 2020"
+    },
+    {
+      "userId": 11,
+      "connectedUserId": 1,
+      "status": false,
+      "dateConnected": "November 9, 2020",
+      "id": 15
+    },
+    {
+      "userId": 12,
+      "connectedUserId": 1,
+      "status": true,
+      "dateConnected": "November 9, 2020",
+      "id": 16
     }
   ],
   "activity": [
@@ -2344,15 +2396,6 @@
       "id": 29
     },
     {
-      "activityType": "Connected With",
-      "userId": 9,
-      "itemId": 1,
-      "locationId": 1,
-      "connectedUserId": 16,
-      "date": "October 31, 2020 at 11:06 AM",
-      "id": 30
-    },
-    {
       "activityType": "Updated Their Location",
       "userId": 1,
       "itemId": 1,
@@ -2378,15 +2421,6 @@
       "connectedUserId": 1,
       "date": "October 31, 2020 at 11:29 AM",
       "id": 34
-    },
-    {
-      "activityType": "Connected With",
-      "userId": 1,
-      "itemId": 1,
-      "locationId": 1,
-      "connectedUserId": 24,
-      "date": "November 8, 2020 at 11:09 PM",
-      "id": 35
     },
     {
       "activityType": "Updated Their Location",
@@ -2549,6 +2583,15 @@
       "connectedUserId": 10,
       "date": "November 9, 2020 at 5:05 PM",
       "id": 53
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 14,
+      "date": "November 9, 2020 at 8:29 PM",
+      "id": 54
     }
   ],
   "lists": []

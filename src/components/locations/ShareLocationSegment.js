@@ -14,13 +14,10 @@ export const ShareLocationSegment = () => {
     const currentUser = localStorage.getItem("user")
     const [thing, setThing] = useState({})
     const locationId = useParams()
-    const usersConnectedUsers = connections.filter(cons => cons.connectedUserId === parseInt(currentUser))
-    // let currentLocation = location.id
+    const connectedUsers = connections.filter(connection => connection.connectedUserId === parseInt(currentUser) && connection.status === true)
 
     useEffect(() => {
         getConnection()
-        
-        
     })
 
     const handleDropdown = (event, data) => {
@@ -49,10 +46,10 @@ export const ShareLocationSegment = () => {
             
                 <Dropdown 
                     placeholder='Choose from your connected users'
-                    options={usersConnectedUsers.map(connection => (
+                    options={connectedUsers.map(connection => (
                         {
                             key: connection.userId,
-                            text: connection.user.firstName +" " + connection.user.lastName,
+                            text: connection.user?.firstName +" " + connection.user?.lastName,
                             value: connection.userId
                         }
                     ))}

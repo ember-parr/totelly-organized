@@ -1,2555 +1,2587 @@
 {
-    "users": [
-      {
-        "firstName": "Ember",
-        "lastName": "Parr",
-        "phoneNumber": 6158150173,
-        "email": "ember@emberparr.com",
-        "lastFmUsername": "emberparr",
-        "darkMode": false,
-        "id": 1
-      },
-      {
-        "firstName": "Justin",
-        "lastName": "Adams",
-        "phoneNumber": 6148745147,
-        "email": "justin@home.com",
-        "lastFmUsername": "justinadams",
-        "darkMode": false,
-        "id": 2
-      },
-      {
-        "firstName": "Aiden",
-        "lastName": "Parr",
-        "phoneNumber": 6154748741,
-        "email": "aiden@home.com",
-        "lastFmUsername": "aidenparr",
-        "darkMode": false,
-        "id": 3
-      },
-      {
-        "firstName": "Lexi",
-        "lastName": "Adams",
-        "phoneNumber": 6154748741,
-        "email": "lexi@home.com",
-        "lastFmUsername": "lexiadams",
-        "darkMode": false,
-        "id": 4
-      },
-      {
-        "firstName": "Snoop",
-        "lastName": "Cat",
-        "phoneNumber": 6154748741,
-        "email": "snoop@home.com",
-        "lastFmUsername": "snoopcat",
-        "darkMode": false,
-        "id": 5
-      },
-      {
-        "firstName": "Biggie",
-        "lastName": "Pawz",
-        "phoneNumber": 6154748741,
-        "email": "biggie@home.com",
-        "lastFmUsername": "biggiepawz",
-        "darkMode": false,
-        "id": 6
-      },
-      {
-        "firstName": "Brenda",
-        "lastName": "Long",
-        "phoneNumber": 6154748742,
-        "email": "brenda@nss.com",
-        "lastFmUsername": "brendalong",
-        "darkMode": false,
-        "id": 7
-      },
-      {
-        "firstName": "Adam",
-        "lastName": "S.",
-        "phoneNumber": 4514785454,
-        "email": "adam@nss.com",
-        "lastFmUsername": "adams",
-        "darkMode": false,
-        "id": 8
-      },
-      {
-        "firstName": "Sage",
-        "lastName": "K.",
-        "phoneNumber": 4785142424,
-        "email": "sage@nss.com",
-        "lastFmUsername": "sagek",
-        "darkMode": false,
-        "id": 9
-      },
-      {
-        "firstName": "John",
-        "lastName": "Wark",
-        "phoneNumber": 8675309615,
-        "email": "john@nss.com",
-        "lastFmUsername": "volutpat",
-        "darkMode": false,
-        "id": 10
-      },
-      {
-        "firstName": "Paul ",
-        "lastName": "Buchanan",
-        "phoneNumber": 8675309615,
-        "email": "paul@home.com",
-        "lastFmUsername": "euismod",
-        "darkMode": false,
-        "id": 11
-      },
-      {
-        "firstName": "Rebecca",
-        "lastName": "Buchanan",
-        "phoneNumber": 8675309615,
-        "email": "rebecca@home.com",
-        "lastFmUsername": "arcu.",
-        "darkMode": true,
-        "id": 12
-      },
-      {
-        "firstName": "Jonas",
-        "lastName": "Bond",
-        "phoneNumber": 8675309615,
-        "email": "pharetra.sed@euultricessit.net",
-        "lastFmUsername": "nisi.",
-        "darkMode": false,
-        "id": 13
-      },
-      {
-        "firstName": "Shafira",
-        "lastName": "Walton",
-        "phoneNumber": 8675309615,
-        "email": "Cum@felis.net",
-        "lastFmUsername": "Donec",
-        "darkMode": false,
-        "id": 14
-      },
-      {
-        "firstName": "Nissim",
-        "lastName": "Christensen",
-        "phoneNumber": 8675309615,
-        "email": "purus.ac.tellus@liberoProin.co.uk",
-        "lastFmUsername": "lobortis",
-        "darkMode": false,
-        "id": 15
-      },
-      {
-        "firstName": "Ayanna",
-        "lastName": "Flores",
-        "phoneNumber": 8675309615,
-        "email": "vitae.orci@montesnascetur.ca",
-        "lastFmUsername": "id,",
-        "darkMode": false,
-        "id": 16
-      },
-      {
-        "firstName": "Quin",
-        "lastName": "Burch",
-        "phoneNumber": 8675309615,
-        "email": "erat.volutpat.Nulla@rutrumFuscedolor.org",
-        "lastFmUsername": "eros.",
-        "darkMode": false,
-        "id": 17
-      },
-      {
-        "firstName": "Edan",
-        "lastName": "Harrell",
-        "phoneNumber": 8675309615,
-        "email": "id.sapien@turpisnonenim.edu",
-        "lastFmUsername": "et",
-        "darkMode": false,
-        "id": 18
-      },
-      {
-        "firstName": "Robert",
-        "lastName": "Farrell",
-        "phoneNumber": 8675309615,
-        "email": "amet@Donec.edu",
-        "lastFmUsername": "Nunc",
-        "darkMode": true,
-        "id": 19
-      },
-      {
-        "firstName": "Calvin",
-        "lastName": "Pruitt",
-        "phoneNumber": 8675309615,
-        "email": "magna@suscipitest.net",
-        "lastFmUsername": "egestas",
-        "darkMode": true,
-        "id": 20
-      },
-      {
-        "firstName": "Burke",
-        "lastName": "Ramos",
-        "phoneNumber": 8675309615,
-        "email": "ultrices.posuere.cubilia@sit.ca",
-        "lastFmUsername": "Maecenas",
-        "darkMode": true,
-        "id": 21
-      },
-      {
-        "firstName": "Patience",
-        "lastName": "Ashley",
-        "phoneNumber": 8675309615,
-        "email": "arcu.Vestibulum@vulputaterisus.net",
-        "lastFmUsername": "Vivamus",
-        "darkMode": true,
-        "id": 22
-      },
-      {
-        "firstName": "Chloe",
-        "lastName": "Gibson",
-        "phoneNumber": 8675309615,
-        "email": "molestie.in.tempus@interdumNuncsollicitudin.ca",
-        "lastFmUsername": "sociosqu",
-        "darkMode": false,
-        "id": 23
-      },
-      {
-        "firstName": "Ruth",
-        "lastName": "Knight",
-        "phoneNumber": 8675309615,
-        "email": "fringilla.cursus@cursusinhendrerit.com",
-        "lastFmUsername": "nec",
-        "darkMode": true,
-        "id": 24
-      },
-      {
-        "firstName": "Keiko",
-        "lastName": "Duke",
-        "phoneNumber": 8675309615,
-        "email": "molestie@egetmetus.edu",
-        "lastFmUsername": "tortor",
-        "darkMode": false,
-        "id": 25
-      }
-    ],
-    "items": [
-      {
-        "id": 1,
-        "itemName": "Iron",
-        "description": "Steamy One",
-        "room": "Laundry Room ",
-        "placement": "On shelf, with dust",
-        "notes": "Don't burn yourself again though...",
-        "categoryId": 18,
-        "locationId": 6,
-        "dateAdded": "October 25, 2020",
-        "userId": 1
-      },
-      {
-        "id": 2,
-        "itemName": "Ironing Board",
-        "description": "the mini table top one",
-        "room": "Laundry Room",
-        "placement": "Hanging beside dryer",
-        "notes": "it wiggles. pretend it doesn't though. ",
-        "categoryId": 18,
-        "locationId": 6,
-        "dateAdded": "October 25, 2020",
-        "userId": 1
-      },
-      {
-        "id": 3,
-        "itemName": "Glasses Wipes",
-        "description": "Individually Wrapped",
-        "room": "Home Office",
-        "placement": "2nd Drawer",
-        "notes": "They say anti-smudge... they lied. ",
-        "categoryId": 13,
-        "locationId": 32,
-        "dateAdded": "October 25, 2020",
-        "userId": 7
-      },
-      {
-        "id": 4,
-        "itemName": "Macbook Pro Charger",
-        "description": "MagSafe",
-        "room": "Kids Room",
-        "placement": "Closet, Tech Bin",
-        "notes": "Throwback Charger Type",
-        "categoryId": 7,
-        "locationId": 6,
-        "dateAdded": "October 26, 2020",
-        "userId": 1
-      },
-      {
-        "id": 5,
-        "itemName": "Index Cards",
-        "description": "blank on both sides",
-        "room": "Home Office",
-        "placement": "School Supply Bin",
-        "notes": "roughly fifty million packs",
-        "categoryId": 13,
-        "locationId": 54,
-        "dateAdded": "October 26, 2020",
-        "userId": 4
-      },
-      {
-        "id": 6,
-        "itemName": "Charging Block",
-        "description": "To plug USB cord into wall",
-        "room": "Home Office",
-        "placement": "Cables Bin",
-        "notes": "3 three foot cords and 1 six food cord",
-        "categoryId": 7,
-        "locationId": 5,
-        "dateAdded": "October 26, 2020",
-        "userId": 2
-      },
-      {
-        "id": 7,
-        "itemName": "3\" Curling Iron",
-        "description": "Hot Tools Brand",
-        "room": "Bathroom",
-        "placement": "Under sink, hot tool bin",
-        "notes": "holds a good curl! ",
-        "categoryId": 15,
-        "locationId": 6,
-        "dateAdded": "October 27, 2020",
-        "userId": 1
-      },
-      {
-        "id": 8,
-        "itemName": "Trucker Hat",
-        "description": "for when I want to rock the \"dad bod\" look",
-        "room": "Closet",
-        "placement": "in the 'junk' bin",
-        "notes": "Kindof smells like sweat & bad decisions",
-        "categoryId": 4,
-        "locationId": 6,
-        "dateAdded": "October 28, 2020",
-        "userId": 1
-      },
-      {
-        "id": 9,
-        "itemName": "Office Ping Pong",
-        "description": "Mini version of ping pong to play at work desk",
-        "room": "Closet",
-        "placement": "in the 'junk' bin",
-        "notes": "Almost got fired for this...",
-        "categoryId": 13,
-        "locationId": 3,
-        "dateAdded": "October 28, 2020",
-        "userId": 1
-      },
-      {
-        "id": 10,
-        "itemName": "Calculator",
-        "description": "Basic with big buttons",
-        "room": "Home Office",
-        "placement": "2nd desk drawer",
-        "notes": "not the T9 calculator",
-        "categoryId": 13,
-        "locationId": 6,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 1
-      },
-      {
-        "id": 11,
-        "itemName": "Extra TCL Remote",
-        "description": "Just a spare",
-        "room": "Office",
-        "placement": "Desk Bottom Drawer",
-        "notes": "Why is there an extra though? ",
-        "categoryId": 7,
-        "locationId": 6,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 1
-      },
-      {
-        "id": 12,
-        "itemName": "Apple Watch Power Bank",
-        "description": "",
-        "room": "Office",
-        "placement": "Desk Bottom Drawer",
-        "notes": "rechargeable  ",
-        "categoryId": 7,
-        "locationId": 5,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 2
-      },
-      {
-        "id": 13,
-        "itemName": "Tiny Tweezers",
-        "description": "not good for eyebrows. ",
-        "room": "Bathroom",
-        "placement": "Medicine Cabinet",
-        "notes": "",
-        "categoryId": 15,
-        "locationId": 54,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 4
-      },
-      {
-        "id": 14,
-        "itemName": "Rubber Ducky",
-        "description": "",
-        "room": "Office",
-        "placement": "Desk Bottom Drawer",
-        "notes": "",
-        "categoryId": 20,
-        "locationId": 6,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 1
-      },
-      {
-        "id": 15,
-        "itemName": "Postage Stamps",
-        "description": "Forever stamps from moms wedding invites",
-        "room": "Guest Room",
-        "placement": "",
-        "notes": "",
-        "categoryId": 13,
-        "locationId": 24,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 12
-      },
-      {
-        "id": 16,
-        "itemName": "Balloons",
-        "description": "time",
-        "room": "Guest Room",
-        "placement": "",
-        "notes": "",
-        "categoryId": 21,
-        "locationId": 39,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 9
-      },
-      {
-        "id": 17,
-        "itemName": "Shovel",
-        "description": "two",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 14,
-        "locationId": 8,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 2
-      },
-      {
-        "id": 18,
-        "itemName": "White Out",
-        "description": "bulk box of extras",
-        "room": "gcfutq",
-        "placement": "",
-        "notes": "",
-        "categoryId": 13,
-        "locationId": 54,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 4
-      },
-      {
-        "id": 19,
-        "itemName": "Spool of Wire",
-        "description": "lskdfj",
-        "room": "Storage Closet",
-        "placement": "",
-        "notes": "",
-        "categoryId": 6,
-        "locationId": 45,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 11
-      },
-      {
-        "id": 20,
-        "itemName": "Vase",
-        "description": "crystal one I got from grandma",
-        "room": "bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 6,
-        "locationId": 8,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 2
-      },
-      {
-        "id": 21,
-        "itemName": "Pocket watch",
-        "description": "fake gold one",
-        "room": "Dressing Room",
-        "placement": "",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 53,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 3
-      },
-      {
-        "id": 22,
-        "itemName": "Toy Robot",
-        "description": "remote control is with the robot but batteries are dead",
-        "room": "bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 20,
-        "locationId": 53,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 3
-      },
-      {
-        "id": 23,
-        "itemName": "Plush Frog",
-        "description": "ribbit ribbit",
-        "room": "Billiard Room",
-        "placement": "",
-        "notes": "",
-        "categoryId": 20,
-        "locationId": 54,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 4
-      },
-      {
-        "id": 24,
-        "itemName": "Spice Bottle",
-        "description": "Old school mac ",
-        "room": "outdoor shed",
-        "placement": "on a random shelf",
-        "notes": "",
-        "categoryId": 11,
-        "locationId": 39,
-        "dateAdded": "October 30, 2020 at 1:03 AM",
-        "userId": 9
-      },
-      {
-        "id": 25,
-        "itemName": "Mouse Pad",
-        "description": "The one with cats on it",
-        "room": "Office",
-        "placement": "Desk",
-        "notes": "",
-        "categoryId": 13,
-        "locationId": 6,
-        "dateAdded": "October 30, 2020 at 1:04 AM",
-        "userId": 1
-      },
-      {
-        "id": 26,
-        "itemName": "#1 Sweater",
-        "description": "for when I want to razzle dazle",
-        "room": "kitchen",
-        "placement": "framed on the wall",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 28,
-        "dateAdded": "October 30, 2020 at 1:05 AM",
-        "userId": 8
-      },
-      {
-        "id": 27,
-        "itemName": "Jeff Goldblum Poster",
-        "description": "collectors edition",
-        "room": "bedroom",
-        "placement": "on the wall",
-        "notes": "",
-        "categoryId": 5,
-        "locationId": 39,
-        "dateAdded": "October 30, 2020 at 1:23 AM",
-        "userId": 9
-      },
-      {
-        "id": 28,
-        "itemName": "Mouse Pad",
-        "description": "With Jeff Goldblum's Face",
-        "room": "Guest Room",
-        "placement": "on my desk... obviously",
-        "notes": "",
-        "categoryId": 5,
-        "locationId": 39,
-        "dateAdded": "October 30, 2020 at 1:33 AM",
-        "userId": 9
-      },
-      {
-        "id": 29,
-        "itemName": "Toy mouse",
-        "description": "",
-        "room": "Kids Room",
-        "placement": "under the couch",
-        "notes": "",
-        "categoryId": 16,
-        "locationId": 29,
-        "dateAdded": "October 30, 2020 at 1:47 AM",
-        "userId": 5
-      },
-      {
-        "id": 30,
-        "itemName": "Cat Wings",
-        "description": "super scary costume",
-        "room": "basement",
-        "placement": "storage area, 4th shelf",
-        "notes": "fits snoop but too big for biggie",
-        "categoryId": 16,
-        "locationId": 2,
-        "dateAdded": "October 30, 2020 at 9:13 AM",
-        "userId": 1
-      },
-      {
-        "id": 31,
-        "itemName": "Toenail Clippers",
-        "description": "Sharpest Ones",
-        "room": "Bathroom",
-        "placement": "bottom drawer under sink",
-        "notes": "",
-        "categoryId": 15,
-        "locationId": 6,
-        "dateAdded": "October 30, 2020 at 9:14 AM",
-        "userId": 1
-      },
-      {
-        "id": 32,
-        "itemName": "Rose Bud Lip Stuff",
-        "description": "In the tube",
-        "room": "Bathroom",
-        "placement": "Medicine Cabinet",
-        "notes": "",
-        "categoryId": 15,
-        "locationId": 6,
-        "dateAdded": "November 8, 2020 at 11:58 PM",
-        "userId": 1
-      },
-      {
-        "id": 33,
-        "itemName": "Tire Swing",
-        "description": "Whoever said money can't buy happiness didn't know where to shop.",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 14,
-        "locationId": 54,
-        "dateAdded": "July 10th, 2020",
-        "userId": 4
-      },
-      {
-        "id": 34,
-        "itemName": "Pair of Handcuffs",
-        "description": "A woman is like a tea bag – you can't tell how strong she is until you put her in hot water.",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 5,
-        "locationId": 49,
-        "dateAdded": "February 11th, 2021",
-        "userId": 16
-      },
-      {
-        "id": 35,
-        "itemName": "Baseball Hat",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 54,
-        "dateAdded": "June 29th, 2020",
-        "userId": 4
-      },
-      {
-        "id": 36,
-        "itemName": "Locket",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 38,
-        "dateAdded": "August 24th, 2021",
-        "userId": 10
-      },
-      {
-        "id": 37,
-        "itemName": "Shawl",
-        "description": "",
-        "room": "Bathroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 28,
-        "dateAdded": "November 13th, 2019",
-        "userId": 8
-      },
-      {
-        "id": 38,
-        "itemName": "Bottle of Ink",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 13,
-        "locationId": 50,
-        "dateAdded": "February 5th, 2021",
-        "userId": 10
-      },
-      {
-        "id": 39,
-        "itemName": "tea Cup",
-        "description": "",
-        "room": "Guest Room",
-        "placement": "",
-        "notes": "",
-        "categoryId": 11,
-        "locationId": 38,
-        "dateAdded": "July 14th, 2021",
-        "userId": 10
-      },
-      {
-        "id": 40,
-        "itemName": "Plush Octopus",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 20,
-        "locationId": 51,
-        "dateAdded": "July 26th, 2020",
-        "userId": 25
-      },
-      {
-        "id": 41,
-        "itemName": "Photo Album ",
-        "description": "",
-        "room": "Garage",
-        "placement": "",
-        "notes": "",
-        "categoryId": 12,
-        "locationId": 28,
-        "dateAdded": "December 3rd, 2020",
-        "userId": 8
-      },
-      {
-        "id": 42,
-        "itemName": "Pair of Dice",
-        "description": "",
-        "room": "Bathroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 12,
-        "locationId": 28,
-        "dateAdded": "November 6th, 2020",
-        "userId": 8
-      },
-      {
-        "id": 43,
-        "itemName": "Speakers",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 7,
-        "locationId": 51,
-        "dateAdded": "April 24th, 2021",
-        "userId": 25
-      },
-      {
-        "id": 44,
-        "itemName": "youbetcha' magnet",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 12,
-        "locationId": 23,
-        "dateAdded": "June 11th, 2020",
-        "userId": 12
-      },
-      {
-        "id": 45,
-        "itemName": "Pair of knitting needles",
-        "description": "",
-        "room": "Garage",
-        "placement": "",
-        "notes": "",
-        "categoryId": 1,
-        "locationId": 34,
-        "dateAdded": "April 24th, 2020",
-        "userId": 19
-      },
-      {
-        "id": 46,
-        "itemName": "thermometer",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 9,
-        "locationId": 47,
-        "dateAdded": "May 21st, 2021",
-        "userId": 23
-      },
-      {
-        "id": 47,
-        "itemName": "Lip Gloss",
-        "description": "",
-        "room": "Home Office",
-        "placement": "",
-        "notes": "",
-        "categoryId": 15,
-        "locationId": 37,
-        "dateAdded": "December 8th, 2020",
-        "userId": 14
-      },
-      {
-        "id": 48,
-        "itemName": "Stockings",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "eget",
-        "notes": "",
-        "categoryId": 17,
-        "locationId": 2,
-        "dateAdded": "October 29th, 2020",
-        "userId": 1
-      },
-      {
-        "id": 49,
-        "itemName": "Spectacles",
-        "description": "The two most common elements in the universe are hydrogen and stupidity.",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 46,
-        "dateAdded": "November 14th, 2020",
-        "userId": 20
-      },
-      {
-        "id": 50,
-        "itemName": "Pail",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 6,
-        "locationId": 37,
-        "dateAdded": "October 27th, 2020",
-        "userId": 14
-      },
-      {
-        "id": 51,
-        "itemName": "Miniature Portrait",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 1,
-        "locationId": 50,
-        "dateAdded": "March 31st, 2021",
-        "userId": 10
-      },
-      {
-        "id": 52,
-        "itemName": "Tea Pot",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 11,
-        "locationId": 52,
-        "dateAdded": "October 21st, 2020",
-        "userId": 24
-      },
-      {
-        "id": 53,
-        "itemName": "Face Wash",
-        "description": "",
-        "room": "Home Office",
-        "placement": "",
-        "notes": "",
-        "categoryId": 15,
-        "locationId": 25,
-        "dateAdded": "April 27th, 2020",
-        "userId": 12
-      },
-      {
-        "id": 54,
-        "itemName": "Safety Pins",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 6,
-        "locationId": 39,
-        "dateAdded": "March 1st, 2021",
-        "userId": 9
-      },
-      {
-        "id": 55,
-        "itemName": "Sand Paper",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 19,
-        "locationId": 28,
-        "dateAdded": "February 15th, 2021",
-        "userId": 8
-      },
-      {
-        "id": 56,
-        "itemName": "Feather Duster",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 6,
-        "locationId": 35,
-        "dateAdded": "November 4th, 2021",
-        "userId": 6
-      },
-      {
-        "id": 57,
-        "itemName": "Hamster Ball",
-        "description": "There’s no such thing as an ordinary cat.",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 16,
-        "locationId": 39,
-        "dateAdded": "July 24th, 2021",
-        "userId": 9
-      },
-      {
-        "id": 58,
-        "itemName": "Sketch Pad",
-        "description": "",
-        "room": "Bathroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 13,
-        "locationId": 32,
-        "dateAdded": "November 16th, 2020",
-        "userId": 7
-      },
-      {
-        "id": 59,
-        "itemName": "Roll of Masking Tape",
-        "description": "",
-        "room": "Home Office",
-        "placement": "",
-        "notes": "",
-        "categoryId": 19,
-        "locationId": 53,
-        "dateAdded": "November 11th, 2020",
-        "userId": 3
-      },
-      {
-        "id": 60,
-        "itemName": "Pocketwatch",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 28,
-        "dateAdded": "December 30th, 2019",
-        "userId": 8
-      },
-      {
-        "id": 61,
-        "itemName": "Rubber bands",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 13,
-        "locationId": 33,
-        "dateAdded": "January 23rd, 2021",
-        "userId": 18
-      },
-      {
-        "id": 62,
-        "itemName": "Steak Knives",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 11,
-        "locationId": 36,
-        "dateAdded": "February 16th, 2021",
-        "userId": 13
-      },
-      {
-        "id": 63,
-        "itemName": "Tennessee Map",
-        "description": "Ain't that the berries!",
-        "room": "Garage",
-        "placement": "rhoncus. Donec",
-        "notes": "",
-        "categoryId": 21,
-        "locationId": 3,
-        "dateAdded": "September 19th, 2020",
-        "userId": 1
-      },
-      {
-        "id": 64,
-        "itemName": "Washington Map",
-        "description": "",
-        "room": "Bathroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 21,
-        "locationId": 40,
-        "dateAdded": "January 2nd, 2021",
-        "userId": 22
-      },
-      {
-        "id": 65,
-        "itemName": "Bottle of Red Paint",
-        "description": "",
-        "room": "Garage",
-        "placement": "mauris elit,",
-        "notes": "",
-        "categoryId": 1,
-        "locationId": 11,
-        "dateAdded": "March 14th, 2021",
-        "userId": 1
-      },
-      {
-        "id": 66,
-        "itemName": "Paint Roller",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 19,
-        "locationId": 43,
-        "dateAdded": "August 26th, 2020",
-        "userId": 12
-      },
-      {
-        "id": 67,
-        "itemName": "Lamp Shade",
-        "description": "",
-        "room": "Bathroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 6,
-        "locationId": 1,
-        "dateAdded": "August 17th, 2021",
-        "userId": 2
-      },
-      {
-        "id": 68,
-        "itemName": "Stick",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 21,
-        "locationId": 41,
-        "dateAdded": "May 20th, 2020",
-        "userId": 15
-      },
-      {
-        "id": 69,
-        "itemName": "Can of Whipped Cream",
-        "description": "",
-        "room": "Master Closet",
-        "placement": "",
-        "notes": "",
-        "categoryId": 11,
-        "locationId": 44,
-        "dateAdded": "February 25th, 2021",
-        "userId": 17
-      },
-      {
-        "id": 70,
-        "itemName": "Binoculars",
-        "description": "",
-        "room": "Garage",
-        "placement": "",
-        "notes": "",
-        "categoryId": 7,
-        "locationId": 45,
-        "dateAdded": "March 31st, 2021",
-        "userId": 11
-      },
-      {
-        "id": 71,
-        "itemName": "Hammer",
-        "description": "Do not wait to strike till the iron is hot; but make it hot by striking.",
-        "room": "Kitchen",
-        "placement": "",
-        "notes": "",
-        "categoryId": 19,
-        "locationId": 45,
-        "dateAdded": "January 19th, 2021",
-        "userId": 11
-      },
-      {
-        "id": 72,
-        "itemName": "Scallop Shell",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 5,
-        "locationId": 38,
-        "dateAdded": "April 24th, 2020",
-        "userId": 10
-      },
-      {
-        "id": 73,
-        "itemName": "Dagger",
-        "description": "",
-        "room": "Garage",
-        "placement": "",
-        "notes": "",
-        "categoryId": 19,
-        "locationId": 45,
-        "dateAdded": "December 17th, 2020",
-        "userId": 11
-      },
-      {
-        "id": 74,
-        "itemName": "iPod nano",
-        "description": "",
-        "room": "Garage",
-        "placement": "",
-        "notes": "",
-        "categoryId": 7,
-        "locationId": 42,
-        "dateAdded": "November 8th, 2020",
-        "userId": 7
-      },
-      {
-        "id": 75,
-        "itemName": "snail shell",
-        "description": "",
-        "room": "Office",
-        "placement": "",
-        "notes": "",
-        "categoryId": 5,
-        "locationId": 39,
-        "dateAdded": "April 12th, 2020",
-        "userId": 9
-      },
-      {
-        "id": 76,
-        "itemName": "Watter Goggles",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 17,
-        "locationId": 49,
-        "dateAdded": "June 20th, 2021",
-        "userId": 16
-      },
-      {
-        "id": 77,
-        "itemName": "Sun Glasses",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 29,
-        "dateAdded": "September 29th, 2021",
-        "userId": 5
-      },
-      {
-        "id": 78,
-        "itemName": "Camera",
-        "description": "",
-        "room": "Storage Closet",
-        "placement": "Photography Bin",
-        "notes": "",
-        "categoryId": 7,
-        "locationId": 3,
-        "dateAdded": "August 1st, 2020",
-        "userId": 1
-      },
-      {
-        "id": 79,
-        "itemName": "Cannon 30mm Lens",
-        "description": "",
-        "room": "Garage",
-        "placement": "",
-        "notes": "",
-        "categoryId": 7,
-        "locationId": 5,
-        "dateAdded": "November 20th, 2020",
-        "userId": 2
-      },
-      {
-        "id": 80,
-        "itemName": "Genetic Ancestry Kit",
-        "description": "",
-        "room": "Home Office",
-        "placement": "",
-        "notes": "",
-        "categoryId": 21,
-        "locationId": 35,
-        "dateAdded": "October 1st, 2020",
-        "userId": 6
-      },
-      {
-        "id": 81,
-        "itemName": "Pebble",
-        "description": "",
-        "room": "Home Office",
-        "placement": "",
-        "notes": "",
-        "categoryId": 12,
-        "locationId": 53,
-        "dateAdded": "May 29th, 2020",
-        "userId": 3
-      },
-      {
-        "id": 82,
-        "itemName": "Box of Chalk",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 1,
-        "locationId": 46,
-        "dateAdded": "October 23rd, 2021",
-        "userId": 20
-      },
-      {
-        "id": 83,
-        "itemName": "Container of Pudding",
-        "description": "",
-        "room": "Kitchen",
-        "placement": "",
-        "notes": "",
-        "categoryId": 11,
-        "locationId": 28,
-        "dateAdded": "August 1st, 2020",
-        "userId": 8
-      },
-      {
-        "id": 84,
-        "itemName": "Feather",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 14,
-        "locationId": 44,
-        "dateAdded": "December 24th, 2019",
-        "userId": 17
-      },
-      {
-        "id": 85,
-        "itemName": "Boom Box",
-        "description": "",
-        "room": "Guest Room",
-        "placement": "",
-        "notes": "",
-        "categoryId": 7,
-        "locationId": 34,
-        "dateAdded": "November 10th, 2019",
-        "userId": 19
-      },
-      {
-        "id": 86,
-        "itemName": "Walkman",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 7,
-        "locationId": 36,
-        "dateAdded": "March 1st, 2021",
-        "userId": 13
-      },
-      {
-        "id": 87,
-        "itemName": "Nintendo 64",
-        "description": "",
-        "room": "Guest Room",
-        "placement": "",
-        "notes": "",
-        "categoryId": 7,
-        "locationId": 41,
-        "dateAdded": "September 15th, 2020",
-        "userId": 15
-      },
-      {
-        "id": 88,
-        "itemName": "007 Game",
-        "description": "",
-        "room": "Storage Closet",
-        "placement": "",
-        "notes": "",
-        "categoryId": 7,
-        "locationId": 48,
-        "dateAdded": "May 28th, 2020",
-        "userId": 21
-      },
-      {
-        "id": 89,
-        "itemName": "Mario Party ",
-        "description": "",
-        "room": "Garage",
-        "placement": "",
-        "notes": "",
-        "categoryId": 7,
-        "locationId": 47,
-        "dateAdded": "April 20th, 2021",
-        "userId": 23
-      },
-      {
-        "id": 90,
-        "itemName": "Bonesaw",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 8,
-        "locationId": 45,
-        "dateAdded": "January 6th, 2020",
-        "userId": 11
-      },
-      {
-        "id": 91,
-        "itemName": "Bottle of Sunscreen",
-        "description": "",
-        "room": "Kitchen",
-        "placement": "",
-        "notes": "",
-        "categoryId": 15,
-        "locationId": 1,
-        "dateAdded": "October 30th, 2021",
-        "userId": 2
-      },
-      {
-        "id": 92,
-        "itemName": "Canteen",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 9,
-        "locationId": 45,
-        "dateAdded": "December 9th, 2019",
-        "userId": 11
-      },
-      {
-        "id": 93,
-        "itemName": "Shirt Button",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 45,
-        "dateAdded": "February 1st, 2021",
-        "userId": 11
-      },
-      {
-        "id": 94,
-        "itemName": "Acorn",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 2,
-        "locationId": 28,
-        "dateAdded": "November 6th, 2021",
-        "userId": 8
-      },
-      {
-        "id": 95,
-        "itemName": "Handfull of Change",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 6,
-        "locationId": 33,
-        "dateAdded": "June 18th, 2020",
-        "userId": 18
-      },
-      {
-        "id": 96,
-        "itemName": "Grid Paper",
-        "description": "",
-        "room": "Laundry Room ",
-        "placement": "",
-        "notes": "",
-        "categoryId": 13,
-        "locationId": 53,
-        "dateAdded": "January 5th, 2021",
-        "userId": 3
-      },
-      {
-        "id": 97,
-        "itemName": "Snowglobe",
-        "description": "",
-        "room": "Master Closet",
-        "placement": "",
-        "notes": "",
-        "categoryId": 17,
-        "locationId": 48,
-        "dateAdded": "March 17th, 2021",
-        "userId": 21
-      },
-      {
-        "id": 98,
-        "itemName": "Martini Glasses",
-        "description": "",
-        "room": "Master Bedroom",
-        "placement": "",
-        "notes": "",
-        "categoryId": 11,
-        "locationId": 26,
-        "dateAdded": "May 13th, 2020",
-        "userId": 7
-      },
-      {
-        "id": 99,
-        "itemName": "Straw",
-        "description": "",
-        "room": "Garage",
-        "placement": "",
-        "notes": "",
-        "categoryId": 11,
-        "locationId": 52,
-        "dateAdded": "January 20th, 2020",
-        "userId": 24
-      },
-      {
-        "id": 100,
-        "itemName": "Leg Warmers",
-        "description": "",
-        "room": "Storage Closet",
-        "placement": "",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 54,
-        "dateAdded": "February 2nd, 2021",
-        "userId": 4
-      },
-      {
-        "id": 101,
-        "itemName": "Handbasket",
-        "description": "",
-        "room": "Kitchen",
-        "placement": "pantry door shelf, middle row",
-        "notes": "",
-        "categoryId": 5,
-        "locationId": 11,
-        "dateAdded": "November 9, 2020 at 12:22 PM",
-        "userId": 1
-      },
-      {
-        "id": 102,
-        "itemName": "Shedding Comb",
-        "description": "",
-        "room": "Kitchen",
-        "placement": "Cup Cabinet",
-        "notes": "",
-        "categoryId": 16,
-        "locationId": 6,
-        "dateAdded": "November 9, 2020 at 12:24 PM",
-        "userId": 1
-      },
-      {
-        "id": 103,
-        "itemName": "Felt Coasters",
-        "description": "",
-        "room": "Living Room",
-        "placement": "In drawer under TV",
-        "notes": "",
-        "categoryId": 6,
-        "locationId": 6,
-        "dateAdded": "November 9, 2020 at 12:28 PM",
-        "userId": 1
-      },
-      {
-        "id": 104,
-        "itemName": "Stone Coasters",
-        "description": "",
-        "room": "Living Room",
-        "placement": "Drawer under TV",
-        "notes": "",
-        "categoryId": 6,
-        "locationId": 6,
-        "dateAdded": "November 9, 2020 at 12:31 PM",
-        "userId": 1
-      },
-      {
-        "id": 105,
-        "itemName": "The Office Sign",
-        "description": "",
-        "room": "Bedroom",
-        "placement": "Under-bed storage bin",
-        "notes": "",
-        "categoryId": 5,
-        "locationId": 11,
-        "dateAdded": "November 9, 2020 at 12:34 PM",
-        "userId": 1
-      },
-      {
-        "id": 106,
-        "itemName": "Toe Socks",
-        "description": "",
-        "room": "Master Closet",
-        "placement": "in bin marked \"winter gear\"",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 6,
-        "dateAdded": "November 9, 2020 at 12:34 PM",
-        "userId": 1
-      },
-      {
-        "id": 107,
-        "itemName": "Fuzzy House Shoes",
-        "description": "",
-        "room": "Master Closet",
-        "placement": "In bin labeled \"winter gear\"",
-        "notes": "",
-        "categoryId": 4,
-        "locationId": 6,
-        "dateAdded": "November 9, 2020 at 12:39 PM",
-        "userId": 1
-      },
-      {
-        "id": 108,
-        "itemName": "Soccer Ball",
-        "description": "",
-        "room": "Garage",
-        "placement": "rolling around on the floor somewhere",
-        "notes": "",
-        "categoryId": 20,
-        "locationId": 53,
-        "dateAdded": "November 9, 2020 at 12:52 PM",
-        "userId": 3
-      },
-      {
-        "id": 109,
-        "itemName": "Basketball",
-        "description": "",
-        "room": "Garage",
-        "placement": "not sure, ask mom",
-        "notes": "",
-        "categoryId": 20,
-        "locationId": 53,
-        "dateAdded": "November 9, 2020 at 1:00 PM",
-        "userId": 3
-      }
-    ],
-    "locations": [
-      {
-        "name": "Moms House",
-        "description": "Mama Adam's House - green key",
-        "userId": 2,
-        "id": 1
-      },
-      {
-        "name": "Storage Unit (large)",
-        "description": "RedDot unit 54",
-        "userId": 1,
-        "id": 2
-      },
-      {
-        "name": "Office",
-        "description": "physical office, not home office",
-        "userId": 1,
-        "id": 3
-      },
-      {
-        "name": "Backyard Shed",
-        "description": "",
-        "userId": 1,
-        "id": 4
-      },
-      {
-        "name": "Office Basement",
-        "description": "from parking garage, go through door 5a - red key",
-        "userId": 2,
-        "id": 5
-      },
-      {
-        "name": "My House",
-        "description": "The one I live in!",
-        "userId": 1,
-        "id": 6
-      },
-      {
-        "name": "Mom's Shed",
-        "description": "blue key",
-        "userId": 2,
-        "id": 8
-      },
-      {
-        "name": "Storage Unit (small)",
-        "description": "unit 132",
-        "userId": 1,
-        "id": 11
-      },
-      {
-        "name": "Gym Locker",
-        "description": "locker #14B @ our gym",
-        "userId": 1,
-        "id": 13
-      },
-      {
-        "name": "House",
-        "description": "norfleet dr.",
-        "userId": 12,
-        "id": 23
-      },
-      {
-        "name": "Storage Unit",
-        "description": "cubesmart storage in Nashville",
-        "userId": 12,
-        "id": 24
-      },
-      {
-        "name": "Appartment Garage",
-        "description": "Garage marked  36AA",
-        "userId": 12,
-        "id": 25
-      },
-      {
-        "name": "Brenda's House",
-        "description": "",
-        "userId": 7,
-        "id": 26
-      },
-      {
-        "name": "Home ",
-        "description": "It's a sweater wonderland",
-        "userId": 8,
-        "id": 28
-      },
-      {
-        "name": "Homestead",
-        "description": "meow",
-        "userId": 5,
-        "id": 29
-      },
-      {
-        "name": "Office",
-        "description": "NSS office room",
-        "userId": 7,
-        "id": 32
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 18,
-        "id": 33
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 19,
-        "id": 34
-      },
-      {
-        "name": "Hairball Haven",
-        "description": "purrrrr",
-        "userId": 6,
-        "id": 35
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 13,
-        "id": 36
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 14,
-        "id": 37
-      },
-      {
-        "name": "Humble Abode",
-        "description": "",
-        "userId": 10,
-        "id": 38
-      },
-      {
-        "name": "hizzousse",
-        "description": "It's the turtles house… I just live here",
-        "userId": 9,
-        "id": 39
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 22,
-        "id": 40
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 15,
-        "id": 41
-      },
-      {
-        "name": "Johns House",
-        "description": "brother's house",
-        "userId": 7,
-        "id": 42
-      },
-      {
-        "name": "Storage Unit",
-        "description": "cubesmart storage in Memphis",
-        "userId": 12,
-        "id": 43
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 17,
-        "id": 44
-      },
-      {
-        "name": "Oretelle Kelley Office",
-        "description": "Corner office - frick yea!",
-        "userId": 11,
-        "id": 45
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 20,
-        "id": 46
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 23,
-        "id": 47
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 21,
-        "id": 48
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 16,
-        "id": 49
-      },
-      {
-        "name": "NSS Office",
-        "description": "biggest office 'cause I'm the biggest deal.",
-        "userId": 10,
-        "id": 50
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 25,
-        "id": 51
-      },
-      {
-        "name": "home",
-        "description": "",
-        "userId": 24,
-        "id": 52
-      },
-      {
-        "name": "my room",
-        "description": "",
-        "userId": 3,
-        "id": 53
-      },
-      {
-        "name": "LEXi'S R00M <3",
-        "description": "",
-        "userId": 4,
-        "id": 54
-      }
-    ],
-    "categories": [
-      {
-        "name": "Arts, Crafts & Sewing",
-        "id": 1
-      },
-      {
-        "name": "Automotive",
-        "id": 2
-      },
-      {
-        "name": "Cleaning",
-        "id": 3
-      },
-      {
-        "name": "Clothing, Shoes & Jewelry",
-        "id": 4
-      },
-      {
-        "name": "Collectibles",
-        "id": 5
-      },
-      {
-        "name": "Home / Décor",
-        "id": 6
-      },
-      {
-        "name": "Electronics & Accessories",
-        "id": 7
-      },
-      {
-        "name": "Entertainment (Movies/books)",
-        "id": 8
-      },
-      {
-        "name": "Health & Fitness",
-        "id": 9
-      },
-      {
-        "name": "Kids / Baby",
-        "id": 10
-      },
-      {
-        "name": "Kitchen",
-        "id": 11
-      },
-      {
-        "name": "Memorabilia",
-        "id": 12
-      },
-      {
-        "name": "Office Supply",
-        "id": 13
-      },
-      {
-        "name": "Outdoor & Garden",
-        "id": 14
-      },
-      {
-        "name": "Personal Care / Beauty",
-        "id": 15
-      },
-      {
-        "name": "Pet",
-        "id": 16
-      },
-      {
-        "name": "Seasonal",
-        "id": 17
-      },
-      {
-        "name": "Small Applances",
-        "id": 18
-      },
-      {
-        "name": "Tools & Home Improvement",
-        "id": 19
-      },
-      {
-        "name": "Toys & Games",
-        "id": 20
-      },
-      {
-        "name": "Miscellaneous",
-        "id": 21
-      }
-    ],
-    "sharedLocations": [
-      {
-        "id": 1,
-        "locationId": 2,
-        "userId": 2,
-        "date": "October 24, 2020"
-      },
-      {
-        "id": 2,
-        "locationId": 2,
-        "userId": 3,
-        "date": "October 24, 2020"
-      },
-      {
-        "id": 3,
-        "locationId": 2,
-        "userId": 4,
-        "date": "October 24, 2020"
-      },
-      {
-        "id": 4,
-        "locationId": 3,
-        "userId": 5,
-        "date": "October 24, 2020"
-      },
-      {
-        "id": 5,
-        "locationId": 3,
-        "userId": 6,
-        "date": "October 24, 2020"
-      },
-      {
-        "id": 6,
-        "locationId": 4,
-        "userId": 7,
-        "date": "October 24, 2020"
-      },
-      {
-        "id": 7,
-        "locationId": 4,
-        "userId": 8,
-        "date": "October 24, 2020"
-      },
-      {
-        "id": 8,
-        "locationId": 6,
-        "userId": 9,
-        "date": "October 24, 2020"
-      },
-      {
-        "id": 9,
-        "locationId": 6,
-        "userId": 2,
-        "date": "October 24, 2020"
-      },
-      {
-        "id": 10,
-        "locationId": 6,
-        "userId": 3,
-        "date": "October 29, 2020"
-      },
-      {
-        "id": 11,
-        "locationId": 6,
-        "userId": 4,
-        "date": "October 30, 2020"
-      },
-      {
-        "id": 12,
-        "locationId": 6,
-        "userId": 5,
-        "date": "October 30, 2020"
-      },
-      {
-        "id": 13,
-        "locationId": 11,
-        "userId": 6,
-        "date": "October 30, 2020"
-      },
-      {
-        "id": 14,
-        "locationId": 1,
-        "userId": 1,
-        "date": "October 30, 2020"
-      },
-      {
-        "id": 15,
-        "locationId": 5,
-        "userId": 3,
-        "date": "November 8, 2020"
-      },
-      {
-        "id": 16,
-        "locationId": 8,
-        "userId": 4,
-        "date": "November 8, 2020"
-      },
-      {
-        "id": 18,
-        "locationId": 1,
-        "userId": 11,
-        "date": "November 8, 2020"
-      },
-      {
-        "id": 20,
-        "locationId": 1,
-        "userId": 21,
-        "date": "November 8, 2020"
-      },
-      {
-        "id": 21,
-        "locationId": 5,
-        "userId": 1,
-        "date": "November 8, 2020"
-      },
-      {
-        "id": 23,
-        "locationId": 53,
-        "userId": 1,
-        "date": "November 8, 2020"
-      },
-      {
-        "id": 24,
-        "locationId": 53,
-        "userId": 2,
-        "date": "November 8, 2020"
-      },
-      {
-        "id": 27,
-        "locationId": 54,
-        "userId": 2,
-        "date": "November 8, 2020"
-      },
-      {
-        "id": 28,
-        "locationId": 29,
-        "userId": 9,
-        "date": "November 8, 2020"
-      },
-      {
-        "id": 29,
-        "locationId": 39,
-        "userId": 1,
-        "date": "November 8, 2020"
-      },
-      {
-        "id": 30,
-        "locationId": 39,
-        "userId": 5,
-        "date": "November 8, 2020"
-      }
-    ],
-    "connectedUsers": [
-      {
-        "id": 1,
-        "userId": 1,
-        "connectedUserId": 2,
-        "status": true,
-        "dateConnected": "October 27, 2020"
-      },
-      {
-        "id": 2,
-        "userId": 2,
-        "connectedUserId": 1,
-        "status": true,
-        "dateConnected": "October 27, 2020"
-      },
-      {
-        "id": 3,
-        "userId": 10,
-        "connectedUserId": 1,
-        "status": true,
-        "dateConnected": "November 9, 2020"
-      },
-      {
-        "userId": 1,
-        "connectedUserId": 10,
-        "status": true,
-        "dateConnected": "November 9, 2020",
-        "id": 4
-      },
-      {
-        "id": 5,
-        "userId": 3,
-        "connectedUserId": 1,
-        "status": true,
-        "dateConnected": "November 9, 2020"
-      },
-      {
-        "userId": 5,
-        "connectedUserId": 1,
-        "status": false,
-        "dateConnected": "November 9, 2020",
-        "id": 6
-      },
-      {
-        "id": 7,
-        "userId": 6,
-        "connectedUserId": 1,
-        "status": true,
-        "dateConnected": "November 9, 2020"
-      },
-      {
-        "userId": 1,
-        "connectedUserId": 6,
-        "status": true,
-        "dateConnected": "November 9, 2020",
-        "id": 8
-      },
-      {
-        "userId": 1,
-        "connectedUserId": 3,
-        "status": true,
-        "dateConnected": "November 9, 2020",
-        "id": 9
-      },
-      {
-        "id": 10,
-        "userId": 9,
-        "connectedUserId": 1,
-        "status": true,
-        "dateConnected": "November 9, 2020"
-      },
-      {
-        "userId": 8,
-        "connectedUserId": 1,
-        "status": false,
-        "dateConnected": "November 9, 2020",
-        "id": 11
-      },
-      {
-        "userId": 1,
-        "connectedUserId": 9,
-        "status": true,
-        "dateConnected": "November 9, 2020",
-        "id": 12
-      }
-    ],
-    "activity": [
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "itemId": 9,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 28, 2020",
-        "id": 1
-      },
-      {
-        "activityType": "Added A New Location",
-        "userId": 2,
-        "itemId": 1,
-        "locationId": 3,
-        "connectedUserId": 1,
-        "date": "October 24, 2020",
-        "id": 2
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "itemId": 4,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 29, 2020",
-        "id": 4
-      },
-      {
-        "activityType": "Updated an Item",
-        "userId": 3,
-        "itemId": 11,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 29, 2020 at 11:09 AM",
-        "id": 5
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "itemId": 11,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 29, 2020 at 3:09 PM",
-        "id": 6
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "itemId": 12,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 29, 2020 at 2:09 PM",
-        "id": 7
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "locationId": 1,
-        "itemId": 13,
-        "connectedUserId": 1,
-        "date": "October 29, 2020 at 6:09 PM",
-        "id": 8
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "locationId": 1,
-        "itemId": 14,
-        "connectedUserId": 1,
-        "date": "October 29, 2020 at 4:09 PM",
-        "id": 9
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "locationId": 1,
-        "itemId": 15,
-        "connectedUserId": 1,
-        "date": "October 29, 2020 at 4:09 PM",
-        "id": 10
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "itemId": 16,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 29, 2020 at 4:09 PM",
-        "id": 11
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "locationId": 1,
-        "itemId": 17,
-        "connectedUserId": 1,
-        "date": "October 29, 2020 at 9:22 PM",
-        "id": 12
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "itemId": 23,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 29, 2020 at 10:32 PM",
-        "id": 13
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 7,
-        "itemId": 23,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 1:03 AM",
-        "id": 14
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 7,
-        "itemId": 23,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 1:04 AM",
-        "id": 15
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 8,
-        "itemId": 23,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 1:05 AM",
-        "id": 16
-      },
-      {
-        "activityType": "Updated an Item",
-        "userId": 8,
-        "itemId": 26,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 1:05 AM",
-        "id": 17
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 9,
-        "itemId": 23,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 1:23 AM",
-        "id": 18
-      },
-      {
-        "activityType": "Updated Their Location",
-        "userId": 9,
-        "itemId": 1,
-        "locationId": 28,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 1:28 AM",
-        "id": 19
-      },
-      {
-        "activityType": "Updated Their Location",
-        "userId": 9,
-        "itemId": 1,
-        "locationId": 28,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 1:30 AM",
-        "id": 20
-      },
-      {
-        "activityType": "Updated Their Location",
-        "userId": 9,
-        "itemId": 1,
-        "locationId": 28,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 1:31 AM",
-        "id": 21
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 8,
-        "itemId": 26,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 1:31 AM",
-        "id": 22
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 9,
-        "itemId": 27,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 1:33 AM",
-        "id": 23
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 5,
-        "itemId": 23,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 1:47 AM",
-        "id": 24
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 1,
-        "itemId": 31,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 9:13 AM",
-        "id": 25
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 1,
-        "itemId": 31,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 9:14 AM",
-        "id": 26
-      },
-      {
-        "activityType": "Updated Their Location",
-        "userId": 1,
-        "itemId": 1,
-        "locationId": 6,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 11:05 AM",
-        "id": 27
-      },
-      {
-        "activityType": "Updated an Item",
-        "userId": 1,
-        "itemId": 11,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 11:05 AM",
-        "id": 28
-      },
-      {
-        "activityType": "Updated an Item",
-        "userId": 1,
-        "itemId": 4,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 11:05 AM",
-        "id": 29
-      },
-      {
-        "activityType": "Connected With",
-        "userId": 9,
-        "itemId": 1,
-        "locationId": 1,
-        "connectedUserId": 16,
-        "date": "October 31, 2020 at 11:06 AM",
-        "id": 30
-      },
-      {
-        "activityType": "Updated Their Location",
-        "userId": 1,
-        "itemId": 1,
-        "locationId": 6,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 11:11 AM",
-        "id": 31
-      },
-      {
-        "activityType": "Updated Their Location",
-        "userId": 1,
-        "itemId": 1,
-        "locationId": 6,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 11:29 AM",
-        "id": 33
-      },
-      {
-        "activityType": "Updated an Item",
-        "userId": 1,
-        "itemId": 1,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "October 31, 2020 at 11:29 AM",
-        "id": 34
-      },
-      {
-        "activityType": "Connected With",
-        "userId": 1,
-        "itemId": 1,
-        "locationId": 1,
-        "connectedUserId": 24,
-        "date": "November 8, 2020 at 11:09 PM",
-        "id": 35
-      },
-      {
-        "activityType": "Updated Their Location",
-        "userId": 1,
-        "itemId": 1,
-        "locationId": 6,
-        "connectedUserId": 1,
-        "date": "November 8, 2020 at 11:57 PM",
-        "id": 36
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 1,
-        "itemId": 50,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "November 1, 2020 at 11:58 PM",
-        "id": 37
-      },
-      {
-        "activityType": "Updated Their Location",
-        "userId": 1,
-        "itemId": 1,
-        "locationId": 2,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 10:24 AM",
-        "id": 38
-      },
-      {
-        "activityType": "Updated Their Location",
-        "userId": 1,
-        "itemId": 1,
-        "locationId": 11,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 11:33 AM",
-        "id": 39
-      },
-      {
-        "activityType": "Updated Their Location",
-        "userId": 1,
-        "itemId": 1,
-        "locationId": 13,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 11:34 AM",
-        "id": 40
-      },
-      {
-        "activityType": "Updated an Item",
-        "userId": 1,
-        "itemId": 78,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 11:52 AM",
-        "id": 41
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 1,
-        "itemId": 77,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 12:22 PM",
-        "id": 42
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 1,
-        "locationId": 1,
-        "itemId": 78,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 12:24 PM",
-        "id": 43
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 1,
-        "itemId": 104,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 12:31 PM",
-        "id": 44
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 1,
-        "itemId": 105,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 12:34 PM",
-        "id": 45
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 1,
-        "itemId": 106,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 12:34 PM",
-        "id": 46
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 1,
-        "itemId": 107,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 12:39 PM",
-        "id": 47
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "itemId": 108,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 12:52 PM",
-        "id": 48
-      },
-      {
-        "activityType": "Added A New Item",
-        "userId": 3,
-        "itemId": 109,
-        "locationId": 1,
-        "connectedUserId": 1,
-        "date": "November 9, 2020 at 1:00 PM",
-        "id": 49
-      },
-      {
-        "activityType": "Connected With",
-        "userId": 10,
-        "itemId": 1,
-        "locationId": 1,
-        "connectedUserId": 3,
-        "date": "November 9, 2020 at 4:55 PM",
-        "id": 50
-      },
-      {
-        "activityType": "Connected With",
-        "userId": 6,
-        "itemId": 1,
-        "locationId": 1,
-        "connectedUserId": 7,
-        "date": "November 9, 2020 at 4:58 PM",
-        "id": 51
-      },
-      {
-        "activityType": "Connected With",
-        "userId": 3,
-        "itemId": 1,
-        "locationId": 1,
-        "connectedUserId": 5,
-        "date": "November 9, 2020 at 4:59 PM",
-        "id": 52
-      },
-      {
-        "activityType": "Connected With",
-        "userId": 9,
-        "itemId": 1,
-        "locationId": 1,
-        "connectedUserId": 10,
-        "date": "November 9, 2020 at 5:05 PM",
-        "id": 53
-      }
-    ],
-    "lists": []
-  }
+  "users": [
+    {
+      "firstName": "Ember",
+      "lastName": "Parr",
+      "phoneNumber": 6158150173,
+      "email": "ember@emberparr.com",
+      "lastFmUsername": "emberparr",
+      "darkMode": false,
+      "id": 1
+    },
+    {
+      "firstName": "Justin",
+      "lastName": "Adams",
+      "phoneNumber": 6148745147,
+      "email": "justin@home.com",
+      "lastFmUsername": "justinadams",
+      "darkMode": false,
+      "id": 2
+    },
+    {
+      "firstName": "Aiden",
+      "lastName": "Parr",
+      "phoneNumber": 6154748741,
+      "email": "aiden@home.com",
+      "lastFmUsername": "aidenparr",
+      "darkMode": false,
+      "id": 3
+    },
+    {
+      "firstName": "Lexi",
+      "lastName": "Adams",
+      "phoneNumber": 6154748741,
+      "email": "lexi@home.com",
+      "lastFmUsername": "lexiadams",
+      "darkMode": false,
+      "id": 4
+    },
+    {
+      "firstName": "Snoop",
+      "lastName": "Cat",
+      "phoneNumber": 6154748741,
+      "email": "snoop@home.com",
+      "lastFmUsername": "snoopcat",
+      "darkMode": false,
+      "id": 5
+    },
+    {
+      "firstName": "Biggie",
+      "lastName": "Pawz",
+      "phoneNumber": 6154748741,
+      "email": "biggie@home.com",
+      "lastFmUsername": "biggiepawz",
+      "darkMode": false,
+      "id": 6
+    },
+    {
+      "firstName": "Brenda",
+      "lastName": "Long",
+      "phoneNumber": 6154748742,
+      "email": "brenda@nss.com",
+      "lastFmUsername": "brendalong",
+      "darkMode": false,
+      "id": 7
+    },
+    {
+      "firstName": "Adam",
+      "lastName": "S.",
+      "phoneNumber": 4514785454,
+      "email": "adam@nss.com",
+      "lastFmUsername": "adams",
+      "darkMode": false,
+      "id": 8
+    },
+    {
+      "firstName": "Sage",
+      "lastName": "K.",
+      "phoneNumber": 4785142424,
+      "email": "sage@nss.com",
+      "lastFmUsername": "sagek",
+      "darkMode": false,
+      "id": 9
+    },
+    {
+      "firstName": "John",
+      "lastName": "Wark",
+      "phoneNumber": 8675309615,
+      "email": "john@nss.com",
+      "lastFmUsername": "volutpat",
+      "darkMode": false,
+      "id": 10
+    },
+    {
+      "firstName": "Paul ",
+      "lastName": "Buchanan",
+      "phoneNumber": 8675309615,
+      "email": "paul@home.com",
+      "lastFmUsername": "euismod",
+      "darkMode": false,
+      "id": 11
+    },
+    {
+      "firstName": "Rebecca",
+      "lastName": "Buchanan",
+      "phoneNumber": 8675309615,
+      "email": "rebecca@home.com",
+      "lastFmUsername": "arcu.",
+      "darkMode": true,
+      "id": 12
+    },
+    {
+      "firstName": "Jonas",
+      "lastName": "Bond",
+      "phoneNumber": 8675309615,
+      "email": "pharetra.sed@euultricessit.net",
+      "lastFmUsername": "nisi.",
+      "darkMode": false,
+      "id": 13
+    },
+    {
+      "firstName": "Shafira",
+      "lastName": "Walton",
+      "phoneNumber": 8675309615,
+      "email": "Cum@felis.net",
+      "lastFmUsername": "Donec",
+      "darkMode": false,
+      "id": 14
+    },
+    {
+      "firstName": "Nissim",
+      "lastName": "Christensen",
+      "phoneNumber": 8675309615,
+      "email": "purus.ac.tellus@liberoProin.co.uk",
+      "lastFmUsername": "lobortis",
+      "darkMode": false,
+      "id": 15
+    },
+    {
+      "firstName": "Ayanna",
+      "lastName": "Flores",
+      "phoneNumber": 8675309615,
+      "email": "vitae.orci@montesnascetur.ca",
+      "lastFmUsername": "id,",
+      "darkMode": false,
+      "id": 16
+    },
+    {
+      "firstName": "Quin",
+      "lastName": "Burch",
+      "phoneNumber": 8675309615,
+      "email": "erat.volutpat.Nulla@rutrumFuscedolor.org",
+      "lastFmUsername": "eros.",
+      "darkMode": false,
+      "id": 17
+    },
+    {
+      "firstName": "Edan",
+      "lastName": "Harrell",
+      "phoneNumber": 8675309615,
+      "email": "id.sapien@turpisnonenim.edu",
+      "lastFmUsername": "et",
+      "darkMode": false,
+      "id": 18
+    },
+    {
+      "firstName": "Robert",
+      "lastName": "Farrell",
+      "phoneNumber": 8675309615,
+      "email": "amet@Donec.edu",
+      "lastFmUsername": "Nunc",
+      "darkMode": true,
+      "id": 19
+    },
+    {
+      "firstName": "Calvin",
+      "lastName": "Pruitt",
+      "phoneNumber": 8675309615,
+      "email": "magna@suscipitest.net",
+      "lastFmUsername": "egestas",
+      "darkMode": true,
+      "id": 20
+    },
+    {
+      "firstName": "Burke",
+      "lastName": "Ramos",
+      "phoneNumber": 8675309615,
+      "email": "ultrices.posuere.cubilia@sit.ca",
+      "lastFmUsername": "Maecenas",
+      "darkMode": true,
+      "id": 21
+    },
+    {
+      "firstName": "Patience",
+      "lastName": "Ashley",
+      "phoneNumber": 8675309615,
+      "email": "arcu.Vestibulum@vulputaterisus.net",
+      "lastFmUsername": "Vivamus",
+      "darkMode": true,
+      "id": 22
+    },
+    {
+      "firstName": "Chloe",
+      "lastName": "Gibson",
+      "phoneNumber": 8675309615,
+      "email": "molestie.in.tempus@interdumNuncsollicitudin.ca",
+      "lastFmUsername": "sociosqu",
+      "darkMode": false,
+      "id": 23
+    },
+    {
+      "firstName": "Ruth",
+      "lastName": "Knight",
+      "phoneNumber": 8675309615,
+      "email": "fringilla.cursus@cursusinhendrerit.com",
+      "lastFmUsername": "nec",
+      "darkMode": true,
+      "id": 24
+    },
+    {
+      "firstName": "Keiko",
+      "lastName": "Duke",
+      "phoneNumber": 8675309615,
+      "email": "molestie@egetmetus.edu",
+      "lastFmUsername": "tortor",
+      "darkMode": false,
+      "id": 25
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "itemName": "Iron",
+      "description": "Steamy One",
+      "room": "Laundry Room ",
+      "placement": "On shelf, with dust",
+      "notes": "Don't burn yourself again though...",
+      "categoryId": 18,
+      "locationId": 6,
+      "dateAdded": "October 25, 2020",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "itemName": "Ironing Board",
+      "description": "the mini table top one",
+      "room": "Laundry Room",
+      "placement": "Hanging beside dryer",
+      "notes": "it wiggles. pretend it doesn't though. ",
+      "categoryId": 18,
+      "locationId": 6,
+      "dateAdded": "October 25, 2020",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "itemName": "Glasses Wipes",
+      "description": "Individually Wrapped",
+      "room": "Home Office",
+      "placement": "2nd Drawer",
+      "notes": "They say anti-smudge... they lied. ",
+      "categoryId": 13,
+      "locationId": 32,
+      "dateAdded": "October 25, 2020",
+      "userId": 7
+    },
+    {
+      "id": 4,
+      "itemName": "Macbook Pro Charger",
+      "description": "MagSafe",
+      "room": "Kids Room",
+      "placement": "Closet, Tech Bin",
+      "notes": "Throwback Charger Type",
+      "categoryId": 7,
+      "locationId": 6,
+      "dateAdded": "October 26, 2020",
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "itemName": "Index Cards",
+      "description": "blank on both sides",
+      "room": "Home Office",
+      "placement": "School Supply Bin",
+      "notes": "roughly fifty million packs",
+      "categoryId": 13,
+      "locationId": 54,
+      "dateAdded": "October 26, 2020",
+      "userId": 4
+    },
+    {
+      "id": 6,
+      "itemName": "Charging Block",
+      "description": "To plug USB cord into wall",
+      "room": "Home Office",
+      "placement": "Cables Bin",
+      "notes": "3 three foot cords and 1 six food cord",
+      "categoryId": 7,
+      "locationId": 5,
+      "dateAdded": "October 26, 2020",
+      "userId": 2
+    },
+    {
+      "id": 7,
+      "itemName": "3\" Curling Iron",
+      "description": "Hot Tools Brand",
+      "room": "Bathroom",
+      "placement": "Under sink, hot tool bin",
+      "notes": "holds a good curl! ",
+      "categoryId": 15,
+      "locationId": 6,
+      "dateAdded": "October 27, 2020",
+      "userId": 1
+    },
+    {
+      "id": 8,
+      "itemName": "Trucker Hat",
+      "description": "for when I want to rock the \"dad bod\" look",
+      "room": "Closet",
+      "placement": "in the 'junk' bin",
+      "notes": "Kindof smells like sweat & bad decisions",
+      "categoryId": 4,
+      "locationId": 6,
+      "dateAdded": "October 28, 2020",
+      "userId": 1
+    },
+    {
+      "id": 9,
+      "itemName": "Office Ping Pong",
+      "description": "Mini version of ping pong to play at work desk",
+      "room": "Closet",
+      "placement": "in the 'junk' bin",
+      "notes": "Almost got fired for this...",
+      "categoryId": 13,
+      "locationId": 3,
+      "dateAdded": "October 28, 2020",
+      "userId": 1
+    },
+    {
+      "id": 10,
+      "itemName": "Calculator",
+      "description": "Basic with big buttons",
+      "room": "Home Office",
+      "placement": "2nd desk drawer",
+      "notes": "not the T9 calculator",
+      "categoryId": 13,
+      "locationId": 6,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 1
+    },
+    {
+      "id": 11,
+      "itemName": "Extra TCL Remote",
+      "description": "Just a spare",
+      "room": "Office",
+      "placement": "Desk Bottom Drawer",
+      "notes": "Why is there an extra though? ",
+      "categoryId": 7,
+      "locationId": 6,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 1
+    },
+    {
+      "id": 12,
+      "itemName": "Apple Watch Power Bank",
+      "description": "",
+      "room": "Office",
+      "placement": "Desk Bottom Drawer",
+      "notes": "rechargeable  ",
+      "categoryId": 7,
+      "locationId": 5,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 2
+    },
+    {
+      "id": 13,
+      "itemName": "Tiny Tweezers",
+      "description": "not good for eyebrows. ",
+      "room": "Bathroom",
+      "placement": "Medicine Cabinet",
+      "notes": "",
+      "categoryId": 15,
+      "locationId": 54,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 4
+    },
+    {
+      "id": 14,
+      "itemName": "Rubber Ducky",
+      "description": "",
+      "room": "Office",
+      "placement": "Desk Bottom Drawer",
+      "notes": "",
+      "categoryId": 20,
+      "locationId": 6,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 1
+    },
+    {
+      "id": 15,
+      "itemName": "Postage Stamps",
+      "description": "Forever stamps from moms wedding invites",
+      "room": "Guest Room",
+      "placement": "",
+      "notes": "",
+      "categoryId": 13,
+      "locationId": 24,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 12
+    },
+    {
+      "id": 16,
+      "itemName": "Balloons",
+      "description": "time",
+      "room": "Guest Room",
+      "placement": "",
+      "notes": "",
+      "categoryId": 21,
+      "locationId": 39,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 9
+    },
+    {
+      "id": 17,
+      "itemName": "Shovel",
+      "description": "two",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 14,
+      "locationId": 8,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 2
+    },
+    {
+      "id": 18,
+      "itemName": "White Out",
+      "description": "bulk box of extras",
+      "room": "gcfutq",
+      "placement": "",
+      "notes": "",
+      "categoryId": 13,
+      "locationId": 54,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 4
+    },
+    {
+      "id": 19,
+      "itemName": "Spool of Wire",
+      "description": "lskdfj",
+      "room": "Storage Closet",
+      "placement": "",
+      "notes": "",
+      "categoryId": 6,
+      "locationId": 45,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 11
+    },
+    {
+      "id": 20,
+      "itemName": "Vase",
+      "description": "crystal one I got from grandma",
+      "room": "bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 6,
+      "locationId": 8,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 2
+    },
+    {
+      "id": 21,
+      "itemName": "Pocket watch",
+      "description": "fake gold one",
+      "room": "Dressing Room",
+      "placement": "",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 53,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 3
+    },
+    {
+      "id": 22,
+      "itemName": "Toy Robot",
+      "description": "remote control is with the robot but batteries are dead",
+      "room": "bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 20,
+      "locationId": 53,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 3
+    },
+    {
+      "id": 23,
+      "itemName": "Plush Frog",
+      "description": "ribbit ribbit",
+      "room": "Billiard Room",
+      "placement": "",
+      "notes": "",
+      "categoryId": 20,
+      "locationId": 54,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 4
+    },
+    {
+      "id": 24,
+      "itemName": "Spice Bottle",
+      "description": "Old school mac ",
+      "room": "outdoor shed",
+      "placement": "on a random shelf",
+      "notes": "",
+      "categoryId": 11,
+      "locationId": 39,
+      "dateAdded": "October 30, 2020 at 1:03 AM",
+      "userId": 9
+    },
+    {
+      "id": 25,
+      "itemName": "Mouse Pad",
+      "description": "The one with cats on it",
+      "room": "Office",
+      "placement": "Desk",
+      "notes": "",
+      "categoryId": 13,
+      "locationId": 6,
+      "dateAdded": "October 30, 2020 at 1:04 AM",
+      "userId": 1
+    },
+    {
+      "id": 26,
+      "itemName": "#1 Sweater",
+      "description": "for when I want to razzle dazle",
+      "room": "kitchen",
+      "placement": "framed on the wall",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 28,
+      "dateAdded": "October 30, 2020 at 1:05 AM",
+      "userId": 8
+    },
+    {
+      "id": 27,
+      "itemName": "Jeff Goldblum Poster",
+      "description": "collectors edition",
+      "room": "bedroom",
+      "placement": "on the wall",
+      "notes": "",
+      "categoryId": 5,
+      "locationId": 39,
+      "dateAdded": "October 30, 2020 at 1:23 AM",
+      "userId": 9
+    },
+    {
+      "id": 28,
+      "itemName": "Mouse Pad",
+      "description": "With Jeff Goldblum's Face",
+      "room": "Guest Room",
+      "placement": "on my desk... obviously",
+      "notes": "",
+      "categoryId": 5,
+      "locationId": 39,
+      "dateAdded": "October 30, 2020 at 1:33 AM",
+      "userId": 9
+    },
+    {
+      "id": 29,
+      "itemName": "Toy mouse",
+      "description": "",
+      "room": "Kids Room",
+      "placement": "under the couch",
+      "notes": "",
+      "categoryId": 16,
+      "locationId": 29,
+      "dateAdded": "October 30, 2020 at 1:47 AM",
+      "userId": 5
+    },
+    {
+      "id": 30,
+      "itemName": "Cat Wings",
+      "description": "super scary costume",
+      "room": "basement",
+      "placement": "storage area, 4th shelf",
+      "notes": "fits snoop but too big for biggie",
+      "categoryId": 16,
+      "locationId": 2,
+      "dateAdded": "October 30, 2020 at 9:13 AM",
+      "userId": 1
+    },
+    {
+      "id": 31,
+      "itemName": "Toenail Clippers",
+      "description": "Sharpest Ones",
+      "room": "Bathroom",
+      "placement": "bottom drawer under sink",
+      "notes": "",
+      "categoryId": 15,
+      "locationId": 6,
+      "dateAdded": "October 30, 2020 at 9:14 AM",
+      "userId": 1
+    },
+    {
+      "id": 32,
+      "itemName": "Rose Bud Lip Stuff",
+      "description": "In the tube",
+      "room": "Bathroom",
+      "placement": "Medicine Cabinet",
+      "notes": "",
+      "categoryId": 15,
+      "locationId": 6,
+      "dateAdded": "November 8, 2020 at 11:58 PM",
+      "userId": 1
+    },
+    {
+      "id": 33,
+      "itemName": "Tire Swing",
+      "description": "Whoever said money can't buy happiness didn't know where to shop.",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 14,
+      "locationId": 54,
+      "dateAdded": "July 10th, 2020",
+      "userId": 4
+    },
+    {
+      "id": 34,
+      "itemName": "Pair of Handcuffs",
+      "description": "A woman is like a tea bag – you can't tell how strong she is until you put her in hot water.",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 5,
+      "locationId": 49,
+      "dateAdded": "February 11th, 2021",
+      "userId": 16
+    },
+    {
+      "id": 35,
+      "itemName": "Baseball Hat",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 54,
+      "dateAdded": "June 29th, 2020",
+      "userId": 4
+    },
+    {
+      "id": 36,
+      "itemName": "Locket",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 38,
+      "dateAdded": "August 24th, 2021",
+      "userId": 10
+    },
+    {
+      "id": 37,
+      "itemName": "Shawl",
+      "description": "",
+      "room": "Bathroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 28,
+      "dateAdded": "November 13th, 2019",
+      "userId": 8
+    },
+    {
+      "id": 38,
+      "itemName": "Bottle of Ink",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 13,
+      "locationId": 50,
+      "dateAdded": "February 5th, 2021",
+      "userId": 10
+    },
+    {
+      "id": 39,
+      "itemName": "tea Cup",
+      "description": "",
+      "room": "Guest Room",
+      "placement": "",
+      "notes": "",
+      "categoryId": 11,
+      "locationId": 38,
+      "dateAdded": "July 14th, 2021",
+      "userId": 10
+    },
+    {
+      "id": 40,
+      "itemName": "Plush Octopus",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 20,
+      "locationId": 51,
+      "dateAdded": "July 26th, 2020",
+      "userId": 25
+    },
+    {
+      "id": 41,
+      "itemName": "Photo Album ",
+      "description": "",
+      "room": "Garage",
+      "placement": "",
+      "notes": "",
+      "categoryId": 12,
+      "locationId": 28,
+      "dateAdded": "December 3rd, 2020",
+      "userId": 8
+    },
+    {
+      "id": 42,
+      "itemName": "Pair of Dice",
+      "description": "",
+      "room": "Bathroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 12,
+      "locationId": 28,
+      "dateAdded": "November 6th, 2020",
+      "userId": 8
+    },
+    {
+      "id": 43,
+      "itemName": "Speakers",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 7,
+      "locationId": 51,
+      "dateAdded": "April 24th, 2021",
+      "userId": 25
+    },
+    {
+      "id": 44,
+      "itemName": "youbetcha' magnet",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 12,
+      "locationId": 23,
+      "dateAdded": "June 11th, 2020",
+      "userId": 12
+    },
+    {
+      "id": 45,
+      "itemName": "Pair of knitting needles",
+      "description": "",
+      "room": "Garage",
+      "placement": "",
+      "notes": "",
+      "categoryId": 1,
+      "locationId": 34,
+      "dateAdded": "April 24th, 2020",
+      "userId": 19
+    },
+    {
+      "id": 46,
+      "itemName": "thermometer",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 9,
+      "locationId": 47,
+      "dateAdded": "May 21st, 2021",
+      "userId": 23
+    },
+    {
+      "id": 47,
+      "itemName": "Lip Gloss",
+      "description": "",
+      "room": "Home Office",
+      "placement": "",
+      "notes": "",
+      "categoryId": 15,
+      "locationId": 37,
+      "dateAdded": "December 8th, 2020",
+      "userId": 14
+    },
+    {
+      "id": 48,
+      "itemName": "Stockings",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "eget",
+      "notes": "",
+      "categoryId": 17,
+      "locationId": 2,
+      "dateAdded": "October 29th, 2020",
+      "userId": 1
+    },
+    {
+      "id": 49,
+      "itemName": "Spectacles",
+      "description": "The two most common elements in the universe are hydrogen and stupidity.",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 46,
+      "dateAdded": "November 14th, 2020",
+      "userId": 20
+    },
+    {
+      "id": 50,
+      "itemName": "Pail",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 6,
+      "locationId": 37,
+      "dateAdded": "October 27th, 2020",
+      "userId": 14
+    },
+    {
+      "id": 51,
+      "itemName": "Miniature Portrait",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 1,
+      "locationId": 50,
+      "dateAdded": "March 31st, 2021",
+      "userId": 10
+    },
+    {
+      "id": 52,
+      "itemName": "Tea Pot",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 11,
+      "locationId": 52,
+      "dateAdded": "October 21st, 2020",
+      "userId": 24
+    },
+    {
+      "id": 53,
+      "itemName": "Face Wash",
+      "description": "",
+      "room": "Home Office",
+      "placement": "",
+      "notes": "",
+      "categoryId": 15,
+      "locationId": 25,
+      "dateAdded": "April 27th, 2020",
+      "userId": 12
+    },
+    {
+      "id": 54,
+      "itemName": "Safety Pins",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 6,
+      "locationId": 39,
+      "dateAdded": "March 1st, 2021",
+      "userId": 9
+    },
+    {
+      "id": 55,
+      "itemName": "Sand Paper",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 19,
+      "locationId": 28,
+      "dateAdded": "February 15th, 2021",
+      "userId": 8
+    },
+    {
+      "id": 56,
+      "itemName": "Feather Duster",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 6,
+      "locationId": 35,
+      "dateAdded": "November 4th, 2021",
+      "userId": 6
+    },
+    {
+      "id": 57,
+      "itemName": "Hamster Ball",
+      "description": "There’s no such thing as an ordinary cat.",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 16,
+      "locationId": 39,
+      "dateAdded": "July 24th, 2021",
+      "userId": 9
+    },
+    {
+      "id": 58,
+      "itemName": "Sketch Pad",
+      "description": "",
+      "room": "Bathroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 13,
+      "locationId": 32,
+      "dateAdded": "November 16th, 2020",
+      "userId": 7
+    },
+    {
+      "id": 59,
+      "itemName": "Roll of Masking Tape",
+      "description": "",
+      "room": "Home Office",
+      "placement": "",
+      "notes": "",
+      "categoryId": 19,
+      "locationId": 53,
+      "dateAdded": "November 11th, 2020",
+      "userId": 3
+    },
+    {
+      "id": 60,
+      "itemName": "Pocketwatch",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 28,
+      "dateAdded": "December 30th, 2019",
+      "userId": 8
+    },
+    {
+      "id": 61,
+      "itemName": "Rubber bands",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 13,
+      "locationId": 33,
+      "dateAdded": "January 23rd, 2021",
+      "userId": 18
+    },
+    {
+      "id": 62,
+      "itemName": "Steak Knives",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 11,
+      "locationId": 36,
+      "dateAdded": "February 16th, 2021",
+      "userId": 13
+    },
+    {
+      "id": 63,
+      "itemName": "Tennessee Map",
+      "description": "Ain't that the berries!",
+      "room": "Garage",
+      "placement": "rhoncus. Donec",
+      "notes": "",
+      "categoryId": 21,
+      "locationId": 3,
+      "dateAdded": "September 19th, 2020",
+      "userId": 1
+    },
+    {
+      "id": 64,
+      "itemName": "Washington Map",
+      "description": "",
+      "room": "Bathroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 21,
+      "locationId": 40,
+      "dateAdded": "January 2nd, 2021",
+      "userId": 22
+    },
+    {
+      "id": 65,
+      "itemName": "Bottle of Red Paint",
+      "description": "",
+      "room": "Garage",
+      "placement": "mauris elit,",
+      "notes": "",
+      "categoryId": 1,
+      "locationId": 11,
+      "dateAdded": "March 14th, 2021",
+      "userId": 1
+    },
+    {
+      "id": 66,
+      "itemName": "Paint Roller",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 19,
+      "locationId": 43,
+      "dateAdded": "August 26th, 2020",
+      "userId": 12
+    },
+    {
+      "id": 67,
+      "itemName": "Lamp Shade",
+      "description": "",
+      "room": "Bathroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 6,
+      "locationId": 1,
+      "dateAdded": "August 17th, 2021",
+      "userId": 2
+    },
+    {
+      "id": 68,
+      "itemName": "Stick",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 21,
+      "locationId": 41,
+      "dateAdded": "May 20th, 2020",
+      "userId": 15
+    },
+    {
+      "id": 69,
+      "itemName": "Can of Whipped Cream",
+      "description": "",
+      "room": "Master Closet",
+      "placement": "",
+      "notes": "",
+      "categoryId": 11,
+      "locationId": 44,
+      "dateAdded": "February 25th, 2021",
+      "userId": 17
+    },
+    {
+      "id": 70,
+      "itemName": "Binoculars",
+      "description": "",
+      "room": "Garage",
+      "placement": "",
+      "notes": "",
+      "categoryId": 7,
+      "locationId": 45,
+      "dateAdded": "March 31st, 2021",
+      "userId": 11
+    },
+    {
+      "id": 71,
+      "itemName": "Hammer",
+      "description": "Do not wait to strike till the iron is hot; but make it hot by striking.",
+      "room": "Kitchen",
+      "placement": "",
+      "notes": "",
+      "categoryId": 19,
+      "locationId": 45,
+      "dateAdded": "January 19th, 2021",
+      "userId": 11
+    },
+    {
+      "id": 72,
+      "itemName": "Scallop Shell",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 5,
+      "locationId": 38,
+      "dateAdded": "April 24th, 2020",
+      "userId": 10
+    },
+    {
+      "id": 73,
+      "itemName": "Dagger",
+      "description": "",
+      "room": "Garage",
+      "placement": "",
+      "notes": "",
+      "categoryId": 19,
+      "locationId": 45,
+      "dateAdded": "December 17th, 2020",
+      "userId": 11
+    },
+    {
+      "id": 74,
+      "itemName": "iPod nano",
+      "description": "",
+      "room": "Garage",
+      "placement": "",
+      "notes": "",
+      "categoryId": 7,
+      "locationId": 42,
+      "dateAdded": "November 8th, 2020",
+      "userId": 7
+    },
+    {
+      "id": 75,
+      "itemName": "snail shell",
+      "description": "",
+      "room": "Office",
+      "placement": "",
+      "notes": "",
+      "categoryId": 5,
+      "locationId": 39,
+      "dateAdded": "April 12th, 2020",
+      "userId": 9
+    },
+    {
+      "id": 76,
+      "itemName": "Watter Goggles",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 17,
+      "locationId": 49,
+      "dateAdded": "June 20th, 2021",
+      "userId": 16
+    },
+    {
+      "id": 77,
+      "itemName": "Sun Glasses",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 29,
+      "dateAdded": "September 29th, 2021",
+      "userId": 5
+    },
+    {
+      "id": 78,
+      "itemName": "Camera",
+      "description": "",
+      "room": "Storage Closet",
+      "placement": "Photography Bin",
+      "notes": "",
+      "categoryId": 7,
+      "locationId": 3,
+      "dateAdded": "August 1st, 2020",
+      "userId": 1
+    },
+    {
+      "id": 79,
+      "itemName": "Cannon 30mm Lens",
+      "description": "",
+      "room": "Garage",
+      "placement": "",
+      "notes": "",
+      "categoryId": 7,
+      "locationId": 5,
+      "dateAdded": "November 20th, 2020",
+      "userId": 2
+    },
+    {
+      "id": 80,
+      "itemName": "Genetic Ancestry Kit",
+      "description": "",
+      "room": "Home Office",
+      "placement": "",
+      "notes": "",
+      "categoryId": 21,
+      "locationId": 35,
+      "dateAdded": "October 1st, 2020",
+      "userId": 6
+    },
+    {
+      "id": 81,
+      "itemName": "Pebble",
+      "description": "",
+      "room": "Home Office",
+      "placement": "",
+      "notes": "",
+      "categoryId": 12,
+      "locationId": 53,
+      "dateAdded": "May 29th, 2020",
+      "userId": 3
+    },
+    {
+      "id": 82,
+      "itemName": "Box of Chalk",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 1,
+      "locationId": 46,
+      "dateAdded": "October 23rd, 2021",
+      "userId": 20
+    },
+    {
+      "id": 83,
+      "itemName": "Container of Pudding",
+      "description": "",
+      "room": "Kitchen",
+      "placement": "",
+      "notes": "",
+      "categoryId": 11,
+      "locationId": 28,
+      "dateAdded": "August 1st, 2020",
+      "userId": 8
+    },
+    {
+      "id": 84,
+      "itemName": "Feather",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 14,
+      "locationId": 44,
+      "dateAdded": "December 24th, 2019",
+      "userId": 17
+    },
+    {
+      "id": 85,
+      "itemName": "Boom Box",
+      "description": "",
+      "room": "Guest Room",
+      "placement": "",
+      "notes": "",
+      "categoryId": 7,
+      "locationId": 34,
+      "dateAdded": "November 10th, 2019",
+      "userId": 19
+    },
+    {
+      "id": 86,
+      "itemName": "Walkman",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 7,
+      "locationId": 36,
+      "dateAdded": "March 1st, 2021",
+      "userId": 13
+    },
+    {
+      "id": 87,
+      "itemName": "Nintendo 64",
+      "description": "",
+      "room": "Guest Room",
+      "placement": "",
+      "notes": "",
+      "categoryId": 7,
+      "locationId": 41,
+      "dateAdded": "September 15th, 2020",
+      "userId": 15
+    },
+    {
+      "id": 88,
+      "itemName": "007 Game",
+      "description": "",
+      "room": "Storage Closet",
+      "placement": "",
+      "notes": "",
+      "categoryId": 7,
+      "locationId": 48,
+      "dateAdded": "May 28th, 2020",
+      "userId": 21
+    },
+    {
+      "id": 89,
+      "itemName": "Mario Party ",
+      "description": "",
+      "room": "Garage",
+      "placement": "",
+      "notes": "",
+      "categoryId": 7,
+      "locationId": 47,
+      "dateAdded": "April 20th, 2021",
+      "userId": 23
+    },
+    {
+      "id": 90,
+      "itemName": "Bonesaw",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 8,
+      "locationId": 45,
+      "dateAdded": "January 6th, 2020",
+      "userId": 11
+    },
+    {
+      "id": 91,
+      "itemName": "Bottle of Sunscreen",
+      "description": "",
+      "room": "Kitchen",
+      "placement": "",
+      "notes": "",
+      "categoryId": 15,
+      "locationId": 1,
+      "dateAdded": "October 30th, 2021",
+      "userId": 2
+    },
+    {
+      "id": 92,
+      "itemName": "Canteen",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 9,
+      "locationId": 45,
+      "dateAdded": "December 9th, 2019",
+      "userId": 11
+    },
+    {
+      "id": 93,
+      "itemName": "Shirt Button",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 45,
+      "dateAdded": "February 1st, 2021",
+      "userId": 11
+    },
+    {
+      "id": 94,
+      "itemName": "Acorn",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 2,
+      "locationId": 28,
+      "dateAdded": "November 6th, 2021",
+      "userId": 8
+    },
+    {
+      "id": 95,
+      "itemName": "Handfull of Change",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 6,
+      "locationId": 33,
+      "dateAdded": "June 18th, 2020",
+      "userId": 18
+    },
+    {
+      "id": 96,
+      "itemName": "Grid Paper",
+      "description": "",
+      "room": "Laundry Room ",
+      "placement": "",
+      "notes": "",
+      "categoryId": 13,
+      "locationId": 53,
+      "dateAdded": "January 5th, 2021",
+      "userId": 3
+    },
+    {
+      "id": 97,
+      "itemName": "Snowglobe",
+      "description": "",
+      "room": "Master Closet",
+      "placement": "",
+      "notes": "",
+      "categoryId": 17,
+      "locationId": 48,
+      "dateAdded": "March 17th, 2021",
+      "userId": 21
+    },
+    {
+      "id": 98,
+      "itemName": "Martini Glasses",
+      "description": "",
+      "room": "Master Bedroom",
+      "placement": "",
+      "notes": "",
+      "categoryId": 11,
+      "locationId": 26,
+      "dateAdded": "May 13th, 2020",
+      "userId": 7
+    },
+    {
+      "id": 99,
+      "itemName": "Straw",
+      "description": "",
+      "room": "Garage",
+      "placement": "",
+      "notes": "",
+      "categoryId": 11,
+      "locationId": 52,
+      "dateAdded": "January 20th, 2020",
+      "userId": 24
+    },
+    {
+      "id": 100,
+      "itemName": "Leg Warmers",
+      "description": "",
+      "room": "Storage Closet",
+      "placement": "",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 54,
+      "dateAdded": "February 2nd, 2021",
+      "userId": 4
+    },
+    {
+      "id": 101,
+      "itemName": "Handbasket",
+      "description": "",
+      "room": "Kitchen",
+      "placement": "pantry door shelf, middle row",
+      "notes": "",
+      "categoryId": 5,
+      "locationId": 11,
+      "dateAdded": "November 9, 2020 at 12:22 PM",
+      "userId": 1
+    },
+    {
+      "id": 102,
+      "itemName": "Shedding Comb",
+      "description": "",
+      "room": "Kitchen",
+      "placement": "Cup Cabinet",
+      "notes": "",
+      "categoryId": 16,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:24 PM",
+      "userId": 1
+    },
+    {
+      "id": 103,
+      "itemName": "Felt Coasters",
+      "description": "",
+      "room": "Living Room",
+      "placement": "In drawer under TV",
+      "notes": "",
+      "categoryId": 6,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:28 PM",
+      "userId": 1
+    },
+    {
+      "id": 104,
+      "itemName": "Stone Coasters",
+      "description": "",
+      "room": "Living Room",
+      "placement": "Drawer under TV",
+      "notes": "",
+      "categoryId": 6,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:31 PM",
+      "userId": 1
+    },
+    {
+      "id": 105,
+      "itemName": "The Office Sign",
+      "description": "",
+      "room": "Bedroom",
+      "placement": "Under-bed storage bin",
+      "notes": "",
+      "categoryId": 5,
+      "locationId": 11,
+      "dateAdded": "November 9, 2020 at 12:34 PM",
+      "userId": 1
+    },
+    {
+      "id": 106,
+      "itemName": "Toe Socks",
+      "description": "",
+      "room": "Master Closet",
+      "placement": "in bin marked \"winter gear\"",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:34 PM",
+      "userId": 1
+    },
+    {
+      "id": 107,
+      "itemName": "Fuzzy House Shoes",
+      "description": "",
+      "room": "Master Closet",
+      "placement": "In bin labeled \"winter gear\"",
+      "notes": "",
+      "categoryId": 4,
+      "locationId": 6,
+      "dateAdded": "November 9, 2020 at 12:39 PM",
+      "userId": 1
+    },
+    {
+      "id": 108,
+      "itemName": "Soccer Ball",
+      "description": "",
+      "room": "Garage",
+      "placement": "rolling around on the floor somewhere",
+      "notes": "",
+      "categoryId": 20,
+      "locationId": 53,
+      "dateAdded": "November 9, 2020 at 12:52 PM",
+      "userId": 3
+    },
+    {
+      "id": 109,
+      "itemName": "Basketball",
+      "description": "",
+      "room": "Garage",
+      "placement": "not sure, ask mom",
+      "notes": "",
+      "categoryId": 20,
+      "locationId": 53,
+      "dateAdded": "November 9, 2020 at 1:00 PM",
+      "userId": 3
+    }
+  ],
+  "locations": [
+    {
+      "name": "Moms House",
+      "description": "Mama Adam's House - green key",
+      "userId": 2,
+      "id": 1
+    },
+    {
+      "name": "Storage Unit (large)",
+      "description": "RedDot unit 54",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "name": "Office",
+      "description": "physical office, not home office",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "Backyard Shed",
+      "description": "",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "Office Basement",
+      "description": "from parking garage, go through door 5a - red key",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "My House",
+      "description": "The one I live in!",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "name": "Mom's Shed",
+      "description": "blue key",
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "name": "Storage Unit (small)",
+      "description": "unit 132",
+      "userId": 1,
+      "id": 11
+    },
+    {
+      "name": "Gym Locker",
+      "description": "locker #14B @ our gym",
+      "userId": 1,
+      "id": 13
+    },
+    {
+      "name": "House",
+      "description": "norfleet dr.",
+      "userId": 12,
+      "id": 23
+    },
+    {
+      "name": "Storage Unit",
+      "description": "cubesmart storage in Nashville",
+      "userId": 12,
+      "id": 24
+    },
+    {
+      "name": "Appartment Garage",
+      "description": "Garage marked  36AA",
+      "userId": 12,
+      "id": 25
+    },
+    {
+      "name": "Brenda's House",
+      "description": "",
+      "userId": 7,
+      "id": 26
+    },
+    {
+      "name": "Home ",
+      "description": "It's a sweater wonderland",
+      "userId": 8,
+      "id": 28
+    },
+    {
+      "name": "Homestead",
+      "description": "meow",
+      "userId": 5,
+      "id": 29
+    },
+    {
+      "name": "Office",
+      "description": "NSS office room",
+      "userId": 7,
+      "id": 32
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 18,
+      "id": 33
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 19,
+      "id": 34
+    },
+    {
+      "name": "Hairball Haven",
+      "description": "purrrrr",
+      "userId": 6,
+      "id": 35
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 13,
+      "id": 36
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 14,
+      "id": 37
+    },
+    {
+      "name": "Humble Abode",
+      "description": "",
+      "userId": 10,
+      "id": 38
+    },
+    {
+      "name": "hizzousse",
+      "description": "It's the turtles house… I just live here",
+      "userId": 9,
+      "id": 39
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 22,
+      "id": 40
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 15,
+      "id": 41
+    },
+    {
+      "name": "Johns House",
+      "description": "brother's house",
+      "userId": 7,
+      "id": 42
+    },
+    {
+      "name": "Storage Unit",
+      "description": "cubesmart storage in Memphis",
+      "userId": 12,
+      "id": 43
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 17,
+      "id": 44
+    },
+    {
+      "name": "Oretelle Kelley Office",
+      "description": "Corner office - frick yea!",
+      "userId": 11,
+      "id": 45
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 20,
+      "id": 46
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 23,
+      "id": 47
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 21,
+      "id": 48
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 16,
+      "id": 49
+    },
+    {
+      "name": "NSS Office",
+      "description": "biggest office 'cause I'm the biggest deal.",
+      "userId": 10,
+      "id": 50
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 25,
+      "id": 51
+    },
+    {
+      "name": "home",
+      "description": "",
+      "userId": 24,
+      "id": 52
+    },
+    {
+      "name": "my room",
+      "description": "",
+      "userId": 3,
+      "id": 53
+    },
+    {
+      "name": "LEXi'S R00M <3",
+      "description": "",
+      "userId": 4,
+      "id": 54
+    }
+  ],
+  "categories": [
+    {
+      "name": "Arts, Crafts & Sewing",
+      "id": 1
+    },
+    {
+      "name": "Automotive",
+      "id": 2
+    },
+    {
+      "name": "Cleaning",
+      "id": 3
+    },
+    {
+      "name": "Clothing, Shoes & Jewelry",
+      "id": 4
+    },
+    {
+      "name": "Collectibles",
+      "id": 5
+    },
+    {
+      "name": "Home / Décor",
+      "id": 6
+    },
+    {
+      "name": "Electronics & Accessories",
+      "id": 7
+    },
+    {
+      "name": "Entertainment (Movies/books)",
+      "id": 8
+    },
+    {
+      "name": "Health & Fitness",
+      "id": 9
+    },
+    {
+      "name": "Kids / Baby",
+      "id": 10
+    },
+    {
+      "name": "Kitchen",
+      "id": 11
+    },
+    {
+      "name": "Memorabilia",
+      "id": 12
+    },
+    {
+      "name": "Office Supply",
+      "id": 13
+    },
+    {
+      "name": "Outdoor & Garden",
+      "id": 14
+    },
+    {
+      "name": "Personal Care / Beauty",
+      "id": 15
+    },
+    {
+      "name": "Pet",
+      "id": 16
+    },
+    {
+      "name": "Seasonal",
+      "id": 17
+    },
+    {
+      "name": "Small Applances",
+      "id": 18
+    },
+    {
+      "name": "Tools & Home Improvement",
+      "id": 19
+    },
+    {
+      "name": "Toys & Games",
+      "id": 20
+    },
+    {
+      "name": "Miscellaneous",
+      "id": 21
+    }
+  ],
+  "sharedLocations": [
+    {
+      "id": 1,
+      "locationId": 2,
+      "userId": 2,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 2,
+      "locationId": 2,
+      "userId": 3,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 3,
+      "locationId": 2,
+      "userId": 4,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 4,
+      "locationId": 3,
+      "userId": 5,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 5,
+      "locationId": 3,
+      "userId": 6,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 6,
+      "locationId": 4,
+      "userId": 7,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 7,
+      "locationId": 4,
+      "userId": 8,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 8,
+      "locationId": 6,
+      "userId": 9,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 9,
+      "locationId": 6,
+      "userId": 2,
+      "date": "October 24, 2020"
+    },
+    {
+      "id": 10,
+      "locationId": 6,
+      "userId": 3,
+      "date": "October 29, 2020"
+    },
+    {
+      "id": 11,
+      "locationId": 6,
+      "userId": 4,
+      "date": "October 30, 2020"
+    },
+    {
+      "id": 12,
+      "locationId": 6,
+      "userId": 5,
+      "date": "October 30, 2020"
+    },
+    {
+      "id": 13,
+      "locationId": 11,
+      "userId": 6,
+      "date": "October 30, 2020"
+    },
+    {
+      "id": 14,
+      "locationId": 1,
+      "userId": 1,
+      "date": "October 30, 2020"
+    },
+    {
+      "id": 15,
+      "locationId": 5,
+      "userId": 3,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 16,
+      "locationId": 8,
+      "userId": 4,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 18,
+      "locationId": 1,
+      "userId": 11,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 20,
+      "locationId": 1,
+      "userId": 21,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 21,
+      "locationId": 5,
+      "userId": 1,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 23,
+      "locationId": 53,
+      "userId": 1,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 24,
+      "locationId": 53,
+      "userId": 2,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 27,
+      "locationId": 54,
+      "userId": 2,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 28,
+      "locationId": 29,
+      "userId": 9,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 29,
+      "locationId": 39,
+      "userId": 1,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 30,
+      "locationId": 39,
+      "userId": 5,
+      "date": "November 8, 2020"
+    },
+    {
+      "id": 31,
+      "userId": 9,
+      "locationId": 3,
+      "date": "November 9, 2020"
+    },
+    {
+      "userId": 9,
+      "locationId": 2,
+      "date": "REQUESTED",
+      "id": 32
+    },
+    {
+      "userId": 2,
+      "locationId": 13,
+      "date": "REQUESTED",
+      "id": 33
+    }
+  ],
+  "connectedUsers": [
+    {
+      "id": 1,
+      "userId": 1,
+      "connectedUserId": 2,
+      "status": true,
+      "dateConnected": "October 27, 2020"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "connectedUserId": 1,
+      "status": true,
+      "dateConnected": "October 27, 2020"
+    },
+    {
+      "id": 3,
+      "userId": 10,
+      "connectedUserId": 1,
+      "status": true,
+      "dateConnected": "November 9, 2020"
+    },
+    {
+      "userId": 1,
+      "connectedUserId": 10,
+      "status": true,
+      "dateConnected": "November 9, 2020",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "userId": 3,
+      "connectedUserId": 1,
+      "status": true,
+      "dateConnected": "November 9, 2020"
+    },
+    {
+      "userId": 5,
+      "connectedUserId": 1,
+      "status": false,
+      "dateConnected": "November 9, 2020",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "userId": 6,
+      "connectedUserId": 1,
+      "status": true,
+      "dateConnected": "November 9, 2020"
+    },
+    {
+      "userId": 1,
+      "connectedUserId": 6,
+      "status": true,
+      "dateConnected": "November 9, 2020",
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "connectedUserId": 3,
+      "status": true,
+      "dateConnected": "November 9, 2020",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "userId": 9,
+      "connectedUserId": 1,
+      "status": true,
+      "dateConnected": "November 9, 2020"
+    },
+    {
+      "userId": 8,
+      "connectedUserId": 1,
+      "status": false,
+      "dateConnected": "November 9, 2020",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "connectedUserId": 9,
+      "status": true,
+      "dateConnected": "November 9, 2020",
+      "id": 12
+    },
+    {
+      "userId": 4,
+      "connectedUserId": 1,
+      "status": false,
+      "dateConnected": "November 9, 2020",
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "connectedUserId": 12,
+      "status": false,
+      "dateConnected": "November 9, 2020",
+      "id": 14
+    }
+  ],
+  "activity": [
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 9,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 28, 2020",
+      "id": 1
+    },
+    {
+      "activityType": "Added A New Location",
+      "userId": 2,
+      "itemId": 1,
+      "locationId": 3,
+      "connectedUserId": 1,
+      "date": "October 24, 2020",
+      "id": 2
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 4,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 29, 2020",
+      "id": 4
+    },
+    {
+      "activityType": "Updated an Item",
+      "userId": 3,
+      "itemId": 11,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 29, 2020 at 11:09 AM",
+      "id": 5
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 11,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 29, 2020 at 3:09 PM",
+      "id": 6
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 12,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 29, 2020 at 2:09 PM",
+      "id": 7
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "locationId": 1,
+      "itemId": 13,
+      "connectedUserId": 1,
+      "date": "October 29, 2020 at 6:09 PM",
+      "id": 8
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "locationId": 1,
+      "itemId": 14,
+      "connectedUserId": 1,
+      "date": "October 29, 2020 at 4:09 PM",
+      "id": 9
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "locationId": 1,
+      "itemId": 15,
+      "connectedUserId": 1,
+      "date": "October 29, 2020 at 4:09 PM",
+      "id": 10
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 16,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 29, 2020 at 4:09 PM",
+      "id": 11
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "locationId": 1,
+      "itemId": 17,
+      "connectedUserId": 1,
+      "date": "October 29, 2020 at 9:22 PM",
+      "id": 12
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 23,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 29, 2020 at 10:32 PM",
+      "id": 13
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 7,
+      "itemId": 23,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:03 AM",
+      "id": 14
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 7,
+      "itemId": 23,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:04 AM",
+      "id": 15
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 8,
+      "itemId": 23,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:05 AM",
+      "id": 16
+    },
+    {
+      "activityType": "Updated an Item",
+      "userId": 8,
+      "itemId": 26,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:05 AM",
+      "id": 17
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 9,
+      "itemId": 23,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:23 AM",
+      "id": 18
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 9,
+      "itemId": 1,
+      "locationId": 28,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:28 AM",
+      "id": 19
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 9,
+      "itemId": 1,
+      "locationId": 28,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:30 AM",
+      "id": 20
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 9,
+      "itemId": 1,
+      "locationId": 28,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:31 AM",
+      "id": 21
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 8,
+      "itemId": 26,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:31 AM",
+      "id": 22
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 9,
+      "itemId": 27,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:33 AM",
+      "id": 23
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 5,
+      "itemId": 23,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 1:47 AM",
+      "id": 24
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 31,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 9:13 AM",
+      "id": 25
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 31,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 9:14 AM",
+      "id": 26
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 6,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:05 AM",
+      "id": 27
+    },
+    {
+      "activityType": "Updated an Item",
+      "userId": 1,
+      "itemId": 11,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:05 AM",
+      "id": 28
+    },
+    {
+      "activityType": "Updated an Item",
+      "userId": 1,
+      "itemId": 4,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:05 AM",
+      "id": 29
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 9,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 16,
+      "date": "October 31, 2020 at 11:06 AM",
+      "id": 30
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 6,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:11 AM",
+      "id": 31
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 6,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:29 AM",
+      "id": 33
+    },
+    {
+      "activityType": "Updated an Item",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "October 31, 2020 at 11:29 AM",
+      "id": 34
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 24,
+      "date": "November 8, 2020 at 11:09 PM",
+      "id": 35
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 6,
+      "connectedUserId": 1,
+      "date": "November 8, 2020 at 11:57 PM",
+      "id": 36
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 50,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 1, 2020 at 11:58 PM",
+      "id": 37
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 2,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 10:24 AM",
+      "id": 38
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 11,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 11:33 AM",
+      "id": 39
+    },
+    {
+      "activityType": "Updated Their Location",
+      "userId": 1,
+      "itemId": 1,
+      "locationId": 13,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 11:34 AM",
+      "id": 40
+    },
+    {
+      "activityType": "Updated an Item",
+      "userId": 1,
+      "itemId": 78,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 11:52 AM",
+      "id": 41
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 77,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:22 PM",
+      "id": 42
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "locationId": 1,
+      "itemId": 78,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:24 PM",
+      "id": 43
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 104,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:31 PM",
+      "id": 44
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 105,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:34 PM",
+      "id": 45
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 106,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:34 PM",
+      "id": 46
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 1,
+      "itemId": 107,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:39 PM",
+      "id": 47
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 108,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 12:52 PM",
+      "id": 48
+    },
+    {
+      "activityType": "Added A New Item",
+      "userId": 3,
+      "itemId": 109,
+      "locationId": 1,
+      "connectedUserId": 1,
+      "date": "November 9, 2020 at 1:00 PM",
+      "id": 49
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 10,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 3,
+      "date": "November 9, 2020 at 4:55 PM",
+      "id": 50
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 6,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 7,
+      "date": "November 9, 2020 at 4:58 PM",
+      "id": 51
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 3,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 5,
+      "date": "November 9, 2020 at 4:59 PM",
+      "id": 52
+    },
+    {
+      "activityType": "Connected With",
+      "userId": 9,
+      "itemId": 1,
+      "locationId": 1,
+      "connectedUserId": 10,
+      "date": "November 9, 2020 at 5:05 PM",
+      "id": 53
+    }
+  ],
+  "lists": []
+}

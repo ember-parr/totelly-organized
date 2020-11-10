@@ -2022,22 +2022,10 @@
       "id": 33
     },
     {
+      "id": 35,
       "userId": 1,
-      "locationId": 8,
-      "date": "REQUESTED",
-      "id": 34
-    },
-    {
-      "userId": 3,
-      "locationId": 3,
-      "date": "November 9, 2020",
-      "id": 35
-    },
-    {
-      "userId": 10,
-      "locationId": 2,
-      "date": "November 9, 2020",
-      "id": 36
+      "locationId": 38,
+      "date": "November 10, 2020"
     }
   ],
   "connectedUsers": [
@@ -2133,25 +2121,11 @@
       "id": 13
     },
     {
-      "id": 14,
       "userId": 1,
       "connectedUserId": 12,
-      "status": true,
-      "dateConnected": "November 9, 2020"
-    },
-    {
-      "userId": 11,
-      "connectedUserId": 1,
       "status": false,
       "dateConnected": "November 9, 2020",
-      "id": 15
-    },
-    {
-      "userId": 12,
-      "connectedUserId": 1,
-      "status": true,
-      "dateConnected": "November 9, 2020",
-      "id": 16
+      "id": 14
     }
   ],
   "activity": [
@@ -2595,15 +2569,6 @@
       "connectedUserId": 10,
       "date": "November 9, 2020 at 5:05 PM",
       "id": 53
-    },
-    {
-      "activityType": "Connected With",
-      "userId": 1,
-      "itemId": 1,
-      "locationId": 1,
-      "connectedUserId": 14,
-      "date": "November 9, 2020 at 8:29 PM",
-      "id": 54
     }
   ],
   "lists": []

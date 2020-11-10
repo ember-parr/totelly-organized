@@ -2026,6 +2026,18 @@
       "userId": 1,
       "locationId": 38,
       "date": "November 10, 2020"
+    },
+    {
+      "userId": 10,
+      "locationId": 11,
+      "date": "November 10, 2020",
+      "id": 36
+    },
+    {
+      "userId": 2,
+      "locationId": 11,
+      "date": "November 10, 2020",
+      "id": 37
     }
   ],
   "connectedUsers": [

@@ -20,7 +20,7 @@ export const SharedWithSegment = ({location}) => {
                 setFilteredLocations(location)
             })
         })
-    }, [Locations])
+    }, [])
     
 
     let myColor = { background: '#2b7a78', text: "#FFFFFF" };

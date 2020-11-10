@@ -15,6 +15,7 @@ export const ShareLocationSegment = () => {
     const currentUser = localStorage.getItem("user")
     const [thing, setThing] = useState({})
     const [sharedWith, setSharedWith] = useState([])
+    const [requestClicked, setRequestClicked] = useState(false)
     const userIdsWithAccess = sharedWith.map((share) => share.userId)
     const locationId = useParams()
     const fixedLocationId = parseInt(locationId.locationId)
@@ -22,17 +23,15 @@ export const ShareLocationSegment = () => {
 
     useEffect(()=> {
         getConnection()
-    })
+    }, [requestClicked])
 
     useEffect(()=> {
-        getLocations()
-        .then(() => {
+        getSharedLocation(fixedLocationId)
+        .then(location => { setSharedWith(location) })
+        
+    }, [requestClicked])
 
-            getSharedLocation(fixedLocationId).then(location => {
-                setSharedWith(location)
-            })
-        })
-    }, [Locations])
+
 
 
     const handleDropdown = (event, data) => {
@@ -47,6 +46,12 @@ export const ShareLocationSegment = () => {
             locationId: parseInt(locationId.locationId),
             date: currentDate
         })
+        if (requestClicked === false) {
+
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
     }
 
     let myColor = { background: '#2b7a78', text: "#FFFFFF" };

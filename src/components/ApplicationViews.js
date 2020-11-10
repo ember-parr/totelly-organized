@@ -35,13 +35,13 @@ export const ApplicationViews = (props) => {
             <MyAccountPlaceholder />
           </Route>
           
-          <Route exact path="/">
             <ActivityProvider>
               <LocationProvider>
-                <DashboardView />
+                <Route exact path="/">
+                  <DashboardView />
+                </Route>
               </LocationProvider>
             </ActivityProvider>
-          </Route>
 
           <ItemProvider>
             <ConnectionProvider>

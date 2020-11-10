@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {useContext, useEffect, useState} from 'react'
 import { Segment, Dropdown, Button  } from 'semantic-ui-react'
 import { useParams } from 'react-router-dom';
@@ -10,18 +11,28 @@ let currentDate = dateFormat(now, "longDate")
 
 export const ShareLocationSegment = () => {
     const {connections, getConnection} = useContext(ConnectionContext)
-    const {shareLocationWithUser} = useContext(LocationContext)
+    const {shareLocationWithUser, getSharedLocation } = useContext(LocationContext)
     const currentUser = localStorage.getItem("user")
     const [thing, setThing] = useState({})
+    const [sharedWith, setSharedWith] = useState([])
+    const [requestClicked, setRequestClicked] = useState(false)
+    const userIdsWithAccess = sharedWith.map((share) => share.userId)
     const locationId = useParams()
-    const usersConnectedUsers = connections.filter(cons => cons.connectedUserId === parseInt(currentUser))
-    // let currentLocation = location.id
+    const fixedLocationId = parseInt(locationId.locationId)
+    const connectedUsers = connections.filter(connection => connection.connectedUserId === parseInt(currentUser) && connection.status === true && userIdsWithAccess.includes(connection.userId) === false)
 
-    useEffect(() => {
+    useEffect(()=> {
         getConnection()
+    }, [requestClicked])
+
+    useEffect(()=> {
+        getSharedLocation(fixedLocationId)
+        .then(location => { setSharedWith(location) })
         
-        
-    })
+    }, [requestClicked])
+
+
+
 
     const handleDropdown = (event, data) => {
         const newThing = { ...thing }
@@ -35,13 +46,19 @@ export const ShareLocationSegment = () => {
             locationId: parseInt(locationId.locationId),
             date: currentDate
         })
+        if (requestClicked === false) {
+
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
     }
 
     let myColor = { background: '#2b7a78', text: "#FFFFFF" };
 
     return (
         <>
-        <div class="pageComponent">
+        <div className="pageComponent">
             <Segment raised>
                 <p>
                     To share <strong> {'this location'} </strong> with another user, please select user from dropdown below
@@ -49,10 +66,10 @@ export const ShareLocationSegment = () => {
             
                 <Dropdown 
                     placeholder='Choose from your connected users'
-                    options={usersConnectedUsers.map(connection => (
+                    options={connectedUsers.map(connection => (
                         {
                             key: connection.userId,
-                            text: connection.user.firstName +" " + connection.user.lastName,
+                            text: connection.user?.firstName +" " + connection.user?.lastName,
                             value: connection.userId
                         }
                     ))}
@@ -61,6 +78,7 @@ export const ShareLocationSegment = () => {
                     label="connections"
                     selection
                     search
+                    
                     />
             
             <Button 
@@ -70,6 +88,7 @@ export const ShareLocationSegment = () => {
                     event.preventDefault()
                     createSharedLocation()
                     notify.show('Location Shared!', "custom", 4000, myColor)
+                    
                 }}> Share Location </Button>
             <Notifications />
             

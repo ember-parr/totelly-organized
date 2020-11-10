@@ -1,52 +1,37 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, {useContext, useEffect, useState} from 'react'
+import React, {useContext, useEffect } from 'react'
 import { Icon, Grid, Card } from 'semantic-ui-react'
-import {ItemContext} from "../items/ItemProvider"
 import { ActivityContext } from './ActivityProvider'
 
 export const RecentlyAdded = () => {
-    const {UserActivities, getCurrentUserActivities} = useContext(ActivityContext)
-    const { Items, getItems } = useContext(ItemContext)
+    const {UserActivities, getCurrentUserActivities } = useContext(ActivityContext)
     const currentUser = parseInt(localStorage.user)
-    const [itemDetails, setItemDetails] = useState([])
+
+    const userItemActivities = UserActivities.filter(act => act.userId === currentUser && act.itemId !== 1)
 
     useEffect(()=> {
-        getCurrentUserActivities().then(getItems())
+
+        getCurrentUserActivities(currentUser)
+        
     }, [])
 
 
-
-    useEffect(() => {
-        const activitiesByUser = UserActivities.filter(
-            (activity) => activity.userId === currentUser
-        );
-
-        const itemsId = activitiesByUser.map((activity) => activity.itemId)
-
-        const activityInfo = Items.filter(
-            (item) => itemsId.includes(item.id) 
-        );
-            setItemDetails(activityInfo)
-
-    }, [UserActivities, Items, currentUser])
     
-
+    console.log("item deails: ", userItemActivities)
     return (
         <>
         <Grid celled='internally' columns={3}>
             <Card.Group className="spaceBetween">
-                {itemDetails.map((item) => (
+                {userItemActivities.slice(0,6).map((item) => (
                         <Card key={item.id} className="recentActivityCard">
                             <Card.Content>
                             <Card.Header >
                                 <Icon name="plus circle" />
-                                <a  href={`/items/edit/${item.id}`} alt="items">You added {item.itemName} </a>
+                                <a  href={`/items/edit/${item.item.id}`} alt="items">You added {item.item.itemName} </a>
                             </Card.Header>
                             <Card.Description>
-                                Location: {item.location.name} <br />
-                                Room: {item.room} <br />
-                                Placement: {item.placement} <br />
-                                </Card.Description>
+                                {item.date} 
+                            </Card.Description>
                             </Card.Content>
 
 

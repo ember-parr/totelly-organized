@@ -12,29 +12,38 @@ import { SharedWithSegment } from './SharedWithSegment'
 import { Button, Grid, Header, Icon, Form, Item, Modal, Table } from 'semantic-ui-react'
 
 export const LocationForm = () => {
+    // pulls in necessary Context variables
     const { addLocation, getLocationById, updateLocation, getLocations, deleteLocation } = useContext(LocationContext)
     const { addActivity } = useContext(ActivityContext)
+    const {getItemsByLocation } = useContext(ItemContext)
+    // useState variables to set evolving and/or dependant variables  (note: 'open' controls modal status)
+    const [open, setOpen] = React.useState(false)
     const [location, setLocation] = useState({})
     const [isLoading, setIsLoading] = useState(true);
+    const [filteredItems, setItems] = useState([])
+    // useParams to capture locationId from URL & useHistory to send user elsewhere when needed
     const {locationId} = useParams();
     const history = useHistory();
+    // captures currently logged in user from local storage
     const user = localStorage.getItem("user")
-    const [open, setOpen] = React.useState(false)
+    // formats date using npm package
     let dateFormat = require('dateformat')
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")
     let currentTime = dateFormat(now, "shortTime")
-    const {getItemsByLocation } = useContext(ItemContext)
 
-    const [filteredItems, setItems] = useState([])
 
+    // handles input changes in location add and edit forms as needed
     const handleControlledInputChange = (event) => {
         const newLocation = { ...location }
         newLocation[event.target.name] = event.target.value
         setLocation(newLocation)
     }
+
+    //custom color for toast alerts when location is updated or shared
     let myColor = { background: '#2b7a78', text: "#FFFFFF" };
 
+    // on page load, get all details needed from database. 
     useEffect(() => {
         getLocations().then(() => {
             if (locationId){
@@ -54,6 +63,9 @@ export const LocationForm = () => {
         })
     }, [])
 
+
+    // funtion to create a new location object --OR-- update an existing location in database. 
+    // also adds activity to database when a location is added or updated. (note: setting itemId and connectedUserId to '0' throws an error in json server)
     const constructLocationObject = () => {
         if (parseInt(locationId) === 0) {
             window.alert("Please select a location")
@@ -92,11 +104,14 @@ export const LocationForm = () => {
         }
     }
 
+    
 
 
 
-    // const [values, setValues] = useState({itemName: '', description: '', room: '', categoryId: 2, locationId: 1, placement: '', notes: '', lists: []})
+    // if else statements to determin which view to display
+
     if(!locationId) {
+    // ********** view that shows when a user is entering a new location **********
     return (
         <div class="pageComponent">
             <Grid.Column>
@@ -123,8 +138,9 @@ export const LocationForm = () => {
                     </Grid.Column>
         </div>
     )} else if (locationId && location.userId===parseInt(user)) {
+        // ********** view that shows when a user is viewing a location they DO own **********
         return (
-            <div class="pageComponent">
+            <div className="pageComponent">
                 <Header>
                     <h2>{locationId ? `Update ${location.name}` : "Add New Location"}</h2>
                 </Header>
@@ -136,8 +152,8 @@ export const LocationForm = () => {
                     </Grid.Row>
                             
 
-                    <Grid.Row columns={2} fluid>
-                    <Grid.Column>
+                    <Grid.Row columns={2}>
+                    <Grid.Column width={4}>
                         <form >
                             
                                 <h4>{`Edit ${location.name}'s Details`}</h4>
@@ -218,7 +234,7 @@ export const LocationForm = () => {
                         </Grid.Column>
 
 
-                        <Grid.Column>
+                        <Grid.Column key={location.userId} width={12}>
                             
                                 <h4>Shared with:</h4>
                                     <SharedWithSegment location={location} />
@@ -253,6 +269,7 @@ export const LocationForm = () => {
             </div>
         )
     } else if (locationId && location.userId!==parseInt(user)) {
+        // ********** view that shows when a user is viewing a location they do not own **********
         return (
             
             <div className="pageComponent">

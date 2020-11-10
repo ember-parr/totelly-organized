@@ -18,6 +18,7 @@ export const ConnectedUserDetail = () => {
     const sharedLocationIds = sharedLocations.map((location) => location.locationId)
     const requestedLocations = sharedLocations.filter(location => location.date === 'REQUESTED')
     const requestedLocationIds = requestedLocations.map((location) => location.locationId)
+    const [requestClicked, setRequestClicked] = useState(false)
     
 
     useEffect(() => {
@@ -32,7 +33,7 @@ export const ConnectedUserDetail = () => {
         .then(shared => {
             setSharedLocations(shared)
         })
-    }, [Locations])
+    }, [requestClicked])
 
 
     const locationRequest = (location) => {
@@ -42,7 +43,12 @@ export const ConnectedUserDetail = () => {
             date:"REQUESTED"
         })
         sharedLocations.concat(location)
-        
+        if (requestClicked === false) {
+
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
     }
 
 

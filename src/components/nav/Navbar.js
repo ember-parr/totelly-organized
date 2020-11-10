@@ -20,8 +20,69 @@ function exampleReducer(state, action) {
   }
 }
 
+/*
+  ************
+    export const SidebarNavigation below is for demo MVP & does *** NOT *** include lists or account tabs 
+  ************
+*/
 
-  export const SidebarNavitation = () => {
+
+  export const SidebarNavigation = () => {
+
+    const [state ] = React.useReducer(exampleReducer, {
+      animation: 'show',
+      direction: "right",
+      dimmed: false,
+      visible: false,
+      color: 'grey'
+    })
+    const { color } = state
+    
+    const history=useHistory()
+
+    return (
+      <>
+          <Menu.Item as='a' onClick={() => history.push("/")}>
+            <Icon name='home' />
+            Home
+          </Menu.Item>
+          <Menu.Item as='a' onClick={() => history.push("/items")}>
+            <Icon name='list alternate outline' color={color} />
+            Items
+          </Menu.Item>
+          <Menu.Item as='a' onClick={() => history.push("/locations")}>
+            <Icon name='map outline' color={color} />
+            Locations
+          </Menu.Item>
+          <Menu.Item as='a' onClick={() => history.push("/users")}>
+            <Icon name='users' color={color} />
+            Connected Users
+          </Menu.Item>
+          
+      </>
+    )
+  }
+
+
+
+
+
+
+
+
+
+
+
+/*
+  ************
+    export const SidebarNavigation below is for stretch goals & *** DOES *** include lists or account tabs 
+    ** NOTE: these exports have the exact same constant name. if one is used, the other should be commented out **
+  ************
+*/
+
+
+/*
+  export const SidebarNavigation = () => {
 
     const [state ] = React.useReducer(exampleReducer, {
       animation: 'show',
@@ -63,3 +124,4 @@ function exampleReducer(state, action) {
       </>
     )
   }
+  */

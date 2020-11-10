@@ -104,6 +104,7 @@ export const ItemForm = () => {
                     userId: parseInt(user)
                 }).then(getMostRecentItem).then((newItem)=> {
                     setItem(newItem)
+                    console.log("new item: ", newItem)
                     addActivity({
                         activityType: "Added A New Item",
                         userId: parseInt(user),

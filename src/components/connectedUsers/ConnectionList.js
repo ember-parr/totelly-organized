@@ -34,7 +34,7 @@ export const ConnectionList = () => {
             } else if (connection.connectedUserId === UserToDelete && connection.userId === currentUser) {
                 deleteConnection(connection.id)
             } else {
-                console.log("nothing to delete?")
+                console.log("nothing to delete?") 
             }
         })
     }
@@ -87,7 +87,8 @@ export const ConnectionList = () => {
 
         setPending(pendingRequest)
 
-        if (searchTerms !== "") {
+        if (searchTerms !== "" && searchTerms.length >= 2) {
+            console.log("search terms: ", searchTerms)
             //search through friends by email/name
             const friendSubset = friendInformation.filter(
                 (friend) => 
@@ -99,9 +100,7 @@ export const ConnectionList = () => {
                     .includes(searchTerms.toLowerCase().trim()) || 
                 friend.lastName
                     .toLowerCase()
-                    .includes(searchTerms.toLowerCase().trim())  || 
-                friend.phoneNumber
-                    .includes(searchTerms.toLowerCase().trim())
+                    .includes(searchTerms.toLowerCase().trim())  
             );
             //search through nonFriends by email/name
             const nonFriendSubset = nonFriendInformation.filter(
@@ -114,9 +113,7 @@ export const ConnectionList = () => {
                     .includes(searchTerms.toLowerCase().trim()) ||
                 friend.lastName
                     .toLowerCase()
-                    .includes(searchTerms.toLowerCase().trim()) ||
-                friend.phoneNumber
-                    .includes(searchTerms.toLowerCase().trim())
+                    .includes(searchTerms.toLowerCase().trim()) 
             );
             // if the search field is not blank, display matching friends/nonfriends
             setFriendUsers(friendSubset);

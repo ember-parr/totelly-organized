@@ -44,7 +44,7 @@ export const ItemProvider = (props) => {
     }
 
     const getMostRecentItem = () => {
-        return fetch(`http://localhost:8088/items?_sort=dateAdded&_order=desc&_limit=1`)
+        return fetch(`http://localhost:8088/items?_sort=id&_order=desc&_limit=1`)
         .then(result => result.json())
     }
 

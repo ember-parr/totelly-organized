@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Header, Card, Feed } from 'semantic-ui-react'
+import { Grid, Header, Feed } from 'semantic-ui-react'
 import { ConnectionRequest } from '../connectedUsers/ConnectionRequests'
 import { ConnectionProvider } from '../connectedUsers/ConnectionProvider'
 import {ActivityProvider} from './ActivityProvider'
@@ -22,19 +22,21 @@ export const DashboardView = () => {
                         <Header as='h4'>Recent Added Items</Header>
                         <ItemProvider>
                             <ActivityProvider>
-                                <RecentlyAdded />
+                                <ConnectionProvider>
+                                    <RecentlyAdded />
+                                </ConnectionProvider>
                             </ActivityProvider>
                         </ItemProvider>
                     </Grid.Column>
                     <Grid.Column >
                         <Header as='h4'>Requests</Header>
-                        <Card.Group >
+                        {/* <Card.Group > */}
                             <ConnectionProvider>
                                 <UserProvider>
                                     <ConnectionRequest />
                                 </UserProvider>
                             </ConnectionProvider>
-                        </Card.Group>
+                        {/* </Card.Group> */}
                     </Grid.Column>
                 </Grid.Row>
 
@@ -43,7 +45,9 @@ export const DashboardView = () => {
                         <Feed size="small">
                             <Header as='h4'>Recent Activity</Header>
                                 <ActivityProvider>
-                                    <ActivityCard />
+                                    <ConnectionProvider>
+                                        <ActivityCard />
+                                    </ConnectionProvider>
                                 </ActivityProvider>
                         </Feed>
                     </Grid.Column>

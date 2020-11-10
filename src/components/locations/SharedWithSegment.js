@@ -2,11 +2,12 @@
 import React, {useContext, useEffect, useState} from "react"
 import { LocationContext } from './LocationProvider'
 import Notifications, {notify} from 'react-notify-toast';
-import { Card, Button } from 'semantic-ui-react'
+import { Card, Button, Grid } from 'semantic-ui-react'
 
-export const SharedWithSegment = ({location}) => {
-    const {getSharedLocation, updateSharedLocation, deleteSharedLocation, getLocations, Locations} = useContext(LocationContext)
+export const SharedWithSegment = ({location, newAddition}) => {
+    const {getSharedLocation, updateSharedLocation, deleteSharedLocation, getLocations } = useContext(LocationContext)
     const [filteredLocations, setFilteredLocations] = useState([])
+    const [requestClicked, setRequestClicked] = useState(false)
     let dateFormat = require('dateformat')
     let now = new Date()
     let currentDate = dateFormat(now, "longDate")
@@ -15,16 +16,21 @@ export const SharedWithSegment = ({location}) => {
     useEffect(()=> {
         getLocations()
         .then(() => {
-
             getSharedLocation(location.id).then(location => {
                 setFilteredLocations(location)
             })
         })
-    }, [Locations])
+        if(newAddition === true) {
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
+    }, [newAddition, requestClicked])
     
 
     let myColor = { background: '#2b7a78', text: "#FFFFFF" };
     let myRejectColor = { background: '#1e0001', text: "#FFFFFF" };
+    
 
 
     const approveShare = (shareToApprove) => {
@@ -34,21 +40,34 @@ export const SharedWithSegment = ({location}) => {
             locationId: shareToApprove.locationId,
             date: currentDate
         })
+        if (requestClicked === false) {
+
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
     }
 
     const deleteRequest = (requestId) => {
         console.log("request id: ", requestId)
         deleteSharedLocation(requestId)
+        if (requestClicked === false) {
+
+            setRequestClicked(true)
+        } else {
+            setRequestClicked(false)
+        }
     }
 
     return (
         <>
-            <Card.Group>
+        <Grid  columns={8}  >
+            <Card.Group className="spaceBetween">
                 {filteredLocations.map((loc) => {
                     if (loc.date === "REQUESTED") {
                         return (
                             <>
-                            <Card>
+                            <Card key={loc.userId} className="sharedWithCard">
                                 <Card.Content>
                                 <Card.Header>{loc.user.firstName} {loc.user.lastName}</Card.Header>
                                     <Card.Meta>Request Pending...</Card.Meta>
@@ -77,11 +96,11 @@ export const SharedWithSegment = ({location}) => {
                     } else {
                         return (
                             <>
-                            <Card>
+                            <Card key={loc.userId} className="sharedWithCard">
                                 <Card.Content>
                                 <Card.Header>{loc.user.firstName} {loc.user.lastName}</Card.Header>
                                     <Card.Meta>{loc.user.email}</Card.Meta>
-                        <Card.Description>Shared On: {loc.date}</Card.Description>
+                                        <Card.Description>Shared On: {loc.date}</Card.Description>
                                 </Card.Content>
                                 </Card>
                                 <Notifications />
@@ -93,6 +112,7 @@ export const SharedWithSegment = ({location}) => {
                     }
                 })}
             </Card.Group>
+            </Grid>
         </>
     )
 }

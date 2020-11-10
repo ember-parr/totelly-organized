@@ -50,7 +50,7 @@ export const Header = () => {
 
     return (
         <Sticky >
-            <Menu borderless attached='top'>
+            <Menu borderless attached='top' className="fullPageStr">
                 <Grid columns={2} className="headerContent">
                     <Grid.Column width={13} floated='left'>
                         <Segment basic>

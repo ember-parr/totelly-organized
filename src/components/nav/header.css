@@ -7,3 +7,9 @@
     margin: 0px 0px 0px 0px  !important;
     padding: 0px 0px 0px 0px  !important
 }
+
+.fullPageStr {
+    display: flex !important;
+    align-content: space-between !important;
+    min-width: 110% !important;
+}

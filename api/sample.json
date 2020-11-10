@@ -1149,7 +1149,7 @@
       "categoryId": 4,
       "locationId": 29,
       "dateAdded": "September 29th, 2021",
-      "userId": 5
+      "userId": 1
     },
     {
       "id": 78,
@@ -2020,6 +2020,24 @@
       "locationId": 13,
       "date": "REQUESTED",
       "id": 33
+    },
+    {
+      "id": 35,
+      "userId": 1,
+      "locationId": 38,
+      "date": "November 10, 2020"
+    },
+    {
+      "userId": 10,
+      "locationId": 11,
+      "date": "November 10, 2020",
+      "id": 36
+    },
+    {
+      "userId": 2,
+      "locationId": 11,
+      "date": "November 10, 2020",
+      "id": 37
     }
   ],
   "connectedUsers": [
@@ -2376,15 +2394,6 @@
       "id": 29
     },
     {
-      "activityType": "Connected With",
-      "userId": 9,
-      "itemId": 1,
-      "locationId": 1,
-      "connectedUserId": 16,
-      "date": "October 31, 2020 at 11:06 AM",
-      "id": 30
-    },
-    {
       "activityType": "Updated Their Location",
       "userId": 1,
       "itemId": 1,
@@ -2410,15 +2419,6 @@
       "connectedUserId": 1,
       "date": "October 31, 2020 at 11:29 AM",
       "id": 34
-    },
-    {
-      "activityType": "Connected With",
-      "userId": 1,
-      "itemId": 1,
-      "locationId": 1,
-      "connectedUserId": 24,
-      "date": "November 8, 2020 at 11:09 PM",
-      "id": 35
     },
     {
       "activityType": "Updated Their Location",

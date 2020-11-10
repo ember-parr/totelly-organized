@@ -27,7 +27,7 @@ export const RecentlyAdded = () => {
                             <Card.Content>
                             <Card.Header >
                                 <Icon name="plus circle" />
-                                <a  href={`/items/edit/${item.id}`} alt="items">You added {item.item.itemName} </a>
+                                <a  href={`/items/edit/${item.item.id}`} alt="items">You added {item.item.itemName} </a>
                             </Card.Header>
                             <Card.Description>
                                 {item.date} 

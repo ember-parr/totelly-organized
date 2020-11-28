@@ -17,13 +17,19 @@ An app for whole home organization. We've all had that moment... we KNOW we have
 Note: login & register is not secure & should be used for demo purposes only. 
 
 ### Links:
-[wireframe](https://miro.com/app/board/o9J_kjRTY1c=/)
+[Wireframe](https://miro.com/app/board/o9J_kjRTY1c=/)
 
 
 [Entity Relationship Diagram - ERD](https://lucid.app/lucidchart/invitations/accept/f2d2abad-a052-4a29-9136-965118759ce9)
 
 
-[project guidelines from NSS](https://github.com/nss-day-cohort-43/Capstone-Time-Getting-Started)
+[Project Guidelines from NSS](https://github.com/nss-day-cohort-43/Capstone-Time-Getting-Started)
+
+
+[My Portfolio Site](http://ember-parr.github.io/)
+
+
+[LinkedIn](www.linkedin.com/in/emberparr)
 
 
 
